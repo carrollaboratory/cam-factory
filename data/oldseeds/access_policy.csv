@@ -1,0 +1,3 @@
+access_policy_id,access_description,data_use_accession,data_use_permission,data_use_modifier,website,disease_limitation
+co-ajdm9fyxxz,This access policy is specifically for General Research Use,dbgap:phs000000,DUO:0000042,DUO:0000045,https://carrollaboratory.github.io/kfi-fhir-input/elements/website/,
+co-t869rg8xx6,This access policy is also specifically for General Research Use,dbgap:phs000000,DUO:0000042,DUO:0000045,https://carrollaboratory.github.io/kfi-fhir-input/elements/website/2,MSH:D012919
