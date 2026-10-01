@@ -1,0 +1,22 @@
+CAMO:
+  name: Common Access Model Ontology
+  vocabulary_prefix: CAMO
+  vocabulary_uri: http://purl.obolibrary.org/obo/CAMO_
+  fhir_system: http://purl.obolibrary.org/obo/CAMO
+  description: Organized terms in support of a shared data model.
+  codes:
+    CAMO:0000004:
+      concept_curie: CAMO:0000004
+      concept_id:
+      vocabulary_prefix: CAMO
+      concept_code: '0000004'
+      display: This family study includes at a minimum two parents of one
+        affected child.
+      definition:
+    CAMO:0000024:
+      concept_curie: CAMO:0000024
+      concept_id:
+      vocabulary_prefix: CAMO
+      concept_code: '0000024'
+      display: Study participant with consent, assent, or waiver of consent.
+      definition:
