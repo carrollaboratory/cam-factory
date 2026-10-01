@@ -12,7 +12,7 @@ https://loinc.org/:
   description: The international standard for identifying health measurements, observations, and documents.
 http://purl.obolibrary.org/obo/hp.owl:
   name: Human Phenotype Ontology
-  vocabulary_prefix: np
+  vocabulary_prefix: HP
   vocabulary_uri: http://purl.obolibrary.org/obo/HP_
   fhir_system: http://purl.obolibrary.org/obo/hp.owl
   description: The Human Phenotype Ontology (HPO) aims to provide a standardized vocabulary of phenotypic abnormalities encountered in human disease. Each term in the HPO describes a phenotypic abnormality, such as atrial septal defect. The HPO is currently being developed using the medical literature, Orphanet, DECIPHER, and OMIM.
