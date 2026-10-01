@@ -4,6 +4,30 @@ pg_port := env_var_or_default("CAM_PG_PORT", "5432")
 pg_volume := pg_container + "-data"
 pg_dbs := "cam_testdata_tiny cam_testdata_small cam_testdata_portal cam_testdata_test"
 
+# Install dependencies and start Postgres
+setup: && pg-up
+  uv sync
+
+build profile:
+  uv run cam-testdata build --profile {{profile}}
+
+tiny: (build "tiny")
+
+small: (build "small")
+
+portal: (build "portal")
+
+test *args="":
+  uv run pytest {{args}}
+
+lint:
+  uv run ruff check
+  uv run ruff format --check
+  uv run mypy
+
+# Lint + test. Phase 5 adds: build tiny, then fail on any change in output/tiny
+check: lint test
+
 # Update the common-access-model monolith YAML file
 update-cam:
   uv run update-cam -d data

@@ -1,0 +1,300 @@
+# Tiny scenario — DESIGN §8.1, format DESIGN §8.2. DRAFT for CHECKPOINT A.
+#
+# Keys are fixture-local; handles are tiny/<Class>/<key>. Slots ranged to an
+# entity class take keys; Concept / enum / uriorcurie slots take curies. Omitted
+# fields are filled by the factories (filler text, hashes, computed ages and
+# counts). study_id / access_policy_id are inherited from the scoping parent.
+# Ages are integer days except BiospecimenCollection.age_at_collection
+# (decimal years, computed from the encounter).
+#
+# Curie provenance: [enum] = schema permissible value, [vc] = vocab_content.yaml.
+# Lines marked TODO(concept) need a concept that isn't in any input yet; the
+# candidate codes there are NOT verified and must go through missing-concepts.
+
+scenario: tiny
+
+records:
+  AccessPolicy:
+    - key: ap-controlled
+      id: co-ajdm9fyxxz                      # pinned from old seeds (S1's policy there too)
+      data_use_permission: DUO:0000007       # [enum] disease specific research
+      data_use_modifier: DUO:0000021         # [enum] ethics approval required
+      disease_limitation: mesh:D012919       # free string; Down syndrome (old seed value, prefix fixed)
+      data_use_accession: DBGAP:phs000000
+    - key: ap-open
+      id: co-t869rg8xx6                      # pinned from old seeds
+      data_use_permission: DUO:0000042       # [enum] general research use
+      data_use_modifier: DUO:0000045         # [enum] not for profit organisation use only
+
+  Investigator:
+    - key: s1-pi
+      study_id: s1
+      investigator_title: Principal Investigator
+    - key: s1-contact
+      study_id: s1
+      investigator_title: Study Coordinator
+  # names, institutions, emails: Faker + example.org (AGENTS.md rule 10)
+
+  Publication:
+    - key: s1-pub1
+      study_id: s1
+
+  DOI:
+    - key: s1-doi                            # do_id minted: 10.5072/cam-testdata.<hash>
+      study_id: s1
+
+  Study:
+    - key: s1
+      id: sd-7hwpqzc2yr                      # pinned from old seeds
+      study_title: Madamoiselle Moo's Marvelous Research Study
+      study_code: M00M00
+      study_short_name: M00M00 Study
+      study_description: >-
+        Synthetic trio study used to exercise every CAM table and FHIR mapping
+        path. All people and data are fictional.
+      access_policy_id: ap-controlled
+      program: [https://www.nih.gov/include-project]   # [enum] INCLUDE
+      funding_source: [Fictional Foundation for Test Data]
+      principal_investigator: [s1-pi]
+      contact: [s1-contact]
+      publication: [s1-pub1]
+      do_id: s1-doi                          # Study <-> DOI cycle
+      external_id: [DBGAP:phs000000, CUD:M00M00-01]    # two external ids (old seeds)
+    - key: s2
+      study_title: Tiny Follow-on Study
+      study_code: TINY-S2
+      study_description: Minimal child study of S1 with one open-access participant.
+      access_policy_id: ap-open
+      parent_study: s1
+      program: [https://www.nih.gov/include-project]
+      principal_investigator: [s1-pi]
+      contact: [s1-contact]
+
+  VirtualBiorepository:
+    - key: s1-vbr
+      study_id: s1
+      contact: [s1-contact]
+
+  StudyMetadata:                             # one-to-one: key = the study's key
+    - key: s1
+      vbr_id: s1-vbr
+      expected_number_of_participants: 4
+      # actual_number_of_participants computed (R8): 3
+      participant_lifespan_stage: [NCIT:C89345, NCIT:C199314]   # [enum] Childhood, Adulthood
+      study_design: [mesh:D015331, mesh:D008137]                # [enum] Cohort, Longitudinal
+      clinical_data_source_type: [CAMO:0000014, CAMO:0000011]   # [enum] EHR, Research Assessment
+      data_category: [edam:topic_3673, edam:topic_0625]         # [enum] WGS, Genotype and phenotype
+      research_domain: [mesh:D006330]                           # [enum][vc] Congenital Heart Defects
+    - key: s2
+      expected_number_of_participants: 1
+      participant_lifespan_stage: [NCIT:C199314]
+      study_design: [mesh:D003430]                              # [enum] Cross-Sectional
+      clinical_data_source_type: [CAMO:0000010]                 # [enum] Survey
+      data_category: [edam:topic_0625]
+      research_domain: [mesh:D013568]                           # [enum][vc] All Co-occurring Conditions
+
+  Subject:
+    - {key: trio1-proband, study_id: s1, subject_type: CAMO:0000024, organism_type: NCBITaxon:9606}  # [enum] Participant, Human
+    - {key: trio1-mother,  study_id: s1, subject_type: CAMO:0000024, organism_type: NCBITaxon:9606}
+    - {key: trio1-father,  study_id: s1, subject_type: CAMO:0000024, organism_type: NCBITaxon:9606}
+    - {key: trio1-sibling, study_id: s1, subject_type: CAMO:0000025}   # [enum] Non-Participant; no Demographics
+    - {key: s2-p1,         study_id: s2, subject_type: CAMO:0000024}   # organism_type omitted
+
+  Demographics:                              # one-to-one: key = the subject's key
+    - key: trio1-proband
+      sex: snomedct:248152002                # [enum] Female
+      race: [CDCREC:2054-5, CDCREC:2106-3]   # [enum] Black or African American, White (two races)
+      ethnicity: CDCREC:2186-5               # [enum] Not Hispanic or Latino
+      vital_status: snomedct:438949009       # [enum] Alive
+      age_at_last_vital_status: 2190
+      age_at_first_engagement: 1826
+    - key: trio1-mother
+      sex: snomedct:248152002
+      race: [CDCREC:2106-3]
+      ethnicity: CDCREC:2186-5
+      age_at_first_engagement: 12410
+    - key: trio1-father
+      sex: snomedct:248153007                # [enum] Male
+      race: [CDCREC:2054-5]
+      ethnicity: snomedct:261665006          # [enum] Unknown
+      age_at_first_engagement: 13140
+    - key: s2-p1
+      sex: snomedct:261665006                # [enum] Unknown
+      race: [snomedct:261665006]
+      ethnicity: CDCREC:2135-2               # [enum] Hispanic or Latino
+      vital_status: snomedct:419099009       # [enum] Dead
+      age_at_last_vital_status: 25550
+
+  Family:
+    - key: trio1
+      study_id: s1
+      family_type: CAMO:0000005              # [enum] Trio+ (trio plus sibling)
+      consanguinity: snomedct:410516002      # [enum] Known absent
+      family_study_focus: MONDO:0008608      # [vc] Down syndrome
+
+  FamilyMembership:                          # family_membership_id minted: fmb-<hash>
+    - {key: trio1-proband, family_id: trio1, subject_id: trio1-proband, family_role: snomedct:85900004}  # [enum] Proband
+    - {key: trio1-mother,  family_id: trio1, subject_id: trio1-mother,  family_role: snomedct:72705000}  # [enum] Mother
+    - {key: trio1-father,  family_id: trio1, subject_id: trio1-father,  family_role: NCIT:C25174}        # [vc] Father (no enum PV)
+    - {key: trio1-sibling, family_id: trio1, subject_id: trio1-sibling, family_role: NCIT:C25204}        # [vc] Sibling (no enum PV)
+
+  FamilyRelationship:                        # reads: family_member_id <relation> subject_id
+    - {key: mother-of-proband,  family_member_id: trio1-mother,  relation: KIN:KIN_027, subject_id: trio1-proband}  # [enum] isBiologicalMotherOf
+    - {key: father-of-proband,  family_member_id: trio1-father,  relation: KIN:KIN_028, subject_id: trio1-proband}  # [enum] isBiologicalFatherOf
+    - {key: sibling-of-proband, family_member_id: trio1-sibling, relation: KIN:KIN_008, subject_id: trio1-proband}  # [enum] isFullsiblingOf
+
+  ActivityDefinition:
+    - {key: clinical-assessment, study_id: s1, name: Clinical assessment}
+    - {key: blood-draw,          study_id: s1, name: Blood draw}
+    - {key: wgs,                 study_id: s1, name: Whole genome sequencing}
+
+  EncounterDefinition:
+    - key: baseline
+      study_id: s1
+      name: Baseline visit
+      activity_definition_id: [clinical-assessment, blood-draw]
+    - key: follow-up
+      study_id: s1
+      name: Follow-up visit
+      activity_definition_id: [clinical-assessment]
+
+  Encounter:
+    - {key: trio1-proband-baseline,  subject_id: trio1-proband, encounter_definition_id: baseline,  age_at_event: 1826}
+    - {key: trio1-proband-follow-up, subject_id: trio1-proband, encounter_definition_id: follow-up, age_at_event: 2190}
+    - {key: trio1-mother-baseline,   subject_id: trio1-mother,  encounter_definition_id: baseline,  age_at_event: 12410}
+    - {key: trio1-father-baseline,   subject_id: trio1-father,  encounter_definition_id: baseline,  age_at_event: 13140}
+    - {key: s2-p1-visit,             subject_id: s2-p1,         age_at_event: 25000}   # no definition (nullable branch)
+
+  SubjectAssertion:                          # all ob- (Q8)
+    - key: trio1-proband-ds
+      subject_id: trio1-proband
+      encounter_id: trio1-proband-baseline
+      concept: [MONDO:0008608]               # [vc] Down syndrome
+      value_concept: [snomedct:410515003]    # [enum] Known present
+      age_at_event: 0
+      age_at_assertion: 1826
+      asserter_type: CAMO:0000017            # [enum] Healthcare Asserted
+      assertion_source_type: CAMO:0000014    # [enum] EHR
+    - key: trio1-proband-avsd
+      subject_id: trio1-proband
+      encounter_id: trio1-proband-baseline
+      concept: [HP:0006695]                  # [vc] Atrioventricular canal defect
+      value_concept: [snomedct:410515003]
+      age_at_event: 0
+      age_at_assertion: 1826
+    - key: trio1-proband-hypothyroid-absent
+      subject_id: trio1-proband
+      encounter_id: trio1-proband-baseline
+      concept: [HP:0000821]                  # [vc] Hypothyroidism
+      value_concept: [snomedct:410516002]    # [enum] Known absent
+      age_at_assertion: 1826
+    - key: trio1-proband-height
+      subject_id: trio1-proband
+      encounter_id: trio1-proband-follow-up
+      concept: [loinc:8302-2]                # [vc] Body Height
+      value_number: 109.2
+      value_unit: ucum:cm                    # [vc]
+      age_at_event: 2190
+    - key: trio1-mother-hypothyroid
+      subject_id: trio1-mother               # no encounter (nullable branch)
+      concept: [HP:0000821]
+      value_concept: [snomedct:410515003]
+      age_at_event: 9125
+      asserter_type: CAMO:0000019            # [enum] Participant Asserted
+      assertion_source_type: CAMO:0000010    # [enum] Survey
+    - key: s2-p1-murmur-resolved
+      subject_id: s2-p1
+      encounter_id: s2-p1-visit
+      concept: [HP:0030148]                  # [vc] Heart murmur
+      value_concept: [snomedct:410515003]
+      age_at_event: 18250
+      age_at_resolution: 20075
+    # TODO(checkpoint): tested-condition cases from the user's note (DESIGN §8.1):
+    #   positive test result WITH a matching condition assertion, and WITHOUT one.
+    #   Need to agree what "test result" vs "condition" looks like in CAM before
+    #   adding rows (e.g. concept = the condition + a different asserter/source?).
+
+  BiospecimenCollection:                     # id minted: bsc-<hash>; age_at_collection computed
+    - {key: trio1-proband-blood-draw, encounter_id: trio1-proband-baseline, method: snomedct:82078001}  # [enum] Collection of blood specimen for laboratory
+    - {key: trio1-mother-blood-draw,  encounter_id: trio1-mother-baseline,  method: snomedct:82078001}
+    - {key: trio1-father-blood-draw,  encounter_id: trio1-father-baseline,  method: snomedct:82078001}
+
+  Sample:
+    # TODO(concept): sample_type for blood and DNA. Nothing in inputs; candidate
+    # codes (unverified) snomedct:119297000 blood specimen, snomedct:258566005 DNA.
+    - {key: trio1-proband-blood, biospecimen_collection_id: trio1-proband-blood-draw, sample_type: TODO-blood, availability_status: snomedct:103328004}
+    - {key: trio1-mother-blood,  biospecimen_collection_id: trio1-mother-blood-draw,  sample_type: TODO-blood, availability_status: snomedct:103328004}
+    - {key: trio1-father-blood,  biospecimen_collection_id: trio1-father-blood-draw,  sample_type: TODO-blood, availability_status: snomedct:103328004}
+    - {key: trio1-proband-dna, parent_sample_id: trio1-proband-blood, sample_type: TODO-dna}   # collection inherited from parent
+    - {key: trio1-mother-dna,  parent_sample_id: trio1-mother-blood,  sample_type: TODO-dna}
+    - {key: trio1-father-dna,  parent_sample_id: trio1-father-blood,  sample_type: TODO-dna}
+    # TODO(concept): one `processing` and one `storage_method` value to exercise
+    # Sample_processing / Sample_storage_method; candidates from concept_pools (2.2).
+
+  Aliquot:                                   # id minted: alq-<hash>
+    - {key: trio1-proband-blood-a1, sample_id: trio1-proband-blood, quantity_number: 2.0, quantity_unit: ucum:ml, availability_status: snomedct:103328004}  # [vc] ml
+    - {key: trio1-mother-blood-a1,  sample_id: trio1-mother-blood,  quantity_number: 2.0, quantity_unit: ucum:ml, availability_status: snomedct:103328004}
+    - {key: trio1-father-blood-a1,  sample_id: trio1-father-blood,  quantity_number: 2.0, quantity_unit: ucum:ml, availability_status: snomedct:103329007}  # [enum] Unavailable
+    # TODO(concept): DNA concentration unit (e.g. ng/uL) isn't in vocab_content; quantity in ucum:ml for now
+    - {key: trio1-proband-dna-a1, sample_id: trio1-proband-dna, quantity_number: 0.1, quantity_unit: ucum:ml}
+    - {key: trio1-proband-dna-a2, sample_id: trio1-proband-dna, quantity_number: 0.1, quantity_unit: ucum:ml}
+    - {key: trio1-mother-dna-a1,  sample_id: trio1-mother-dna,  quantity_number: 0.1, quantity_unit: ucum:ml}
+    - {key: trio1-father-dna-a1,  sample_id: trio1-father-dna,  quantity_number: 0.1, quantity_unit: ucum:ml}
+
+  File:                                      # hash values computed: real digests of a deterministic string
+    - key: trio1-proband-cram
+      subject_id: [trio1-proband]
+      sample_id: [trio1-proband-dna]
+      filename: TRIO1-P.cram
+      file_extension: .cram
+      format: edam:format_3462               # [enum] CRAM
+      data_type: edam:data_0863              # [enum] Sequence alignment
+      data_category: edam:topic_3673         # [enum] Whole genome sequencing
+      availability: snomedct:103328004
+      hash: [{hash_type: MS:1000568}, {hash_type: MS:1000569}]   # [enum] MD5 + SHA-1 (the one file with two)
+    - key: trio1-mother-cram
+      subject_id: [trio1-mother]
+      sample_id: [trio1-mother-dna]
+      filename: TRIO1-M.cram
+      file_extension: .cram
+      format: edam:format_3462
+      data_type: edam:data_0863
+      data_category: edam:topic_3673
+      hash: [{hash_type: MS:1000568}]
+    - key: trio1-father-cram
+      subject_id: [trio1-father]
+      sample_id: [trio1-father-dna]
+      filename: TRIO1-F.cram
+      file_extension: .cram
+      format: edam:format_3462
+      data_type: edam:data_0863
+      data_category: edam:topic_3673
+      hash: [{hash_type: MS:1000568}]
+    - key: trio1-joint-vcf
+      subject_id: [trio1-proband, trio1-mother, trio1-father]
+      sample_id: [trio1-proband-dna, trio1-mother-dna, trio1-father-dna]
+      filename: TRIO1.joint.vcf.gz
+      file_extension: .vcf.gz
+      format: edam:format_3016               # [enum] VCF
+      data_type: edam:data_3498              # [enum] Sequence variations
+      data_category: edam:topic_0199         # [enum] Genetic variation
+      hash: [{hash_type: MS:1000568}]
+    - key: trio1-clinical-tsv
+      subject_id: [trio1-proband, trio1-mother, trio1-father]   # subjects only, no samples
+      filename: TRIO1.clinical.tsv
+      file_extension: .tsv
+      format: edam:format_3475               # [enum] TSV
+      data_category: edam:topic_0625         # [enum] Genotype and phenotype
+      hash: [{hash_type: MS:1000568}]
+
+  Assay:
+    - {key: trio1-proband-wgs, subject_id: [trio1-proband], sample_id: [trio1-proband-dna], file_id: [trio1-proband-cram], assay_type: OBI:0002117, activity_definition_id: wgs}  # [enum] WGS assay
+    - {key: trio1-mother-wgs,  subject_id: [trio1-mother],  sample_id: [trio1-mother-dna],  file_id: [trio1-mother-cram],  assay_type: OBI:0002117, activity_definition_id: wgs}
+    - {key: trio1-father-wgs,  subject_id: [trio1-father],  sample_id: [trio1-father-dna],  file_id: [trio1-father-cram],  assay_type: OBI:0002117, activity_definition_id: wgs}
+
+  Dataset:                                   # no Record mixin: no study_id / external_id
+    - key: s1-release-1
+      name: M00M00 release 1
+      do_id: s1-doi
+      publication: [s1-pub1]
+      file_id: [trio1-proband-cram, trio1-mother-cram, trio1-father-cram, trio1-joint-vcf, trio1-clinical-tsv]

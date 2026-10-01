@@ -6,6 +6,10 @@ CLAUDE.md
 TODO.md
 data/harmony
 
+# Generated outputs that are published as release archives, not committed
+output/portal/
+dist/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
