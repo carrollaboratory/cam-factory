@@ -3,16 +3,18 @@ requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [project]
-name = "linkml-data-generator"
+name = "cam-testdata"
 dynamic = ["version"]
-description = "Common Access Model factory for fake data. "
+description = "Deterministic test data generator for the Common Access Model."
 readme = "README.md"
 requires-python = ">=3.12"
 authors = [
     { name = "Eric Torstenson", email = "eric.s.torstenson@vumc.org" }
 ]
 dependencies = [
+    "common-access-model",
     "factory-boy>=3.3.0",
+    "faker>=40.0.0",
     "linkml>=1.6.0",
     "linkml-runtime>=1.6.0",
     "psycopg[binary]>=3.1.0",
@@ -20,11 +22,17 @@ dependencies = [
     "rich>=15.0.0",
     "ruamel-yaml>=0.19.1",
     "sqlalchemy>=2.0.0",
+    "typer>=0.12.0",
 ]
+
+[project.scripts]
+cam-testdata = "cam_testdata.cli:app"
 
 [dependency-groups]
 dev = [
-    "common-access-model",
+    "mypy>=1.10",
+    "pytest>=8.0",
+    "ruff>=0.6",
     "the-caddie",
 ]
 
@@ -32,8 +40,31 @@ dev = [
 source = "vcs"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src"]
+packages = ["src/cam_testdata"]
 
 [tool.uv.sources]
-common-access-model = { url = "https://github.com/include-dcc/common-access-model/releases/download/v0.2.0/common_access_model-0.2.0-py3-none-any.whl" }
+# common-access-model = { url = "https://github.com/include-dcc/common-access-model/releases/download/v0.2.0/common_access_model-0.2.0-py3-none-any.whl" }
+common-access-model = { path = "../common-access-model/dist/common_access_model-0.2.0.post4.dev0+5253ae3-py3-none-any.whl" }
 the-caddie = { git = "https://github.com/carrollaboratory/the-caddie" }
+
+[tool.ruff]
+target-version = "py312"
+src = ["src", "tests"]
+extend-exclude = ["scripts"]
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+packages = ["cam_testdata"]
+mypy_path = "src"
+
+[[tool.mypy.overrides]]
+module = ["common_access_model.*", "factory.*", "linkml_runtime.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

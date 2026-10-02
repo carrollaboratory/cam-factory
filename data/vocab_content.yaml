@@ -4,10 +4,10 @@ mesh:
   vocabulary_uri: http://id.nlm.nih.gov/mesh/
   vocabulary_id:
   fhir_system: http://terminology.hl7.org/CodeSystem/MSH
-  description: MeSH (Medical Subject Headings) is the National Library of 
-    Medicine's controlled vocabulary thesaurus. It consists of sets of terms 
-    naming descriptors in a hierarchical structure that permits searching at 
-    various levels of specificity. This thesaurus is used by NLM for indexing 
+  description: MeSH (Medical Subject Headings) is the National Library of
+    Medicine's controlled vocabulary thesaurus. It consists of sets of terms
+    naming descriptors in a hierarchical structure that permits searching at
+    various levels of specificity. This thesaurus is used by NLM for indexing
     articles from biomedical journals, cataloguing of books, documents, etc.
   version:
   vocabulary_source:
@@ -120,7 +120,7 @@ loinc:
   vocabulary_uri: https://loinc.org/rdf/
   vocabulary_id:
   fhir_system: http://loinc.org
-  description: The international standard for identifying health measurements, 
+  description: The international standard for identifying health measurements,
     observations, and documents.
   version:
   vocabulary_source:
@@ -280,9 +280,9 @@ snomedct:
   vocabulary_uri: http://snomed.info/id/
   vocabulary_id:
   fhir_system: http://snomed.info/sct
-  description: SNOMED CT (Systematized Nomenclature of Medicine -- Clinical 
-    Terms), is a systematically organized computer processable collection of 
-    medical terminology covering most areas of clinical information such as 
+  description: SNOMED CT (Systematized Nomenclature of Medicine -- Clinical
+    Terms), is a systematically organized computer processable collection of
+    medical terminology covering most areas of clinical information such as
     diseases, findings, procedures, microorganisms, pharmaceuticals, etc.
   version:
   vocabulary_source:
@@ -327,7 +327,7 @@ snomedct:
     concept_id:
     vocabulary_prefix: snomedct
     concept_code: '75446001'
-    display: Mechanical complication of cardiac device, implant AND/OR graft 
+    display: Mechanical complication of cardiac device, implant AND/OR graft
       (disorder)
     definition:
   - concept_curie: snomedct:111746009
@@ -498,7 +498,7 @@ MAXO:
   vocabulary_uri: http://purl.obolibrary.org/obo/MAXO_
   vocabulary_id:
   fhir_system: http://purl.obolibrary.org/obo/maxo.owl
-  description: An ontology to represent medically relevant actions, procedures, 
+  description: An ontology to represent medically relevant actions, procedures,
     therapies, interventions, and recommendations.
   version:
   vocabulary_source:
@@ -713,7 +713,7 @@ MONDO:
   vocabulary_uri: http://purl.obolibrary.org/obo/MONDO_
   vocabulary_id:
   fhir_system: http://purl.obolibrary.org/obo/mondo.owl
-  description: The Mondo Disease Ontology (Mondo) aims to harmonize disease 
+  description: The Mondo Disease Ontology (Mondo) aims to harmonize disease
     definitions across the world.
   version:
   vocabulary_source:
@@ -2798,7 +2798,7 @@ MONDO:
     concept_id:
     vocabulary_prefix: MONDO
     concept_code: '0020440'
-    display: persistent left superior vena cava connecting to the left-sided 
+    display: persistent left superior vena cava connecting to the left-sided
       atrium
     definition:
   - concept_curie: MONDO:0004895
@@ -2907,14 +2907,14 @@ MONDO:
     concept_id:
     vocabulary_prefix: MONDO
     concept_code: '0020696'
-    display: inborn disorder of cobalamin metabolism and transport, vitamin B12 
+    display: inborn disorder of cobalamin metabolism and transport, vitamin B12
       deficiency
     definition:
   - concept_curie: MONDO:0019220
     concept_id:
     vocabulary_prefix: MONDO
     concept_code: '0019220'
-    display: inborn disorder of cobalamin metabolism and transport, vitamin B12 
+    display: inborn disorder of cobalamin metabolism and transport, vitamin B12
       deficiency
     definition:
   - concept_curie: MONDO:0001044
@@ -3215,14 +3215,14 @@ MONDO:
     concept_id:
     vocabulary_prefix: MONDO
     concept_code: '0044881'
-    display: hematopoietic and lymphoid cell neoplasm, hematopoietic and 
+    display: hematopoietic and lymphoid cell neoplasm, hematopoietic and
       lymphoid system neoplasm
     definition:
   - concept_curie: MONDO:0002334
     concept_id:
     vocabulary_prefix: MONDO
     concept_code: '0002334'
-    display: hematopoietic and lymphoid cell neoplasm, hematopoietic and 
+    display: hematopoietic and lymphoid cell neoplasm, hematopoietic and
       lymphoid system neoplasm
     definition:
   - concept_curie: MONDO:0005570
@@ -3292,9 +3292,9 @@ HP:
   vocabulary_id:
   fhir_system: http://purl.obolibrary.org/obo/hp.owl
   description: The Human Phenotype Ontology (HPO) aims to provide a standardized
-    vocabulary of phenotypic abnormalities encountered in human disease. Each 
-    term in the HPO describes a phenotypic abnormality, such as atrial septal 
-    defect. The HPO is currently being developed using the medical literature, 
+    vocabulary of phenotypic abnormalities encountered in human disease. Each
+    term in the HPO describes a phenotypic abnormality, such as atrial septal
+    defect. The HPO is currently being developed using the medical literature,
     Orphanet, DECIPHER, and OMIM.
   version:
   vocabulary_source:
@@ -5825,12 +5825,12 @@ OMIT:
   vocabulary_uri: http://purl.obolibrary.org/obo/OMIT_
   vocabulary_id:
   fhir_system: http://purl.obolibrary.org/obo/omit.owl
-  description: The purpose of the OMIT ontology is to establish data exchange 
-    standards and common data elements in the microRNA (miR) domain. Biologists 
-    (cell biologists in particular) and bioinformaticians can make use of OMIT 
-    to leverage emerging semantic technologies in knowledge acquisition and 
-    discovery for more effective identification of important roles performed by 
-    miRs in humans' various diseases and biological processes (usually through 
+  description: The purpose of the OMIT ontology is to establish data exchange
+    standards and common data elements in the microRNA (miR) domain. Biologists
+    (cell biologists in particular) and bioinformaticians can make use of OMIT
+    to leverage emerging semantic technologies in knowledge acquisition and
+    discovery for more effective identification of important roles performed by
+    miRs in humans' various diseases and biological processes (usually through
     miRs' respective target genes).
   version:
   vocabulary_source:
@@ -5847,9 +5847,9 @@ NCIT:
   vocabulary_uri: http://purl.obolibrary.org/obo/NCIT_
   vocabulary_id:
   fhir_system: http://purl.obolibrary.org/obo/ncit.owl
-  description: NCI Thesaurus (NCIt) provides reference terminology covering 
-    vocabulary for clinical care, translational and basic research, and public 
-    information and administrative activities, providing a stable and unique 
+  description: NCI Thesaurus (NCIt) provides reference terminology covering
+    vocabulary for clinical care, translational and basic research, and public
+    information and administrative activities, providing a stable and unique
     identification code.
   version:
   vocabulary_source:
@@ -5974,7 +5974,7 @@ SYMP:
   vocabulary_uri: http://purl.obolibrary.org/obo/SYMP_
   vocabulary_id:
   fhir_system: https://purl.obolibrary.org/obo/symp.owl
-  description: The Symptom Ontology has been developed as a standardized 
+  description: The Symptom Ontology has been developed as a standardized
     ontology for symptoms of human diseases.
   version:
   vocabulary_source:
@@ -5991,16 +5991,16 @@ meddra:
   vocabulary_uri: http://purl.bioontology.org/ontology/MDRFRE/
   vocabulary_id:
   fhir_system: https://www.meddra.org
-  description: The Medical Dictionary for Regulatory Activities (MedDRA) was 
-    developed by the International Council for Harmonisation of Technical 
-    Requirements for Registration of Pharmaceuticals for Human Use (ICH)to 
-    provide a standardised medical terminology to facilitate sharing of 
-    regulatory information internationally for medical products used by humans. 
-    It is used within regulatory processes, safety monitoring, as well as for 
-    marketing activities. Products covered by the scope of MedDRA include 
-    pharmaceuticals, biologics, vaccines and drug-device combination products. 
+  description: The Medical Dictionary for Regulatory Activities (MedDRA) was
+    developed by the International Council for Harmonisation of Technical
+    Requirements for Registration of Pharmaceuticals for Human Use (ICH)to
+    provide a standardised medical terminology to facilitate sharing of
+    regulatory information internationally for medical products used by humans.
+    It is used within regulatory processes, safety monitoring, as well as for
+    marketing activities. Products covered by the scope of MedDRA include
+    pharmaceuticals, biologics, vaccines and drug-device combination products.
     The MedDRA dictionary is organized by System Organ Class (SOC), divided into
-    High-Level Group Terms (HLGT), High-Level Terms (HLT), Preferred Terms (PT) 
+    High-Level Group Terms (HLGT), High-Level Terms (HLT), Preferred Terms (PT)
     and finally into Lowest Level Terms (LLT).
   version:
   vocabulary_source:
@@ -6035,7 +6035,7 @@ v3-rolecode:
   vocabulary_uri: http://terminology.hl7.org/CodeSystem/v3-RoleCode#
   vocabulary_id:
   fhir_system: http://terminology.hl7.org/CodeSystem/v3-RoleCode
-  description: A set of codes further specifying the kind of Role; specific 
+  description: A set of codes further specifying the kind of Role; specific
     classification codes for further qualifying RoleClass codes.
   version:
   vocabulary_source:
@@ -6076,7 +6076,7 @@ v3-nullflavor:
   vocabulary_uri: http://terminology.hl7.org/CodeSystem/v3-NullFlavor#
   vocabulary_id:
   fhir_system: http://terminology.hl7.org/CodeSystem/v3-NullFlavor
-  description: A collection of codes specifying why a valid value is not 
+  description: A collection of codes specifying why a valid value is not
     present.
   version:
   vocabulary_source:
@@ -6133,73 +6133,73 @@ administrative-gender:
     concept_code: unknown
     display: Unknown
     definition:
-cdcrec:
-  vocabulary_prefix: cdcrec
+CDCREC:
+  vocabulary_prefix: CDCREC
   name: CDC Rec
   vocabulary_uri: https://cdc.gov#
   vocabulary_id:
   fhir_system: urn:oid:2.16.840.1.113883.6.238
-  description: The U.S. Centers for Disease Control and Prevention (CDC) has 
+  description: The U.S. Centers for Disease Control and Prevention (CDC) has
     prepared a code set for use in coding race and ethnicity data. This code set
-    is based on current federal standards for classifying data on race and 
+    is based on current federal standards for classifying data on race and
     ethnicity, specifically the minimum race and ethnicity categories defined by
-    the U.S. Office of Management and Budget (OMB) and a more detailed set of 
-    race and ethnicity categories maintained by the U.S. Bureau of the Census 
+    the U.S. Office of Management and Budget (OMB) and a more detailed set of
+    race and ethnicity categories maintained by the U.S. Bureau of the Census
     (BC).
   version:
   vocabulary_source:
   codes:
-  - concept_curie: cdcrec:1002-5
+  - concept_curie: CDCREC:1002-5
     concept_id:
-    vocabulary_prefix: cdcrec
+    vocabulary_prefix: CDCREC
     concept_code: 1002-5
     display: American Indian or Alaska Native
     definition:
-  - concept_curie: cdcrec:2028-9
+  - concept_curie: CDCREC:2028-9
     concept_id:
-    vocabulary_prefix: cdcrec
+    vocabulary_prefix: CDCREC
     concept_code: 2028-9
     display: Asian
     definition:
-  - concept_curie: cdcrec:2054-5
+  - concept_curie: CDCREC:2054-5
     concept_id:
-    vocabulary_prefix: cdcrec
+    vocabulary_prefix: CDCREC
     concept_code: 2054-5
     display: Black or African American
     definition:
-  - concept_curie: cdcrec:2131-1
+  - concept_curie: CDCREC:2131-1
     concept_id:
-    vocabulary_prefix: cdcrec
+    vocabulary_prefix: CDCREC
     concept_code: 2131-1
     display: Other Race
     definition:
-  - concept_curie: cdcrec:2076-8
+  - concept_curie: CDCREC:2076-8
     concept_id:
-    vocabulary_prefix: cdcrec
+    vocabulary_prefix: CDCREC
     concept_code: 2076-8
     display: Native Hawaiian or Other Pacific Islander
     definition:
-  - concept_curie: cdcrec:2106-3
+  - concept_curie: CDCREC:2106-3
     concept_id:
-    vocabulary_prefix: cdcrec
+    vocabulary_prefix: CDCREC
     concept_code: 2106-3
     display: White
     definition:
-  - concept_curie: cdcrec:2178-2
+  - concept_curie: CDCREC:2178-2
     concept_id:
-    vocabulary_prefix: cdcrec
+    vocabulary_prefix: CDCREC
     concept_code: 2178-2
     display: Latin American
     definition:
-  - concept_curie: cdcrec:2135-2
+  - concept_curie: CDCREC:2135-2
     concept_id:
-    vocabulary_prefix: cdcrec
+    vocabulary_prefix: CDCREC
     concept_code: 2135-2
     display: Hispanic or Latino
     definition:
-  - concept_curie: cdcrec:2186-5
+  - concept_curie: CDCREC:2186-5
     concept_id:
-    vocabulary_prefix: cdcrec
+    vocabulary_prefix: CDCREC
     concept_code: 2186-5
     display: Not Hispanic or Latino
     definition:
@@ -6209,8 +6209,8 @@ ucum:
   vocabulary_uri: https://units-of-measurement.org/
   vocabulary_id:
   fhir_system: http://unitsofmeasure.org
-  description: Unified Code for Units of Measure (UCUM) is a code system 
-    intended to include all units of measures being contemporarily used in 
+  description: Unified Code for Units of Measure (UCUM) is a code system
+    intended to include all units of measures being contemporarily used in
     international science, engineering, and business.
   version:
   vocabulary_source:

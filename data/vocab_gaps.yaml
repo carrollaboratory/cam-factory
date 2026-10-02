@@ -4,7 +4,127 @@ CAMO:
   vocabulary_uri: http://purl.obolibrary.org/obo/CAMO_
   fhir_system: http://purl.obolibrary.org/obo/CAMO
   description: Organized terms in support of a shared data model.
+  source: https://github.com/include-dcc/camo/releases/download/v2026-09-09/camo.json
   codes:
   - CAMO:0000004
   - CAMO:0000024
-  - CAMO:0000099
+DUO:
+  name: Data Use Ontology
+  vocabulary_prefix: DUO
+  vocabulary_uri: http://purl.obolibrary.org/obo/DUO_
+  fhir_system: http://purl.obolibrary.org/obo/duo.owl
+  description: DUO is an ontology which represent data use conditions.
+  source: OLS
+  codes:
+  - DUO:00000044
+  - DUO:0000004
+  - DUO:0000006
+  - DUO:0000007
+  - DUO:0000011
+  - DUO:0000012
+  - DUO:0000015
+  - DUO:0000016
+  - DUO:0000018
+  - DUO:0000019
+  - DUO:0000020
+  - DUO:0000021
+  - DUO:0000022
+  - DUO:0000024
+  - DUO:0000025
+  - DUO:0000026
+  - DUO:0000027
+  - DUO:0000028
+  - DUO:0000029
+  - DUO:0000042
+  - DUO:0000043
+  - DUO:0000045
+  - DUO:0000046
+CHMO:
+  name: Chemical Methods Ontology
+  vocabulary_prefix: CHMO
+  vocabulary_uri: http://purl.obolibrary.org/obo/CHMO_
+  fhir_system: http://purl.obolibrary.org/obo/chmo.owl
+  description: CHMO, the chemical methods ontology, describes methods used to
+  source: http://purl.obolibrary.org/obo/chmo.owl
+  codes:
+  - CHMO:0000087
+  - CHMO:0000089
+  - CHMO:0000102
+  - CHMO:0000701
+MS:
+  name: Mass spectrometry ontology
+  vocabulary_prefix: MS
+  vocabulary_uri: http://purl.obolibrary.org/obo/MS_
+  fhir_system: http://purl.obolibrary.org/obo/ms.owl
+  description: The PSI-Mass Spectrometry (MS) CV contains all the terms used in the PSI MS-related data standards. The CV contains a logical hierarchical structure to ensure ease of maintenance and the development of software that makes use of complex semantics. The CV contains terms required for a complete description of an MS analysis pipeline used in proteomics, including sample labeling, digestion enzymes, instrumentation parts and parameters, software used for identification and quantification of peptides/proteins and the parameters and scores used to determine their significance.
+  source: OLS
+  codes:
+  - MS:1000568
+  - MS:1000569
+  - MS:1003151
+OBI:
+  name: Ontology for Biomedical Investigations
+  vocabulary_prefix: OBI
+  vocabulary_uri: http://purl.obolibrary.org/obo/OBI_
+  fhir_system: http://purl.obolibrary.org/obo/obi.owl
+  description: The Ontology for Biomedical Investigations (OBI) project is developing an integrated ontology for the description of biological and clinical investigations. The ontology will represent the design of an investigation, the protocols and instrumentation used, the material used, the data generated and the type analysis performed on it. Currently OBI is being built under the Basic Formal Ontology (BFO).
+  source: OLS
+  codes:
+  - OBI:0000070
+  - OBI:0001051
+  - OBI:0000257
+  - OBI:0000915
+  - OBI:0000819
+edam:
+  name: EDAM Ontology
+  vocabulary_prefix: edam
+  vocabulary_uri: http://edamontology.org/
+  fhir_system: http://edamontology.org/
+  description: "EDAM is an ontology of general bioinformatics concepts, including topics, data types, formats, identifiers and operations. EDAM provides a controlled vocabulary for the description, in semantic terms, of things such as: web services (e.g. WSDL files), applications, tool collections and packages, work-benches and workflow software, databases and ontologies, XSD data schema and data objects, data syntax and file formats, web portals and pages, resource catalogues and documents (such as scientific publications)."
+  source: OLS
+  codes:
+  - edam:data_0582
+  - edam:data_0842
+  - edam:data_0844
+  - edam:data_0845
+  - edam:data_0846
+  - edam:data_0847
+KIN:
+  name: KIN - The Family History Relations Ontology
+  description: KIN is a family relations ontology developed as part of the Global Alliance for Genomics and Health Pedigree Standard project. It allows using an OWL reasoner to automatically validate a family history graph and infer new relations.
+  vocabulary_prefix: KIN
+  vocabulary_uri: http://purl.org/ga4gh/kin.owl#KIN_
+  fhir_system: http://purl.org/ga4gh/kin.owl
+  source: https://raw.githubusercontent.com/GA4GH-Pedigree-Standard/family_history_terminology/main/src/main/resources/kin.owl
+  codes:
+  - KIN:027
+  - KIN:028
+  - KIN:013
+  - KIN:036
+  - KIN:024
+  - KIN:025
+  - KIN:009
+  - KIN:012
+  - KIN:014
+  - KIN:032
+  - KIN:017
+  - KIN:008
+  - KIN:007
+UBERON:
+  name: Uber Anatomy Ontology
+  description: Uberon is an integrated cross-species anatomy ontology representing a variety of entities classified according to traditional anatomical criteria such as structure, function and developmental lineage. The ontology includes comprehensive relationships to taxon-specific anatomical ontologies, allowing integration of functional, phenotype and expression data.
+  vocabulary_prefix: UBERON
+  vocabulary_uri: http://purl.obolibrary.org/obo/UBERON_
+  fhir_system: http://purl.obolibrary.org/obo/uberon.owl
+  source: OLS
+  codes:
+  - UBERON:0000178
+ucum:
+  name: Unified Code for Units of Measure
+  vocabulary_prefix: ucum
+  vocabulary_uri: https://units-of-measurement.org/
+  fhir_system: http://unitsofmeasure.org
+  description: Unified Code for Units of Measure (UCUM) is a code system intended to include all units of measures being contemporarily used in international science, engineering, and business.
+  source: manual
+  codes:
+  - {curie: ucum:ng/uL, display: nanogram per microliter}

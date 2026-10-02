@@ -5,18 +5,407 @@ CAMO:
   fhir_system: http://purl.obolibrary.org/obo/CAMO
   description: Organized terms in support of a shared data model.
   codes:
-    CAMO:0000004:
-      concept_curie: CAMO:0000004
-      concept_id:
-      vocabulary_prefix: CAMO
-      concept_code: '0000004'
-      display: This family study includes at a minimum two parents of one
-        affected child.
-      definition:
-    CAMO:0000024:
-      concept_curie: CAMO:0000024
-      concept_id:
-      vocabulary_prefix: CAMO
-      concept_code: '0000024'
-      display: Study participant with consent, assent, or waiver of consent.
-      definition:
+  - concept_curie: CAMO:0000004
+    concept_id:
+    vocabulary_prefix: CAMO
+    concept_code: '0000004'
+    display: Trio
+    definition: This family study includes at a minimum two parents of one affected child.
+  - concept_curie: CAMO:0000024
+    concept_id:
+    vocabulary_prefix: CAMO
+    concept_code: '0000024'
+    display: Participant
+    definition: Study participant with consent, assent, or waiver of consent.
+DUO:
+  name: Data Use Ontology
+  vocabulary_prefix: DUO
+  vocabulary_uri: http://purl.obolibrary.org/obo/DUO_
+  fhir_system: http://purl.obolibrary.org/obo/duo.owl
+  description: DUO is an ontology which represent data use conditions.
+  codes:
+  - concept_curie: DUO:00000044
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '00000044'
+    display: population origins or ancestry research prohibited
+    definition: This data use modifier indicates use for purposes of population, origin, or ancestry research is prohibited.
+  - concept_curie: DUO:0000004
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000004'
+    display: no restriction
+    definition: This data use permission indicates there is no restriction on use.
+  - concept_curie: DUO:0000006
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000006'
+    display: health or medical or biomedical research
+    definition: This data use permission indicates that use is allowed for health/medical/biomedical purposes; does not include the study of population origins or ancestry.
+  - concept_curie: DUO:0000007
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000007'
+    display: disease specific research
+    definition: This data use permission indicates that use is allowed provided it is related to the specified disease.
+  - concept_curie: DUO:0000011
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000011'
+    display: population origins or ancestry research only
+    definition: This data use permission indicates that use of the data is limited to the study of population origins or ancestry.
+  - concept_curie: DUO:0000012
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000012'
+    display: research specific restrictions
+    definition: This data use modifier indicates that use is limited to studies of a certain research type.
+  - concept_curie: DUO:0000015
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000015'
+    display: no general methods research
+    definition: This data use modifier indicates that use does not allow methods development research (e.g., development of software or algorithms).
+  - concept_curie: DUO:0000016
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000016'
+    display: genetic studies only
+    definition: This data use modifier indicates that use is limited to genetic studies only (i.e., studies that include genotype research alone or both genotype and phenotype research, but not phenotype research exclusively)
+  - concept_curie: DUO:0000018
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000018'
+    display: not for profit, non commercial use only
+    definition: This data use modifier indicates that use of the data is limited to not-for-profit organizations and not-for-profit use, non-commercial use.
+  - concept_curie: DUO:0000019
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000019'
+    display: publication required
+    definition: This data use modifier indicates that requestor agrees to make results of studies using the data available to the larger scientific community.
+  - concept_curie: DUO:0000020
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000020'
+    display: collaboration required
+    definition: This could be coupled with a string describing the primary study investigator(s).
+  - concept_curie: DUO:0000021
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000021'
+    display: ethics approval required
+    definition: This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval.
+  - concept_curie: DUO:0000022
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000022'
+    display: geographical restriction
+    definition: This data use modifier indicates that use is limited to within a specific geographic region.
+  - concept_curie: DUO:0000024
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000024'
+    display: publication moratorium
+    definition: This data use modifier indicates that requestor agrees not to publish results of studies until a specific date.
+  - concept_curie: DUO:0000025
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000025'
+    display: time limit on use
+    definition: This data use modifier indicates that use is approved for a specific number of months.
+  - concept_curie: DUO:0000026
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000026'
+    display: user specific restriction
+    definition: This data use modifier indicates that use is limited to use by approved users.
+  - concept_curie: DUO:0000027
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000027'
+    display: project specific restriction
+    definition: This data use modifier indicates that use is limited to use within an approved project.
+  - concept_curie: DUO:0000028
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000028'
+    display: institution specific restriction
+    definition: This data use modifier indicates that use is limited to use within an approved institution.
+  - concept_curie: DUO:0000029
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000029'
+    display: return to database or resource
+    definition: This data use modifier indicates that the requestor must return derived/enriched data to the database/resource.
+  - concept_curie: DUO:0000042
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000042'
+    display: general research use
+    definition: This data use permission indicates that use is allowed for general research use for any research purpose.
+  - concept_curie: DUO:0000043
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000043'
+    display: clinical care use
+    definition: Clinical Care is defined as Health care or services provided at home, in a healthcare facility or hospital. Data may be used for clinical decision making.
+  - concept_curie: DUO:0000045
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000045'
+    display: not for profit organisation use only
+    definition: This data use modifier indicates that use of the data is limited to not-for-profit organizations.
+  - concept_curie: DUO:0000046
+    concept_id:
+    vocabulary_prefix: DUO
+    concept_code: '0000046'
+    display: non-commercial use only
+    definition: This data use modifier indicates that use of the data is limited to not-for-profit use.
+CHMO:
+  name: Chemical Methods Ontology
+  vocabulary_prefix: CHMO
+  vocabulary_uri: http://purl.obolibrary.org/obo/CHMO_
+  fhir_system: http://purl.obolibrary.org/obo/chmo.owl
+  description: CHMO, the chemical methods ontology, describes methods used to
+  codes:
+  - concept_curie: CHMO:0000087
+    concept_id:
+    vocabulary_prefix: CHMO
+    concept_code: '0000087'
+    display: fluorescence microscopy
+    definition: Any type of light microscopy assay where the specimen can be made to fluoresce (emit energy as visible light) by illuminating it with light of specific wavelengths. These specimens are called fluorophores.
+  - concept_curie: CHMO:0000089
+    concept_id:
+    vocabulary_prefix: CHMO
+    concept_code: '0000089'
+    display: confocal fluorescence microscopy assay
+    definition: Microscopy where the specimen can be made to fluoresce (emit energy as visible light) by scanning a gas (Ar or Kr) laser spot of specific wavelength over its surface and using a spatial pinhole to eliminate out-of-focus fluorescence.
+  - concept_curie: CHMO:0000102
+    concept_id:
+    vocabulary_prefix: CHMO
+    concept_code: '0000102'
+    display: light microscopy assay
+    definition: Microscopy where the specimen is illuminated with visible light and a system of lenses is used to produce an image.
+  - concept_curie: CHMO:0000701
+    concept_id:
+    vocabulary_prefix: CHMO
+    concept_code: '0000701'
+    display: liquid chromatography-tandem mass spectrometry
+    definition: A method where a sample mixture is first separated by liquid chromatography before being ionised and characterised by mass-to-charge ratio and relative abundance using two mass spectrometers in series.
+MS:
+  name: Mass spectrometry ontology
+  vocabulary_prefix: MS
+  vocabulary_uri: http://purl.obolibrary.org/obo/MS_
+  fhir_system: http://purl.obolibrary.org/obo/ms.owl
+  description: The PSI-Mass Spectrometry (MS) CV contains all the terms used in the PSI MS-related data standards. The CV contains a logical hierarchical structure to ensure ease of maintenance and the development of software that makes use of complex semantics. The CV contains terms required for a complete description of an MS analysis pipeline used in proteomics, including sample labeling, digestion enzymes, instrumentation parts and parameters, software used for identification and quantification of peptides/proteins and the parameters and scores used to determine their significance.
+  codes:
+  - concept_curie: MS:1000568
+    concept_id:
+    vocabulary_prefix: MS
+    concept_code: '1000568'
+    display: MD5
+    definition: MD5 (Message-Digest algorithm 5) is a (now deprecated) cryptographic hash function with a 128-bit hash value used to check the integrity of files.
+  - concept_curie: MS:1000569
+    concept_id:
+    vocabulary_prefix: MS
+    concept_code: '1000569'
+    display: SHA-1
+    definition: SHA-1 (Secure Hash Algorithm-1) is a cryptographic hash function designed by the National Security Agency (NSA). It is also used to verify file integrity. Since 2011 it has been deprecated by the NIST as a U. S. government standard.
+  - concept_curie: MS:1003151
+    concept_id:
+    vocabulary_prefix: MS
+    concept_code: '1003151'
+    display: SHA-256
+    definition: SHA-256 (member of Secure Hash Algorithm-2 family) is a cryptographic hash function designed by the National Security Agency (NSA) and published by the NIST as a U. S. government standard. It is also used to verify file integrity.
+OBI:
+  name: Ontology for Biomedical Investigations
+  vocabulary_prefix: OBI
+  vocabulary_uri: http://purl.obolibrary.org/obo/OBI_
+  fhir_system: http://purl.obolibrary.org/obo/obi.owl
+  description: The Ontology for Biomedical Investigations (OBI) project is developing an integrated ontology for the description of biological and clinical investigations. The ontology will represent the design of an investigation, the protocols and instrumentation used, the material used, the data generated and the type analysis performed on it. Currently OBI is being built under the Basic Formal Ontology (BFO).
+  codes:
+  - concept_curie: OBI:0000070
+    concept_id:
+    vocabulary_prefix: OBI
+    concept_code: '0000070'
+    display: assay
+    definition: A planned process that has the objective to produce information about a material entity (the evaluant) by examining it.
+  - concept_curie: OBI:0001051
+    concept_id:
+    vocabulary_prefix: OBI
+    concept_code: '0001051'
+    display: DNA extract
+    definition: The output of an extraction process in which DNA molecules are purified in order to exclude DNA from organellas.
+  - concept_curie: OBI:0000257
+    concept_id:
+    vocabulary_prefix: OBI
+    concept_code: '0000257'
+    display: DNA extraction
+    definition: A DNA extraction is a nucleic acid extraction where the desired output material is DNA.
+  - concept_curie: OBI:0000915
+    concept_id:
+    vocabulary_prefix: OBI
+    concept_code: '0000915'
+    display: freezing storage
+    definition: A storage process in temperature that maintenance the frozen status of the stored entities.
+  - concept_curie: OBI:0000819
+    concept_id:
+    vocabulary_prefix: OBI
+    concept_code: '0000819'
+    display: anticoagulant tube storage of blood specimen
+    definition: Storage of a blood specimen in a tube with anticoagulant
+edam:
+  name: EDAM Ontology
+  vocabulary_prefix: edam
+  vocabulary_uri: http://edamontology.org/
+  fhir_system: http://edamontology.org/
+  description: 'EDAM is an ontology of general bioinformatics concepts, including topics, data types, formats, identifiers and operations. EDAM provides a controlled vocabulary for the description, in semantic terms, of things such as: web services (e.g. WSDL files), applications, tool collections and packages, work-benches and workflow software, databases and ontologies, XSD data schema and data objects, data syntax and file formats, web portals and pages, resource catalogues and documents (such as scientific publications).'
+  codes:
+  - concept_curie: edam:data_0582
+    concept_id:
+    vocabulary_prefix: edam
+    concept_code: data_0582
+    display: Ontology
+    definition: An ontology of biological or bioinformatics concepts and relations, a controlled vocabulary, structured glossary etc.
+  - concept_curie: edam:data_0842
+    concept_id:
+    vocabulary_prefix: edam
+    concept_code: data_0842
+    display: Identifier
+    definition: A text token, number or something else which identifies an entity, but which may not be persistent (stable) or unique (the same identifier may identify multiple things).
+  - concept_curie: edam:data_0844
+    concept_id:
+    vocabulary_prefix: edam
+    concept_code: data_0844
+    display: Molecular mass
+    definition: Mass of a molecule.
+  - concept_curie: edam:data_0845
+    concept_id:
+    vocabulary_prefix: edam
+    concept_code: data_0845
+    display: Molecular charge
+    definition: Net charge of a molecule.
+  - concept_curie: edam:data_0846
+    concept_id:
+    vocabulary_prefix: edam
+    concept_code: data_0846
+    display: Chemical formula
+    definition: A specification of a chemical structure.
+  - concept_curie: edam:data_0847
+    concept_id:
+    vocabulary_prefix: edam
+    concept_code: data_0847
+    display: QSAR descriptor
+    definition: A QSAR quantitative descriptor (name-value pair) of chemical structure.
+KIN:
+  name: KIN - The Family History Relations Ontology
+  description: KIN is a family relations ontology developed as part of the Global Alliance for Genomics and Health Pedigree Standard project. It allows using an OWL reasoner to automatically validate a family history graph and infer new relations.
+  vocabulary_prefix: KIN
+  vocabulary_uri: http://purl.org/ga4gh/kin.owl#KIN_
+  fhir_system: http://purl.org/ga4gh/kin.owl
+  codes:
+  - concept_curie: KIN:027
+    concept_id:
+    vocabulary_prefix: KIN
+    concept_code: '027'
+    display: isBiologicalMotherOf
+    definition: A relation that indicates that a person is the biological mother of another person.
+  - concept_curie: KIN:028
+    concept_id:
+    vocabulary_prefix: KIN
+    concept_code: '028'
+    display: isBiologicalFatherOf
+    definition: A relation that indicates that a person is the biological father of another person.
+  - concept_curie: KIN:013
+    concept_id:
+    vocabulary_prefix: KIN
+    concept_code: '013'
+    display: isParentalSiblingOf
+    definition: A relation that indicates that a person is the sibling of a parent of another person.
+  - concept_curie: KIN:036
+    concept_id:
+    vocabulary_prefix: KIN
+    concept_code: '036'
+    display: isGrandchildOf
+    definition: A relation between a person and a parent of that person's parent.
+  - concept_curie: KIN:024
+    concept_id:
+    vocabulary_prefix: KIN
+    concept_code: '024'
+    display: isSiblingFigureOf
+    definition: A relation between two people that has all or some of the characteristics of a sibling relationship.
+  - concept_curie: KIN:025
+    concept_id:
+    vocabulary_prefix: KIN
+    concept_code: '025'
+    display: isStepSiblingOf
+    definition: A relation between children born of two different families who have been joined by marriage, defacto or otherwise, of at least one of their respective parents.
+  - concept_curie: KIN:009
+    concept_id:
+    vocabulary_prefix: KIN
+    concept_code: '009'
+    display: isMultipleBirthSiblingOf
+    definition: A relation between two people born at the same birth.
+  - concept_curie: KIN:012
+    concept_id:
+    vocabulary_prefix: KIN
+    concept_code: '012'
+    display: isHalfSiblingOf
+    definition: A relation between two people that have a single biological parent in common.
+  - concept_curie: KIN:014
+    concept_id:
+    vocabulary_prefix: KIN
+    concept_code: '014'
+    display: isCousinOf
+    definition: A relation between a person and a child of that person's uncle or aunt.
+  - concept_curie: KIN:032
+    concept_id:
+    vocabulary_prefix: KIN
+    concept_code: '032'
+    display: isBiologicalChildOf
+    definition: A relation that indicates that a person is the biological child of another person.
+  - concept_curie: KIN:017
+    concept_id:
+    vocabulary_prefix: KIN
+    concept_code: '017'
+    display: isGrandparentOf
+    definition: A relation between a person and a child of that person's child.
+  - concept_curie: KIN:008
+    concept_id:
+    vocabulary_prefix: KIN
+    concept_code: '008'
+    display: isFullsiblingOf
+    definition: A relation between two people that have both biological parents in common.
+  - concept_curie: KIN:007
+    concept_id:
+    vocabulary_prefix: KIN
+    concept_code: '007'
+    display: isBiologicalSiblingOf
+    definition: A relation between two people that have one or both biological parents in common.
+UBERON:
+  name: Uber Anatomy Ontology
+  description: Uberon is an integrated cross-species anatomy ontology representing a variety of entities classified according to traditional anatomical criteria such as structure, function and developmental lineage. The ontology includes comprehensive relationships to taxon-specific anatomical ontologies, allowing integration of functional, phenotype and expression data.
+  vocabulary_prefix: UBERON
+  vocabulary_uri: http://purl.obolibrary.org/obo/UBERON_
+  fhir_system: http://purl.obolibrary.org/obo/uberon.owl
+  codes:
+  - concept_curie: UBERON:0000178
+    concept_id:
+    vocabulary_prefix: UBERON
+    concept_code: '0000178'
+    display: blood
+    definition: A fluid that is composed of blood plasma and erythrocytes.
+ucum:
+  name: Unified Code for Units of Measure
+  vocabulary_prefix: ucum
+  vocabulary_uri: https://units-of-measurement.org/
+  fhir_system: http://unitsofmeasure.org
+  description: Unified Code for Units of Measure (UCUM) is a code system intended to include all units of measures being contemporarily used in international science, engineering, and business.
+  codes:
+  - concept_curie: ucum:ng/uL
+    concept_id:
+    vocabulary_prefix: ucum
+    concept_code: ng/uL
+    display: nanogram per microliter
+    definition:

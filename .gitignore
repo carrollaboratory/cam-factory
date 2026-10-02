@@ -6,6 +6,13 @@ CLAUDE.md
 TODO.md
 data/harmony
 
+# Generated outputs that are published as release archives, not committed
+output/portal/
+dist/
+
+# Ontology files downloaded by scripts/follow_up_codes.py
+data/onto/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

@@ -207,9 +207,13 @@ mistaken for global IDs.
 ### 5.3 Human traceability
 
 Random-looking IDs are hard to follow by hand, so every record that carries the
-`Record` mixin gets one `external_id` equal to a readable submitter-style ID
-derived from its handle (e.g. `TRIO1-P`, `TRIO1-P-BLOOD-DNA`). In addition,
-`output/<profile>/id_map.csv` lists `handle, table, id, external_id` for every row.
+`Record` mixin gets one `external_id`. External IDs are URIs, so the default is
+derived from the record's handle under the reserved `example.org` domain:
+`https://example.org/cam-testdata/<profile>/<Class>/<key>`, e.g.
+`https://example.org/cam-testdata/tiny/Subject/trio1-proband`. A record that
+lists its own `external_id` values in the scenario uses those instead (e.g.
+S1's dbGaP study URL). In addition, `output/<profile>/id_map.csv` lists
+`handle, table, id, external_id` for every row.
 
 ## 6. Referential and semantic correctness
 
@@ -221,8 +225,8 @@ The FK graph contains cycles that the scenario code must respect:
 - `Study.do_id → DOI` and `DOI.study_id → Study`: insert Study with `do_id`
   NULL, flush, insert DOI, then set `Study.do_id`, flush.
 - `Study.parent_study`, `Sample.parent_sample_id`: self-references; insert parents first.
-- `Investigator.study_id → Study` while `Study_principal_investigator → Investigator`:
-  insert Study, then Investigators, then join rows.
+
+Join tables have no cycles of their own; they insert after both parents.
 
 `pg_dump` output handles cycles because it adds FK constraints after the data.
 
@@ -243,15 +247,16 @@ rows. Each rule has an ID so failures are easy to reference.
   `StudyMetadata_clinical_data_source_type`).
 - **R3 One-to-one tables**: exactly one `StudyMetadata` per Study; exactly one
   `Demographics` per Subject whose `subject_type` is Participant.
-- **R4 Specimen reachability**: every `BiospecimenCollection.encounter_id` is set
-  (nullable in the model, but without it a Sample has no path to a Subject, which
-  breaks FHIR `Specimen.subject`). Derived samples share the parent's collection.
+- **R4 Specimen lineage**: in the data we generate, every
+  `Sample.biospecimen_collection_id` and `BiospecimenCollection.encounter_id`
+  is set. Both are nullable in the model (MODEL_ISSUES #20), but we don't
+  generate orphans. A derived sample shares its parent's collection and subject.
 - **R5 Family coherence**: both ends of every `FamilyRelationship` are members of
-  the same Family via `FamilyMembership`; no self-relationships; no duplicate
-  (member, relation, subject) triples.
+  the same Family via `FamilyMembership`; no self-relationships.
 - **R6 Linkage consistency**: if a File or Assay links a Sample, it also links
   that Sample's Subject. If a SubjectAssertion has an `encounter_id`, the
-  Encounter's subject equals the assertion's subject.
+  Encounter's subject equals the assertion's subject. `Sample.subject_id`
+  equals the subject of its collection's encounter.
 - **R7 Ages**: units come from each slot's `unit.ucum_code` in the schema (Q3),
   never assumed. Today every `age_*` slot is integer days (`d`) except
   `BiospecimenCollection.age_at_collection`, which is decimal years (`a`, float).
@@ -265,12 +270,21 @@ rows. Each rule has an ID so failures are easy to reference.
   join tables, `sample_type`, `processing`, `storage_method`, `organism_type`)
   exists in `Concept`, and every `Concept.vocabulary_prefix` exists in `Vocabulary`.
   FK columns are already enforced by Postgres; R9 extends coverage to enum and
-  uriorcurie columns so dbt can always join for a display string.
+  uriorcurie columns so dbt can always join for a display string. Full URIs
+  (e.g. `Study_program` values from the "preferred" `EnumProgram`) are exempt;
+  only curies must resolve.
 - **R10 GlobalID prefixes**: every value in a `*GlobalID` column (PKs and the FK
   columns that point at them) matches the ID format and carries the prefix
   derived from its range type (§5.1). For `any_of` slots (SubjectAssertion),
   the prefix is one of the allowed set. This checks what is in the database,
   including pinned IDs, not just what `ids.py` minted.
+
+- **R11 Natural keys** (the model has no unique constraints, MODEL_ISSUES #19):
+  no two rows share a natural key. Initial set: `FamilyMembership`
+  (`family_id`, `subject_id`); `FamilyRelationship` (`family_member_id`,
+  `relation`, `subject_id`); `File_hash` at most one digest per hash type per
+  file; `HashDigest` (`hash_type`, `hash_value`). The set lives in
+  `config/settings.yaml` (`natural_keys`) so it can grow without code changes.
 
 ## 7. Concepts and vocabularies
 
@@ -298,6 +312,21 @@ VCF, FASTQ, TSV), and collection methods. Every pooled curie is checked against
 the enum's permissible values at startup, which catches model drift. Scaled
 profiles draw from the same pools and should reuse tiny's curies where
 possible, so the terminology set only grows when a profile needs new coverage.
+
+Pools aren't only for enums:
+
+- **`family_role`** (range `Concept`, `EnumFamilyRole` is only a suggestion):
+  restricted to the enum's terms plus the family-member terms the user added
+  to `data/vocab_gaps.yaml`. Don't add others.
+- **Measurements**: (concept, unit) pairs for numeric SubjectAssertions, e.g.
+  height `loinc:8302-2` / `ucum:cm`, weight `loinc:29463-7` / `ucum:kg`, BMI
+  `loinc:39156-5` / `ucum:kg/m2` (all in vocab_content).
+- **Open-ended Sample slots** (`sample_type`, `processing`, `storage_method`):
+  the codes listed in `docs/notes/model_inventory.md`.
+
+Malformed curies in the input (e.g. `loinc:Hemoglobin-level-at-birth`) are
+left alone and never pooled. They came from production harmony files and are
+reported upstream by the user.
 
 Concept prefixes must match the schema's declared prefixes exactly (case
 included), and every `Concept.vocabulary_prefix` must match a
@@ -331,7 +360,7 @@ present, otherwise from a small `config/vocabularies_extra.yaml`.
   structure mix (trio / duo / singleton), probabilities and Poisson means for
   encounters, assertions, samples, files, and assays per subject.
 
-### 8.1 Tiny scenario (target ≈100–150 non-reference rows)
+### 8.1 Tiny scenario (target ≈220 non-reference rows, about a third of them `*_external_id`)
 
 Designed so every FHIR mapping path and every nullable/edge branch is exercised
 at least once.
@@ -354,11 +383,8 @@ at least once.
   phenotype (present), a phenotype with `value_concept` absent, a numeric
   measurement with `value_number` + `value_unit` (UCUM); mother 1; S2 participant
   1 condition with `age_at_resolution`. At least one assertion without an encounter.
-  All assertions are `ob` (Q8). Because an Observation can say "absent" where a
-  FHIR Condition can't, cover both sides of a tested condition: a positive test
-  result for a subject who also has the matching condition asserted present,
-  and a positive test result with no matching condition assertion. (Draft
-  interpretation of the user's note; confirm at CHECKPOINT A.)
+  All assertions are `ob` (Q8) Observations: a concept being asserted plus an
+  observed value (present/absent concept, or a number with a unit).
 - **Biospecimens**: 3 collections (trio blood draws) → 3 blood samples → 3 derived
   DNA samples (`parent_sample_id`) → ~7 aliquots (one unavailable).
 - **Files (5)**: 3 CRAM (one per DNA sample), 1 joint VCF linked to all 3
@@ -411,8 +437,8 @@ Rules:
   same file. Slots ranged to `Concept`, enums, or `uriorcurie` take literal
   curies/URIs. Everything else is a literal.
 - **Keys and handles.** `key` is required and unique per class; the handle is
-  `<profile>/<Class>/<key>`. `external_id` defaults to a readable form of the
-  key (§5.3) unless given.
+  `<profile>/<Class>/<key>`. `external_id` defaults to the handle's URI form
+  (§5.3) unless given.
 - **Scoping is inherited.** `study_id` and `access_policy_id` may be omitted
   when the record has an R1 scoping parent; they are copied from it, and an
   explicit value that disagrees is an error. `access_policy_id` otherwise
@@ -492,7 +518,7 @@ release and uploads the archives.
 
 ## 10. Validation of outputs
 
-- Integrity rules R1–R10 against the database (§6.2).
+- Integrity rules R1–R11 against the database (§6.2).
 - YAML: validate each class file with `linkml-validate` (or the Python API if
   top-level lists aren't accepted), and instantiate the pydantic models as a
   second check.
@@ -524,30 +550,7 @@ add new ones here as `Q11`, `Q12`, ….
 | Q9 | Package name | `cam-testdata` (repo name is the user's call) |
 | Q10 | dbt | Out of scope for now: no dbt dependency, no dbt yml or seed test |
 
-## 12. Model observations (for upstream, not fixed here)
+## 12. Model observations
 
-Kept in `docs/MODEL_ISSUES.md` and added to as the agent finds more.
-
-1. `CAMO` curies are used in enums (subject type, family type, data source type,
-   asserter type, hash type) but `CAMO` is not a declared prefix. UCUM (needed for
-   `value_unit`, `quantity_unit`) is not declared either.
-2. `EnumDataUseModifier` contains `DUO:00000044` (8 digits); the other DUO codes have 7.
-3. `EnumFamilyRole` uses `KIN:027`, while `EnumFamilyRelation` uses `KIN:KIN_027`-style codes.
-4. `File` lists the `format` slot twice.
-5. Circular FK between `Study.do_id` and `DOI.study_id`.
-6. The abstract `Record` mixin and `Any` are emitted as SQL tables.
-7. `Sample` has no direct subject link; the path depends on the optional
-   `BiospecimenCollection.encounter_id`.
-8. `Synonym.concept_curie` and `ConceptRelationship.concept_curie` have no FK to
-   `Concept`, while `ConceptRelationship.target_concept_curie` does.
-9. `Dataset` does not use the `Record` mixin, so it has no `study_id` or `access_policy_id`.
-10. `Sample.sample_type`, `processing`, `storage_method` are uriorcurie with no
-    Concept FK, unlike most coded fields.
-11. `EnumFamilyRole` mixes vocabularies: SNOMED for Proband and Mother, but
-    `KIN:027` (a relation, "isBiologicalMotherOf") as a role.
-12. `EnumProgram` permissible values are full URIs
-    (`https://www.nih.gov/include-project`), not curies; old seeds used `include`.
-13. The `*GlobalID` types declare no `pattern`, so the ID format can't be
-    validated from the schema.
-14. Age units are inconsistent: `age_at_collection` is a float in years (`a`),
-    every other `age_*` slot is an integer in days (`d`).
+Tracked in `docs/MODEL_ISSUES.md`, with each issue's upstream status and the
+workaround used here.

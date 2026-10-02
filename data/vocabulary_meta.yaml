@@ -66,7 +66,7 @@ http://hl7.org/fhir/specimen-status:
   description: Codes providing the status/availability of a specimen.
 urn:oid:2.16.840.1.113883.6.238:
   name: CDC Rec
-  vocabulary_prefix: cdcrec
+  vocabulary_prefix: CDCREC
   vocabulary_uri: https://cdc.gov#  # Google's AI search recommended this over the one below
   # vocabulary_uri: https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238#
   fhir_system: urn:oid:2.16.840.1.113883.6.238
@@ -107,3 +107,22 @@ https://purl.obolibrary.org/obo/symp.owl:
   vocabulary_uri: http://purl.obolibrary.org/obo/SYMP_
   fhir_system: https://purl.obolibrary.org/obo/symp.owl
   description: The Symptom Ontology has been developed as a standardized ontology for symptoms of human diseases.
+http://purl.obolibrary.org/obo/CAMO:
+  name: Common Access Model Ontology
+  vocabulary_prefix: CAMO
+  vocabulary_uri: http://purl.obolibrary.org/obo/CAMO_
+  fhir_system: http://purl.obolibrary.org/obo/camo.owl
+  description: Organized terms in support of a shared data model.
+http://purl.obolibrary.org/obo/duo.owl:
+  name: Data Use Ontology
+  vocabulary_prefix: DUO
+  vocabulary_uri: http://purl.obolibrary.org/obo/DUO_
+  fhir_system: http://purl.obolibrary.org/obo/duo.owl
+  description: DUO is an ontology which represent data use conditions.
+http://purl.org/ga4gh/kin.owl:
+  name: KIN - The Family History Relations Ontology
+  description: KIN is a family relations ontology developed as part of the Global Alliance for Genomics and Health Pedigree Standard project. It allows using an OWL reasoner to automatically validate a family history graph and infer new relations.
+  vocabulary_prefix: KIN
+  vocabulary_uri: http://purl.obolibrary.org/obo/KIN_
+  fhir_system: http://purl.org/ga4gh/kin.owl
+  codes:
