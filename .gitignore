@@ -10,6 +10,9 @@ data/harmony
 output/portal/
 dist/
 
+# Ontology files downloaded by scripts/follow_up_codes.py
+data/onto/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

@@ -152,3 +152,39 @@ tables point at both), so ordinary FK ordering handles it.
    `Sample.biospecimen_collection_id`, `Aliquot.sample_id` are nullable, but
    a NULL makes the row an orphan with no FHIR subject. Proposal: extend R4
    ("reachability") to require all four, alongside `BiospecimenCollection.encounter_id`.
+
+## Update: build 0.2.0.post4.dev0+5253ae3 (2026-10-02)
+
+Rechecked against the user's rebuilt model. The packaged and `data/` schemas
+still match (same classes, slots and enums). Changes from the snapshot above:
+
+- New required column `Sample.subject_id` → Subject (direct subject link).
+- `Dataset` now uses the Record mixin: new `study_id`, `access_policy_id`
+  columns and a `Dataset_external_id` table (46 association tables).
+- Now NOT NULL: `Encounter.subject_id`, `SubjectAssertion.subject_id`,
+  `Aliquot.sample_id`. Still nullable: `Sample.biospecimen_collection_id`,
+  `BiospecimenCollection.encounter_id`.
+- `Synonym.concept_curie` and `ConceptRelationship.concept_curie` now have FKs
+  to `Concept`.
+- `File.format` appears once in `slots`.
+- KIN codes are `KIN:NNN` (prefix `…kin.owl#KIN_`); `CAMO` and `ucum` are
+  declared; `edam` has its trailing slash.
+- Still exactly one FK cycle (Study ↔ DOI). Still no unique constraints or indexes.
+
+### Candidate codes for the open-ended Sample slots (MODEL_ISSUES #10)
+
+Looked up in OLS4 on 2026-10-02 (labels as OLS returns them). These are what
+`scenarios/tiny.yaml` uses; each needs a `data/vocab_gaps.yaml` entry.
+
+| Slot | Code | Label | Note |
+|---|---|---|---|
+| sample_type | `UBERON:0000178` | blood | UBERON, as the slot recommends |
+| sample_type | `OBI:0001051` | DNA extract | UBERON is anatomy and has no DNA term |
+| processing | `OBI:0000257` | DNA extraction | on derived DNA samples |
+| storage_method | `OBI:0000915` | freezing storage | |
+| storage_method | `OBI:0000819` | anticoagulant tube storage of blood specimen | the "with additives" case |
+| concentration_unit | `ucum:ng/uL` | nanogram per microliter | UCUM expression; not in vocab_content |
+
+Alternatives seen: `UBERON:0013756` venous blood, `OBI:0000655` blood
+specimen, `OBI:0302886` centrifugation, `OBI:0000922` frozen specimen,
+`UBERON:0001836` saliva.

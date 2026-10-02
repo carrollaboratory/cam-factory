@@ -7,9 +7,8 @@
 # Ages are integer days except BiospecimenCollection.age_at_collection
 # (decimal years, computed from the encounter).
 #
-# Curie provenance: [enum] = schema permissible value, [vc] = vocab_content.yaml.
-# Lines marked TODO(concept) need a concept that isn't in any input yet; the
-# candidate codes there are NOT verified and must go through missing-concepts.
+# Curie provenance: [enum] = schema permissible value, [vc] = vocab_content.yaml,
+# [gap] = verified in OLS on 2026-10-02, needs an entry in data/vocab_gaps.yaml.
 
 scenario: tiny
 
@@ -59,7 +58,7 @@ records:
       contact: [s1-contact]
       publication: [s1-pub1]
       do_id: s1-doi                          # Study <-> DOI cycle
-      external_id: [DBGAP:phs000000, CUD:M00M00-01]    # two external ids (old seeds)
+      external_id: [https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000000, https://studies.cows-come-home.gov/cud?id=M00M00-01]    # two external ids (old seeds)
     - key: s2
       study_title: Tiny Follow-on Study
       study_code: TINY-S2
@@ -134,14 +133,15 @@ records:
 
   FamilyMembership:                          # family_membership_id minted: fmb-<hash>
     - {key: trio1-proband, family_id: trio1, subject_id: trio1-proband, family_role: snomedct:85900004}  # [enum] Proband
-    - {key: trio1-mother,  family_id: trio1, subject_id: trio1-mother,  family_role: snomedct:72705000}  # [enum] Mother
-    - {key: trio1-father,  family_id: trio1, subject_id: trio1-father,  family_role: NCIT:C25174}        # [vc] Father (no enum PV)
-    - {key: trio1-sibling, family_id: trio1, subject_id: trio1-sibling, family_role: NCIT:C25204}        # [vc] Sibling (no enum PV)
+    # Roles other than proband come from KIN (MODEL_ISSUES #11, pending the user's decision)
+    - {key: trio1-mother,  family_id: trio1, subject_id: trio1-mother,  family_role: KIN:027}  # [enum] isBiologicalMotherOf
+    - {key: trio1-father,  family_id: trio1, subject_id: trio1-father,  family_role: KIN:028}  # [enum, via EnumFamilyRelation] isBiologicalFatherOf
+    - {key: trio1-sibling, family_id: trio1, subject_id: trio1-sibling, family_role: KIN:007}  # [enum, via EnumFamilyRelation] isBiologicalSiblingOf
 
   FamilyRelationship:                        # reads: family_member_id <relation> subject_id
-    - {key: mother-of-proband,  family_member_id: trio1-mother,  relation: KIN:KIN_027, subject_id: trio1-proband}  # [enum] isBiologicalMotherOf
-    - {key: father-of-proband,  family_member_id: trio1-father,  relation: KIN:KIN_028, subject_id: trio1-proband}  # [enum] isBiologicalFatherOf
-    - {key: sibling-of-proband, family_member_id: trio1-sibling, relation: KIN:KIN_008, subject_id: trio1-proband}  # [enum] isFullsiblingOf
+    - {key: mother-of-proband,  family_member_id: trio1-mother,  relation: KIN:027, subject_id: trio1-proband}  # [enum] isBiologicalMotherOf
+    - {key: father-of-proband,  family_member_id: trio1-father,  relation: KIN:028, subject_id: trio1-proband}  # [enum] isBiologicalFatherOf
+    - {key: sibling-of-proband, family_member_id: trio1-sibling, relation: KIN:007, subject_id: trio1-proband}  # [enum] isBiologicalSiblingOf
 
   ActivityDefinition:
     - {key: clinical-assessment, study_id: s1, name: Clinical assessment}
@@ -209,37 +209,29 @@ records:
       value_concept: [snomedct:410515003]
       age_at_event: 18250
       age_at_resolution: 20075
-    # TODO(checkpoint): tested-condition cases from the user's note (DESIGN §8.1):
-    #   positive test result WITH a matching condition assertion, and WITHOUT one.
-    #   Need to agree what "test result" vs "condition" looks like in CAM before
-    #   adding rows (e.g. concept = the condition + a different asserter/source?).
 
   BiospecimenCollection:                     # id minted: bsc-<hash>; age_at_collection computed
     - {key: trio1-proband-blood-draw, encounter_id: trio1-proband-baseline, method: snomedct:82078001}  # [enum] Collection of blood specimen for laboratory
     - {key: trio1-mother-blood-draw,  encounter_id: trio1-mother-baseline,  method: snomedct:82078001}
     - {key: trio1-father-blood-draw,  encounter_id: trio1-father-baseline,  method: snomedct:82078001}
 
-  Sample:
-    # TODO(concept): sample_type for blood and DNA. Nothing in inputs; candidate
-    # codes (unverified) snomedct:119297000 blood specimen, snomedct:258566005 DNA.
-    - {key: trio1-proband-blood, biospecimen_collection_id: trio1-proband-blood-draw, sample_type: TODO-blood, availability_status: snomedct:103328004}
-    - {key: trio1-mother-blood,  biospecimen_collection_id: trio1-mother-blood-draw,  sample_type: TODO-blood, availability_status: snomedct:103328004}
-    - {key: trio1-father-blood,  biospecimen_collection_id: trio1-father-blood-draw,  sample_type: TODO-blood, availability_status: snomedct:103328004}
-    - {key: trio1-proband-dna, parent_sample_id: trio1-proband-blood, sample_type: TODO-dna}   # collection inherited from parent
-    - {key: trio1-mother-dna,  parent_sample_id: trio1-mother-blood,  sample_type: TODO-dna}
-    - {key: trio1-father-dna,  parent_sample_id: trio1-father-blood,  sample_type: TODO-dna}
-    # TODO(concept): one `processing` and one `storage_method` value to exercise
-    # Sample_processing / Sample_storage_method; candidates from concept_pools (2.2).
+  Sample:                                    # subject_id is required (and must match the collection's encounter, R6)
+    - {key: trio1-proband-blood, subject_id: trio1-proband, biospecimen_collection_id: trio1-proband-blood-draw, sample_type: UBERON:0000178, storage_method: [OBI:0000819], availability_status: snomedct:103328004}  # [gap] blood; [gap] anticoagulant tube storage
+    - {key: trio1-mother-blood,  subject_id: trio1-mother,  biospecimen_collection_id: trio1-mother-blood-draw,  sample_type: UBERON:0000178, availability_status: snomedct:103328004}
+    - {key: trio1-father-blood,  subject_id: trio1-father,  biospecimen_collection_id: trio1-father-blood-draw,  sample_type: UBERON:0000178, availability_status: snomedct:103328004}
+    # Derived DNA: collection inherited from the parent sample (R4)
+    - {key: trio1-proband-dna, subject_id: trio1-proband, parent_sample_id: trio1-proband-blood, sample_type: OBI:0001051, processing: [OBI:0000257], storage_method: [OBI:0000915]}  # [gap] DNA extract; DNA extraction; freezing storage
+    - {key: trio1-mother-dna,  subject_id: trio1-mother,  parent_sample_id: trio1-mother-blood,  sample_type: OBI:0001051, processing: [OBI:0000257]}
+    - {key: trio1-father-dna,  subject_id: trio1-father,  parent_sample_id: trio1-father-blood,  sample_type: OBI:0001051, processing: [OBI:0000257]}
 
   Aliquot:                                   # id minted: alq-<hash>
     - {key: trio1-proband-blood-a1, sample_id: trio1-proband-blood, quantity_number: 2.0, quantity_unit: ucum:ml, availability_status: snomedct:103328004}  # [vc] ml
     - {key: trio1-mother-blood-a1,  sample_id: trio1-mother-blood,  quantity_number: 2.0, quantity_unit: ucum:ml, availability_status: snomedct:103328004}
     - {key: trio1-father-blood-a1,  sample_id: trio1-father-blood,  quantity_number: 2.0, quantity_unit: ucum:ml, availability_status: snomedct:103329007}  # [enum] Unavailable
-    # TODO(concept): DNA concentration unit (e.g. ng/uL) isn't in vocab_content; quantity in ucum:ml for now
-    - {key: trio1-proband-dna-a1, sample_id: trio1-proband-dna, quantity_number: 0.1, quantity_unit: ucum:ml}
-    - {key: trio1-proband-dna-a2, sample_id: trio1-proband-dna, quantity_number: 0.1, quantity_unit: ucum:ml}
-    - {key: trio1-mother-dna-a1,  sample_id: trio1-mother-dna,  quantity_number: 0.1, quantity_unit: ucum:ml}
-    - {key: trio1-father-dna-a1,  sample_id: trio1-father-dna,  quantity_number: 0.1, quantity_unit: ucum:ml}
+    - {key: trio1-proband-dna-a1, sample_id: trio1-proband-dna, quantity_number: 0.1, quantity_unit: ucum:ml, concentration_number: 52.5, concentration_unit: ucum:ng/uL}  # [gap] ng/uL
+    - {key: trio1-proband-dna-a2, sample_id: trio1-proband-dna, quantity_number: 0.1, quantity_unit: ucum:ml, concentration_number: 48.0, concentration_unit: ucum:ng/uL}
+    - {key: trio1-mother-dna-a1,  sample_id: trio1-mother-dna,  quantity_number: 0.1, quantity_unit: ucum:ml, concentration_number: 61.2, concentration_unit: ucum:ng/uL}
+    - {key: trio1-father-dna-a1,  sample_id: trio1-father-dna,  quantity_number: 0.1, quantity_unit: ucum:ml}   # no concentration (nullable branch)
 
   File:                                      # hash values computed: real digests of a deterministic string
     - key: trio1-proband-cram
@@ -292,8 +284,9 @@ records:
     - {key: trio1-mother-wgs,  subject_id: [trio1-mother],  sample_id: [trio1-mother-dna],  file_id: [trio1-mother-cram],  assay_type: OBI:0002117, activity_definition_id: wgs}
     - {key: trio1-father-wgs,  subject_id: [trio1-father],  sample_id: [trio1-father-dna],  file_id: [trio1-father-cram],  assay_type: OBI:0002117, activity_definition_id: wgs}
 
-  Dataset:                                   # no Record mixin: no study_id / external_id
+  Dataset:
     - key: s1-release-1
+      study_id: s1
       name: M00M00 release 1
       do_id: s1-doi
       publication: [s1-pub1]
