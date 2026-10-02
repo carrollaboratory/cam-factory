@@ -128,3 +128,12 @@ ucum:
   source: manual
   codes:
   - {curie: ucum:ng/uL, display: nanogram per microliter}
+NCBITaxon:
+  name: NCBI Taxonomy
+  vocabulary_prefix: NCBITaxon
+  vocabulary_uri: http://purl.obolibrary.org/obo/NCBITaxon_
+  fhir_system: http://purl.obolibrary.org/obo/ncbitaxon.owl
+  description: The taxonomy contains the relationships between all living forms for which nucleic acid or protein sequence have been determined.
+  source: OLS
+  codes:
+  - NCBITaxon:9606

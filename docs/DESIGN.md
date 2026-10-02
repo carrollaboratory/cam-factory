@@ -29,7 +29,7 @@ pipeline's job), loading all of SNOMED, simulating realistic statistics.
 | SQLAlchemy model | `common_access_model.datamodel.common_access_model_sqla` (installed dependency) | The DDL source of truth; factories bind to these classes |
 | Pydantic model | `common_access_model.datamodel.*pydantic*` (discover exact module) | Optional fast validation of YAML output |
 | Real concept/vocab content | `data/vocab_content.yaml` | Top-level key per vocabulary prefix holding `Vocabulary` columns plus a `codes:` list of `Concept` columns. Built by the user with `scripts/collect_concepts.py` from INCLUDE harmony CSVs (`scripts/pull_harmony_data.py`) and `data/vocabulary_meta.yaml`. Treated as an input; the generator never regenerates it |
-| User-supplied extra concepts | `data/concepts_extra.yaml` (new) | Where the user drops concepts pulled down after a "missing concepts" report |
+| User-supplied extra concepts | `data/vocab_gaps.yaml` → `data/additional_vocab_content.yaml` | The user lists vocabularies (with `fhir_system`) and codes in `vocab_gaps.yaml`; `scripts/follow_up_codes.py` looks the codes up (OLS, OWL, OBO JSON, or manual) and writes `additional_vocab_content.yaml` in the same shape as `vocab_content.yaml` |
 | Tiny scenario | `scenarios/tiny.yaml` | Hand-authored, declarative description of the tiny dataset (§8.2) |
 | Old hand-made seeds | `data/oldseeds/*.csv` | Reference for realistic values and naming; diffed against current DDL in Phase 0. `harmony.csv` (code mappings) and `prefix_fhir_systems.csv` (prefix → FHIR system) are not table seeds. Personal data in them (real names, emails) must never be copied into outputs |
 
@@ -41,7 +41,8 @@ schema YAML ─────────▶│ schema_introspect      │  enums,
 SQLA metadata ───────▶│ (SchemaView + metadata)│  ID prefixes, table registry
                       └──────────┬─────────────┘
 vocab_content.yaml ─┐            │
-concepts_extra.yaml ├▶ concepts ─┤  ConceptRegistry (resolve / fallback / report)
+additional_vocab_ ───┤          │
+   content.yaml       ├▶ concepts ─┤  ConceptRegistry (resolve / fallback / report)
 enum PV titles ─────┘            │
                                  ▼
 tiny.yaml / profile YAML ──▶ scenario (tiny: declarative loader | scaled: config-driven)
@@ -285,22 +286,27 @@ rows. Each rule has an ID so failures are easy to reference.
   `relation`, `subject_id`); `File_hash` at most one digest per hash type per
   file; `HashDigest` (`hash_type`, `hash_value`). The set lives in
   `config/settings.yaml` (`natural_keys`) so it can grow without code changes.
+- **R12 No empty strings**: no text column holds `''`. CSV can't tell `''` from
+  NULL, so an empty string would load as NULL from the CSV but stay `''` from
+  the SQL dump. Factories and the loader normalize `''` to NULL.
 
 ## 7. Concepts and vocabularies
 
 `ConceptRegistry` resolves a curie in this order:
 
 1. `data/vocab_content.yaml` (real content, source=`vocab_content`)
-2. `data/concepts_extra.yaml` (user-pulled, source=`extra`)
+2. `data/additional_vocab_content.yaml` (user-pulled via `vocab_gaps.yaml`, source=`extra`)
 3. The enum permissible value in the schema, which has `title` and often
    `description` (source=`linkml_enum`). This covers most enum curies without
    downloading anything.
 4. Otherwise: recorded as missing.
 
 `cam-testdata missing-concepts --profile X` runs the scenario in dry-run mode and
-writes `output/X/missing_concepts.csv` (curie, used_by table.column, count) so the
-user can pull exactly those terms and add them to `concepts_extra.yaml`. The
-build fails on any missing curie.
+writes `output/X/missing_concepts.csv` (curie, used_by table.column, count) and
+`output/X/vocab_gaps_stub.yaml` (missing codes grouped by prefix, in
+`vocab_gaps.yaml` format) so the user can pull exactly those terms. Prefixes
+with concepts but no Vocabulary row are reported too. The build fails on any
+missing curie or vocabulary.
 
 Only concepts actually used by the profile (plus their vocabularies) are loaded
 into `Concept`, which keeps the tiny seed readable. A `--full-reference` flag
@@ -495,11 +501,14 @@ the LinkML project cookiecutter uses for `examples/valid/`, ready to copy into
 the model repo.
 
 **SQL** (`sql/cam_<profile>.sql`): `pg_dump --schema=cam --no-owner
---no-privileges` in plain format, plus `sql/cam_<profile>_data.sql`
-(`--data-only --column-inserts`) for loaders that cannot handle `COPY`. Strip or
-pin volatile header lines so the dump is diff-stable. Recent `pg_dump` releases
-emit a `\restrict <random key>` line; pass a fixed `--restrict-key` if the
-installed version supports it, or post-process the line out.
+--no-privileges` in plain format (COPY), plus `sql/cam_<profile>_inserts.sql`:
+the same full dump with `--column-inserts`, for loaders that can't handle
+`COPY`. Both are full dumps on purpose. A data-only dump can't be loaded into an
+existing schema once the Study ↔ DOI cycle has data, and the model's FKs
+aren't deferrable (docs/notes/vertical_slice.md). `pg_dump` 18 emits a random
+`\restrict` key; pass the fixed `database.restrict_key` setting as
+`--restrict-key` so dumps are byte-stable. Keep the `Dumped from/by version`
+lines: they only change when the Postgres image does.
 
 **Manifest** (`manifest.json`): profile, seed, model version and schema file
 sha256, generator git sha, package versions (SQLAlchemy, factory_boy, Faker),
@@ -518,7 +527,7 @@ release and uploads the archives.
 
 ## 10. Validation of outputs
 
-- Integrity rules R1–R11 against the database (§6.2).
+- Integrity rules R1–R12 against the database (§6.2).
 - YAML: validate each class file with `linkml-validate` (or the Python API if
   top-level lists aren't accepted), and instantiate the pydantic models as a
   second check.
