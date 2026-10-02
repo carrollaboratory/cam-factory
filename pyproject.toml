@@ -65,6 +65,16 @@ mypy_path = "src"
 module = ["common_access_model.*", "factory.*", "linkml_runtime.*"]
 ignore_missing_imports = true
 
+# factory_boy is only partly typed: let it re-export its names, and allow its
+# untyped declarations inside our factory modules (everything else stays strict).
+[[tool.mypy.overrides]]
+module = ["factory", "factory.*"]
+implicit_reexport = true
+
+[[tool.mypy.overrides]]
+module = ["cam_testdata.factories.*"]
+disallow_untyped_calls = false
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-ra"

@@ -23,6 +23,8 @@ database:
   # pg_dump / psql run inside the container so client and server versions match.
   pg_dump: [docker, exec, cam-testdata-pg, pg_dump, -U, postgres]
   psql: [docker, exec, -i, cam-testdata-pg, psql, -U, postgres]
+  # Fixed pg_dump --restrict-key so dumps are byte-stable (pg_dump 18 randomizes it).
+  restrict_key: camtestdata
 
 tables:
   # LinkML SQL-generator artifacts: never created (Q4).

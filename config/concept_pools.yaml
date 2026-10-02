@@ -1,0 +1,132 @@
+# Curated curies the scenarios draw from (DESIGN §7). Keys are <Class>.<slot>.
+#
+# Validation (cam_testdata.concept_pools):
+#   - enum-bound slots: every entry must be a permissible value of the slot's enum;
+#   - Concept / coded uriorcurie slots: every entry must resolve through the
+#     ConceptRegistry (vocab_content, additional_vocab_content, or an enum PV);
+#     unresolved ones show up in `cam-testdata missing-concepts`.
+# Every code below was checked against the schema / inputs on 2026-10-02.
+# Prefer curies tiny already uses; scaled profiles share these pools.
+
+pools:
+  # --- Study ---
+  StudyMetadata.participant_lifespan_stage:   # EnumParticipantLifespanStage
+    - NCIT:C89345    # Childhood
+    - NCIT:C199314   # Adulthood
+    - NCIT:C39298    # Adolescence
+    - NCIT:C89889    # Infancy
+  StudyMetadata.study_design:                 # Concept; EnumStudyDesign suggested
+    - mesh:D015331   # Cohort Studies
+    - mesh:D008137   # Longitudinal Studies
+    - mesh:D003430   # Cross-Sectional Studies
+    - mesh:D016022   # Case-Control Studies
+  StudyMetadata.research_domain:              # Concept; EnumResearchDomain suggested
+    - mesh:D006330   # Congenital Heart Defects
+    - mesh:D013568   # All Co-occurring Conditions
+    - mesh:D007154   # Immune System Diseases
+    - mesh:D001520   # Behavior and Behavior Mechanisms
+  StudyMetadata.data_category:                # Concept; EnumDataCategory suggested
+    - edam:topic_3673   # Whole genome sequencing
+    - edam:topic_0625   # Genotype and phenotype
+    - edam:topic_3170   # RNA-Seq
+  StudyMetadata.clinical_data_source_type:    # EnumDataSourceType
+    - CAMO:0000014   # Electronic Health Record
+    - CAMO:0000011   # Research Assessment
+    - CAMO:0000010   # Survey
+
+  # --- Family (family_role: the enum's terms + the user's vocab_gaps KIN terms only) ---
+  FamilyMembership.family_role:
+    - snomedct:85900004   # Proband
+    - snomedct:72705000   # Mother
+    - KIN:027   # isBiologicalMotherOf
+    - KIN:028   # isBiologicalFatherOf
+    - KIN:007   # isBiologicalSiblingOf
+    - KIN:008   # isFullsiblingOf
+    - KIN:012   # isHalfSiblingOf
+    - KIN:009   # isMultipleBirthSiblingOf
+    - KIN:024   # isSiblingFigureOf
+    - KIN:025   # isStepSiblingOf
+    - KIN:013   # isParentalSiblingOf
+    - KIN:014   # isCousinOf
+    - KIN:017   # isGrandparentOf
+    - KIN:032   # isBiologicalChildOf
+    - KIN:036   # isGrandchildOf
+
+  # --- Clinical ---
+  SubjectAssertion.concept:                   # conditions / phenotypes (present/absent)
+    - MONDO:0008608   # Down syndrome
+    - HP:0006695      # Atrioventricular canal defect
+    - HP:0000821      # Hypothyroidism
+    - HP:0030148      # Heart murmur
+    - HP:0001631      # Atrial septal defect
+    - HP:0001629      # Ventricular septal defect
+    - HP:0001252      # Hypotonia
+    - MONDO:0002070   # ventricular septal defect
+  SubjectAssertion.value_concept:             # Concept; EnumPresentAbsent suggested
+    - snomedct:410515003   # Known present
+    - snomedct:410516002   # Known absent
+  SubjectAssertion.asserter_type:             # EnumAsserterType
+    - CAMO:0000017   # Healthcare Asserted
+    - CAMO:0000016   # Research Staff Asserted
+    - CAMO:0000019   # Participant Asserted
+  SubjectAssertion.assertion_source_type:     # EnumDataSourceType
+    - CAMO:0000014   # Electronic Health Record
+    - CAMO:0000011   # Research Assessment
+    - CAMO:0000010   # Survey
+
+  # --- Biospecimens ---
+  BiospecimenCollection.method:               # EnumSampleCollectionMethod
+    - snomedct:82078001    # Collection of blood specimen for laboratory
+    - snomedct:225098009   # Collection of sample of saliva
+  # BiospecimenCollection.site: not generated. EnumSiteExamples (temporal lobe,
+  # diaphragm, femur) doesn't fit blood or saliva, and no fitting site term is
+  # in the inputs yet.
+  BiospecimenCollection.laterality:           # Concept; EnumLaterality suggested
+    - HP:0012834   # Right
+    - HP:0012835   # Left
+  BiospecimenCollection.spatial_qualifier:    # Concept; EnumSpatialQualifiers suggested
+    - snomedct:24028007   # Right
+    - snomedct:7771000    # Left
+  Sample.sample_type:                         # open-ended (MODEL_ISSUES #10)
+    - UBERON:0000178   # blood
+    - OBI:0001051      # DNA extract
+  Sample.processing:
+    - OBI:0000257      # DNA extraction
+  Sample.storage_method:
+    - OBI:0000915      # freezing storage
+    - OBI:0000819      # anticoagulant tube storage of blood specimen
+  Sample.quantity_unit:
+    - ucum:ml
+  Aliquot.quantity_unit:
+    - ucum:ml
+  Aliquot.concentration_unit:
+    - ucum:ng/uL
+  Sample.availability_status:                 # EnumAvailabilityStatus
+    - snomedct:103328004   # Available
+    - snomedct:103329007   # Unavailable
+
+  # --- Files / assays ---
+  File.availability:                          # EnumAvailabilityStatus
+    - snomedct:103328004   # Available
+  HashDigest.hash_type:                       # EnumFileHashType
+    - MS:1000568   # MD5
+    - MS:1000569   # SHA-1
+    - MS:1003151   # SHA-256
+  Assay.assay_type:                           # EnumAssayType
+    - OBI:0002117   # whole genome sequencing assay
+    - OBI:0003090   # bulk RNA-seq assay
+    - OBI:0001332   # DNA methylation profiling by array assay
+
+# Coherent combinations. Each key is <Class>.<slot> (validated like a pool
+# entry) or a plain attribute the scenario uses (extension, value range).
+bundles:
+  file_kinds:
+    - {File.format: edam:format_3462, File.data_type: edam:data_0863, File.data_category: edam:topic_3673, File.file_extension: .cram}       # CRAM alignment
+    - {File.format: edam:format_3016, File.data_type: edam:data_3498, File.data_category: edam:topic_0199, File.file_extension: .vcf.gz}     # VCF variants
+    - {File.format: edam:format_1930, File.data_type: edam:data_3494, File.data_category: edam:topic_3673, File.file_extension: .fastq.gz}   # FASTQ reads
+    - {File.format: edam:format_3475, File.data_category: edam:topic_0625, File.file_extension: .tsv}                                         # clinical table
+    - {File.format: edam:format_3578, File.data_category: edam:topic_3173, File.file_extension: .idat}                                        # methylation array
+  measurements:
+    - {SubjectAssertion.concept: loinc:8302-2, SubjectAssertion.value_unit: ucum:cm, min: 45, max: 200}       # Body Height
+    - {SubjectAssertion.concept: loinc:29463-7, SubjectAssertion.value_unit: ucum:kg, min: 2, max: 150}      # Body Weight
+    - {SubjectAssertion.concept: loinc:39156-5, SubjectAssertion.value_unit: ucum:kg/m2, min: 12, max: 45}   # Body Mass Index

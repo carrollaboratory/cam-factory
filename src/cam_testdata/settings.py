@@ -52,6 +52,7 @@ class DatabaseSettings(_Strict):
     schema_name: str = Field(alias="schema")
     pg_dump: list[str]
     psql: list[str]
+    restrict_key: str
 
     def url(self, profile: str) -> str:
         """Database URL for a profile; CAM_PG_URL overrides it."""
