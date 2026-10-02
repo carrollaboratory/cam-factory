@@ -409,3 +409,16 @@ ucum:
     concept_code: ng/uL
     display: nanogram per microliter
     definition:
+NCBITaxon:
+  name: NCBI Taxonomy
+  vocabulary_prefix: NCBITaxon
+  vocabulary_uri: http://purl.obolibrary.org/obo/NCBITaxon_
+  fhir_system: http://purl.obolibrary.org/obo/ncbitaxon.owl
+  description: The taxonomy contains the relationships between all living forms for which nucleic acid or protein sequence have been determined.
+  codes:
+  - concept_curie: NCBITaxon:9606
+    concept_id:
+    vocabulary_prefix: NCBITaxon
+    concept_code: '9606'
+    display: Homo sapiens
+    definition:

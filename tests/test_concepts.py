@@ -109,12 +109,14 @@ def test_first_file_wins_and_conflicts_are_noted(tmp_path: Path) -> None:
 
 def test_vocabularies_for_reports_missing_prefixes() -> None:
     reg = ConceptRegistry()
-    concepts = [
-        c for c in (reg.resolve("NCBITaxon:9606"), reg.resolve("HP:0000821")) if c
-    ]
-    found, missing = reg.vocabularies_for(concepts)
-    assert [v.vocabulary_prefix for v in found] == ["HP"]
-    assert missing == ["NCBITaxon"]
+    hp = reg.resolve("HP:0000821")
+    # A concept that only an enum PV provides, with a prefix no file defines:
+    orphan = ConceptRegistry(vocab_files=()).resolve("CAMO:0000024")
+    assert hp is not None and orphan is not None
+    found, missing = reg.vocabularies_for([hp, orphan])
+    assert missing == []
+    assert [v.vocabulary_prefix for v in found] == ["CAMO", "HP"]
+    assert ConceptRegistry(vocab_files=()).vocabularies_for([orphan]) == ([], ["CAMO"])
 
 
 def test_concept_codes_stay_strings(registry: ConceptRegistry) -> None:

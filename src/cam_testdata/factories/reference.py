@@ -9,7 +9,7 @@ from common_access_model.datamodel.common_access_model_sqla import Concept, Voca
 from sqlalchemy.orm import Session
 
 from cam_testdata.concepts import ConceptRecord, ConceptRegistry
-from cam_testdata.factories.base import BaseFactory, bind_session
+from cam_testdata.factories.base import BaseFactory
 
 
 class VocabularyFactory(BaseFactory):
@@ -69,11 +69,9 @@ def load_reference(
             f"concepts use prefixes with no Vocabulary entry: {missing}; add them to data/vocab_gaps.yaml"
         )
 
-    with bind_session(session):
-        for vocab in vocabularies:
-            VocabularyFactory(**vocab.row())
-        session.flush()
-        for concept in concepts:
-            ConceptFactory(**concept.row())
-        session.flush()
+    # .build(): reference rows go straight into the session, not through a Build.
+    session.add_all(VocabularyFactory.build(**vocab.row()) for vocab in vocabularies)
+    session.flush()
+    session.add_all(ConceptFactory.build(**concept.row()) for concept in concepts)
+    session.flush()
     return len(vocabularies), len(concepts)

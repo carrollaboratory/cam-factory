@@ -23,11 +23,9 @@ def test_loads_only_used_concepts(session: Session) -> None:
 
 
 def test_missing_vocabulary_fails(session: Session) -> None:
-    registry = ConceptRegistry()
-    registry.resolve(
-        "NCBITaxon:9606", "Subject.organism_type"
-    )  # enum PV, but no Vocabulary entry
-    with pytest.raises(MissingVocabularyError, match="NCBITaxon"):
+    registry = ConceptRegistry(vocab_files=())  # no vocabulary files at all
+    registry.resolve("CAMO:0000024", "Subject.subject_type")  # resolves from the enum
+    with pytest.raises(MissingVocabularyError, match="CAMO"):
         load_reference(session, registry)
 
 

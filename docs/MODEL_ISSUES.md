@@ -65,6 +65,10 @@ reflects the user's notes of 2026-10-02 and the installed build
     be an oversight (expected to become required; unconfirmed). *Workaround:* R1
     treats them as required. If nullable turns out to be intended, add an
     example without them.
+23. ❓ **`File.size` is a 32-bit `INTEGER`** in the DDL, so sizes over
+    2,147,483,647 bytes (~2.1 GB) can't be stored, and real CRAM/BAM files are
+    often tens of GB. Needs a 64-bit range (BIGINT). *Workaround:* generated sizes
+    stay under 2**31.
 
 ## Semantics
 

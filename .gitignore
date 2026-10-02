@@ -5,7 +5,7 @@ AGENTS.md
 CLAUDE.md
 TODO.md
 data/harmony
-notes
+/notes/
 
 # Generated outputs that are published as release archives, not committed
 output/portal/

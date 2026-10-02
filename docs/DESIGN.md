@@ -48,7 +48,7 @@ enum PV titles ─────┘            │
 tiny.yaml / profile YAML ──▶ scenario (tiny: declarative loader | scaled: config-driven)
                                  │  uses
                                  ▼
-                      factories (factory_boy SQLAlchemyModelFactory)
+                      factories (factory_boy) → Build (collect, then ordered write)
                                  │  flush into
                                  ▼
                       PostgreSQL  (db per profile, schema "cam")   ◀── source of truth for a build
@@ -345,8 +345,19 @@ present, otherwise from a small `config/vocabularies_extra.yaml`.
 
 ## 8. Factories and scenarios
 
-- One `SQLAlchemyModelFactory` per mapped class. Session persistence is `"flush"`;
-  the scenario runner owns commit.
+- One factory per mapped class. Factories don't touch the session: they create
+  transient objects that the active `Build` (`build.py`) collects. `Build.write()`
+  resolves every coded value, loads only the used Vocabulary/Concept rows, then
+  inserts table by table in FK order (self-referencing tables parent-first, the
+  Study ↔ DOI cycle per §6.1) and fixes sequences. The scenario runner owns
+  commit. The ORM can't order these inserts itself because many FKs have no
+  `relationship()` (docs/notes/vertical_slice.md).
+- Factory conventions (`factories/base.py`): a `handle` param drives the ID,
+  Faker filler, pool choices and default external_id. Faker and the RNG are
+  reseeded per (seed, handle, field), so adding a record never changes another
+  record's values. A `scope` param supplies study_id/access_policy_id (R1).
+  Many-valued slots are passed as lists under their LinkML names. Every column
+  is declared, so the drift check catches new ones.
 - Factories set only column values plus explicit join-table rows. Multivalued
   relationships are populated by creating the association-class rows
   (`StudyProgram`, `DemographicsRace`, …) through their own small factories.
