@@ -1,0 +1,4 @@
+BiospecimenCollection_biospecimen_collection_id,external_id
+bsc-8bf58h4x9t,https://example.org/cam-testdata/tiny/BiospecimenCollection/trio1-mother-blood-draw
+bsc-rbwuuy21ne,https://example.org/cam-testdata/tiny/BiospecimenCollection/trio1-father-blood-draw
+bsc-v721ubzcsj,https://example.org/cam-testdata/tiny/BiospecimenCollection/trio1-proband-blood-draw

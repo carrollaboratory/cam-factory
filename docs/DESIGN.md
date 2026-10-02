@@ -526,11 +526,13 @@ aren't deferrable (docs/notes/vertical_slice.md). `pg_dump` 18 emits a random
 lines: they only change when the Postgres image does.
 
 **Manifest** (`manifest.json`): profile, seed, model version and schema file
-sha256, generator git sha, package versions (SQLAlchemy, factory_boy, Faker),
+sha256, package versions (SQLAlchemy, factory_boy, Faker, linkml), `pg_dump` version,
 row count per table, expected FHIR counts by prefix, coverage features with
 their handles (§8.3), sha256 of each artifact.
 `cam-testdata check-drift` compares the manifest with the current installed model
-and exits non-zero if regeneration is needed.
+and exits non-zero if regeneration is needed. The generator's own git commit is
+deliberately left out: tiny and small outputs are committed, so a per-commit
+value would change every build and `just check` could never pass.
 
 **Git policy**: tiny and small outputs are committed. Small and portal are
 also published as compressed release artifacts (Q6) so other projects can use

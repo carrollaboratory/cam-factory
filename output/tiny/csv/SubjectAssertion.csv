@@ -1,0 +1,7 @@
+assertion_id,subject_id,encounter_id,asserter_type,assertion_source_type,age_at_assertion,age_at_event,age_at_resolution,concept_source,value_number,value_source,value_unit,value_unit_source,access_policy_id,study_id
+ob-48tbqcc1jp,pt-0u4gl52nuc,en-wbpon00qtl,,,1826,0,,,,,,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+ob-5h0mfs0vx9,pt-0u4gl52nuc,en-doxuilm0y1,,,,2190,,,109.2,,ucum:cm,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+ob-bul4oi10uq,pt-0u4gl52nuc,en-wbpon00qtl,,,1826,,,,,,,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+ob-og6bcws64z,pt-lahn13sl6m,en-5qdf0jtojy,,,,18250,20075,,,,,,co-t869rg8xx6,sd-upp74psk4k
+ob-ru9q09b4ju,pt-nlpxyndlla,,CAMO:0000019,CAMO:0000010,,9125,,,,,,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+ob-sczo3hb6fu,pt-0u4gl52nuc,en-wbpon00qtl,CAMO:0000017,CAMO:0000014,1826,0,,,,,,,co-ajdm9fyxxz,sd-7hwpqzc2yr

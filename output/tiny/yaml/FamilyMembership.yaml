@@ -1,0 +1,32 @@
+- family_membership_id: fmb-e6elokv6qd
+  family_id: gr-gm96zwr6qd
+  subject_id: pt-r4rv0bzkwc
+  family_role: KIN:028
+  external_id:
+  - https://example.org/cam-testdata/tiny/FamilyMembership/trio1-father
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- family_membership_id: fmb-uctgvkptt8
+  family_id: gr-gm96zwr6qd
+  subject_id: pt-0u4gl52nuc
+  family_role: snomedct:85900004
+  external_id:
+  - https://example.org/cam-testdata/tiny/FamilyMembership/trio1-proband
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- family_membership_id: fmb-v0q32cilqq
+  family_id: gr-gm96zwr6qd
+  subject_id: pt-at6m2ta7nf
+  family_role: KIN:007
+  external_id:
+  - https://example.org/cam-testdata/tiny/FamilyMembership/trio1-sibling
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- family_membership_id: fmb-w5q92avw3s
+  family_id: gr-gm96zwr6qd
+  subject_id: pt-nlpxyndlla
+  family_role: KIN:027
+  external_id:
+  - https://example.org/cam-testdata/tiny/FamilyMembership/trio1-mother
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr

@@ -1,0 +1,4 @@
+activity_definition_id,name,description,access_policy_id,study_id
+ad-9uamjmgmeq,Whole genome sequencing,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+ad-h4vzhilve0,Clinical assessment,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+ad-rcmx6wtmst,Blood draw,,co-ajdm9fyxxz,sd-7hwpqzc2yr

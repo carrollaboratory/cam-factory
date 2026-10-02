@@ -1,0 +1,80 @@
+- vocabulary_prefix: CAMO
+  name: Common Access Model Ontology
+  vocabulary_uri: http://purl.obolibrary.org/obo/CAMO_
+  fhir_system: http://purl.obolibrary.org/obo/CAMO
+  description: Organized terms in support of a shared data model.
+- vocabulary_prefix: CDCREC
+  name: CDC Rec
+  vocabulary_uri: https://cdc.gov#
+  fhir_system: urn:oid:2.16.840.1.113883.6.238
+  description: The U.S. Centers for Disease Control and Prevention (CDC) has prepared a code set for use in coding race and ethnicity data. This code set is based on current federal standards for classifying data on race and ethnicity, specifically the minimum race and ethnicity categories defined by the U.S. Office of Management and Budget (OMB) and a more detailed set of race and ethnicity categories maintained by the U.S. Bureau of the Census (BC).
+- vocabulary_prefix: DUO
+  name: Data Use Ontology
+  vocabulary_uri: http://purl.obolibrary.org/obo/DUO_
+  fhir_system: http://purl.obolibrary.org/obo/duo.owl
+  description: DUO is an ontology which represent data use conditions.
+- vocabulary_prefix: edam
+  name: EDAM Ontology
+  vocabulary_uri: http://edamontology.org/
+  fhir_system: http://edamontology.org/
+  description: 'EDAM is an ontology of general bioinformatics concepts, including topics, data types, formats, identifiers and operations. EDAM provides a controlled vocabulary for the description, in semantic terms, of things such as: web services (e.g. WSDL files), applications, tool collections and packages, work-benches and workflow software, databases and ontologies, XSD data schema and data objects, data syntax and file formats, web portals and pages, resource catalogues and documents (such as scientific publications).'
+- vocabulary_prefix: HP
+  name: Human Phenotype Ontology
+  vocabulary_uri: http://purl.obolibrary.org/obo/HP_
+  fhir_system: http://purl.obolibrary.org/obo/hp.owl
+  description: The Human Phenotype Ontology (HPO) aims to provide a standardized vocabulary of phenotypic abnormalities encountered in human disease. Each term in the HPO describes a phenotypic abnormality, such as atrial septal defect. The HPO is currently being developed using the medical literature, Orphanet, DECIPHER, and OMIM.
+- vocabulary_prefix: KIN
+  name: KIN - The Family History Relations Ontology
+  vocabulary_uri: http://purl.org/ga4gh/kin.owl#KIN_
+  fhir_system: http://purl.org/ga4gh/kin.owl
+  description: KIN is a family relations ontology developed as part of the Global Alliance for Genomics and Health Pedigree Standard project. It allows using an OWL reasoner to automatically validate a family history graph and infer new relations.
+- vocabulary_prefix: loinc
+  name: Logical Observation Identifiers Names and Codes
+  vocabulary_uri: https://loinc.org/rdf/
+  fhir_system: http://loinc.org
+  description: The international standard for identifying health measurements, observations, and documents.
+- vocabulary_prefix: mesh
+  name: Medical Subject Headings
+  vocabulary_uri: http://id.nlm.nih.gov/mesh/
+  fhir_system: http://terminology.hl7.org/CodeSystem/MSH
+  description: MeSH (Medical Subject Headings) is the National Library of Medicine's controlled vocabulary thesaurus. It consists of sets of terms naming descriptors in a hierarchical structure that permits searching at various levels of specificity. This thesaurus is used by NLM for indexing articles from biomedical journals, cataloguing of books, documents, etc.
+- vocabulary_prefix: MONDO
+  name: Mondo Disease Ontology
+  vocabulary_uri: http://purl.obolibrary.org/obo/MONDO_
+  fhir_system: http://purl.obolibrary.org/obo/mondo.owl
+  description: The Mondo Disease Ontology (Mondo) aims to harmonize disease definitions across the world.
+- vocabulary_prefix: MS
+  name: Mass spectrometry ontology
+  vocabulary_uri: http://purl.obolibrary.org/obo/MS_
+  fhir_system: http://purl.obolibrary.org/obo/ms.owl
+  description: The PSI-Mass Spectrometry (MS) CV contains all the terms used in the PSI MS-related data standards. The CV contains a logical hierarchical structure to ensure ease of maintenance and the development of software that makes use of complex semantics. The CV contains terms required for a complete description of an MS analysis pipeline used in proteomics, including sample labeling, digestion enzymes, instrumentation parts and parameters, software used for identification and quantification of peptides/proteins and the parameters and scores used to determine their significance.
+- vocabulary_prefix: NCBITaxon
+  name: NCBI Taxonomy
+  vocabulary_uri: http://purl.obolibrary.org/obo/NCBITaxon_
+  fhir_system: http://purl.obolibrary.org/obo/ncbitaxon.owl
+  description: The taxonomy contains the relationships between all living forms for which nucleic acid or protein sequence have been determined.
+- vocabulary_prefix: NCIT
+  name: National Cancer Institute Thesaurus
+  vocabulary_uri: http://purl.obolibrary.org/obo/NCIT_
+  fhir_system: http://purl.obolibrary.org/obo/ncit.owl
+  description: NCI Thesaurus (NCIt) provides reference terminology covering vocabulary for clinical care, translational and basic research, and public information and administrative activities, providing a stable and unique identification code.
+- vocabulary_prefix: OBI
+  name: Ontology for Biomedical Investigations
+  vocabulary_uri: http://purl.obolibrary.org/obo/OBI_
+  fhir_system: http://purl.obolibrary.org/obo/obi.owl
+  description: The Ontology for Biomedical Investigations (OBI) project is developing an integrated ontology for the description of biological and clinical investigations. The ontology will represent the design of an investigation, the protocols and instrumentation used, the material used, the data generated and the type analysis performed on it. Currently OBI is being built under the Basic Formal Ontology (BFO).
+- vocabulary_prefix: snomedct
+  name: Systematized Nomenclature of Medicine - Clinical Terms
+  vocabulary_uri: http://snomed.info/id/
+  fhir_system: http://snomed.info/sct
+  description: SNOMED CT (Systematized Nomenclature of Medicine -- Clinical Terms), is a systematically organized computer processable collection of medical terminology covering most areas of clinical information such as diseases, findings, procedures, microorganisms, pharmaceuticals, etc.
+- vocabulary_prefix: UBERON
+  name: Uber Anatomy Ontology
+  vocabulary_uri: http://purl.obolibrary.org/obo/UBERON_
+  fhir_system: http://purl.obolibrary.org/obo/uberon.owl
+  description: Uberon is an integrated cross-species anatomy ontology representing a variety of entities classified according to traditional anatomical criteria such as structure, function and developmental lineage. The ontology includes comprehensive relationships to taxon-specific anatomical ontologies, allowing integration of functional, phenotype and expression data.
+- vocabulary_prefix: ucum
+  name: Unified Code for Units of Measure
+  vocabulary_uri: https://units-of-measurement.org/
+  fhir_system: http://unitsofmeasure.org
+  description: Unified Code for Units of Measure (UCUM) is a code system intended to include all units of measures being contemporarily used in international science, engineering, and business.

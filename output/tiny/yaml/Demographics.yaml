@@ -1,0 +1,44 @@
+- subject_id: pt-0u4gl52nuc
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2054-5
+  - CDCREC:2106-3
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 2190
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 1826
+  external_id:
+  - https://example.org/cam-testdata/tiny/Demographics/trio1-proband
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- subject_id: pt-lahn13sl6m
+  sex: snomedct:261665006
+  race:
+  - snomedct:261665006
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 25550
+  vital_status: snomedct:419099009
+  external_id:
+  - https://example.org/cam-testdata/tiny/Demographics/s2-p1
+  access_policy_id: co-t869rg8xx6
+  study_id: sd-upp74psk4k
+- subject_id: pt-nlpxyndlla
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2106-3
+  ethnicity: CDCREC:2186-5
+  age_at_first_engagement: 12410
+  external_id:
+  - https://example.org/cam-testdata/tiny/Demographics/trio1-mother
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- subject_id: pt-r4rv0bzkwc
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2054-5
+  ethnicity: snomedct:261665006
+  age_at_first_engagement: 13140
+  external_id:
+  - https://example.org/cam-testdata/tiny/Demographics/trio1-father
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
