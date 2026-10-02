@@ -62,7 +62,7 @@ packages = ["cam_testdata"]
 mypy_path = "src"
 
 [[tool.mypy.overrides]]
-module = ["common_access_model.*", "factory.*", "linkml_runtime.*"]
+module = ["common_access_model.*", "factory.*", "linkml.*", "linkml_runtime.*"]
 ignore_missing_imports = true
 
 # factory_boy is only partly typed: let it re-export its names, and allow its

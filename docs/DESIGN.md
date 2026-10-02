@@ -240,6 +240,9 @@ rows. Each rule has an ID so failures are easy to reference.
   `access_policy_id`. A child's `study_id` equals its parent chain's
   (Encounter→Subject, BiospecimenCollection→Encounter, Sample→BiospecimenCollection,
   Aliquot→Sample, SubjectAssertion→Subject, FamilyMembership→Family, etc.).
+  Join-table links between Record tables stay within one study too, except
+  links to Investigator: one investigator can serve several studies
+  (MODEL_ISSUES #24). `Study.parent_study` naturally crosses studies.
 - **R2 Required multivalued slots** (generic, from SchemaView): every
   required+multivalued slot has ≥1 row in its join table (e.g. `Study_program`,
   `Study_principal_investigator`, `Study_contact`, `Demographics_race`,
@@ -277,8 +280,9 @@ rows. Each rule has an ID so failures are easy to reference.
 - **R10 GlobalID prefixes**: every value in a `*GlobalID` column (PKs and the FK
   columns that point at them) matches the ID format and carries the prefix
   derived from its range type (§5.1). For `any_of` slots (SubjectAssertion),
-  the prefix is one of the allowed set. This checks what is in the database,
-  including pinned IDs, not just what `ids.py` minted.
+  the prefix is one of the allowed set. Local IDs (`fmb-`, `bsc-`, `alq-`) and
+  DOIs are checked against their formats too. This checks what is in the
+  database, including pinned IDs, not just what `ids.py` minted.
 
 - **R11 Natural keys** (the model has no unique constraints, MODEL_ISSUES #19):
   no two rows share a natural key. Initial set: `FamilyMembership`
