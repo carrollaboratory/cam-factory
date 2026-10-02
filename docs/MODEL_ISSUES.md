@@ -72,6 +72,13 @@ reflects the user's notes of 2026-10-02 and the installed build
 
 ## Semantics
 
+24. ❓ **`Investigator` uses the `Record` mixin** (its own `study_id` /
+    `access_policy_id`), but one investigator is expected to serve several
+    studies (PI or contact of more than one). The user has raised it with the
+    modeler; the mixin is likely an error. *Workaround:* R1 lets Study and
+    VirtualBiorepository link to an investigator from another study; the
+    investigator row still carries its home study's scoping.
+
 7. ✅ **`Sample` had no direct subject link.** New required `Sample.subject_id`.
    That makes the subject reachable two ways (directly, and via the
    collection's encounter), so R6 checks they agree.

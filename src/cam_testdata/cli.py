@@ -46,3 +46,25 @@ def missing_concepts(profile: Profile = "tiny", out_dir: OutDir = None) -> None:
     typer.echo(f"wrote {csv_path} and {stub_path}")
     if not report.ok:
         raise typer.Exit(1)
+
+
+@app.command("validate")
+def validate(profile: Profile = "tiny", limit: int = 5) -> None:
+    """Run integrity rules R1-R12 against the profile's database."""
+    from cam_testdata import db
+    from cam_testdata.validate.integrity import run_all
+
+    engine = db.make_engine(profile)
+    with engine.connect() as conn:
+        results = run_all(conn)
+    failed = 0
+    for rule, violations in results.items():
+        status = "ok" if not violations else f"FAIL ({len(violations)})"
+        typer.echo(f"{rule:<4} {status}")
+        for v in violations[:limit]:
+            typer.echo(f"     {v.table} {v.key}: {v.detail}")
+        if len(violations) > limit:
+            typer.echo(f"     ... {len(violations) - limit} more")
+        failed += bool(violations)
+    if failed:
+        raise typer.Exit(1)
