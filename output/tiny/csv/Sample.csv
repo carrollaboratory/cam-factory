@@ -1,0 +1,7 @@
+sample_id,biospecimen_collection_id,parent_sample_id,sample_type,subject_id,availability_status,quantity_number,quantity_unit,access_policy_id,study_id
+bs-1zcz596f79,bsc-v721ubzcsj,,UBERON:0000178,pt-0u4gl52nuc,snomedct:103328004,,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+bs-55cg5o8i0k,bsc-rbwuuy21ne,bs-9k9idinw9y,OBI:0001051,pt-r4rv0bzkwc,,,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+bs-9k9idinw9y,bsc-rbwuuy21ne,,UBERON:0000178,pt-r4rv0bzkwc,snomedct:103328004,,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+bs-dy45fxh8vr,bsc-8bf58h4x9t,bs-zkbwm6i1ez,OBI:0001051,pt-nlpxyndlla,,,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+bs-x1o5ezuit1,bsc-v721ubzcsj,bs-1zcz596f79,OBI:0001051,pt-0u4gl52nuc,,,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+bs-zkbwm6i1ez,bsc-8bf58h4x9t,,UBERON:0000178,pt-nlpxyndlla,snomedct:103328004,,,co-ajdm9fyxxz,sd-7hwpqzc2yr

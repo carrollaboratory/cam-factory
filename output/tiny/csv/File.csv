@@ -1,0 +1,6 @@
+file_id,filename,file_extension,data_category,data_type,format,size,internal_uri,release_uri,drs_uri,storage_class,availability,access_policy_id,study_id
+dr-88uhd8kdda,TRIO1.joint.vcf.gz,.vcf.gz,edam:topic_0199,edam:data_3498,edam:format_3016,362905217,,,,,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+dr-8racu3r89t,TRIO1-M.cram,.cram,edam:topic_3673,edam:data_0863,edam:format_3462,2074521186,,,,,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+dr-bpfgefc86h,TRIO1-F.cram,.cram,edam:topic_3673,edam:data_0863,edam:format_3462,924768134,,,,,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+dr-mabd0lfbmq,TRIO1-P.cram,.cram,edam:topic_3673,edam:data_0863,edam:format_3462,149975627,,,,,snomedct:103328004,co-ajdm9fyxxz,sd-7hwpqzc2yr
+dr-njl7vp2sz9,TRIO1.clinical.tsv,.tsv,edam:topic_0625,,edam:format_3475,618663582,,,,,,co-ajdm9fyxxz,sd-7hwpqzc2yr

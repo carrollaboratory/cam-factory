@@ -1,0 +1,4 @@
+biospecimen_collection_id,age_at_collection,method,site,spatial_qualifier,laterality,encounter_id,access_policy_id,study_id
+bsc-8bf58h4x9t,33.98,snomedct:82078001,,,,en-03iwm0w52x,co-ajdm9fyxxz,sd-7hwpqzc2yr
+bsc-rbwuuy21ne,35.98,snomedct:82078001,,,,en-p0i0xr3d3b,co-ajdm9fyxxz,sd-7hwpqzc2yr
+bsc-v721ubzcsj,5.0,snomedct:82078001,,,,en-wbpon00qtl,co-ajdm9fyxxz,sd-7hwpqzc2yr

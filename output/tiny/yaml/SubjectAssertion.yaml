@@ -1,0 +1,78 @@
+- assertion_id: ob-48tbqcc1jp
+  subject_id: pt-0u4gl52nuc
+  encounter_id: en-wbpon00qtl
+  age_at_assertion: 1826
+  age_at_event: 0
+  concept:
+  - HP:0006695
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/tiny/SubjectAssertion/trio1-proband-avsd
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- assertion_id: ob-5h0mfs0vx9
+  subject_id: pt-0u4gl52nuc
+  encounter_id: en-doxuilm0y1
+  age_at_event: 2190
+  concept:
+  - loinc:8302-2
+  value_number: 109.2
+  value_unit: ucum:cm
+  external_id:
+  - https://example.org/cam-testdata/tiny/SubjectAssertion/trio1-proband-height
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- assertion_id: ob-bul4oi10uq
+  subject_id: pt-0u4gl52nuc
+  encounter_id: en-wbpon00qtl
+  age_at_assertion: 1826
+  concept:
+  - HP:0000821
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/tiny/SubjectAssertion/trio1-proband-hypothyroid-absent
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- assertion_id: ob-og6bcws64z
+  subject_id: pt-lahn13sl6m
+  encounter_id: en-5qdf0jtojy
+  age_at_event: 18250
+  age_at_resolution: 20075
+  concept:
+  - HP:0030148
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/tiny/SubjectAssertion/s2-p1-murmur-resolved
+  access_policy_id: co-t869rg8xx6
+  study_id: sd-upp74psk4k
+- assertion_id: ob-ru9q09b4ju
+  subject_id: pt-nlpxyndlla
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000010
+  age_at_event: 9125
+  concept:
+  - HP:0000821
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/tiny/SubjectAssertion/trio1-mother-hypothyroid
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- assertion_id: ob-sczo3hb6fu
+  subject_id: pt-0u4gl52nuc
+  encounter_id: en-wbpon00qtl
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 1826
+  age_at_event: 0
+  concept:
+  - MONDO:0008608
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/tiny/SubjectAssertion/trio1-proband-ds
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr

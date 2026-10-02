@@ -125,4 +125,3 @@ http://purl.org/ga4gh/kin.owl:
   vocabulary_prefix: KIN
   vocabulary_uri: http://purl.obolibrary.org/obo/KIN_
   fhir_system: http://purl.org/ga4gh/kin.owl
-  codes:

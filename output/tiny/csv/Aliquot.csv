@@ -1,0 +1,8 @@
+aliquot_id,sample_id,availability_status,quantity_number,quantity_unit,concentration_number,concentration_unit,access_policy_id,study_id
+alq-f18iqw2be0,bs-55cg5o8i0k,,0.1,ucum:ml,,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+alq-fceeelww5m,bs-zkbwm6i1ez,snomedct:103328004,2.0,ucum:ml,,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+alq-grqrv6jfp2,bs-x1o5ezuit1,,0.1,ucum:ml,52.5,ucum:ng/uL,co-ajdm9fyxxz,sd-7hwpqzc2yr
+alq-nyzjx7514x,bs-x1o5ezuit1,,0.1,ucum:ml,48.0,ucum:ng/uL,co-ajdm9fyxxz,sd-7hwpqzc2yr
+alq-qdsvqrfurt,bs-1zcz596f79,snomedct:103328004,2.0,ucum:ml,,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+alq-tmb9u0qdvt,bs-dy45fxh8vr,,0.1,ucum:ml,61.2,ucum:ng/uL,co-ajdm9fyxxz,sd-7hwpqzc2yr
+alq-w7hd0pnram,bs-9k9idinw9y,snomedct:103329007,2.0,ucum:ml,,,co-ajdm9fyxxz,sd-7hwpqzc2yr

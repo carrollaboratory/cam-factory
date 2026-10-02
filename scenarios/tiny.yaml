@@ -235,6 +235,7 @@ records:
 
   File:                                      # hash values computed: real digests of a deterministic string
     - key: trio1-proband-cram
+      study_id: s1
       subject_id: [trio1-proband]
       sample_id: [trio1-proband-dna]
       filename: TRIO1-P.cram
@@ -245,6 +246,7 @@ records:
       availability: snomedct:103328004
       hash: [{hash_type: MS:1000568}, {hash_type: MS:1000569}]   # [enum] MD5 + SHA-1 (the one file with two)
     - key: trio1-mother-cram
+      study_id: s1
       subject_id: [trio1-mother]
       sample_id: [trio1-mother-dna]
       filename: TRIO1-M.cram
@@ -254,6 +256,7 @@ records:
       data_category: edam:topic_3673
       hash: [{hash_type: MS:1000568}]
     - key: trio1-father-cram
+      study_id: s1
       subject_id: [trio1-father]
       sample_id: [trio1-father-dna]
       filename: TRIO1-F.cram
@@ -263,6 +266,7 @@ records:
       data_category: edam:topic_3673
       hash: [{hash_type: MS:1000568}]
     - key: trio1-joint-vcf
+      study_id: s1
       subject_id: [trio1-proband, trio1-mother, trio1-father]
       sample_id: [trio1-proband-dna, trio1-mother-dna, trio1-father-dna]
       filename: TRIO1.joint.vcf.gz
@@ -272,6 +276,7 @@ records:
       data_category: edam:topic_0199         # [enum] Genetic variation
       hash: [{hash_type: MS:1000568}]
     - key: trio1-clinical-tsv
+      study_id: s1
       subject_id: [trio1-proband, trio1-mother, trio1-father]   # subjects only, no samples
       filename: TRIO1.clinical.tsv
       file_extension: .tsv
@@ -280,9 +285,9 @@ records:
       hash: [{hash_type: MS:1000568}]
 
   Assay:
-    - {key: trio1-proband-wgs, subject_id: [trio1-proband], sample_id: [trio1-proband-dna], file_id: [trio1-proband-cram], assay_type: OBI:0002117, activity_definition_id: wgs}  # [enum] WGS assay
-    - {key: trio1-mother-wgs,  subject_id: [trio1-mother],  sample_id: [trio1-mother-dna],  file_id: [trio1-mother-cram],  assay_type: OBI:0002117, activity_definition_id: wgs}
-    - {key: trio1-father-wgs,  subject_id: [trio1-father],  sample_id: [trio1-father-dna],  file_id: [trio1-father-cram],  assay_type: OBI:0002117, activity_definition_id: wgs}
+    - {key: trio1-proband-wgs, study_id: s1, subject_id: [trio1-proband], sample_id: [trio1-proband-dna], file_id: [trio1-proband-cram], assay_type: OBI:0002117, activity_definition_id: wgs}  # [enum] WGS assay
+    - {key: trio1-mother-wgs, study_id: s1,  subject_id: [trio1-mother],  sample_id: [trio1-mother-dna],  file_id: [trio1-mother-cram],  assay_type: OBI:0002117, activity_definition_id: wgs}
+    - {key: trio1-father-wgs, study_id: s1,  subject_id: [trio1-father],  sample_id: [trio1-father-dna],  file_id: [trio1-father-cram],  assay_type: OBI:0002117, activity_definition_id: wgs}
 
   Dataset:
     - key: s1-release-1

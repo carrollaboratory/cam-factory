@@ -25,8 +25,20 @@ lint:
   uv run ruff format --check
   uv run mypy
 
-# Lint + test. Phase 5 adds: build tiny, then fail on any change in output/tiny
-check: lint test
+# Round-trip each SQL dump through a scratch DB and byte-compare its CSVs
+verify-sql profile="tiny":
+  uv run cam-testdata verify-sql --profile {{profile}}
+
+# Lint + test + build tiny; fail if output/tiny or its scenario doc changed (untracked files count)
+check: lint test tiny
+  #!/usr/bin/env bash
+  set -euo pipefail
+  changes="$(git status --porcelain -- output/tiny docs/SCENARIO_TINY.md)"
+  if [ -n "$changes" ]; then
+    echo "output/tiny changed; explain it in your summary (or commit it):"
+    echo "$changes" | head -20
+    exit 1
+  fi
 
 # Update the common-access-model monolith YAML file
 update-cam:

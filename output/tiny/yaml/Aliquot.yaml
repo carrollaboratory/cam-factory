@@ -1,0 +1,65 @@
+- aliquot_id: alq-f18iqw2be0
+  sample_id: bs-55cg5o8i0k
+  quantity_number: 0.1
+  quantity_unit: ucum:ml
+  external_id:
+  - https://example.org/cam-testdata/tiny/Aliquot/trio1-father-dna-a1
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- aliquot_id: alq-fceeelww5m
+  sample_id: bs-zkbwm6i1ez
+  availability_status: snomedct:103328004
+  quantity_number: 2.0
+  quantity_unit: ucum:ml
+  external_id:
+  - https://example.org/cam-testdata/tiny/Aliquot/trio1-mother-blood-a1
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- aliquot_id: alq-grqrv6jfp2
+  sample_id: bs-x1o5ezuit1
+  quantity_number: 0.1
+  quantity_unit: ucum:ml
+  concentration_number: 52.5
+  concentration_unit: ucum:ng/uL
+  external_id:
+  - https://example.org/cam-testdata/tiny/Aliquot/trio1-proband-dna-a1
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- aliquot_id: alq-nyzjx7514x
+  sample_id: bs-x1o5ezuit1
+  quantity_number: 0.1
+  quantity_unit: ucum:ml
+  concentration_number: 48.0
+  concentration_unit: ucum:ng/uL
+  external_id:
+  - https://example.org/cam-testdata/tiny/Aliquot/trio1-proband-dna-a2
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- aliquot_id: alq-qdsvqrfurt
+  sample_id: bs-1zcz596f79
+  availability_status: snomedct:103328004
+  quantity_number: 2.0
+  quantity_unit: ucum:ml
+  external_id:
+  - https://example.org/cam-testdata/tiny/Aliquot/trio1-proband-blood-a1
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- aliquot_id: alq-tmb9u0qdvt
+  sample_id: bs-dy45fxh8vr
+  quantity_number: 0.1
+  quantity_unit: ucum:ml
+  concentration_number: 61.2
+  concentration_unit: ucum:ng/uL
+  external_id:
+  - https://example.org/cam-testdata/tiny/Aliquot/trio1-mother-dna-a1
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- aliquot_id: alq-w7hd0pnram
+  sample_id: bs-9k9idinw9y
+  availability_status: snomedct:103329007
+  quantity_number: 2.0
+  quantity_unit: ucum:ml
+  external_id:
+  - https://example.org/cam-testdata/tiny/Aliquot/trio1-father-blood-a1
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr

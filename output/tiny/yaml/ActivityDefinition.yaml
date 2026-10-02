@@ -1,0 +1,18 @@
+- activity_definition_id: ad-9uamjmgmeq
+  name: Whole genome sequencing
+  external_id:
+  - https://example.org/cam-testdata/tiny/ActivityDefinition/wgs
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- activity_definition_id: ad-h4vzhilve0
+  name: Clinical assessment
+  external_id:
+  - https://example.org/cam-testdata/tiny/ActivityDefinition/clinical-assessment
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- activity_definition_id: ad-rcmx6wtmst
+  name: Blood draw
+  external_id:
+  - https://example.org/cam-testdata/tiny/ActivityDefinition/blood-draw
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr

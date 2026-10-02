@@ -1,0 +1,5 @@
+family_membership_id,family_id,subject_id,family_role,access_policy_id,study_id
+fmb-e6elokv6qd,gr-gm96zwr6qd,pt-r4rv0bzkwc,KIN:028,co-ajdm9fyxxz,sd-7hwpqzc2yr
+fmb-uctgvkptt8,gr-gm96zwr6qd,pt-0u4gl52nuc,snomedct:85900004,co-ajdm9fyxxz,sd-7hwpqzc2yr
+fmb-v0q32cilqq,gr-gm96zwr6qd,pt-at6m2ta7nf,KIN:007,co-ajdm9fyxxz,sd-7hwpqzc2yr
+fmb-w5q92avw3s,gr-gm96zwr6qd,pt-nlpxyndlla,KIN:027,co-ajdm9fyxxz,sd-7hwpqzc2yr

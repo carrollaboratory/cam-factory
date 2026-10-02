@@ -1,0 +1,64 @@
+- sample_id: bs-1zcz596f79
+  biospecimen_collection_id: bsc-v721ubzcsj
+  sample_type: UBERON:0000178
+  subject_id: pt-0u4gl52nuc
+  availability_status: snomedct:103328004
+  storage_method:
+  - OBI:0000819
+  external_id:
+  - https://example.org/cam-testdata/tiny/Sample/trio1-proband-blood
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- sample_id: bs-55cg5o8i0k
+  biospecimen_collection_id: bsc-rbwuuy21ne
+  parent_sample_id: bs-9k9idinw9y
+  sample_type: OBI:0001051
+  subject_id: pt-r4rv0bzkwc
+  processing:
+  - OBI:0000257
+  external_id:
+  - https://example.org/cam-testdata/tiny/Sample/trio1-father-dna
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- sample_id: bs-9k9idinw9y
+  biospecimen_collection_id: bsc-rbwuuy21ne
+  sample_type: UBERON:0000178
+  subject_id: pt-r4rv0bzkwc
+  availability_status: snomedct:103328004
+  external_id:
+  - https://example.org/cam-testdata/tiny/Sample/trio1-father-blood
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- sample_id: bs-dy45fxh8vr
+  biospecimen_collection_id: bsc-8bf58h4x9t
+  parent_sample_id: bs-zkbwm6i1ez
+  sample_type: OBI:0001051
+  subject_id: pt-nlpxyndlla
+  processing:
+  - OBI:0000257
+  external_id:
+  - https://example.org/cam-testdata/tiny/Sample/trio1-mother-dna
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- sample_id: bs-x1o5ezuit1
+  biospecimen_collection_id: bsc-v721ubzcsj
+  parent_sample_id: bs-1zcz596f79
+  sample_type: OBI:0001051
+  subject_id: pt-0u4gl52nuc
+  processing:
+  - OBI:0000257
+  storage_method:
+  - OBI:0000915
+  external_id:
+  - https://example.org/cam-testdata/tiny/Sample/trio1-proband-dna
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- sample_id: bs-zkbwm6i1ez
+  biospecimen_collection_id: bsc-8bf58h4x9t
+  sample_type: UBERON:0000178
+  subject_id: pt-nlpxyndlla
+  availability_status: snomedct:103328004
+  external_id:
+  - https://example.org/cam-testdata/tiny/Sample/trio1-mother-blood
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr

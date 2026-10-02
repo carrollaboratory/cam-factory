@@ -1,0 +1,4 @@
+family_relationship_id,family_member_id,relation,subject_id,access_policy_id,study_id
+fm-7n5m7c64u3,pt-at6m2ta7nf,KIN:007,pt-0u4gl52nuc,co-ajdm9fyxxz,sd-7hwpqzc2yr
+fm-jqonemtrwc,pt-nlpxyndlla,KIN:027,pt-0u4gl52nuc,co-ajdm9fyxxz,sd-7hwpqzc2yr
+fm-m9v33c0t9z,pt-r4rv0bzkwc,KIN:028,pt-0u4gl52nuc,co-ajdm9fyxxz,sd-7hwpqzc2yr

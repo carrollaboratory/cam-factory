@@ -1,0 +1,39 @@
+- encounter_id: en-03iwm0w52x
+  subject_id: pt-nlpxyndlla
+  encounter_definition_id: pd-n6cib0z6yi
+  age_at_event: 12410
+  external_id:
+  - https://example.org/cam-testdata/tiny/Encounter/trio1-mother-baseline
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- encounter_id: en-5qdf0jtojy
+  subject_id: pt-lahn13sl6m
+  age_at_event: 25000
+  external_id:
+  - https://example.org/cam-testdata/tiny/Encounter/s2-p1-visit
+  access_policy_id: co-t869rg8xx6
+  study_id: sd-upp74psk4k
+- encounter_id: en-doxuilm0y1
+  subject_id: pt-0u4gl52nuc
+  encounter_definition_id: pd-crs8941hkh
+  age_at_event: 2190
+  external_id:
+  - https://example.org/cam-testdata/tiny/Encounter/trio1-proband-follow-up
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- encounter_id: en-p0i0xr3d3b
+  subject_id: pt-r4rv0bzkwc
+  encounter_definition_id: pd-n6cib0z6yi
+  age_at_event: 13140
+  external_id:
+  - https://example.org/cam-testdata/tiny/Encounter/trio1-father-baseline
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr
+- encounter_id: en-wbpon00qtl
+  subject_id: pt-0u4gl52nuc
+  encounter_definition_id: pd-n6cib0z6yi
+  age_at_event: 1826
+  external_id:
+  - https://example.org/cam-testdata/tiny/Encounter/trio1-proband-baseline
+  access_policy_id: co-ajdm9fyxxz
+  study_id: sd-7hwpqzc2yr

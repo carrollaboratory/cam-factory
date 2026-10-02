@@ -68,3 +68,44 @@ def validate(profile: Profile = "tiny", limit: int = 5) -> None:
         failed += bool(violations)
     if failed:
         raise typer.Exit(1)
+
+
+@app.command("build")
+def build(
+    profile: Profile = "tiny", out_dir: OutDir = None, full_reference: bool = False
+) -> None:
+    """Build a profile: reset its DB, load the scenario, validate, export, write the manifest."""
+    from cam_testdata.pipeline import BuildFailed, run_build
+
+    doc = (
+        PROJECT_ROOT / "docs" / "SCENARIO_TINY.md"
+        if profile == "tiny" and out_dir is None
+        else None
+    )
+    try:
+        result = run_build(
+            profile,
+            out_dir=out_dir,
+            scenario_doc_path=doc,
+            full_reference=full_reference,
+        )
+    except BuildFailed as exc:
+        typer.echo(f"build failed: {exc}", err=True)
+        raise typer.Exit(1) from exc
+    total = sum(result.row_counts.values())
+    typer.echo(
+        f"built {profile}: {total} rows, {len(result.artifacts)} artifacts in {result.out_dir}"
+    )
+
+
+@app.command("verify-sql")
+def verify_sql_command(profile: Profile = "tiny", out_dir: OutDir = None) -> None:
+    """Load each SQL dump into a scratch DB and byte-compare its CSV export with output/<profile>/csv."""
+    from cam_testdata.validate.roundtrip import verify_sql
+
+    results = verify_sql(profile, out_dir or PROJECT_ROOT / "output" / profile)
+    bad = {dump: tables for dump, tables in results.items() if tables}
+    for dump, tables in results.items():
+        typer.echo(f"{dump}: {'ok' if not tables else 'differs: ' + ', '.join(tables)}")
+    if bad or not results:
+        raise typer.Exit(1)

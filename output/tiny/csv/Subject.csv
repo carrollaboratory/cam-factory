@@ -1,0 +1,6 @@
+subject_id,subject_type,organism_type,access_policy_id,study_id
+pt-0u4gl52nuc,CAMO:0000024,NCBITaxon:9606,co-ajdm9fyxxz,sd-7hwpqzc2yr
+pt-at6m2ta7nf,CAMO:0000025,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+pt-lahn13sl6m,CAMO:0000024,,co-t869rg8xx6,sd-upp74psk4k
+pt-nlpxyndlla,CAMO:0000024,NCBITaxon:9606,co-ajdm9fyxxz,sd-7hwpqzc2yr
+pt-r4rv0bzkwc,CAMO:0000024,NCBITaxon:9606,co-ajdm9fyxxz,sd-7hwpqzc2yr

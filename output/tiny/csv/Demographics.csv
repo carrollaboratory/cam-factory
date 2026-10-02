@@ -1,0 +1,5 @@
+subject_id,sex,ethnicity,age_at_last_vital_status,vital_status,age_at_first_engagement,access_policy_id,study_id
+pt-0u4gl52nuc,snomedct:248152002,CDCREC:2186-5,2190,snomedct:438949009,1826,co-ajdm9fyxxz,sd-7hwpqzc2yr
+pt-lahn13sl6m,snomedct:261665006,CDCREC:2135-2,25550,snomedct:419099009,,co-t869rg8xx6,sd-upp74psk4k
+pt-nlpxyndlla,snomedct:248152002,CDCREC:2186-5,,,12410,co-ajdm9fyxxz,sd-7hwpqzc2yr
+pt-r4rv0bzkwc,snomedct:248153007,snomedct:261665006,,,13140,co-ajdm9fyxxz,sd-7hwpqzc2yr
