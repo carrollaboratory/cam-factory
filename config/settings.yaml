@@ -1,0 +1,64 @@
+# cam-testdata settings (DESIGN §4, §5, §6.2, §11). Loaded by cam_testdata.settings.
+
+ids:
+  # GlobalIDs: <2-letter prefix>-<length chars of alphabet> (Q1). The validation
+  # regex is derived from these: ^[a-z]{2}-[<alphabet>]{<length>}$
+  alphabet: "0123456789abcdefghijklmnopqrstuvwxyz"
+  length: 10
+  # Non-global string IDs (Q2): <local prefix>-<length chars>, by class.
+  local_prefixes:
+    FamilyMembership: fmb
+    BiospecimenCollection: bsc
+    Aliquot: alq
+  # DOI: DataCite test prefix + hashed suffix, for the class(es) whose ID is a DOI.
+  doi_classes: [DOI]
+  doi_prefix: "10.5072/cam-testdata."
+  doi_length: 8
+  # Default external_id (DESIGN §5.3): <base>/<profile>/<Class>/<key>
+  external_id_base: "https://example.org/cam-testdata"
+
+database:
+  url_template: "postgresql+psycopg://postgres@localhost:5432/cam_testdata_{profile}"
+  schema: cam
+  # pg_dump / psql run inside the container so client and server versions match.
+  pg_dump: [docker, exec, cam-testdata-pg, pg_dump, -U, postgres]
+  psql: [docker, exec, -i, cam-testdata-pg, psql, -U, postgres]
+
+tables:
+  # LinkML SQL-generator artifacts: never created (Q4).
+  exclude: [Any, Record, Record_external_id]
+  # Created, but intentionally left empty (header-only CSV).
+  empty: [Synonym, ConceptRelationship, DeprecatedConcept]
+
+concepts:
+  # uriorcurie slots whose values are coded terms that must resolve to a Concept
+  # (R9). The schema doesn't distinguish these from identifier/link uriorcurie
+  # slots (external_id, website, drs_uri, data_use_accession, ...), so they're
+  # listed explicitly. Enum and Concept-FK slots are found from the schema.
+  coded_uriorcurie_slots:
+    - Sample.sample_type
+    - Sample.processing
+    - Sample.storage_method
+    - Subject.organism_type
+    - Family.family_study_focus
+
+drift:
+  # Columns no factory sets on purpose. Each needs a reason. Format: Table.column: reason
+  skip_columns: {}
+
+# R11: natural keys the model doesn't enforce (MODEL_ISSUES #19).
+# File_hash "one digest per hash type per file" spans two tables and is a
+# dedicated check in validate/integrity.py.
+natural_keys:
+  FamilyMembership: [[family_id, subject_id]]
+  FamilyRelationship: [[family_member_id, relation, subject_id]]
+  HashDigest: [[hash_type, hash_value]]
+
+profiles:
+  tiny: {seed: "cam-testdata/tiny/v1"}
+  small: {seed: "cam-testdata/small/v1"}
+  portal: {seed: "cam-testdata/portal/v1"}
+  test: {seed: "cam-testdata/test/v1"}
+
+faker:
+  locale: en_US
