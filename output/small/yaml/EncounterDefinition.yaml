@@ -1,0 +1,34 @@
+- encounter_definition_id: pd-1nasrhdjhv
+  name: Follow-up visit
+  activity_definition_id:
+  - ad-it89pg9x4j
+  external_id:
+  - https://example.org/cam-testdata/small/EncounterDefinition/s02-follow-up
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_definition_id: pd-1xae2rmewt
+  name: Baseline visit
+  activity_definition_id:
+  - ad-rnprvso173
+  - ad-scd0u18qye
+  external_id:
+  - https://example.org/cam-testdata/small/EncounterDefinition/s01-baseline
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_definition_id: pd-58ok1sysct
+  name: Follow-up visit
+  activity_definition_id:
+  - ad-rnprvso173
+  external_id:
+  - https://example.org/cam-testdata/small/EncounterDefinition/s01-follow-up
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_definition_id: pd-v5mqi1nr9t
+  name: Baseline visit
+  activity_definition_id:
+  - ad-azluglneak
+  - ad-it89pg9x4j
+  external_id:
+  - https://example.org/cam-testdata/small/EncounterDefinition/s02-baseline
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0

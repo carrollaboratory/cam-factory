@@ -1,0 +1,36 @@
+- activity_definition_id: ad-4b1di32cvz
+  name: Whole genome sequencing
+  external_id:
+  - https://example.org/cam-testdata/small/ActivityDefinition/s02-wgs
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- activity_definition_id: ad-9xi4otnkl6
+  name: Whole genome sequencing
+  external_id:
+  - https://example.org/cam-testdata/small/ActivityDefinition/s01-wgs
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- activity_definition_id: ad-azluglneak
+  name: Blood draw
+  external_id:
+  - https://example.org/cam-testdata/small/ActivityDefinition/s02-blood
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- activity_definition_id: ad-it89pg9x4j
+  name: Clinical assessment
+  external_id:
+  - https://example.org/cam-testdata/small/ActivityDefinition/s02-clinical
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- activity_definition_id: ad-rnprvso173
+  name: Clinical assessment
+  external_id:
+  - https://example.org/cam-testdata/small/ActivityDefinition/s01-clinical
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- activity_definition_id: ad-scd0u18qye
+  name: Blood draw
+  external_id:
+  - https://example.org/cam-testdata/small/ActivityDefinition/s01-blood
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71

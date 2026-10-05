@@ -1,0 +1,968 @@
+- encounter_id: en-0ajbzdihrl
+  subject_id: pt-r8x9pj0tys
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 13312
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0009-father-e5
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-0xoqinc7fd
+  subject_id: pt-rxqwqab2pf
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 16527
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0002-mother-e2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-0yzxa17due
+  subject_id: pt-0y0gjl36rz
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 13960
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0002-mother-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-19faoum56l
+  subject_id: pt-9mylk1ozmd
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 1556
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0003-proband-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-1oou4fyukz
+  subject_id: pt-l98koluj11
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 2580
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0002-proband-e3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-2dhre19xtm
+  subject_id: pt-455yp3stzr
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 8819
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0011-mother-e2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-2e0c9af4hv
+  subject_id: pt-pkqb7v1zxd
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 5931
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0006-proband-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-33pjcj2zyr
+  subject_id: pt-tyk26seuny
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 4886
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0004-proband-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-37g7oszxev
+  subject_id: pt-a15eslmrz3
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 12656
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0004-mother-e2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-3gzh6x06zc
+  subject_id: pt-1ohce2h4jo
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 18135
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0009-mother-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-3oxofw2ph8
+  subject_id: pt-undm70vrd3
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 12239
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0002-father-e5
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-3r27knw98z
+  subject_id: pt-p9wydbuq5q
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 12492
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0011-father-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-3w3yqj345a
+  subject_id: pt-89rj8wzflm
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 4737
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0008-proband-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-43d39bonyc
+  subject_id: pt-j86rjc1yiy
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 11671
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0012-father-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-462rqvpjnl
+  subject_id: pt-yuolgzovn5
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 12183
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0004-father-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-4ftj1wn9eu
+  subject_id: pt-sdhpmoh9yq
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 12396
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0004-father-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-4j90dvrcms
+  subject_id: pt-yuolgzovn5
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 12718
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0004-father-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-54kdwrummy
+  subject_id: pt-undm70vrd3
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 11171
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0002-father-e3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-5f1hpseun4
+  subject_id: pt-ju11ude3rq
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 2645
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0005-proband-e3
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-5rb4xuwxbw
+  subject_id: pt-rxqwqab2pf
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 16073
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0002-mother-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-7099746o3f
+  subject_id: pt-2px245swmn
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 13074
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0010-mother-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-70d572s02w
+  subject_id: pt-oic36wj8i0
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 5641
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0006-proband-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-71pdhbpci8
+  subject_id: pt-sv38knyk22
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 2314
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0007-proband-e2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-7a001sfm8n
+  subject_id: pt-z07ixekmp1
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 6455
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0012-proband-e2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-7b47r8p2wu
+  subject_id: pt-r8x9pj0tys
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 12183
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0009-father-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-7u8yj7j9a2
+  subject_id: pt-pkqb7v1zxd
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 6815
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0006-proband-e3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-8ex1k0x1j9
+  subject_id: pt-vvn9rj70ad
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 5212
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0005-proband-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-8hv34ena0p
+  subject_id: pt-8737trkhec
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 10337
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0011-mother-e3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-8jhpgyo16d
+  subject_id: pt-1ohce2h4jo
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 17830
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0009-mother-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-8k56b91q99
+  subject_id: pt-2qhnztec9g
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 4395
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0010-proband-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-8yqbmoe8nl
+  subject_id: pt-ljv5blx4vb
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 16546
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0006-mother-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-8z9uz60f52
+  subject_id: pt-t3ll8jhskm
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 11327
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0001-father-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-9126cqyvgh
+  subject_id: pt-oic36wj8i0
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 6025
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0006-proband-e2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-91kvzh5d63
+  subject_id: pt-8737trkhec
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 9599
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0011-mother-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-93e6hmrh4c
+  subject_id: pt-onkaogf9n1
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 4984
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0010-proband-e3
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-99pgn5kovj
+  subject_id: pt-undm70vrd3
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 11868
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0002-father-e4
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-9anqudvpb6
+  subject_id: pt-r8x9pj0tys
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 11740
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0009-father-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-9fepya0v24
+  subject_id: pt-p8lz6kia0j
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 1288
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0002-proband-e2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-ac3zkhkoea
+  subject_id: pt-m9q9s4y6en
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 7862
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0010-mother-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-aghkbl3d6d
+  subject_id: pt-9gk8jq9c8a
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 8882
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0006-father-e4
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-aguhbqalry
+  subject_id: pt-onkaogf9n1
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 4694
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0010-proband-e2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-apthh6nh01
+  subject_id: pt-wjcidufzz8
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 11937
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0012-mother-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-b1sc01ejvc
+  subject_id: pt-72iwinqiw2
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 10252
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0010-father-e2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-b8e014pn1b
+  subject_id: pt-oic36wj8i0
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 7470
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0006-proband-e6
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-b9c8kpg1fv
+  subject_id: pt-2px245swmn
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 12448
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0010-mother-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-bnamypeobm
+  subject_id: pt-r22hejnzwv
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 1450
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0001-proband-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-bpadpmgmn4
+  subject_id: pt-89rj8wzflm
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 4946
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0008-proband-e2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-cpskfds6y0
+  subject_id: pt-0mz8ptoiqy
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 17252
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0004-mother-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-d324se3bz1
+  subject_id: pt-oic36wj8i0
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 6948
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0006-proband-e4
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-dnj7mbpxwy
+  subject_id: pt-223dzfx7g4
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 17634
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0002-father-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-du9cflvbxm
+  subject_id: pt-9gk8jq9c8a
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 8452
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0006-father-e2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-ectdqj2grd
+  subject_id: pt-z07ixekmp1
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 6181
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0012-proband-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-eeg8biszms
+  subject_id: pt-l98koluj11
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 2706
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0002-proband-e4
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-eyo6kevwnt
+  subject_id: pt-m9q9s4y6en
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 8081
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0010-mother-e2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-fbi141a90w
+  subject_id: pt-ju11ude3rq
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 2065
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0005-proband-e2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-fffupimvbd
+  subject_id: pt-3heturwy6c
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 16242
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0011-father-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-fh7yztzqz3
+  subject_id: pt-onkaogf9n1
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 4424
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0010-proband-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-fhc4rsoon8
+  subject_id: pt-fhfb8mfhx3
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 960
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0008-proband-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-fllm9cpfrm
+  subject_id: pt-q5abjhzige
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 17160
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0001-mother-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-fxlvq5v9oq
+  subject_id: pt-t3ll8jhskm
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 11566
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0001-father-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-fzvv6gtysy
+  subject_id: pt-x2oc43ni3s
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 3282
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0004-proband-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-h0f37za8k9
+  subject_id: pt-l98koluj11
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 2017
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0002-proband-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-hty32ttirv
+  subject_id: pt-xoyf6cflcc
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 5145
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0003-proband-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-ianln70jil
+  subject_id: pt-f39hc6n8dq
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 509
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0012-proband-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-iuq1y5pok6
+  subject_id: pt-vvn9rj70ad
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 4567
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0005-proband-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-j4tyrlcsdx
+  subject_id: pt-2tcvf9d0mr
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 18205
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0003-mother-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-jeiqsk3o75
+  subject_id: pt-tyk26seuny
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 6009
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0004-proband-e3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-jhi9nl200b
+  subject_id: pt-oic36wj8i0
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 7254
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0006-proband-e5
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-k1vlefv7sl
+  subject_id: pt-oic36wj8i0
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 6642
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0006-proband-e3
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-l299mdx29i
+  subject_id: pt-ljv5blx4vb
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 17654
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0006-mother-e3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-m7srkh9qay
+  subject_id: pt-r22hejnzwv
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 2078
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0001-proband-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-m8g4iq6aze
+  subject_id: pt-tyk26seuny
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 5509
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0004-proband-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-m9b9fyjc49
+  subject_id: pt-2tcvf9d0mr
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 17957
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0003-mother-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-n43dh26vft
+  subject_id: pt-hmejx0uz9s
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 2113
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0009-proband-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-n6qtvc8xne
+  subject_id: pt-wjcidufzz8
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 12371
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0012-mother-e3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-nv2jnkrhov
+  subject_id: pt-wjcidufzz8
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 11482
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0012-mother-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-o3tc9y3r1e
+  subject_id: pt-2px245swmn
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 13303
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0010-mother-e3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-p09jfo6uyf
+  subject_id: pt-hmejx0uz9s
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 1690
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0009-proband-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-p7bwjxjr89
+  subject_id: pt-ti0pzgxycp
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 5732
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0009-proband-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-piitsol95e
+  subject_id: pt-undm70vrd3
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 10869
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0002-father-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-psdcahprqw
+  subject_id: pt-undm70vrd3
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 10665
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0002-father-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-q129c96jwm
+  subject_id: pt-72iwinqiw2
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 11013
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0010-father-e5
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-q1egnr34ll
+  subject_id: pt-pkqb7v1zxd
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 7106
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0006-proband-e4
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-qartmoyz85
+  subject_id: pt-54i7xpb3so
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 4715
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0011-proband-e3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-qaspjjc6xk
+  subject_id: pt-3746e85sta
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 9809
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0006-mother-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-r7bzto7yv0
+  subject_id: pt-3heturwy6c
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 16383
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0011-father-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-re5c9kzl4g
+  subject_id: pt-54i7xpb3so
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 3847
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0011-proband-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-sihh36j4bo
+  subject_id: pt-r8x9pj0tys
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 12364
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0009-father-e3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-snfsdthc3l
+  subject_id: pt-p8lz6kia0j
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 782
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0002-proband-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-spobtehzht
+  subject_id: pt-0mz8ptoiqy
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 17617
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0004-mother-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-t16w8ysicm
+  subject_id: pt-ju11ude3rq
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 2960
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0005-proband-e4
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-t9bwyprx5q
+  subject_id: pt-9mylk1ozmd
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 1082
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0003-proband-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-tefw9pzcqd
+  subject_id: pt-ju11ude3rq
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 1914
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0005-proband-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-u7v47av9ah
+  subject_id: pt-455yp3stzr
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 9069
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0011-mother-e3
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-u91g5noeql
+  subject_id: pt-9gk8jq9c8a
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 7774
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0006-father-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-u93vrde8oe
+  subject_id: pt-0yxamgf21w
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 6212
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0007-proband-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-ulcinr5rwe
+  subject_id: pt-72iwinqiw2
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 10382
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0010-father-e3
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-uoiadmev43
+  subject_id: pt-hmejx0uz9s
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 2504
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0009-proband-e3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-utdf30g4sz
+  subject_id: pt-ju11ude3rq
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 3284
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0005-proband-e5
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-uxkwnqdefb
+  subject_id: pt-8737trkhec
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 9871
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0011-mother-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-uy3d597ur6
+  subject_id: pt-e1qowyg6qe
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 4950
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0011-proband-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-vf2xqp0cgw
+  subject_id: pt-72iwinqiw2
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 10776
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0010-father-e4
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-vj5z3vr1jp
+  subject_id: pt-r8x9pj0tys
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 12744
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0009-father-e4
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-vm322d7vf8
+  subject_id: pt-0y0gjl36rz
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 14106
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0002-mother-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-vnqmkjs6yh
+  subject_id: pt-a15eslmrz3
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 11982
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0004-mother-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-vw8088hbev
+  subject_id: pt-f39hc6n8dq
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 620
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0012-proband-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-vwr8pv583f
+  subject_id: pt-72iwinqiw2
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 9857
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0010-father-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-wk37ruji9h
+  subject_id: pt-6vj8yjqt9f
+  encounter_definition_id: pd-v5mqi1nr9t
+  age_at_event: 10108
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0003-father-e1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-wmnvmcugkg
+  subject_id: pt-sv38knyk22
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 1657
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0007-proband-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-ww2ja9pj9i
+  subject_id: pt-oic36wj8i0
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 7577
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0006-proband-e7
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-x0thwtgjf6
+  subject_id: pt-54i7xpb3so
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 4144
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0011-proband-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-x285qbotal
+  subject_id: pt-ljv5blx4vb
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 18232
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0006-mother-e4
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-xjnxwoy1n5
+  subject_id: pt-455yp3stzr
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 8651
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0011-mother-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-xz2hbgwzn6
+  subject_id: pt-9gk8jq9c8a
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 8612
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0006-father-e3
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-xzzexxf6sl
+  subject_id: pt-l98koluj11
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 2331
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0002-proband-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-yy5va4j9ek
+  subject_id: pt-lo3ubn20z3
+  encounter_definition_id: pd-58ok1sysct
+  age_at_event: 4164
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0001-proband-e2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-z37eh1zbah
+  subject_id: pt-2tcvf9d0mr
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 18708
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0003-mother-e3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-zm09xauzpg
+  subject_id: pt-lo3ubn20z3
+  encounter_definition_id: pd-1xae2rmewt
+  age_at_event: 3575
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s01-f0001-proband-e1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- encounter_id: en-zpk2a5e9x0
+  subject_id: pt-pkqb7v1zxd
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 6618
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0006-proband-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-zso7zafqqb
+  subject_id: pt-undm70vrd3
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 12491
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0002-father-e6
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- encounter_id: en-zuhsbjz5wa
+  subject_id: pt-ljv5blx4vb
+  encounter_definition_id: pd-1nasrhdjhv
+  age_at_event: 17035
+  external_id:
+  - https://example.org/cam-testdata/small/Encounter/s02-f0006-mother-e2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0

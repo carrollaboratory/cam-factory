@@ -1,0 +1,224 @@
+- family_relationship_id: fm-1lj60j5ttl
+  family_member_id: pt-q5abjhzige
+  relation: KIN:027
+  subject_id: pt-r22hejnzwv
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s02-f0001-mother-of-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_relationship_id: fm-3901gmhqsd
+  family_member_id: pt-3heturwy6c
+  relation: KIN:028
+  subject_id: pt-54i7xpb3so
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s02-f0011-father-of-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_relationship_id: fm-4oijefqmp3
+  family_member_id: pt-0mz8ptoiqy
+  relation: KIN:027
+  subject_id: pt-tyk26seuny
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s02-f0004-mother-of-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_relationship_id: fm-7bibs9inmb
+  family_member_id: pt-k6m1krw8rg
+  relation: KIN:007
+  subject_id: pt-z07ixekmp1
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s01-f0012-sibling-of-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_relationship_id: fm-8a3mbp8l40
+  family_member_id: pt-72iwinqiw2
+  relation: KIN:028
+  subject_id: pt-onkaogf9n1
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s01-f0010-father-of-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_relationship_id: fm-9vbnj46o1c
+  family_member_id: pt-455yp3stzr
+  relation: KIN:027
+  subject_id: pt-e1qowyg6qe
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s01-f0011-mother-of-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_relationship_id: fm-aplnnz3kfr
+  family_member_id: pt-3746e85sta
+  relation: KIN:027
+  subject_id: pt-oic36wj8i0
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s01-f0006-mother-of-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_relationship_id: fm-apr0azc6vx
+  family_member_id: pt-a15eslmrz3
+  relation: KIN:027
+  subject_id: pt-x2oc43ni3s
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s01-f0004-mother-of-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_relationship_id: fm-bckizjmffy
+  family_member_id: pt-223dzfx7g4
+  relation: KIN:028
+  subject_id: pt-p8lz6kia0j
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s01-f0002-father-of-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_relationship_id: fm-btaroulsv9
+  family_member_id: pt-8737trkhec
+  relation: KIN:027
+  subject_id: pt-54i7xpb3so
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s02-f0011-mother-of-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_relationship_id: fm-cpi2c0rx3r
+  family_member_id: pt-2tcvf9d0mr
+  relation: KIN:027
+  subject_id: pt-9mylk1ozmd
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s02-f0003-mother-of-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_relationship_id: fm-dn0zys7hkb
+  family_member_id: pt-9gk8jq9c8a
+  relation: KIN:028
+  subject_id: pt-oic36wj8i0
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s01-f0006-father-of-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_relationship_id: fm-fbqm5oltat
+  family_member_id: pt-op1524v7uh
+  relation: KIN:007
+  subject_id: pt-vvn9rj70ad
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s02-f0005-sibling-of-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_relationship_id: fm-ka758mnupm
+  family_member_id: pt-p9wydbuq5q
+  relation: KIN:028
+  subject_id: pt-e1qowyg6qe
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s01-f0011-father-of-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_relationship_id: fm-kr1crfqeuw
+  family_member_id: pt-j86rjc1yiy
+  relation: KIN:028
+  subject_id: pt-f39hc6n8dq
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s02-f0012-father-of-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_relationship_id: fm-lapxao03ag
+  family_member_id: pt-yuolgzovn5
+  relation: KIN:028
+  subject_id: pt-tyk26seuny
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s02-f0004-father-of-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_relationship_id: fm-m2rnu0b4ir
+  family_member_id: pt-t3ll8jhskm
+  relation: KIN:028
+  subject_id: pt-r22hejnzwv
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s02-f0001-father-of-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_relationship_id: fm-mly6z9jgej
+  family_member_id: pt-r8x9pj0tys
+  relation: KIN:028
+  subject_id: pt-hmejx0uz9s
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s02-f0009-father-of-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_relationship_id: fm-ndbzvpv2la
+  family_member_id: pt-ljv5blx4vb
+  relation: KIN:027
+  subject_id: pt-pkqb7v1zxd
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s02-f0006-mother-of-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_relationship_id: fm-r99cdt95tz
+  family_member_id: pt-m9q9s4y6en
+  relation: KIN:027
+  subject_id: pt-onkaogf9n1
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s01-f0010-mother-of-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_relationship_id: fm-ru8zfg6off
+  family_member_id: pt-1ohce2h4jo
+  relation: KIN:027
+  subject_id: pt-hmejx0uz9s
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s02-f0009-mother-of-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_relationship_id: fm-sx5k4wr5vf
+  family_member_id: pt-rxqwqab2pf
+  relation: KIN:027
+  subject_id: pt-p8lz6kia0j
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s01-f0002-mother-of-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_relationship_id: fm-sz5nqpfy67
+  family_member_id: pt-sdhpmoh9yq
+  relation: KIN:028
+  subject_id: pt-x2oc43ni3s
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s01-f0004-father-of-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_relationship_id: fm-uio40fwh2o
+  family_member_id: pt-undm70vrd3
+  relation: KIN:028
+  subject_id: pt-l98koluj11
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s02-f0002-father-of-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_relationship_id: fm-uwm6v2w9gs
+  family_member_id: pt-0y0gjl36rz
+  relation: KIN:027
+  subject_id: pt-l98koluj11
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s02-f0002-mother-of-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_relationship_id: fm-wekrzatifn
+  family_member_id: pt-2px245swmn
+  relation: KIN:027
+  subject_id: pt-2qhnztec9g
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s02-f0010-mother-of-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_relationship_id: fm-xveksgydqr
+  family_member_id: pt-6vj8yjqt9f
+  relation: KIN:028
+  subject_id: pt-9mylk1ozmd
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s02-f0003-father-of-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_relationship_id: fm-z7ay4qx9oc
+  family_member_id: pt-wjcidufzz8
+  relation: KIN:027
+  subject_id: pt-f39hc6n8dq
+  external_id:
+  - https://example.org/cam-testdata/small/FamilyRelationship/s02-f0012-mother-of-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0

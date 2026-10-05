@@ -220,7 +220,569 @@
   "model": {
     "common_access_model": "0.2.0.post4.dev0+5253ae3",
     "schema_file": "common_access_model-0.2.0.yaml",
-    "schema_sha256": "d21e96c5029429ee4658fb4d56a1f5141c0d6af8d5c695a85a7238aa34ebeb4d"
+    "schema_sha256": "d21e96c5029429ee4658fb4d56a1f5141c0d6af8d5c695a85a7238aa34ebeb4d",
+    "shape": {
+      "enums": {
+        "EnumAssayType": {
+          "count": 1803,
+          "sha256": "222016e52a660f06"
+        },
+        "EnumAsserterType": {
+          "count": 6,
+          "sha256": "3b29df090431014f"
+        },
+        "EnumAvailabilityStatus": {
+          "count": 2,
+          "sha256": "8aa29b87e2df3e79"
+        },
+        "EnumDataCategory": {
+          "count": 293,
+          "sha256": "2ec4ad54b49a7add"
+        },
+        "EnumDataSourceType": {
+          "count": 5,
+          "sha256": "3955e6f509b8b635"
+        },
+        "EnumDataUseModifier": {
+          "count": 18,
+          "sha256": "19f9560124c52680"
+        },
+        "EnumDataUsePermission": {
+          "count": 5,
+          "sha256": "59cc9e8647b0bcde"
+        },
+        "EnumEDAMDataTypes": {
+          "count": 949,
+          "sha256": "21f6ca8b42c4700f"
+        },
+        "EnumEDAMFormats": {
+          "count": 632,
+          "sha256": "435f8294fd57d29a"
+        },
+        "EnumEthnicity": {
+          "count": 2,
+          "sha256": "443fe0ec7c8874ff"
+        },
+        "EnumFamilyRelation": {
+          "count": 48,
+          "sha256": "85acead9f3813ba4"
+        },
+        "EnumFamilyRole": {
+          "count": 3,
+          "sha256": "f9485a4a212b8da1"
+        },
+        "EnumFamilyType": {
+          "count": 7,
+          "sha256": "3fcadc138924adcb"
+        },
+        "EnumFileHashType": {
+          "count": 4,
+          "sha256": "b694fb92e31d9d4b"
+        },
+        "EnumLaterality": {
+          "count": 5,
+          "sha256": "ee1f82318e670506"
+        },
+        "EnumOrganism": {
+          "count": 2,
+          "sha256": "87d940b68b00899f"
+        },
+        "EnumParticipantLifespanStage": {
+          "count": 18,
+          "sha256": "fde8f31171d5e1ca"
+        },
+        "EnumPresentAbsent": {
+          "count": 11,
+          "sha256": "16ec464f047c83a0"
+        },
+        "EnumProgram": {
+          "count": 2,
+          "sha256": "8454cf4791f12c62"
+        },
+        "EnumRace": {
+          "count": 6,
+          "sha256": "f769492b3132fe3c"
+        },
+        "EnumResearchDomain": {
+          "count": 8,
+          "sha256": "d699a9bc9874f8a9"
+        },
+        "EnumSampleCollectionMethod": {
+          "count": 136,
+          "sha256": "dad9a72e01faef91"
+        },
+        "EnumSex": {
+          "count": 2,
+          "sha256": "a4e63dadd75fc2c0"
+        },
+        "EnumSiteExamples": {
+          "count": 3,
+          "sha256": "f3b9bca0617df38c"
+        },
+        "EnumSpatialQualifiers": {
+          "count": 776,
+          "sha256": "ac63e7d74a5b0d4e"
+        },
+        "EnumStudyDesign": {
+          "count": 44,
+          "sha256": "e93b31cb8bd91b1f"
+        },
+        "EnumSubjectType": {
+          "count": 5,
+          "sha256": "b51ab1ba9fc35b88"
+        },
+        "EnumUnknown": {
+          "count": 1,
+          "sha256": "34e31da754f8050f"
+        },
+        "EnumUnknownOther": {
+          "count": 2,
+          "sha256": "3ed169663c80e0ad"
+        },
+        "EnumVitalStatus": {
+          "count": 2,
+          "sha256": "192b103a2567c628"
+        }
+      },
+      "tables": {
+        "AccessPolicy": [
+          "access_policy_id",
+          "data_use_accession",
+          "data_use_permission",
+          "data_use_modifier",
+          "disease_limitation",
+          "access_description",
+          "website"
+        ],
+        "ActivityDefinition": [
+          "activity_definition_id",
+          "name",
+          "description",
+          "access_policy_id",
+          "study_id"
+        ],
+        "ActivityDefinition_external_id": [
+          "ActivityDefinition_activity_definition_id",
+          "external_id"
+        ],
+        "Aliquot": [
+          "aliquot_id",
+          "sample_id",
+          "availability_status",
+          "quantity_number",
+          "quantity_unit",
+          "concentration_number",
+          "concentration_unit",
+          "access_policy_id",
+          "study_id"
+        ],
+        "Aliquot_external_id": [
+          "Aliquot_aliquot_id",
+          "external_id"
+        ],
+        "Assay": [
+          "assay_id",
+          "assay_type",
+          "assay_source",
+          "activity_definition_id",
+          "access_policy_id",
+          "study_id"
+        ],
+        "Assay_external_id": [
+          "Assay_assay_id",
+          "external_id"
+        ],
+        "Assay_file_id": [
+          "Assay_assay_id",
+          "file_id_file_id"
+        ],
+        "Assay_sample_id": [
+          "Assay_assay_id",
+          "sample_id_sample_id"
+        ],
+        "Assay_subject_id": [
+          "Assay_assay_id",
+          "subject_id_subject_id"
+        ],
+        "BiospecimenCollection": [
+          "biospecimen_collection_id",
+          "age_at_collection",
+          "method",
+          "site",
+          "spatial_qualifier",
+          "laterality",
+          "encounter_id",
+          "access_policy_id",
+          "study_id"
+        ],
+        "BiospecimenCollection_external_id": [
+          "BiospecimenCollection_biospecimen_collection_id",
+          "external_id"
+        ],
+        "Concept": [
+          "concept_curie",
+          "concept_id",
+          "vocabulary_prefix",
+          "concept_code",
+          "display",
+          "definition"
+        ],
+        "ConceptRelationship": [
+          "id",
+          "concept_curie",
+          "target_concept_curie",
+          "relationship_curie"
+        ],
+        "DOI": [
+          "do_id",
+          "bibliographic_reference",
+          "access_policy_id",
+          "study_id"
+        ],
+        "DOI_external_id": [
+          "DOI_do_id",
+          "external_id"
+        ],
+        "Dataset": [
+          "dataset_id",
+          "name",
+          "description",
+          "do_id",
+          "data_collection_start",
+          "data_collection_end",
+          "access_policy_id",
+          "study_id"
+        ],
+        "Dataset_external_id": [
+          "Dataset_dataset_id",
+          "external_id"
+        ],
+        "Dataset_file_id": [
+          "Dataset_dataset_id",
+          "file_id_file_id"
+        ],
+        "Dataset_publication": [
+          "Dataset_dataset_id",
+          "publication_id"
+        ],
+        "Demographics": [
+          "subject_id",
+          "sex",
+          "ethnicity",
+          "age_at_last_vital_status",
+          "vital_status",
+          "age_at_first_engagement",
+          "access_policy_id",
+          "study_id"
+        ],
+        "Demographics_external_id": [
+          "Demographics_subject_id",
+          "external_id"
+        ],
+        "Demographics_race": [
+          "Demographics_subject_id",
+          "race_concept_curie"
+        ],
+        "DeprecatedConcept": [
+          "id",
+          "concept_curie",
+          "deprecation_type",
+          "replacement_curie"
+        ],
+        "Encounter": [
+          "encounter_id",
+          "subject_id",
+          "encounter_definition_id",
+          "age_at_event",
+          "access_policy_id",
+          "study_id"
+        ],
+        "EncounterDefinition": [
+          "encounter_definition_id",
+          "name",
+          "description",
+          "access_policy_id",
+          "study_id"
+        ],
+        "EncounterDefinition_activity_definition_id": [
+          "EncounterDefinition_encounter_definition_id",
+          "activity_definition_id_activity_definition_id"
+        ],
+        "EncounterDefinition_external_id": [
+          "EncounterDefinition_encounter_definition_id",
+          "external_id"
+        ],
+        "Encounter_external_id": [
+          "Encounter_encounter_id",
+          "external_id"
+        ],
+        "Family": [
+          "family_id",
+          "family_type",
+          "family_description",
+          "consanguinity",
+          "family_study_focus",
+          "access_policy_id",
+          "study_id"
+        ],
+        "FamilyMembership": [
+          "family_membership_id",
+          "family_id",
+          "subject_id",
+          "family_role",
+          "access_policy_id",
+          "study_id"
+        ],
+        "FamilyMembership_external_id": [
+          "FamilyMembership_family_membership_id",
+          "external_id"
+        ],
+        "FamilyRelationship": [
+          "family_relationship_id",
+          "family_member_id",
+          "relation",
+          "subject_id",
+          "access_policy_id",
+          "study_id"
+        ],
+        "FamilyRelationship_external_id": [
+          "FamilyRelationship_family_relationship_id",
+          "external_id"
+        ],
+        "Family_external_id": [
+          "Family_family_id",
+          "external_id"
+        ],
+        "File": [
+          "file_id",
+          "filename",
+          "file_extension",
+          "data_category",
+          "data_type",
+          "format",
+          "size",
+          "internal_uri",
+          "release_uri",
+          "drs_uri",
+          "storage_class",
+          "availability",
+          "access_policy_id",
+          "study_id"
+        ],
+        "File_external_id": [
+          "File_file_id",
+          "external_id"
+        ],
+        "File_hash": [
+          "File_file_id",
+          "hash_id"
+        ],
+        "File_sample_id": [
+          "File_file_id",
+          "sample_id_sample_id"
+        ],
+        "File_subject_id": [
+          "File_file_id",
+          "subject_id_subject_id"
+        ],
+        "HashDigest": [
+          "id",
+          "hash_type",
+          "hash_value"
+        ],
+        "Investigator": [
+          "id",
+          "name",
+          "institution",
+          "investigator_title",
+          "email",
+          "access_policy_id",
+          "study_id"
+        ],
+        "Investigator_external_id": [
+          "Investigator_id",
+          "external_id"
+        ],
+        "Publication": [
+          "id",
+          "bibliographic_reference",
+          "website",
+          "access_policy_id",
+          "study_id"
+        ],
+        "Publication_external_id": [
+          "Publication_id",
+          "external_id"
+        ],
+        "Sample": [
+          "sample_id",
+          "biospecimen_collection_id",
+          "parent_sample_id",
+          "sample_type",
+          "subject_id",
+          "availability_status",
+          "quantity_number",
+          "quantity_unit",
+          "access_policy_id",
+          "study_id"
+        ],
+        "Sample_external_id": [
+          "Sample_sample_id",
+          "external_id"
+        ],
+        "Sample_processing": [
+          "Sample_sample_id",
+          "processing"
+        ],
+        "Sample_storage_method": [
+          "Sample_sample_id",
+          "storage_method"
+        ],
+        "Study": [
+          "parent_study",
+          "study_title",
+          "study_code",
+          "study_short_name",
+          "study_description",
+          "website",
+          "acknowledgments",
+          "citation_statement",
+          "do_id",
+          "access_policy_id",
+          "study_id"
+        ],
+        "StudyMetadata": [
+          "study_id",
+          "selection_criteria",
+          "vbr_id",
+          "expected_number_of_participants",
+          "actual_number_of_participants",
+          "access_policy_id"
+        ],
+        "StudyMetadata_clinical_data_source_type": [
+          "StudyMetadata_study_id",
+          "clinical_data_source_type"
+        ],
+        "StudyMetadata_data_category": [
+          "StudyMetadata_study_id",
+          "data_category_concept_curie"
+        ],
+        "StudyMetadata_external_id": [
+          "StudyMetadata_study_id",
+          "external_id"
+        ],
+        "StudyMetadata_participant_lifespan_stage": [
+          "StudyMetadata_study_id",
+          "participant_lifespan_stage"
+        ],
+        "StudyMetadata_research_domain": [
+          "StudyMetadata_study_id",
+          "research_domain_concept_curie"
+        ],
+        "StudyMetadata_study_design": [
+          "StudyMetadata_study_id",
+          "study_design_concept_curie"
+        ],
+        "Study_contact": [
+          "Study_study_id",
+          "contact_id"
+        ],
+        "Study_external_id": [
+          "Study_study_id",
+          "external_id"
+        ],
+        "Study_funding_source": [
+          "Study_study_id",
+          "funding_source"
+        ],
+        "Study_principal_investigator": [
+          "Study_study_id",
+          "principal_investigator_id"
+        ],
+        "Study_program": [
+          "Study_study_id",
+          "program"
+        ],
+        "Study_publication": [
+          "Study_study_id",
+          "publication_id"
+        ],
+        "Subject": [
+          "subject_id",
+          "subject_type",
+          "organism_type",
+          "access_policy_id",
+          "study_id"
+        ],
+        "SubjectAssertion": [
+          "assertion_id",
+          "subject_id",
+          "encounter_id",
+          "asserter_type",
+          "assertion_source_type",
+          "age_at_assertion",
+          "age_at_event",
+          "age_at_resolution",
+          "concept_source",
+          "value_number",
+          "value_source",
+          "value_unit",
+          "value_unit_source",
+          "access_policy_id",
+          "study_id"
+        ],
+        "SubjectAssertion_concept": [
+          "SubjectAssertion_assertion_id",
+          "concept_concept_curie"
+        ],
+        "SubjectAssertion_external_id": [
+          "SubjectAssertion_assertion_id",
+          "external_id"
+        ],
+        "SubjectAssertion_value_concept": [
+          "SubjectAssertion_assertion_id",
+          "value_concept_concept_curie"
+        ],
+        "Subject_external_id": [
+          "Subject_subject_id",
+          "external_id"
+        ],
+        "Synonym": [
+          "id",
+          "concept_curie",
+          "display",
+          "display_type",
+          "language"
+        ],
+        "VirtualBiorepository": [
+          "vbr_id",
+          "name",
+          "institution",
+          "website",
+          "vbr_readme",
+          "access_policy_id",
+          "study_id"
+        ],
+        "VirtualBiorepository_contact": [
+          "VirtualBiorepository_vbr_id",
+          "contact_id"
+        ],
+        "VirtualBiorepository_external_id": [
+          "VirtualBiorepository_vbr_id",
+          "external_id"
+        ],
+        "Vocabulary": [
+          "vocabulary_prefix",
+          "name",
+          "vocabulary_uri",
+          "vocabulary_id",
+          "fhir_system",
+          "description",
+          "version",
+          "vocabulary_source"
+        ]
+      }
+    }
   },
   "packages": {
     "common-access-model": "0.2.0.post4.dev0+5253ae3",

@@ -66,13 +66,13 @@ module = ["common_access_model.*", "factory.*", "linkml.*", "linkml_runtime.*"]
 ignore_missing_imports = true
 
 # factory_boy is only partly typed: let it re-export its names, and allow its
-# untyped declarations inside our factory modules (everything else stays strict).
+# untyped declarations inside our factory and scenario modules (everything else stays strict).
 [[tool.mypy.overrides]]
 module = ["factory", "factory.*"]
 implicit_reexport = true
 
 [[tool.mypy.overrides]]
-module = ["cam_testdata.factories.*"]
+module = ["cam_testdata.factories.*", "cam_testdata.scenarios.*"]
 disallow_untyped_calls = false
 
 [tool.pytest.ini_options]

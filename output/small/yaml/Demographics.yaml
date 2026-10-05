@@ -1,0 +1,605 @@
+- subject_id: pt-0mz8ptoiqy
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2076-8
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 17617
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 17252
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0004-mother
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-0y0gjl36rz
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2054-5
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 14106
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 13960
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0002-mother
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-0yxamgf21w
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2076-8
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 6212
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 6212
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0007-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-1ohce2h4jo
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2076-8
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 19005
+  vital_status: snomedct:419099009
+  age_at_first_engagement: 17830
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0009-mother
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-223dzfx7g4
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2076-8
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 17634
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 17634
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0002-father
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-2px245swmn
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2054-5
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 13303
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 12448
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0010-mother
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-2qhnztec9g
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2028-9
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 4395
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 4395
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0010-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-2tcvf9d0mr
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2028-9
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 18758
+  vital_status: snomedct:419099009
+  age_at_first_engagement: 17957
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0003-mother
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-3746e85sta
+  sex: snomedct:248152002
+  race:
+  - CDCREC:1002-5
+  - CDCREC:2028-9
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 9809
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 9809
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0006-mother
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-3heturwy6c
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2028-9
+  - CDCREC:2076-8
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 16383
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 16242
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0011-father
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-455yp3stzr
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2054-5
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 9069
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 8651
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0011-mother
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-54i7xpb3so
+  sex: snomedct:248153007
+  race:
+  - CDCREC:1002-5
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 4715
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 3847
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0011-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-6vj8yjqt9f
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2076-8
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 10108
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 10108
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0003-father
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-72iwinqiw2
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2054-5
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 11013
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 9857
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0010-father
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-8737trkhec
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2106-3
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 10337
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 9599
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0011-mother
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-89rj8wzflm
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2054-5
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 4946
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 4737
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0008-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-9gk8jq9c8a
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2118-8
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 8882
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 7774
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0006-father
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-9mylk1ozmd
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2076-8
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 1556
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 1082
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0003-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-a15eslmrz3
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2028-9
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 12656
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 11982
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0004-mother
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-e1qowyg6qe
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2106-3
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 4950
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 4950
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0011-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-f39hc6n8dq
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2106-3
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 620
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 509
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0012-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-fhfb8mfhx3
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2118-8
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 960
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 960
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0008-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-hmejx0uz9s
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2054-5
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 2574
+  vital_status: snomedct:419099009
+  age_at_first_engagement: 1690
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0009-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-j86rjc1yiy
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2028-9
+  - CDCREC:2054-5
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 11671
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 11671
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0012-father
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-ju11ude3rq
+  sex: snomedct:261665006
+  race:
+  - CDCREC:2118-8
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 3284
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 1914
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0005-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-l98koluj11
+  sex: snomedct:248153007
+  race:
+  - CDCREC:1002-5
+  ethnicity: snomedct:261665006
+  age_at_last_vital_status: 2706
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 2017
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0002-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-ljv5blx4vb
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2076-8
+  ethnicity: snomedct:261665006
+  age_at_last_vital_status: 18232
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 16546
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0006-mother
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-lo3ubn20z3
+  sex: snomedct:248152002
+  race:
+  - CDCREC:1002-5
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 4164
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 3575
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0001-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-m9q9s4y6en
+  sex: snomedct:248152002
+  race:
+  - CDCREC:1002-5
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 8081
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 7862
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0010-mother
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-oic36wj8i0
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2076-8
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 8368
+  vital_status: snomedct:419099009
+  age_at_first_engagement: 5641
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0006-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-onkaogf9n1
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2054-5
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 4984
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 4424
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0010-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-p8lz6kia0j
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2106-3
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 1288
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 782
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0002-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-p9wydbuq5q
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2118-8
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 12492
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 12492
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0011-father
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-pkqb7v1zxd
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2028-9
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 7106
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 5931
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0006-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-q5abjhzige
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2076-8
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 17160
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 17160
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0001-mother
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-r22hejnzwv
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2118-8
+  ethnicity: snomedct:261665006
+  age_at_last_vital_status: 2078
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 1450
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0001-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-r8x9pj0tys
+  sex: snomedct:248153007
+  race:
+  - CDCREC:1002-5
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 13312
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 11740
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0009-father
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-rxqwqab2pf
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2054-5
+  - CDCREC:2076-8
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 16527
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 16073
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0002-mother
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-sdhpmoh9yq
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2106-3
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 12396
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 12396
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0004-father
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-sv38knyk22
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2118-8
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 2314
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 1657
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0007-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-t3ll8jhskm
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2106-3
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 11566
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 11327
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0001-father
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-ti0pzgxycp
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2054-5
+  ethnicity: snomedct:261665006
+  age_at_last_vital_status: 5732
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 5732
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0009-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-tyk26seuny
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2054-5
+  - CDCREC:2106-3
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 6009
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 4886
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0004-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-undm70vrd3
+  sex: snomedct:248153007
+  race:
+  - CDCREC:1002-5
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 12491
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 10665
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0002-father
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-vvn9rj70ad
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2028-9
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 5212
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 4567
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0005-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-wjcidufzz8
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2106-3
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 12371
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 11482
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0012-mother
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-x2oc43ni3s
+  sex: snomedct:248152002
+  race:
+  - CDCREC:1002-5
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 3282
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 3282
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0004-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-xoyf6cflcc
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2054-5
+  ethnicity: CDCREC:2186-5
+  age_at_last_vital_status: 5145
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 5145
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0003-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- subject_id: pt-yuolgzovn5
+  sex: snomedct:248153007
+  race:
+  - CDCREC:2076-8
+  ethnicity: CDCREC:2135-2
+  age_at_last_vital_status: 12718
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 12183
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-f0004-father
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-z07ixekmp1
+  sex: snomedct:248152002
+  race:
+  - CDCREC:2054-5
+  ethnicity: snomedct:261665006
+  age_at_last_vital_status: 6455
+  vital_status: snomedct:438949009
+  age_at_first_engagement: 6181
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s01-f0012-proband
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71

@@ -16,6 +16,7 @@ from sqlalchemy import Connection, func, select
 
 from cam_testdata import db
 from cam_testdata.build import Build
+from cam_testdata.drift import model_shape
 from cam_testdata.factories.base import pk_of
 from cam_testdata.schema_introspect import JoinStorage, Model
 from cam_testdata.settings import SCHEMA_PATH
@@ -120,6 +121,7 @@ def build_manifest(
             "common_access_model": version("common-access-model"),
             "schema_file": SCHEMA_PATH.resolve().name,
             "schema_sha256": sha256(SCHEMA_PATH),
+            "shape": model_shape(model, model.settings),  # for check-drift
         },
         "packages": {name: version(name) for name in PACKAGES},
         "pg_dump": pg_dump_version,

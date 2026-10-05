@@ -1,0 +1,73 @@
+- parent_study: sd-3s8wpdnf71
+  study_title: HumHum Family-Based Camelid Cohort
+  study_code: S02
+  program:
+  - https://www.nih.gov/include-project
+  funding_source:
+  - Fictional Foundation for Test Data
+  principal_investigator:
+  - name: Barbara Hendricks
+    institution: Meadowbrook Center for Galline Genomics
+    investigator_title: Principal Investigator
+    email: barbara.hendricks@example.org
+    external_id:
+    - https://example.org/cam-testdata/small/Investigator/s02-pi
+    access_policy_id: co-yly4xno8c0
+    study_id: sd-2lx98atcp0
+  contact:
+  - name: Gabrielle Henry
+    institution: Sunny Acres School of Barnyard Sciences
+    investigator_title: Study Coordinator
+    email: gabrielle.henry@example.org
+    external_id:
+    - https://example.org/cam-testdata/small/Investigator/s02-contact
+    access_policy_id: co-yly4xno8c0
+    study_id: sd-2lx98atcp0
+  study_description: A fictional study of thyroid function in llamas raised on farms around Pasture Point. Each herd is followed with regular visits, and sleep quality is recorded along the way. All participants and data are synthetic.
+  publication:
+  - bibliographic_reference: Baa F, Neigh E, Neigh N. Social behavior in sheep varies with the season. J Barnyard Sci. 2020;28(10):167-174.
+    external_id:
+    - https://example.org/cam-testdata/small/Publication/s02-pub1
+    access_policy_id: co-yly4xno8c0
+    study_id: sd-2lx98atcp0
+  do_id: 10.5072/cam-testdata.grdggrel
+  external_id:
+  - https://example.org/cam-testdata/small/Study/s02
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- study_title: QuackQuack Longitudinal Anatine Initiative
+  study_code: S01
+  program:
+  - https://www.nih.gov/include-project
+  funding_source:
+  - Fictional Foundation for Test Data
+  principal_investigator:
+  - name: Robert Davis
+    institution: Haystack Valley College of Anatine Medicine
+    investigator_title: Principal Investigator
+    email: robert.davis@example.org
+    external_id:
+    - https://example.org/cam-testdata/small/Investigator/s01-pi
+    access_policy_id: co-tam2ciyi45
+    study_id: sd-3s8wpdnf71
+  contact:
+  - name: Ian Lucas
+    institution: Fernfield Institute of Canine Studies
+    investigator_title: Study Coordinator
+    email: ian.lucas@example.org
+    external_id:
+    - https://example.org/cam-testdata/small/Investigator/s01-contact
+    access_policy_id: co-tam2ciyi45
+    study_id: sd-3s8wpdnf71
+  study_description: A fictional study of sleep quality in ducks raised on farms around Clover Hill. Each paddling is followed with regular visits, and lifespan is recorded along the way. All participants and data are synthetic.
+  publication:
+  - bibliographic_reference: Meow M, Hum B, Cluck C. Coat color in llamas tracks with diet. Proc Farmstead Soc. 2022;3(5):29-40.
+    external_id:
+    - https://example.org/cam-testdata/small/Publication/s01-pub1
+    access_policy_id: co-tam2ciyi45
+    study_id: sd-3s8wpdnf71
+  do_id: 10.5072/cam-testdata.jiktz896
+  external_id:
+  - https://example.org/cam-testdata/small/Study/s01
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71

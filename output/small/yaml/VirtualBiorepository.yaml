@@ -1,0 +1,32 @@
+- vbr_id: or-gi4q7opjnl
+  name: Barnstead Cold Storage Shed
+  institution: Sunny Acres Feline Research Cooperative
+  contact:
+  - name: Ian Lucas
+    institution: Fernfield Institute of Canine Studies
+    investigator_title: Study Coordinator
+    email: ian.lucas@example.org
+    external_id:
+    - https://example.org/cam-testdata/small/Investigator/s01-contact
+    access_policy_id: co-tam2ciyi45
+    study_id: sd-3s8wpdnf71
+  external_id:
+  - https://example.org/cam-testdata/small/VirtualBiorepository/s01-vbr
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- vbr_id: or-qldlz7ot0k
+  name: Willow Creek Sample Silo
+  institution: Millpond Institute of Feline Studies
+  contact:
+  - name: Gabrielle Henry
+    institution: Sunny Acres School of Barnyard Sciences
+    investigator_title: Study Coordinator
+    email: gabrielle.henry@example.org
+    external_id:
+    - https://example.org/cam-testdata/small/Investigator/s02-contact
+    access_policy_id: co-yly4xno8c0
+    study_id: sd-2lx98atcp0
+  external_id:
+  - https://example.org/cam-testdata/small/VirtualBiorepository/s02-vbr
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0

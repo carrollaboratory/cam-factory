@@ -34,6 +34,8 @@ from cam_testdata.schema_introspect import Model, get_model
 from cam_testdata.settings import Settings, get_settings
 from cam_testdata.text import BarnyardProvider, theme_animal
 
+FLUSH_BATCH = 5000
+
 _current: ContextVar["Build | None"] = ContextVar("cam_testdata_build", default=None)
 
 
@@ -107,19 +109,27 @@ class Build:
     # ----- collection --------------------------------------------------------
 
     def collect(self, obj: Any, handle: str | None = None) -> Any:
-        table: Table = obj.__table__
-        # R12: never carry '' into the database.
-        for column in table.columns:
-            if isinstance(column.type, String) and getattr(obj, column.key, None) == "":
-                setattr(obj, column.key, None)
-        for attr, label in self._curie_columns.get(table.name, []):
-            value = getattr(obj, attr, None)
-            if value is not None and not is_uri(str(value)):
-                self.registry.resolve(str(value), label)
+        self._normalize(obj)
         self.objects.append(obj)
         if handle:
             self.handles[id(obj)] = handle
         return obj
+
+    def _normalize(self, obj: Any) -> None:
+        """R12: never carry '' into the database."""
+        for column in obj.__table__.columns:
+            if isinstance(column.type, String) and getattr(obj, column.key, None) == "":
+                setattr(obj, column.key, None)
+
+    def _resolve_concepts(self) -> None:
+        """Record every coded value through the registry. Done at write time, so values
+        a scenario sets after creating an object (vital status, deferred links) count."""
+        for obj in self.objects:
+            self._normalize(obj)
+            for attr, label in self._curie_columns.get(obj.__table__.name, []):
+                value = getattr(obj, attr, None)
+                if value is not None and not is_uri(str(value)):
+                    self.registry.resolve(str(value), label)
 
     # ----- write ---------------------------------------------------------------
 
@@ -127,6 +137,7 @@ class Build:
         """Insert everything collected; returns row counts per table. Caller commits."""
         from cam_testdata.factories.reference import load_reference
 
+        self._resolve_concepts()
         missing = self.registry.missing()
         if missing:
             raise BuildError(
@@ -151,8 +162,11 @@ class Build:
                     if value is not None:
                         deferred.append((obj, fk, value))
                         setattr(obj, fk, None)
-            session.add_all(rows)
-            session.flush()
+            for start in range(
+                0, len(rows), FLUSH_BATCH
+            ):  # batched: memory stays flat on portal
+                session.add_all(rows[start : start + FLUSH_BATCH])
+                session.flush()
         for obj, attr, value in deferred:
             setattr(obj, attr, value)
         session.flush()

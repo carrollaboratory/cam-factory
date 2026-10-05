@@ -1,0 +1,1304 @@
+- assertion_id: ob-07v25k1nxc
+  subject_id: pt-oic36wj8i0
+  encounter_id: en-ww2ja9pj9i
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 7577
+  concept:
+  - MONDO:0008608
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0006-proband-a1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-0e6mj0pur7
+  subject_id: pt-pkqb7v1zxd
+  encounter_id: en-7u8yj7j9a2
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000011
+  age_at_event: 6815
+  concept:
+  - loinc:39156-5
+  value_number: 41.7
+  value_unit: ucum:kg/m2
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0006-proband-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-0okceq8gjg
+  subject_id: pt-sv38knyk22
+  encounter_id: en-71pdhbpci8
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000010
+  age_at_assertion: 2314
+  age_at_event: 652
+  age_at_resolution: 1540
+  concept:
+  - HP:0006695
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0007-proband-a3
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-0r346kcct6
+  subject_id: pt-89rj8wzflm
+  encounter_id: en-bpadpmgmn4
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000014
+  age_at_event: 4946
+  concept:
+  - loinc:8302-2
+  value_number: 102.6
+  value_unit: ucum:cm
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0008-proband-a2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-0s0uft0zh1
+  subject_id: pt-p8lz6kia0j
+  encounter_id: en-9fepya0v24
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 1288
+  age_at_event: 212
+  concept:
+  - HP:0001631
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-proband-a1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-0zq5rwg1js
+  subject_id: pt-sv38knyk22
+  encounter_id: en-71pdhbpci8
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 2314
+  concept:
+  - MONDO:0002070
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0007-proband-a2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-15cq2qptkv
+  subject_id: pt-3746e85sta
+  encounter_id: en-qaspjjc6xk
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 9809
+  age_at_event: 125
+  concept:
+  - MONDO:0002070
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0006-mother-a1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-19oq3nxuu5
+  subject_id: pt-p9wydbuq5q
+  encounter_id: en-3r27knw98z
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 12492
+  age_at_event: 5540
+  concept:
+  - HP:0000821
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0011-father-a2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-1gkfv4658t
+  subject_id: pt-undm70vrd3
+  encounter_id: en-piitsol95e
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 10869
+  concept:
+  - HP:0001252
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0002-father-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-2fu8tc9u3d
+  subject_id: pt-1ohce2h4jo
+  encounter_id: en-3gzh6x06zc
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 18135
+  age_at_event: 4281
+  concept:
+  - HP:0006695
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-mother-a2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-2j4z228mgu
+  subject_id: pt-9mylk1ozmd
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000010
+  age_at_assertion: 1082
+  age_at_event: 765
+  concept:
+  - HP:0030148
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0003-proband-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-2o9t6ziazg
+  subject_id: pt-lo3ubn20z3
+  encounter_id: en-zm09xauzpg
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000011
+  age_at_event: 3575
+  concept:
+  - loinc:29463-7
+  value_number: 75.3
+  value_unit: ucum:kg
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0001-proband-a1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-2t5wknpu1t
+  subject_id: pt-8737trkhec
+  encounter_id: en-8hv34ena0p
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 10337
+  concept:
+  - HP:0000821
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0011-mother-a2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-2th1055nmz
+  subject_id: pt-q5abjhzige
+  encounter_id: en-fllm9cpfrm
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 17160
+  age_at_event: 5857
+  concept:
+  - HP:0030148
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0001-mother-a2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-39ngxcctf0
+  subject_id: pt-r8x9pj0tys
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 11740
+  concept:
+  - MONDO:0002070
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-father-a2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-3pczgmm2wt
+  subject_id: pt-j86rjc1yiy
+  encounter_id: en-43d39bonyc
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000010
+  age_at_assertion: 11671
+  age_at_event: 9357
+  concept:
+  - HP:0001631
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0012-father-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-3q1wqowbls
+  subject_id: pt-wjcidufzz8
+  encounter_id: en-nv2jnkrhov
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000010
+  age_at_assertion: 11482
+  concept:
+  - HP:0000821
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0012-mother-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-43ksy5k8qe
+  subject_id: pt-q5abjhzige
+  encounter_id: en-fllm9cpfrm
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 17160
+  concept:
+  - HP:0001629
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0001-mother-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-4r9dxkahf2
+  subject_id: pt-sdhpmoh9yq
+  encounter_id: en-4ftj1wn9eu
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000010
+  age_at_assertion: 12396
+  age_at_event: 5299
+  concept:
+  - HP:0001252
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-father-a4
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-56cuke5l8x
+  subject_id: pt-sv38knyk22
+  encounter_id: en-wmnvmcugkg
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 1657
+  concept:
+  - HP:0001629
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0007-proband-a1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-5df8ksfbaj
+  subject_id: pt-0yxamgf21w
+  encounter_id: en-u93vrde8oe
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 6212
+  concept:
+  - HP:0030148
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0007-proband-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-5gf0na3qx6
+  subject_id: pt-p8lz6kia0j
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 782
+  age_at_event: 114
+  concept:
+  - HP:0000821
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-proband-a4
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-5j07z09qcl
+  subject_id: pt-f39hc6n8dq
+  encounter_id: en-vw8088hbev
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000014
+  age_at_event: 620
+  concept:
+  - loinc:8302-2
+  value_number: 110.2
+  value_unit: ucum:cm
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0012-proband-a2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-5ocwif8f7h
+  subject_id: pt-72iwinqiw2
+  encounter_id: en-vwr8pv583f
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 9857
+  concept:
+  - HP:0030148
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0010-father-a1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-5p6v69rwhm
+  subject_id: pt-8737trkhec
+  encounter_id: en-8hv34ena0p
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000010
+  age_at_assertion: 10337
+  age_at_event: 4609
+  concept:
+  - HP:0000821
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0011-mother-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-5sb1sy59d2
+  subject_id: pt-2qhnztec9g
+  encounter_id: en-8k56b91q99
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000010
+  age_at_event: 4395
+  concept:
+  - loinc:39156-5
+  value_number: 25.6
+  value_unit: ucum:kg/m2
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0010-proband-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-5zzox8519x
+  subject_id: pt-yuolgzovn5
+  encounter_id: en-462rqvpjnl
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 12183
+  age_at_event: 824
+  concept:
+  - MONDO:0008608
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0004-father-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-64w3zhkcw3
+  subject_id: pt-f39hc6n8dq
+  encounter_id: en-ianln70jil
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 509
+  age_at_event: 258
+  concept:
+  - HP:0030148
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0012-proband-a3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-6lmo0ess49
+  subject_id: pt-0y0gjl36rz
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000011
+  age_at_event: 13960
+  concept:
+  - loinc:8302-2
+  value_number: 51.0
+  value_unit: ucum:cm
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0002-mother-a4
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-8hq7l06k88
+  subject_id: pt-rxqwqab2pf
+  encounter_id: en-5rb4xuwxbw
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 16073
+  concept:
+  - HP:0006695
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-mother-a1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-8vpra2ayrg
+  subject_id: pt-ti0pzgxycp
+  encounter_id: en-p7bwjxjr89
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000010
+  age_at_assertion: 5732
+  age_at_event: 3879
+  concept:
+  - HP:0001631
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0009-proband-a1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-941d3lg2xt
+  subject_id: pt-2qhnztec9g
+  encounter_id: en-8k56b91q99
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000010
+  age_at_assertion: 4395
+  age_at_event: 3668
+  concept:
+  - HP:0006695
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0010-proband-a3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-9ok8np4pct
+  subject_id: pt-sdhpmoh9yq
+  encounter_id: en-4ftj1wn9eu
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 12396
+  age_at_event: 11012
+  concept:
+  - MONDO:0008608
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-father-a3
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-9wv520nakf
+  subject_id: pt-f39hc6n8dq
+  encounter_id: en-ianln70jil
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000014
+  age_at_event: 509
+  concept:
+  - loinc:29463-7
+  value_number: 3.7
+  value_unit: ucum:kg
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0012-proband-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-a1mdiqw21i
+  subject_id: pt-sdhpmoh9yq
+  encounter_id: en-4ftj1wn9eu
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000010
+  age_at_assertion: 12396
+  concept:
+  - HP:0001631
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-father-a1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-a8n11ck7py
+  subject_id: pt-r22hejnzwv
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000011
+  age_at_event: 1450
+  concept:
+  - loinc:29463-7
+  value_number: 71.3
+  value_unit: ucum:kg
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0001-proband-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-bivhr56z0q
+  subject_id: pt-ljv5blx4vb
+  encounter_id: en-zuhsbjz5wa
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 17035
+  age_at_event: 9709
+  concept:
+  - HP:0030148
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0006-mother-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-cfpxagn5v4
+  subject_id: pt-hmejx0uz9s
+  encounter_id: en-uoiadmev43
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000014
+  age_at_event: 2504
+  concept:
+  - loinc:8302-2
+  value_number: 71.6
+  value_unit: ucum:cm
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-proband-a4
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-cnrubgx669
+  subject_id: pt-3heturwy6c
+  encounter_id: en-r7bzto7yv0
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 16383
+  age_at_event: 14203
+  concept:
+  - HP:0000821
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0011-father-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-cuc7ut368f
+  subject_id: pt-ljv5blx4vb
+  encounter_id: en-zuhsbjz5wa
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 17035
+  concept:
+  - HP:0001629
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0006-mother-a2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-e1rrc4zryl
+  subject_id: pt-l98koluj11
+  encounter_id: en-eeg8biszms
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 2706
+  concept:
+  - HP:0006695
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0002-proband-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-eq5hugzgbc
+  subject_id: pt-r22hejnzwv
+  encounter_id: en-m7srkh9qay
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 2078
+  age_at_event: 925
+  concept:
+  - HP:0000821
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0001-proband-a2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-esjw78dqrh
+  subject_id: pt-t3ll8jhskm
+  encounter_id: en-fxlvq5v9oq
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000014
+  age_at_event: 11566
+  concept:
+  - loinc:8302-2
+  value_number: 107.1
+  value_unit: ucum:cm
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0001-father-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-f01pyvexdh
+  subject_id: pt-e1qowyg6qe
+  encounter_id: en-uy3d597ur6
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000014
+  age_at_event: 4950
+  concept:
+  - loinc:8302-2
+  value_number: 173.1
+  value_unit: ucum:cm
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0011-proband-a1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-fek3o3rksv
+  subject_id: pt-sdhpmoh9yq
+  encounter_id: en-4ftj1wn9eu
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 12396
+  age_at_event: 11076
+  concept:
+  - HP:0000821
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-father-a2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-fl2ptdrb84
+  subject_id: pt-wjcidufzz8
+  encounter_id: en-apthh6nh01
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 11937
+  age_at_event: 3314
+  concept:
+  - MONDO:0002070
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0012-mother-a2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-fquhcpaw0s
+  subject_id: pt-pkqb7v1zxd
+  encounter_id: en-2e0c9af4hv
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000010
+  age_at_assertion: 5931
+  age_at_event: 3385
+  concept:
+  - HP:0001631
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0006-proband-a2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-g0px7jqssh
+  subject_id: pt-z07ixekmp1
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 6181
+  concept:
+  - HP:0001252
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0012-proband-a1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-h2qtdap1m7
+  subject_id: pt-0y0gjl36rz
+  encounter_id: en-vm322d7vf8
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000010
+  age_at_assertion: 14106
+  age_at_event: 5001
+  concept:
+  - HP:0001631
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0002-mother-a2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-htk7avml6x
+  subject_id: pt-223dzfx7g4
+  encounter_id: en-dnj7mbpxwy
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 17634
+  age_at_event: 4693
+  concept:
+  - HP:0001629
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-father-a1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-irbaooji7l
+  subject_id: pt-p8lz6kia0j
+  encounter_id: en-snfsdthc3l
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 782
+  age_at_event: 767
+  concept:
+  - MONDO:0002070
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-proband-a3
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-iw1m17fhef
+  subject_id: pt-r8x9pj0tys
+  encounter_id: en-0ajbzdihrl
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000010
+  age_at_assertion: 13312
+  age_at_event: 13209
+  concept:
+  - MONDO:0002070
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-father-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-jj27upzz1q
+  subject_id: pt-89rj8wzflm
+  encounter_id: en-bpadpmgmn4
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 4946
+  concept:
+  - MONDO:0008608
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0008-proband-a1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-jraowe8b90
+  subject_id: pt-sdhpmoh9yq
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000010
+  age_at_event: 12396
+  concept:
+  - loinc:39156-5
+  value_number: 13.0
+  value_unit: ucum:kg/m2
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-father-a5
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-lex7fimy1n
+  subject_id: pt-p9wydbuq5q
+  encounter_id: en-3r27knw98z
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000011
+  age_at_event: 12492
+  concept:
+  - loinc:8302-2
+  value_number: 60.4
+  value_unit: ucum:cm
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0011-father-a1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-lvr7yp042d
+  subject_id: pt-2tcvf9d0mr
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 17957
+  concept:
+  - MONDO:0008608
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0003-mother-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-mu4skpipg9
+  subject_id: pt-3746e85sta
+  encounter_id: en-qaspjjc6xk
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 9809
+  age_at_event: 4286
+  concept:
+  - HP:0030148
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0006-mother-a3
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-n8okp00pmo
+  subject_id: pt-2px245swmn
+  encounter_id: en-7099746o3f
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000011
+  age_at_event: 13074
+  concept:
+  - loinc:8302-2
+  value_number: 121.9
+  value_unit: ucum:cm
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0010-mother-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-nikc1k9awp
+  subject_id: pt-3746e85sta
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 9809
+  age_at_event: 7018
+  concept:
+  - MONDO:0002070
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0006-mother-a2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-nj8g6isnrb
+  subject_id: pt-0y0gjl36rz
+  encounter_id: en-vm322d7vf8
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000010
+  age_at_event: 14106
+  concept:
+  - loinc:29463-7
+  value_number: 122.3
+  value_unit: ucum:kg
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0002-mother-a5
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-nq4g3evmuk
+  subject_id: pt-0mz8ptoiqy
+  encounter_id: en-spobtehzht
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 17617
+  age_at_event: 11412
+  concept:
+  - HP:0006695
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0004-mother-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-nyjs6o9qfw
+  subject_id: pt-2qhnztec9g
+  encounter_id: en-8k56b91q99
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 4395
+  age_at_event: 3124
+  concept:
+  - HP:0001252
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0010-proband-a5
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-o77ffqj9yp
+  subject_id: pt-pkqb7v1zxd
+  encounter_id: en-zpk2a5e9x0
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000010
+  age_at_assertion: 6618
+  concept:
+  - HP:0000821
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0006-proband-a3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-ol5qernx3h
+  subject_id: pt-x2oc43ni3s
+  encounter_id: en-fzvv6gtysy
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000010
+  age_at_event: 3282
+  concept:
+  - loinc:29463-7
+  value_number: 12.1
+  value_unit: ucum:kg
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-proband-a2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-ptf2wu7x70
+  subject_id: pt-hmejx0uz9s
+  encounter_id: en-n43dh26vft
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 2113
+  concept:
+  - HP:0001629
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-proband-a3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-q11pz25xjt
+  subject_id: pt-rxqwqab2pf
+  encounter_id: en-5rb4xuwxbw
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000010
+  age_at_assertion: 16073
+  age_at_event: 9118
+  concept:
+  - MONDO:0002070
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-mother-a2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-r0xke2o5t0
+  subject_id: pt-0y0gjl36rz
+  encounter_id: en-0yzxa17due
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 13960
+  age_at_event: 529
+  concept:
+  - MONDO:0002070
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0002-mother-a3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-rql34wy0vs
+  subject_id: pt-2tcvf9d0mr
+  encounter_id: en-j4tyrlcsdx
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000010
+  age_at_event: 18205
+  concept:
+  - loinc:39156-5
+  value_number: 30.3
+  value_unit: ucum:kg/m2
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0003-mother-a2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-sq9wxvt5qd
+  subject_id: pt-onkaogf9n1
+  encounter_id: en-aguhbqalry
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 4694
+  age_at_event: 2448
+  concept:
+  - HP:0001252
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0010-proband-a1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-sulm1z02ef
+  subject_id: pt-onkaogf9n1
+  encounter_id: en-aguhbqalry
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000014
+  age_at_event: 4694
+  concept:
+  - loinc:39156-5
+  value_number: 36.1
+  value_unit: ucum:kg/m2
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0010-proband-a2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-txfn4v2b9k
+  subject_id: pt-1ohce2h4jo
+  encounter_id: en-3gzh6x06zc
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 18135
+  concept:
+  - HP:0001631
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-mother-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-tyjzteh4t3
+  subject_id: pt-0y0gjl36rz
+  encounter_id: en-0yzxa17due
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000014
+  age_at_event: 13960
+  concept:
+  - loinc:29463-7
+  value_number: 127.6
+  value_unit: ucum:kg
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0002-mother-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-u2sp9zacus
+  subject_id: pt-e1qowyg6qe
+  encounter_id: en-uy3d597ur6
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000014
+  age_at_event: 4950
+  concept:
+  - loinc:8302-2
+  value_number: 117.8
+  value_unit: ucum:cm
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0011-proband-a2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-u3cv6g91yn
+  subject_id: pt-vvn9rj70ad
+  encounter_id: en-iuq1y5pok6
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 4567
+  concept:
+  - HP:0001252
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0005-proband-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-ubrbx6q6xi
+  subject_id: pt-tyk26seuny
+  encounter_id: en-33pjcj2zyr
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000014
+  age_at_event: 4886
+  concept:
+  - loinc:8302-2
+  value_number: 144.2
+  value_unit: ucum:cm
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0004-proband-a2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-uieesu2hpm
+  subject_id: pt-hmejx0uz9s
+  encounter_id: en-uoiadmev43
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 2504
+  concept:
+  - HP:0000821
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-proband-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-vzkq4zuefe
+  subject_id: pt-54i7xpb3so
+  encounter_id: en-qartmoyz85
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000010
+  age_at_event: 4715
+  concept:
+  - loinc:29463-7
+  value_number: 146.9
+  value_unit: ucum:kg
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0011-proband-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-whg2cuw90l
+  subject_id: pt-2qhnztec9g
+  encounter_id: en-8k56b91q99
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000010
+  age_at_assertion: 4395
+  age_at_event: 2990
+  concept:
+  - MONDO:0002070
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0010-proband-a2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-wuv1f67ft6
+  subject_id: pt-223dzfx7g4
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000014
+  age_at_event: 17634
+  concept:
+  - loinc:8302-2
+  value_number: 68.4
+  value_unit: ucum:cm
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-father-a2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-xa73tbpyx3
+  subject_id: pt-x2oc43ni3s
+  encounter_id: en-fzvv6gtysy
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 3282
+  age_at_event: 269
+  concept:
+  - HP:0006695
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-proband-a1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-xbt5jd77l3
+  subject_id: pt-hmejx0uz9s
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000014
+  age_at_event: 1690
+  concept:
+  - loinc:29463-7
+  value_number: 31.5
+  value_unit: ucum:kg
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-proband-a2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-xzea0tg5nn
+  subject_id: pt-455yp3stzr
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 8651
+  age_at_event: 7834
+  concept:
+  - HP:0001631
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0011-mother-a1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-y6owd4p9jf
+  subject_id: pt-tyk26seuny
+  encounter_id: en-jeiqsk3o75
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 6009
+  age_at_event: 4531
+  concept:
+  - HP:0000821
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0004-proband-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-yap6f4l0fa
+  subject_id: pt-r8x9pj0tys
+  encounter_id: en-7b47r8p2wu
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 12183
+  age_at_event: 6617
+  concept:
+  - HP:0001252
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-father-a3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-ycsswekqji
+  subject_id: pt-ti0pzgxycp
+  encounter_id: en-p7bwjxjr89
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000010
+  age_at_assertion: 5732
+  concept:
+  - HP:0001252
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0009-proband-a2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-yi5ioecqje
+  subject_id: pt-xoyf6cflcc
+  encounter_id: en-hty32ttirv
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000010
+  age_at_assertion: 5145
+  concept:
+  - HP:0001252
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0003-proband-a1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-ypnbvvn2kj
+  subject_id: pt-p8lz6kia0j
+  encounter_id: en-snfsdthc3l
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000011
+  age_at_assertion: 782
+  concept:
+  - MONDO:0002070
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-proband-a2
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-z5aoibr9md
+  subject_id: pt-6vj8yjqt9f
+  encounter_id: en-wk37ruji9h
+  asserter_type: CAMO:0000017
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 10108
+  age_at_event: 5913
+  concept:
+  - HP:0006695
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0003-father-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-zlpaom14md
+  subject_id: pt-sdhpmoh9yq
+  encounter_id: en-4ftj1wn9eu
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 12396
+  age_at_event: 5026
+  concept:
+  - HP:0030148
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-father-a6
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-zonwncqlsv
+  subject_id: pt-3746e85sta
+  encounter_id: en-qaspjjc6xk
+  asserter_type: CAMO:0000019
+  assertion_source_type: CAMO:0000014
+  age_at_assertion: 9809
+  age_at_event: 5642
+  concept:
+  - HP:0001631
+  value_concept:
+  - snomedct:410515003
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0006-mother-a4
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- assertion_id: ob-zxkwmvdrni
+  subject_id: pt-2qhnztec9g
+  encounter_id: en-8k56b91q99
+  asserter_type: CAMO:0000016
+  assertion_source_type: CAMO:0000010
+  age_at_assertion: 4395
+  concept:
+  - HP:0001631
+  value_concept:
+  - snomedct:410516002
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0010-proband-a4
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0

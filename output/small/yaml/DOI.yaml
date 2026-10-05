@@ -1,0 +1,12 @@
+- do_id: 10.5072/cam-testdata.grdggrel
+  bibliographic_reference: Baa R, Oink W. Litter size in ducks differs between farms. Ann Hayloft Genet. 2017;20(12):189-195.
+  external_id:
+  - https://example.org/cam-testdata/small/DOI/s02
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- do_id: 10.5072/cam-testdata.jiktz896
+  bibliographic_reference: Hum T, Meow T, Cluck K. Coat color in ducks changes with age. J Barnyard Sci. 2019;23(8):97-107.
+  external_id:
+  - https://example.org/cam-testdata/small/DOI/s01
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71

@@ -1,0 +1,7 @@
+activity_definition_id,name,description,access_policy_id,study_id
+ad-4b1di32cvz,Whole genome sequencing,,co-yly4xno8c0,sd-2lx98atcp0
+ad-9xi4otnkl6,Whole genome sequencing,,co-tam2ciyi45,sd-3s8wpdnf71
+ad-azluglneak,Blood draw,,co-yly4xno8c0,sd-2lx98atcp0
+ad-it89pg9x4j,Clinical assessment,,co-yly4xno8c0,sd-2lx98atcp0
+ad-rnprvso173,Clinical assessment,,co-tam2ciyi45,sd-3s8wpdnf71
+ad-scd0u18qye,Blood draw,,co-tam2ciyi45,sd-3s8wpdnf71
