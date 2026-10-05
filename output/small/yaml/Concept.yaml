@@ -1,0 +1,445 @@
+- concept_curie: CAMO:0000003
+  vocabulary_prefix: CAMO
+  concept_code: '0000003'
+  display: Duo
+  definition: This family study includes at a minimum one parent and one affected child.
+- concept_curie: CAMO:0000004
+  vocabulary_prefix: CAMO
+  concept_code: '0000004'
+  display: Trio
+  definition: This family study includes at a minimum two parents of one affected child.
+- concept_curie: CAMO:0000007
+  vocabulary_prefix: CAMO
+  concept_code: '0000007'
+  display: Proband Only
+  definition: This family study includes only one or more probands.
+- concept_curie: CAMO:0000010
+  vocabulary_prefix: CAMO
+  concept_code: '0000010'
+  display: Survey
+  definition: Data obtained from a survey or questionnaire given to a participant or their representative.
+- concept_curie: CAMO:0000011
+  vocabulary_prefix: CAMO
+  concept_code: '0000011'
+  display: Research Assessment
+  definition: Data obtained by research staff for the study.
+- concept_curie: CAMO:0000014
+  vocabulary_prefix: CAMO
+  concept_code: '0000014'
+  display: Electronic Health Record
+  definition: Data obtained directly from an Electronic Health Record.
+- concept_curie: CAMO:0000016
+  vocabulary_prefix: CAMO
+  concept_code: '0000016'
+  display: Research Staff Asserted
+  definition: Assertion made by research staff.
+- concept_curie: CAMO:0000017
+  vocabulary_prefix: CAMO
+  concept_code: '0000017'
+  display: Healthcare Asserted
+  definition: Assertion documented by a healthcare system or provider.
+- concept_curie: CAMO:0000019
+  vocabulary_prefix: CAMO
+  concept_code: '0000019'
+  display: Participant Asserted
+  definition: Assertion made by a study participant.
+- concept_curie: CAMO:0000024
+  vocabulary_prefix: CAMO
+  concept_code: '0000024'
+  display: Participant
+  definition: Study participant with consent, assent, or waiver of consent.
+- concept_curie: CAMO:0000025
+  vocabulary_prefix: CAMO
+  concept_code: '0000025'
+  display: Non-Participant
+  definition: An individual not directly participating in a study, eg, the subject of a reported family history.
+- concept_curie: CDCREC:1002-5
+  vocabulary_prefix: CDCREC
+  concept_code: 1002-5
+  display: American Indian or Alaska Native
+- concept_curie: CDCREC:2028-9
+  vocabulary_prefix: CDCREC
+  concept_code: 2028-9
+  display: Asian
+- concept_curie: CDCREC:2054-5
+  vocabulary_prefix: CDCREC
+  concept_code: 2054-5
+  display: Black or African American
+- concept_curie: CDCREC:2076-8
+  vocabulary_prefix: CDCREC
+  concept_code: 2076-8
+  display: Native Hawaiian or Other Pacific Islander
+- concept_curie: CDCREC:2106-3
+  vocabulary_prefix: CDCREC
+  concept_code: 2106-3
+  display: White
+- concept_curie: CDCREC:2118-8
+  vocabulary_prefix: CDCREC
+  concept_code: 2118-8
+  display: Middle Eastern or North African
+- concept_curie: CDCREC:2135-2
+  vocabulary_prefix: CDCREC
+  concept_code: 2135-2
+  display: Hispanic or Latino
+- concept_curie: CDCREC:2186-5
+  vocabulary_prefix: CDCREC
+  concept_code: 2186-5
+  display: Not Hispanic or Latino
+- concept_curie: DUO:0000007
+  vocabulary_prefix: DUO
+  concept_code: '0000007'
+  display: disease specific research
+  definition: This data use permission indicates that use is allowed provided it is related to the specified disease.
+- concept_curie: DUO:0000021
+  vocabulary_prefix: DUO
+  concept_code: '0000021'
+  display: ethics approval required
+  definition: This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval.
+- concept_curie: DUO:0000042
+  vocabulary_prefix: DUO
+  concept_code: '0000042'
+  display: general research use
+  definition: This data use permission indicates that use is allowed for general research use for any research purpose.
+- concept_curie: DUO:0000045
+  vocabulary_prefix: DUO
+  concept_code: '0000045'
+  display: not for profit organisation use only
+  definition: This data use modifier indicates that use of the data is limited to not-for-profit organizations.
+- concept_curie: edam:data_0863
+  vocabulary_prefix: edam
+  concept_code: data_0863
+  display: Sequence alignment
+  definition: Alignment of multiple molecular sequences.
+- concept_curie: edam:data_3498
+  vocabulary_prefix: edam
+  concept_code: data_3498
+  display: Sequence variations
+  definition: Data on gene sequence variations resulting large-scale genotyping and DNA sequencing projects.
+- concept_curie: edam:format_3016
+  vocabulary_prefix: edam
+  concept_code: format_3016
+  display: VCF
+  definition: Variant Call Format (VCF) is tabular format for storing genomic sequence variations.
+- concept_curie: edam:format_3462
+  vocabulary_prefix: edam
+  concept_code: format_3462
+  display: CRAM
+  definition: Reference-based compression of alignment format.
+- concept_curie: edam:format_3475
+  vocabulary_prefix: edam
+  concept_code: format_3475
+  display: TSV
+  definition: Tabular data represented as tab-separated values in a text file.
+- concept_curie: edam:topic_0199
+  vocabulary_prefix: edam
+  concept_code: topic_0199
+  display: Genetic variation
+  definition: Stable, naturally occurring mutations in a nucleotide sequence including alleles, naturally occurring mutations such as single base nucleotide substitutions, deletions and insertions, RFLPs and other polymorphisms.
+- concept_curie: edam:topic_0625
+  vocabulary_prefix: edam
+  concept_code: topic_0625
+  display: Genotype and phenotype
+  definition: The study of genetic constitution of a living entity, such as an individual, and organism, a cell and so on, typically with respect to a particular observable phenotypic traits, or resources concerning such traits, which might be an aspect of biochemistry, physiology, morphology, anatomy, development and so on.
+- concept_curie: edam:topic_3170
+  vocabulary_prefix: edam
+  concept_code: topic_3170
+  display: RNA-Seq
+  definition: A topic concerning high-throughput sequencing of cDNA to measure the RNA content (transcriptome) of a sample, for example, to investigate how different alleles of a gene are expressed, detect post-transcriptional mutations or identify gene fusions.
+- concept_curie: edam:topic_3173
+  vocabulary_prefix: edam
+  concept_code: topic_3173
+  display: Epigenomics
+  definition: The study of the epigenetic modifications of a whole cell, tissue, organism etc.
+- concept_curie: edam:topic_3673
+  vocabulary_prefix: edam
+  concept_code: topic_3673
+  display: Whole genome sequencing
+  definition: Laboratory technique to sequence the complete DNA sequence of an organism's genome at a single time.
+- concept_curie: HP:0000821
+  vocabulary_prefix: HP
+  concept_code: '0000821'
+  display: Hypothyroidism
+- concept_curie: HP:0001252
+  vocabulary_prefix: HP
+  concept_code: '0001252'
+  display: Hypotonia
+- concept_curie: HP:0001629
+  vocabulary_prefix: HP
+  concept_code: '0001629'
+  display: Ventricular septal defect
+- concept_curie: HP:0001631
+  vocabulary_prefix: HP
+  concept_code: '0001631'
+  display: Atrial septal defect
+- concept_curie: HP:0006695
+  vocabulary_prefix: HP
+  concept_code: '0006695'
+  display: Atrioventricular canal defect
+- concept_curie: HP:0012834
+  vocabulary_prefix: HP
+  concept_code: '0012834'
+  display: Right
+  definition: Being located on the right side of the body.
+- concept_curie: HP:0012835
+  vocabulary_prefix: HP
+  concept_code: '0012835'
+  display: Left
+  definition: Being located on the left side of the body.
+- concept_curie: HP:0030148
+  vocabulary_prefix: HP
+  concept_code: '0030148'
+  display: Heart murmur
+- concept_curie: KIN:007
+  vocabulary_prefix: KIN
+  concept_code: '007'
+  display: isBiologicalSiblingOf
+  definition: A relation between two people that have one or both biological parents in common.
+- concept_curie: KIN:008
+  vocabulary_prefix: KIN
+  concept_code: '008'
+  display: isFullsiblingOf
+  definition: A relation between two people that have both biological parents in common.
+- concept_curie: KIN:009
+  vocabulary_prefix: KIN
+  concept_code: '009'
+  display: isMultipleBirthSiblingOf
+  definition: A relation between two people born at the same birth.
+- concept_curie: KIN:012
+  vocabulary_prefix: KIN
+  concept_code: '012'
+  display: isHalfSiblingOf
+  definition: A relation between two people that have a single biological parent in common.
+- concept_curie: KIN:013
+  vocabulary_prefix: KIN
+  concept_code: '013'
+  display: isParentalSiblingOf
+  definition: A relation that indicates that a person is the sibling of a parent of another person.
+- concept_curie: KIN:014
+  vocabulary_prefix: KIN
+  concept_code: '014'
+  display: isCousinOf
+  definition: A relation between a person and a child of that person's uncle or aunt.
+- concept_curie: KIN:017
+  vocabulary_prefix: KIN
+  concept_code: '017'
+  display: isGrandparentOf
+  definition: A relation between a person and a child of that person's child.
+- concept_curie: KIN:024
+  vocabulary_prefix: KIN
+  concept_code: '024'
+  display: isSiblingFigureOf
+  definition: A relation between two people that has all or some of the characteristics of a sibling relationship.
+- concept_curie: KIN:025
+  vocabulary_prefix: KIN
+  concept_code: '025'
+  display: isStepSiblingOf
+  definition: A relation between children born of two different families who have been joined by marriage, defacto or otherwise, of at least one of their respective parents.
+- concept_curie: KIN:027
+  vocabulary_prefix: KIN
+  concept_code: '027'
+  display: isBiologicalMotherOf
+  definition: A relation that indicates that a person is the biological mother of another person.
+- concept_curie: KIN:028
+  vocabulary_prefix: KIN
+  concept_code: '028'
+  display: isBiologicalFatherOf
+  definition: A relation that indicates that a person is the biological father of another person.
+- concept_curie: KIN:032
+  vocabulary_prefix: KIN
+  concept_code: '032'
+  display: isBiologicalChildOf
+  definition: A relation that indicates that a person is the biological child of another person.
+- concept_curie: KIN:036
+  vocabulary_prefix: KIN
+  concept_code: '036'
+  display: isGrandchildOf
+  definition: A relation between a person and a parent of that person's parent.
+- concept_curie: loinc:29463-7
+  vocabulary_prefix: loinc
+  concept_code: 29463-7
+  display: Body Weight
+- concept_curie: loinc:39156-5
+  vocabulary_prefix: loinc
+  concept_code: 39156-5
+  display: Body Mass Index
+- concept_curie: loinc:8302-2
+  vocabulary_prefix: loinc
+  concept_code: 8302-2
+  display: Body Height
+- concept_curie: mesh:D001520
+  vocabulary_prefix: mesh
+  concept_code: D001520
+  display: Behavior and Behavior Mechanisms
+- concept_curie: mesh:D003430
+  vocabulary_prefix: mesh
+  concept_code: D003430
+  display: Cross-Sectional Studies
+  definition: Studies in which the presence or absence of disease or other health-related variables are determined in each member of the study population or in a representative sample at one particular time. This contrasts with LONGITUDINAL STUDIES which are followed over a period of time.
+- concept_curie: mesh:D006330
+  vocabulary_prefix: mesh
+  concept_code: D006330
+  display: Congenital Heart Defects
+- concept_curie: mesh:D007154
+  vocabulary_prefix: mesh
+  concept_code: D007154
+  display: Immune System Diseases
+- concept_curie: mesh:D008137
+  vocabulary_prefix: mesh
+  concept_code: D008137
+  display: Longitudinal Studies
+  definition: Studies in which variables relating to an individual or group of individuals are assessed over a period of time.
+- concept_curie: mesh:D013568
+  vocabulary_prefix: mesh
+  concept_code: D013568
+  display: All Co-occurring Conditions
+- concept_curie: mesh:D015331
+  vocabulary_prefix: mesh
+  concept_code: D015331
+  display: Cohort Studies
+  definition: Studies in which subsets of a defined population are identified. These groups may or may not be exposed to factors hypothesized to influence the probability of the occurrence of a particular disease or other outcome. Cohorts are defined populations which, as a whole, are followed in an attempt to determine distinguishing subgroup characteristics.
+- concept_curie: mesh:D016022
+  vocabulary_prefix: mesh
+  concept_code: D016022
+  display: Case-Control Studies
+  definition: Comparisons that start with the identification of persons with the disease or outcome of interest and a control (comparison, referent) group without the disease or outcome of interest. The relationship of an attribute is examined by comparing both groups with regard to the frequency or levels of outcome over time.
+- concept_curie: MONDO:0002070
+  vocabulary_prefix: MONDO
+  concept_code: '0002070'
+  display: ventricular septal defect
+- concept_curie: MONDO:0008608
+  vocabulary_prefix: MONDO
+  concept_code: '0008608'
+  display: Down syndrome
+- concept_curie: MS:1000568
+  vocabulary_prefix: MS
+  concept_code: '1000568'
+  display: MD5
+  definition: MD5 (Message-Digest algorithm 5) is a (now deprecated) cryptographic hash function with a 128-bit hash value used to check the integrity of files.
+- concept_curie: MS:1000569
+  vocabulary_prefix: MS
+  concept_code: '1000569'
+  display: SHA-1
+  definition: SHA-1 (Secure Hash Algorithm-1) is a cryptographic hash function designed by the National Security Agency (NSA). It is also used to verify file integrity. Since 2011 it has been deprecated by the NIST as a U. S. government standard.
+- concept_curie: NCIT:C199314
+  vocabulary_prefix: NCIT
+  concept_code: C199314
+  display: Adulthood
+  definition: A time period in the human lifespan when full physical and intellectual maturity have been attained, which generally follows adolescence.
+- concept_curie: NCIT:C89345
+  vocabulary_prefix: NCIT
+  concept_code: C89345
+  display: Childhood
+  definition: A time period that begins at the beginning of the human embryonic stage and continues until the end of adolescence.
+- concept_curie: NCIT:C89889
+  vocabulary_prefix: NCIT
+  concept_code: C89889
+  display: Infancy
+  definition: A human life stage that begins at birth and continues until twelve complete months of age.
+- concept_curie: OBI:0000257
+  vocabulary_prefix: OBI
+  concept_code: '0000257'
+  display: DNA extraction
+  definition: A DNA extraction is a nucleic acid extraction where the desired output material is DNA.
+- concept_curie: OBI:0000819
+  vocabulary_prefix: OBI
+  concept_code: '0000819'
+  display: anticoagulant tube storage of blood specimen
+  definition: Storage of a blood specimen in a tube with anticoagulant
+- concept_curie: OBI:0000915
+  vocabulary_prefix: OBI
+  concept_code: '0000915'
+  display: freezing storage
+  definition: A storage process in temperature that maintenance the frozen status of the stored entities.
+- concept_curie: OBI:0001051
+  vocabulary_prefix: OBI
+  concept_code: '0001051'
+  display: DNA extract
+  definition: The output of an extraction process in which DNA molecules are purified in order to exclude DNA from organellas.
+- concept_curie: OBI:0002117
+  vocabulary_prefix: OBI
+  concept_code: '0002117'
+  display: whole genome sequencing assay
+  definition: A DNA sequencing assay that intends to provide information about the sequence of an entire genome of an organism.
+- concept_curie: snomedct:103328004
+  vocabulary_prefix: snomedct
+  concept_code: '103328004'
+  display: Available
+  definition: The item is available to users, authorization/request permitting.
+- concept_curie: snomedct:103329007
+  vocabulary_prefix: snomedct
+  concept_code: '103329007'
+  display: Unavailable
+  definition: The item is not available to users.
+- concept_curie: snomedct:24028007
+  vocabulary_prefix: snomedct
+  concept_code: '24028007'
+  display: Right
+- concept_curie: snomedct:248152002
+  vocabulary_prefix: snomedct
+  concept_code: '248152002'
+  display: Female
+- concept_curie: snomedct:248153007
+  vocabulary_prefix: snomedct
+  concept_code: '248153007'
+  display: Male
+- concept_curie: snomedct:261665006
+  vocabulary_prefix: snomedct
+  concept_code: '261665006'
+  display: Unknown
+- concept_curie: snomedct:410515003
+  vocabulary_prefix: snomedct
+  concept_code: '410515003'
+  display: Known present
+- concept_curie: snomedct:410516002
+  vocabulary_prefix: snomedct
+  concept_code: '410516002'
+  display: Known absent
+- concept_curie: snomedct:419099009
+  vocabulary_prefix: snomedct
+  concept_code: '419099009'
+  display: Dead
+- concept_curie: snomedct:438949009
+  vocabulary_prefix: snomedct
+  concept_code: '438949009'
+  display: Alive
+- concept_curie: snomedct:72705000
+  vocabulary_prefix: snomedct
+  concept_code: '72705000'
+  display: Mother
+- concept_curie: snomedct:7771000
+  vocabulary_prefix: snomedct
+  concept_code: '7771000'
+  display: Left
+- concept_curie: snomedct:82078001
+  vocabulary_prefix: snomedct
+  concept_code: '82078001'
+  display: Collection of blood specimen for laboratory
+- concept_curie: snomedct:85900004
+  vocabulary_prefix: snomedct
+  concept_code: '85900004'
+  display: Proband
+- concept_curie: UBERON:0000178
+  vocabulary_prefix: UBERON
+  concept_code: '0000178'
+  display: blood
+  definition: A fluid that is composed of blood plasma and erythrocytes.
+- concept_curie: ucum:cm
+  vocabulary_prefix: ucum
+  concept_code: cm
+  display: cm
+- concept_curie: ucum:kg
+  vocabulary_prefix: ucum
+  concept_code: kg
+  display: Kilograms
+- concept_curie: ucum:kg/m2
+  vocabulary_prefix: ucum
+  concept_code: kg/m2
+  display: kg/m2
+- concept_curie: ucum:ml
+  vocabulary_prefix: ucum
+  concept_code: ml
+  display: ml
+- concept_curie: ucum:ng/uL
+  vocabulary_prefix: ucum
+  concept_code: ng/uL
+  display: nanogram per microliter

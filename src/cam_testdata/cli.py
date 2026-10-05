@@ -109,3 +109,56 @@ def verify_sql_command(profile: Profile = "tiny", out_dir: OutDir = None) -> Non
         typer.echo(f"{dump}: {'ok' if not tables else 'differs: ' + ', '.join(tables)}")
     if bad or not results:
         raise typer.Exit(1)
+
+
+@app.command("dist")
+def dist(profile: Profile = "small", out_dir: OutDir = None) -> None:
+    """Write a reproducible release archive of output/<profile> into dist/."""
+    from cam_testdata.dist import DistError, make_dist
+
+    try:
+        path = make_dist(profile, out_dir)
+    except DistError as exc:
+        typer.echo(str(exc), err=True)
+        raise typer.Exit(1) from exc
+    typer.echo(f"wrote {path} ({path.stat().st_size:,} bytes)")
+
+
+@app.command("check-drift")
+def check_drift(profile: Profile = "tiny", out_dir: OutDir = None) -> None:
+    """Compare a build's manifest with the installed model; list what changed."""
+    import json
+
+    from cam_testdata import drift
+    from cam_testdata.export.manifest import sha256
+    from cam_testdata.factories import all_factories
+    from cam_testdata.schema_introspect import get_model
+    from cam_testdata.settings import SCHEMA_PATH
+
+    path = (out_dir or PROJECT_ROOT / "output" / profile) / "manifest.json"
+    if not path.exists():
+        typer.echo(f"{path} not found; build the profile first", err=True)
+        raise typer.Exit(1)
+    built = json.loads(path.read_text())["model"]
+    model = get_model()
+    problems = []
+    installed = version("common-access-model")
+    if built["common_access_model"] != installed:
+        problems.append(
+            f"model version: built {built['common_access_model']}, installed {installed}"
+        )
+    if built["schema_sha256"] != sha256(SCHEMA_PATH):
+        problems.append(f"schema file changed: {SCHEMA_PATH.resolve().name}")
+    problems += drift.compare_shapes(built.get("shape", {}), drift.model_shape(model))
+    report = drift.check(all_factories())
+    problems += [f"no factory produces table {t}" for t in report.missing_tables]
+    problems += [f"no factory sets column {c}" for c in report.missing_columns]
+    problems += [f"stale drift.skip_columns entry {c}" for c in report.stale_skips]
+    for line in problems:
+        typer.echo(line)
+    if problems:
+        typer.echo(
+            f"{len(problems)} difference(s): update factories/skip list/scenarios, then rebuild tiny and small"
+        )
+        raise typer.Exit(1)
+    typer.echo(f"no drift: {profile} was built with the installed model ({installed})")

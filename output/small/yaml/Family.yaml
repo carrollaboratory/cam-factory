@@ -1,0 +1,144 @@
+- family_id: gr-16iokvr3dp
+  family_type: CAMO:0000007
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s02-f0005
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_id: gr-712cogepvh
+  family_type: CAMO:0000007
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s01-f0009
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_id: gr-7xapo2miv7
+  family_type: CAMO:0000003
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s02-f0010
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_id: gr-87lzvahybi
+  family_type: CAMO:0000004
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s02-f0011
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_id: gr-88gvp0xb9m
+  family_type: CAMO:0000004
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s02-f0003
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_id: gr-8rtgm53791
+  family_type: CAMO:0000004
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s01-f0004
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_id: gr-9dlpx8yoya
+  family_type: CAMO:0000007
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s01-f0005
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_id: gr-a4jmkf3hmb
+  family_type: CAMO:0000007
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s01-f0001
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_id: gr-ak7iyas6ix
+  family_type: CAMO:0000004
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s01-f0006
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_id: gr-b4m81p6827
+  family_type: CAMO:0000007
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s02-f0007
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_id: gr-be10ri4wkd
+  family_type: CAMO:0000007
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s02-f0008
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_id: gr-dw1i7se19t
+  family_type: CAMO:0000003
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s02-f0006
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_id: gr-fcybny88t1
+  family_type: CAMO:0000007
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s01-f0007
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_id: gr-g3m1f955mo
+  family_type: CAMO:0000004
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s02-f0009
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_id: gr-i1ue0qin9w
+  family_type: CAMO:0000004
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s02-f0002
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_id: gr-lysgrb1kny
+  family_type: CAMO:0000004
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s02-f0001
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_id: gr-pjg6syepak
+  family_type: CAMO:0000004
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s01-f0002
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_id: gr-r88okq37o0
+  family_type: CAMO:0000007
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s01-f0012
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_id: gr-v5ied6g1qi
+  family_type: CAMO:0000007
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s01-f0008
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_id: gr-x8t1druio3
+  family_type: CAMO:0000007
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s01-f0003
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_id: gr-xogbo0i77i
+  family_type: CAMO:0000004
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s02-f0012
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_id: gr-y2o3d7nwvm
+  family_type: CAMO:0000004
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s02-f0004
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- family_id: gr-zf9y99gaje
+  family_type: CAMO:0000004
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s01-f0010
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- family_id: gr-znyuulhgxc
+  family_type: CAMO:0000004
+  external_id:
+  - https://example.org/cam-testdata/small/Family/s01-f0011
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71

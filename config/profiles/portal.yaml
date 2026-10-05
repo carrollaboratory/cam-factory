@@ -1,0 +1,34 @@
+# Scaled profile "portal" (TODO 6.3): several studies, hundreds of subjects each.
+# Output is gitignored and published as a release archive (`just dist portal`).
+
+studies: 5
+child_studies: 1
+families_per_study: 150
+family_mix: {trio: 0.45, duo: 0.2, singleton: 0.35}
+non_participant_sibling: 0.15
+
+subject:
+  deceased: 0.04
+  unknown_sex: 0.03
+  two_races: 0.1
+  unknown_ethnicity: 0.08
+  encounters_mean: 2.0
+  assertions_mean: 3.0
+  measurement: 0.35
+  absent: 0.25
+  without_encounter: 0.15
+  resolved: 0.1
+
+biospecimen:
+  blood_draw: 0.75
+  dna: 0.9
+  aliquots_mean: 1.5
+  unavailable_aliquot: 0.08
+
+files:
+  cram_per_dna: 0.9
+  family_vcf: 0.7
+  clinical_table: true
+
+full_reference: true        # load every vocab_content concept, not just the used ones
+record_build_time: true     # not committed, so a timing value is fine here

@@ -1,0 +1,58 @@
+- dataset_id: ls-1154czjcje
+  name: NeighNeigh Equine data release 5
+  do_id: 10.5072/cam-testdata.grdggrel
+  file_id:
+  - dr-6rz35r1dcn
+  - dr-7cmrrchrb2
+  - dr-9gn7m31rwj
+  - dr-am7lr2y8ef
+  - dr-czqmekc4k9
+  - dr-dv899gzt40
+  - dr-gfqyfal0g4
+  - dr-jttmffjdeu
+  - dr-ko8n1f4o85
+  - dr-kxejd1xust
+  - dr-l4caxcumdx
+  - dr-lix3bceyj5
+  - dr-nt2q04ykzv
+  - dr-pl4h7luiyj
+  - dr-q8dppwlx74
+  - dr-rthti3h8qh
+  - dr-u9la8l8rae
+  - dr-vqp87va56v
+  - dr-wjooqqfn1g
+  - dr-wyy6htjq29
+  - dr-zmk9npxmdg
+  publication:
+  - bibliographic_reference: Baa F, Neigh E, Neigh N. Social behavior in sheep varies with the season. J Barnyard Sci. 2020;28(10):167-174.
+    external_id:
+    - https://example.org/cam-testdata/small/Publication/s02-pub1
+    access_policy_id: co-yly4xno8c0
+    study_id: sd-2lx98atcp0
+  external_id:
+  - https://example.org/cam-testdata/small/Dataset/s02-release-1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- dataset_id: ls-ba4m1f3o7k
+  name: MaaMaa Caprine data release 1
+  do_id: 10.5072/cam-testdata.jiktz896
+  file_id:
+  - dr-3ay88rjpq7
+  - dr-5u4yj6t1qz
+  - dr-a5t68p77a3
+  - dr-ay99mw28h9
+  - dr-fdxdtru8l2
+  - dr-fpe7cm9118
+  - dr-l2tutwpe1u
+  - dr-pasezan1az
+  - dr-w6fcc1x2x3
+  publication:
+  - bibliographic_reference: Meow M, Hum B, Cluck C. Coat color in llamas tracks with diet. Proc Farmstead Soc. 2022;3(5):29-40.
+    external_id:
+    - https://example.org/cam-testdata/small/Publication/s01-pub1
+    access_policy_id: co-tam2ciyi45
+    study_id: sd-3s8wpdnf71
+  external_id:
+  - https://example.org/cam-testdata/small/Dataset/s01-release-1
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71

@@ -25,6 +25,10 @@ lint:
   uv run ruff format --check
   uv run mypy
 
+# Reproducible release archive of output/<profile> in dist/ (you upload it)
+dist profile:
+  uv run cam-testdata dist --profile {{profile}}
+
 # Round-trip each SQL dump through a scratch DB and byte-compare its CSVs
 verify-sql profile="tiny":
   uv run cam-testdata verify-sql --profile {{profile}}

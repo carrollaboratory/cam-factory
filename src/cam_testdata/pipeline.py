@@ -4,6 +4,7 @@ A failing validation aborts before anything is exported.
 """
 
 import shutil
+import time
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -18,6 +19,7 @@ from cam_testdata.export import (
     sql_export,
     yaml_export,
 )
+from cam_testdata.scenarios import scaled
 from cam_testdata.scenarios.loader import load_scenario
 from cam_testdata.settings import PROJECT_ROOT, get_settings
 from cam_testdata.validate.coverage import run_features
@@ -51,13 +53,19 @@ def run_build(
     settings = get_settings()
     db_profile = db_profile or profile
     out_dir = out_dir or PROJECT_ROOT / "output" / profile
-    if profile not in SCENARIOS:
-        raise BuildFailed(
-            f"no scenario for profile {profile!r} yet (scaled profiles arrive in Phase 6)"
-        )
-
+    started = time.perf_counter()
     build = Build(profile)
-    load_scenario(build, SCENARIOS[profile])
+    record_build_time = False
+    if profile in SCENARIOS:
+        load_scenario(build, SCENARIOS[profile])
+    elif scaled.profile_path(profile).exists():
+        config = scaled.generate(build, profile)
+        full_reference = full_reference or bool(config.get("full_reference"))
+        record_build_time = bool(config.get("record_build_time"))
+    else:
+        raise BuildFailed(
+            f"no scenario for profile {profile!r} (scenarios/*.yaml or config/profiles/*.yaml)"
+        )
 
     engine = db.make_engine(db_profile)
     try:
@@ -117,6 +125,10 @@ def run_build(
                 id_rows=id_rows,
                 pg_dump_version=sql_export.pg_dump_version(settings),
             )
+            if (
+                record_build_time
+            ):  # never for committed profiles: it isn't deterministic
+                data["build_seconds"] = round(time.perf_counter() - started, 1)
             manifest.write_manifest(data, out_dir / "manifest.json")
             if scenario_doc_path is not None:
                 text = scenario_doc.render(

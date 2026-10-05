@@ -90,18 +90,28 @@ class FamilyUnit:
     mother: Subject | None = None
     father: Subject | None = None
     members: dict[str, Subject] = field(default_factory=dict)
+    demographics: dict[str, Any] = field(default_factory=dict)  # role -> Demographics
 
 
 def make_family(
     kind: Literal["trio", "duo", "singleton"],
     study: Any,
     key: str,
+    member_demographics: dict[str, dict[str, Any]] | None = None,
     **proband_demographics: Any,
 ) -> FamilyUnit:
     """A family with Participant subjects, Demographics, memberships and relationships.
 
     Handles: <profile>/<Class>/<key>-proband (-mother, -father). A duo is proband + mother.
+    `member_demographics` maps a role to Demographics fields; keyword arguments
+    are shorthand for the proband's.
     """
+    member_demographics = dict(member_demographics or {})
+    if proband_demographics:
+        member_demographics["proband"] = {
+            **member_demographics.get("proband", {}),
+            **proband_demographics,
+        }
     build = current_build()
     family = FamilyFactory(
         handle=build.handle("Family", key), scope=study, family_type=FAMILY_TYPES[kind]
@@ -113,17 +123,16 @@ def make_family(
         roles["father"] = (FATHER_ROLE, MALE)
 
     members: dict[str, Subject] = {}
+    demographics_by_role: dict[str, Any] = {}
     for name, (role, sex) in roles.items():
         member_key = f"{key}-{name}"
         subject = SubjectFactory(
             handle=build.handle("Subject", member_key), scope=study
         )
-        demographics: dict[str, Any] = (
-            dict(proband_demographics) if name == "proband" else {}
-        )
+        demographics: dict[str, Any] = dict(member_demographics.get(name, {}))
         if sex is not None:
             demographics.setdefault("sex", sex)
-        DemographicsFactory(
+        demographics_by_role[name] = DemographicsFactory(
             handle=build.handle("Demographics", member_key),
             subject=subject,
             **demographics,
@@ -141,6 +150,7 @@ def make_family(
         mother=members.get("mother"),
         father=members.get("father"),
         members=members,
+        demographics=demographics_by_role,
     )
 
     for name, relation in (("mother", MOTHER_ROLE), ("father", FATHER_ROLE)):

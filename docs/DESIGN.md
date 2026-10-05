@@ -532,7 +532,11 @@ their handles (§8.3), sha256 of each artifact.
 `cam-testdata check-drift` compares the manifest with the current installed model
 and exits non-zero if regeneration is needed. The generator's own git commit is
 deliberately left out: tiny and small outputs are committed, so a per-commit
-value would change every build and `just check` could never pass.
+value would change every build and `just check` could never pass. `model.shape` snapshots every table's
+columns and each enum's value count and hash; `cam-testdata check-drift`
+compares it with the installed model to list table, column and enum changes.
+Profiles that set `record_build_time` (portal only, since its output isn't
+committed) also record `build_seconds`.
 
 **Git policy**: tiny and small outputs are committed. Small and portal are
 also published as compressed release artifacts (Q6) so other projects can use

@@ -1,0 +1,37 @@
+# Scaled profile "small" (TODO 6.2): ~1-2k rows, committed to git and published
+# as a release archive. Read by cam_testdata.scenarios.scaled.
+#
+# Every random choice is seeded by the record's own handle, so raising a count
+# adds records without changing the existing ones.
+
+studies: 2                  # s01, s02, ... alternating controlled / open access
+child_studies: 1            # the last N studies get the first study as parent
+families_per_study: 12      # families are generated until this count
+family_mix: {trio: 0.5, duo: 0.2, singleton: 0.3}
+non_participant_sibling: 0.15   # probability a family also has a Non-Participant sibling
+
+subject:
+  deceased: 0.05
+  unknown_sex: 0.05
+  two_races: 0.1
+  unknown_ethnicity: 0.1
+  encounters_mean: 1.5      # Poisson, plus the baseline visit
+  assertions_mean: 2.0      # Poisson, per participant
+  measurement: 0.3          # share of assertions that are numeric measurements
+  absent: 0.25              # share of condition assertions recorded as absent
+  without_encounter: 0.15   # share of assertions not tied to an encounter
+  resolved: 0.1             # share of present conditions with an age_at_resolution
+
+biospecimen:
+  blood_draw: 0.7           # probability a participant has a baseline blood draw
+  dna: 0.9                  # probability the blood yields a derived DNA sample
+  aliquots_mean: 1.5        # Poisson, per sample (at least one)
+  unavailable_aliquot: 0.1
+
+files:
+  cram_per_dna: 0.85        # a CRAM + WGS assay per DNA sample
+  family_vcf: 0.6           # a joint VCF per family with 2+ DNA samples
+  clinical_table: true      # one clinical TSV per study linking every participant
+
+full_reference: false
+record_build_time: false    # committed output must be byte-stable

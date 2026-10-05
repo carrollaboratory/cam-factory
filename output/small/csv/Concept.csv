@@ -1,0 +1,98 @@
+concept_curie,concept_id,vocabulary_prefix,concept_code,display,definition
+CAMO:0000003,,CAMO,0000003,Duo,This family study includes at a minimum one parent and one affected child.
+CAMO:0000004,,CAMO,0000004,Trio,This family study includes at a minimum two parents of one affected child.
+CAMO:0000007,,CAMO,0000007,Proband Only,This family study includes only one or more probands.
+CAMO:0000010,,CAMO,0000010,Survey,Data obtained from a survey or questionnaire given to a participant or their representative.
+CAMO:0000011,,CAMO,0000011,Research Assessment,Data obtained by research staff for the study.
+CAMO:0000014,,CAMO,0000014,Electronic Health Record,Data obtained directly from an Electronic Health Record.
+CAMO:0000016,,CAMO,0000016,Research Staff Asserted,Assertion made by research staff.
+CAMO:0000017,,CAMO,0000017,Healthcare Asserted,Assertion documented by a healthcare system or provider.
+CAMO:0000019,,CAMO,0000019,Participant Asserted,Assertion made by a study participant.
+CAMO:0000024,,CAMO,0000024,Participant,"Study participant with consent, assent, or waiver of consent."
+CAMO:0000025,,CAMO,0000025,Non-Participant,"An individual not directly participating in a study, eg, the subject of a reported family history."
+CDCREC:1002-5,,CDCREC,1002-5,American Indian or Alaska Native,
+CDCREC:2028-9,,CDCREC,2028-9,Asian,
+CDCREC:2054-5,,CDCREC,2054-5,Black or African American,
+CDCREC:2076-8,,CDCREC,2076-8,Native Hawaiian or Other Pacific Islander,
+CDCREC:2106-3,,CDCREC,2106-3,White,
+CDCREC:2118-8,,CDCREC,2118-8,Middle Eastern or North African,
+CDCREC:2135-2,,CDCREC,2135-2,Hispanic or Latino,
+CDCREC:2186-5,,CDCREC,2186-5,Not Hispanic or Latino,
+DUO:0000007,,DUO,0000007,disease specific research,This data use permission indicates that use is allowed provided it is related to the specified disease.
+DUO:0000021,,DUO,0000021,ethics approval required,This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval.
+DUO:0000042,,DUO,0000042,general research use,This data use permission indicates that use is allowed for general research use for any research purpose.
+DUO:0000045,,DUO,0000045,not for profit organisation use only,This data use modifier indicates that use of the data is limited to not-for-profit organizations.
+edam:data_0863,,edam,data_0863,Sequence alignment,Alignment of multiple molecular sequences.
+edam:data_3498,,edam,data_3498,Sequence variations,Data on gene sequence variations resulting large-scale genotyping and DNA sequencing projects.
+edam:format_3016,,edam,format_3016,VCF,Variant Call Format (VCF) is tabular format for storing genomic sequence variations.
+edam:format_3462,,edam,format_3462,CRAM,Reference-based compression of alignment format.
+edam:format_3475,,edam,format_3475,TSV,Tabular data represented as tab-separated values in a text file.
+edam:topic_0199,,edam,topic_0199,Genetic variation,"Stable, naturally occurring mutations in a nucleotide sequence including alleles, naturally occurring mutations such as single base nucleotide substitutions, deletions and insertions, RFLPs and other polymorphisms."
+edam:topic_0625,,edam,topic_0625,Genotype and phenotype,"The study of genetic constitution of a living entity, such as an individual, and organism, a cell and so on, typically with respect to a particular observable phenotypic traits, or resources concerning such traits, which might be an aspect of biochemistry, physiology, morphology, anatomy, development and so on."
+edam:topic_3170,,edam,topic_3170,RNA-Seq,"A topic concerning high-throughput sequencing of cDNA to measure the RNA content (transcriptome) of a sample, for example, to investigate how different alleles of a gene are expressed, detect post-transcriptional mutations or identify gene fusions."
+edam:topic_3173,,edam,topic_3173,Epigenomics,"The study of the epigenetic modifications of a whole cell, tissue, organism etc."
+edam:topic_3673,,edam,topic_3673,Whole genome sequencing,Laboratory technique to sequence the complete DNA sequence of an organism's genome at a single time.
+HP:0000821,,HP,0000821,Hypothyroidism,
+HP:0001252,,HP,0001252,Hypotonia,
+HP:0001629,,HP,0001629,Ventricular septal defect,
+HP:0001631,,HP,0001631,Atrial septal defect,
+HP:0006695,,HP,0006695,Atrioventricular canal defect,
+HP:0012834,,HP,0012834,Right,Being located on the right side of the body.
+HP:0012835,,HP,0012835,Left,Being located on the left side of the body.
+HP:0030148,,HP,0030148,Heart murmur,
+KIN:007,,KIN,007,isBiologicalSiblingOf,A relation between two people that have one or both biological parents in common.
+KIN:008,,KIN,008,isFullsiblingOf,A relation between two people that have both biological parents in common.
+KIN:009,,KIN,009,isMultipleBirthSiblingOf,A relation between two people born at the same birth.
+KIN:012,,KIN,012,isHalfSiblingOf,A relation between two people that have a single biological parent in common.
+KIN:013,,KIN,013,isParentalSiblingOf,A relation that indicates that a person is the sibling of a parent of another person.
+KIN:014,,KIN,014,isCousinOf,A relation between a person and a child of that person's uncle or aunt.
+KIN:017,,KIN,017,isGrandparentOf,A relation between a person and a child of that person's child.
+KIN:024,,KIN,024,isSiblingFigureOf,A relation between two people that has all or some of the characteristics of a sibling relationship.
+KIN:025,,KIN,025,isStepSiblingOf,"A relation between children born of two different families who have been joined by marriage, defacto or otherwise, of at least one of their respective parents."
+KIN:027,,KIN,027,isBiologicalMotherOf,A relation that indicates that a person is the biological mother of another person.
+KIN:028,,KIN,028,isBiologicalFatherOf,A relation that indicates that a person is the biological father of another person.
+KIN:032,,KIN,032,isBiologicalChildOf,A relation that indicates that a person is the biological child of another person.
+KIN:036,,KIN,036,isGrandchildOf,A relation between a person and a parent of that person's parent.
+loinc:29463-7,,loinc,29463-7,Body Weight,
+loinc:39156-5,,loinc,39156-5,Body Mass Index,
+loinc:8302-2,,loinc,8302-2,Body Height,
+mesh:D001520,,mesh,D001520,Behavior and Behavior Mechanisms,
+mesh:D003430,,mesh,D003430,Cross-Sectional Studies,Studies in which the presence or absence of disease or other health-related variables are determined in each member of the study population or in a representative sample at one particular time. This contrasts with LONGITUDINAL STUDIES which are followed over a period of time.
+mesh:D006330,,mesh,D006330,Congenital Heart Defects,
+mesh:D007154,,mesh,D007154,Immune System Diseases,
+mesh:D008137,,mesh,D008137,Longitudinal Studies,Studies in which variables relating to an individual or group of individuals are assessed over a period of time.
+mesh:D013568,,mesh,D013568,All Co-occurring Conditions,
+mesh:D015331,,mesh,D015331,Cohort Studies,"Studies in which subsets of a defined population are identified. These groups may or may not be exposed to factors hypothesized to influence the probability of the occurrence of a particular disease or other outcome. Cohorts are defined populations which, as a whole, are followed in an attempt to determine distinguishing subgroup characteristics."
+mesh:D016022,,mesh,D016022,Case-Control Studies,"Comparisons that start with the identification of persons with the disease or outcome of interest and a control (comparison, referent) group without the disease or outcome of interest. The relationship of an attribute is examined by comparing both groups with regard to the frequency or levels of outcome over time."
+MONDO:0002070,,MONDO,0002070,ventricular septal defect,
+MONDO:0008608,,MONDO,0008608,Down syndrome,
+MS:1000568,,MS,1000568,MD5,MD5 (Message-Digest algorithm 5) is a (now deprecated) cryptographic hash function with a 128-bit hash value used to check the integrity of files.
+MS:1000569,,MS,1000569,SHA-1,SHA-1 (Secure Hash Algorithm-1) is a cryptographic hash function designed by the National Security Agency (NSA). It is also used to verify file integrity. Since 2011 it has been deprecated by the NIST as a U. S. government standard.
+NCIT:C199314,,NCIT,C199314,Adulthood,"A time period in the human lifespan when full physical and intellectual maturity have been attained, which generally follows adolescence."
+NCIT:C89345,,NCIT,C89345,Childhood,A time period that begins at the beginning of the human embryonic stage and continues until the end of adolescence.
+NCIT:C89889,,NCIT,C89889,Infancy,A human life stage that begins at birth and continues until twelve complete months of age.
+OBI:0000257,,OBI,0000257,DNA extraction,A DNA extraction is a nucleic acid extraction where the desired output material is DNA.
+OBI:0000819,,OBI,0000819,anticoagulant tube storage of blood specimen,Storage of a blood specimen in a tube with anticoagulant
+OBI:0000915,,OBI,0000915,freezing storage,A storage process in temperature that maintenance the frozen status of the stored entities.
+OBI:0001051,,OBI,0001051,DNA extract,The output of an extraction process in which DNA molecules are purified in order to exclude DNA from organellas.
+OBI:0002117,,OBI,0002117,whole genome sequencing assay,A DNA sequencing assay that intends to provide information about the sequence of an entire genome of an organism.
+snomedct:103328004,,snomedct,103328004,Available,"The item is available to users, authorization/request permitting."
+snomedct:103329007,,snomedct,103329007,Unavailable,The item is not available to users.
+snomedct:24028007,,snomedct,24028007,Right,
+snomedct:248152002,,snomedct,248152002,Female,
+snomedct:248153007,,snomedct,248153007,Male,
+snomedct:261665006,,snomedct,261665006,Unknown,
+snomedct:410515003,,snomedct,410515003,Known present,
+snomedct:410516002,,snomedct,410516002,Known absent,
+snomedct:419099009,,snomedct,419099009,Dead,
+snomedct:438949009,,snomedct,438949009,Alive,
+snomedct:72705000,,snomedct,72705000,Mother,
+snomedct:7771000,,snomedct,7771000,Left,
+snomedct:82078001,,snomedct,82078001,Collection of blood specimen for laboratory,
+snomedct:85900004,,snomedct,85900004,Proband,
+UBERON:0000178,,UBERON,0000178,blood,A fluid that is composed of blood plasma and erythrocytes.
+ucum:cm,,ucum,cm,cm,
+ucum:kg,,ucum,kg,Kilograms,
+ucum:kg/m2,,ucum,kg/m2,kg/m2,
+ucum:ml,,ucum,ml,ml,
+ucum:ng/uL,,ucum,ng/uL,nanogram per microliter,

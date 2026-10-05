@@ -1,0 +1,32 @@
+- name: Barbara Hendricks
+  institution: Meadowbrook Center for Galline Genomics
+  investigator_title: Principal Investigator
+  email: barbara.hendricks@example.org
+  external_id:
+  - https://example.org/cam-testdata/small/Investigator/s02-pi
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- name: Robert Davis
+  institution: Haystack Valley College of Anatine Medicine
+  investigator_title: Principal Investigator
+  email: robert.davis@example.org
+  external_id:
+  - https://example.org/cam-testdata/small/Investigator/s01-pi
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- name: Ian Lucas
+  institution: Fernfield Institute of Canine Studies
+  investigator_title: Study Coordinator
+  email: ian.lucas@example.org
+  external_id:
+  - https://example.org/cam-testdata/small/Investigator/s01-contact
+  access_policy_id: co-tam2ciyi45
+  study_id: sd-3s8wpdnf71
+- name: Gabrielle Henry
+  institution: Sunny Acres School of Barnyard Sciences
+  investigator_title: Study Coordinator
+  email: gabrielle.henry@example.org
+  external_id:
+  - https://example.org/cam-testdata/small/Investigator/s02-contact
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
