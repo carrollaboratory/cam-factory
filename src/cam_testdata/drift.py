@@ -67,12 +67,17 @@ def model_shape(model: Any, settings: Settings | None = None) -> dict[str, Any]:
     import hashlib
 
     tables = {t.name: [c.name for c in t.columns] for t in db.registry_tables(settings)}
+    # NOT NULL changes can break insert ordering (e.g. the Study <-> DOI cycle), so track them
+    not_null = {
+        t.name: [c.name for c in t.columns if not c.nullable and not c.primary_key]
+        for t in db.registry_tables(settings)
+    }
     enums = {}
     for name in sorted(model.enums):
         values = sorted(model.enum_values(name))
         digest = hashlib.sha256("\n".join(values).encode()).hexdigest()[:16]
         enums[str(name)] = {"count": len(values), "sha256": digest}
-    return {"tables": tables, "enums": enums}
+    return {"tables": tables, "not_null": not_null, "enums": enums}
 
 
 def compare_shapes(old: dict[str, Any], new: dict[str, Any]) -> list[str]:
@@ -83,6 +88,19 @@ def compare_shapes(old: dict[str, Any], new: dict[str, Any]) -> list[str]:
     for t in sorted(set(old_t) & set(new_t)):
         changes += [f"column added: {t}.{c}" for c in new_t[t] if c not in old_t[t]]
         changes += [f"column removed: {t}.{c}" for c in old_t[t] if c not in new_t[t]]
+    if "not_null" in old:  # manifests from before this field can't be compared
+        old_n, new_n = old["not_null"], new.get("not_null", {})
+        for t in sorted(set(old_n) & set(new_n)):
+            changes += [
+                f"column now NOT NULL: {t}.{c}"
+                for c in new_n[t]
+                if c not in old_n[t] and c in old_t.get(t, [])
+            ]
+            changes += [
+                f"column now nullable: {t}.{c}"
+                for c in old_n[t]
+                if c not in new_n[t] and c in new_t.get(t, [])
+            ]
     old_e, new_e = old.get("enums", {}), new.get("enums", {})
     changes += [f"enum added: {e}" for e in sorted(set(new_e) - set(old_e))]
     changes += [f"enum removed: {e}" for e in sorted(set(old_e) - set(new_e))]

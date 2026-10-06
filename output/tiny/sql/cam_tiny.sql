@@ -3753,8 +3753,8 @@ CREATE TABLE cam."ActivityDefinition" (
     activity_definition_id text NOT NULL,
     name text,
     description text,
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -3780,8 +3780,8 @@ CREATE TABLE cam."Aliquot" (
     quantity_unit text,
     concentration_number double precision,
     concentration_unit text,
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -3804,8 +3804,8 @@ CREATE TABLE cam."Assay" (
     assay_type cam."EnumAssayType" NOT NULL,
     assay_source text,
     activity_definition_id text,
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -3861,8 +3861,8 @@ CREATE TABLE cam."BiospecimenCollection" (
     spatial_qualifier text,
     laterality text,
     encounter_id text,
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -3929,8 +3929,8 @@ ALTER SEQUENCE cam."ConceptRelationship_id_seq" OWNED BY cam."ConceptRelationshi
 CREATE TABLE cam."DOI" (
     do_id text NOT NULL,
     bibliographic_reference text,
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -3955,8 +3955,8 @@ CREATE TABLE cam."Dataset" (
     do_id text,
     data_collection_start text,
     data_collection_end text,
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -4001,8 +4001,8 @@ CREATE TABLE cam."Demographics" (
     age_at_last_vital_status integer,
     vital_status text,
     age_at_first_engagement integer,
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -4067,8 +4067,8 @@ CREATE TABLE cam."Encounter" (
     subject_id text NOT NULL,
     encounter_definition_id text,
     age_at_event integer,
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -4080,8 +4080,8 @@ CREATE TABLE cam."EncounterDefinition" (
     encounter_definition_id text NOT NULL,
     name text,
     description text,
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -4125,8 +4125,8 @@ CREATE TABLE cam."Family" (
     family_description text,
     consanguinity cam."EnumPresentAbsent",
     family_study_focus text,
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -4139,8 +4139,8 @@ CREATE TABLE cam."FamilyMembership" (
     family_id text NOT NULL,
     subject_id text NOT NULL,
     family_role text,
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -4163,8 +4163,8 @@ CREATE TABLE cam."FamilyRelationship" (
     family_member_id text NOT NULL,
     relation text NOT NULL,
     subject_id text NOT NULL,
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -4205,8 +4205,8 @@ CREATE TABLE cam."File" (
     drs_uri text,
     storage_class text,
     availability cam."EnumAvailabilityStatus",
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -4291,8 +4291,8 @@ CREATE TABLE cam."Investigator" (
     institution text,
     investigator_title text,
     email text,
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -4334,8 +4334,8 @@ CREATE TABLE cam."Publication" (
     id integer NOT NULL,
     bibliographic_reference text,
     website text,
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -4382,8 +4382,8 @@ CREATE TABLE cam."Sample" (
     availability_status cam."EnumAvailabilityStatus",
     quantity_number double precision,
     quantity_unit text,
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -4431,7 +4431,7 @@ CREATE TABLE cam."Study" (
     acknowledgments text,
     citation_statement text,
     do_id text,
-    access_policy_id text,
+    access_policy_id text NOT NULL,
     study_id text NOT NULL
 );
 
@@ -4446,7 +4446,7 @@ CREATE TABLE cam."StudyMetadata" (
     vbr_id text,
     expected_number_of_participants integer NOT NULL,
     actual_number_of_participants integer NOT NULL,
-    access_policy_id text
+    access_policy_id text NOT NULL
 );
 
 
@@ -4578,8 +4578,8 @@ CREATE TABLE cam."Subject" (
     subject_id text NOT NULL,
     subject_type text NOT NULL,
     organism_type text,
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -4601,8 +4601,8 @@ CREATE TABLE cam."SubjectAssertion" (
     value_source text,
     value_unit text,
     value_unit_source text,
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -4689,8 +4689,8 @@ CREATE TABLE cam."VirtualBiorepository" (
     institution text,
     website text,
     vbr_readme text,
-    access_policy_id text,
-    study_id text
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
 );
 
 
@@ -5418,8 +5418,8 @@ bs-x1o5ezuit1	OBI:0000915
 --
 
 COPY cam."Study" (parent_study, study_title, study_code, study_short_name, study_description, website, acknowledgments, citation_statement, do_id, access_policy_id, study_id) FROM stdin;
-\N	Madamoiselle Moo's Marvelous Research Study	M00M00	M00M00 Study	Synthetic trio study used to exercise every CAM table and FHIR mapping path. All people and data are fictional.	\N	\N	\N	10.5072/cam-testdata.bc5dx08a	co-ajdm9fyxxz	sd-7hwpqzc2yr
 sd-7hwpqzc2yr	Tiny Follow-on Study	TINY-S2	\N	Minimal child study of S1 with one open-access participant.	\N	\N	\N	\N	co-t869rg8xx6	sd-upp74psk4k
+\N	Madamoiselle Moo's Marvelous Research Study	M00M00	M00M00 Study	Synthetic trio study used to exercise every CAM table and FHIR mapping path. All people and data are fictional.	\N	\N	\N	10.5072/cam-testdata.bc5dx08a	co-ajdm9fyxxz	sd-7hwpqzc2yr
 \.
 
 

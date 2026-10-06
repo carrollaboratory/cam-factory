@@ -65,7 +65,7 @@ prefixes:
     prefix_reference: http://purl.obolibrary.org/obo/NCBITaxon_
   CAMO:
     prefix_prefix: CAMO
-    prefix_reference: http://purl.obolibrary.org/obo/CAMO_
+    prefix_reference: https://github.com/include-dcc/camo/releases/latest/download/camo.owl#
   ucum:
     prefix_prefix: ucum
     prefix_reference: https://units-of-measurement.org/
@@ -29292,6 +29292,13 @@ classes:
     - external_id
     - access_policy_id
     - study_id
+    slot_usage:
+      access_policy_id:
+        name: access_policy_id
+        required: true
+      study_id:
+        name: study_id
+        required: true
   AccessPolicy:
     name: AccessPolicy
     description: The access policy that describes the controls around use of data

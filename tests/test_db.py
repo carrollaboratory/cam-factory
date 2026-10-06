@@ -1,4 +1,4 @@
-from common_access_model.datamodel.common_access_model_sqla import Investigator
+from common_access_model.datamodel.common_access_model_sqla import HashDigest
 from sqlalchemy import Engine, text
 from sqlalchemy.orm import Session
 
@@ -50,18 +50,18 @@ def test_fix_sequences_moves_past_explicit_ids(session: Session) -> None:
         t.name for t in db.serial_tables()
     }
 
-    session.add(Investigator(id=41, name="Explicit"))
+    session.add(HashDigest(id=41, hash_type="MS:1000568", hash_value="a"))
     session.flush()
-    db.fix_sequences(session.connection(), [Investigator.__table__])  # type: ignore[list-item]
-    nxt = Investigator(name="Next")
+    db.fix_sequences(session.connection(), [HashDigest.__table__])  # type: ignore[list-item]
+    nxt = HashDigest(hash_type="MS:1000568", hash_value="b")
     session.add(nxt)
     session.flush()
     assert nxt.id == 42
 
 
 def test_fix_sequences_on_empty_table_starts_at_one(session: Session) -> None:
-    db.fix_sequences(session.connection(), [Investigator.__table__])  # type: ignore[list-item]
-    first = Investigator(name="First")
+    db.fix_sequences(session.connection(), [HashDigest.__table__])  # type: ignore[list-item]
+    first = HashDigest(hash_type="MS:1000568", hash_value="c")
     session.add(first)
     session.flush()
     assert first.id == 1

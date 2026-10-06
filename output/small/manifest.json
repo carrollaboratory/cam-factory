@@ -75,8 +75,8 @@
     "csv/VirtualBiorepository_external_id.csv": "1d669a9023c1d0e17f6518158fdf653b3fc1cccd80db94cbb55fc3dee83f0b49",
     "csv/Vocabulary.csv": "89a5cf29787964effaa5fadb8c7447a9d0e39843ff436d0f44fcd23a507c4f91",
     "id_map.csv": "ac6f26b02a78d051812092b3adbb17c4e55bcb37ce5d47930eb43afc6a342843",
-    "sql/cam_small.sql": "23db057ed39b4586f4baf58757143041703954c08599889b284deb18a425c131",
-    "sql/cam_small_inserts.sql": "ac59caff44d28b85095715ab8c5033a59c17065528f406b8996b840535831910",
+    "sql/cam_small.sql": "e5fb413941ce49ca1dc656c04f26bbb6244e0b5ba32ef49b3215d6cac619eab1",
+    "sql/cam_small_inserts.sql": "19efc156840056ff0b5d3f4fb87460714d0dd2dd1f75c629dba345b64b50d438",
     "yaml/AccessPolicy.yaml": "8ee95de9a9e018ea0253a11886ac475a07f1a7ebd16d364073919b46eb07d4c1",
     "yaml/ActivityDefinition.yaml": "132e97158a763a1d280ff0e0140a99d596ba4417997dd0984da7f4942bdb6a77",
     "yaml/Aliquot.yaml": "1f8a39b2402f15233fc1508d5c087a98c21e576a1c4a0596b5f4e7172621ea82",
@@ -363,7 +363,7 @@
     "sd": 2
   },
   "model": {
-    "common_access_model": "0.2.0.post4.dev0+5253ae3",
+    "common_access_model": "0.2.1",
     "schema_file": "common_access_model-0.2.0.yaml",
     "schema_sha256": "d21e96c5029429ee4658fb4d56a1f5141c0d6af8d5c695a85a7238aa34ebeb4d",
     "shape": {
@@ -488,6 +488,170 @@
           "count": 2,
           "sha256": "192b103a2567c628"
         }
+      },
+      "not_null": {
+        "AccessPolicy": [
+          "data_use_permission"
+        ],
+        "ActivityDefinition": [
+          "access_policy_id",
+          "study_id"
+        ],
+        "ActivityDefinition_external_id": [],
+        "Aliquot": [
+          "sample_id",
+          "access_policy_id",
+          "study_id"
+        ],
+        "Aliquot_external_id": [],
+        "Assay": [
+          "assay_type",
+          "access_policy_id",
+          "study_id"
+        ],
+        "Assay_external_id": [],
+        "Assay_file_id": [],
+        "Assay_sample_id": [],
+        "Assay_subject_id": [],
+        "BiospecimenCollection": [
+          "access_policy_id",
+          "study_id"
+        ],
+        "BiospecimenCollection_external_id": [],
+        "Concept": [
+          "concept_code"
+        ],
+        "ConceptRelationship": [],
+        "DOI": [
+          "access_policy_id",
+          "study_id"
+        ],
+        "DOI_external_id": [],
+        "Dataset": [
+          "access_policy_id",
+          "study_id"
+        ],
+        "Dataset_external_id": [],
+        "Dataset_file_id": [],
+        "Dataset_publication": [],
+        "Demographics": [
+          "sex",
+          "ethnicity",
+          "access_policy_id",
+          "study_id"
+        ],
+        "Demographics_external_id": [],
+        "Demographics_race": [],
+        "DeprecatedConcept": [],
+        "Encounter": [
+          "subject_id",
+          "access_policy_id",
+          "study_id"
+        ],
+        "EncounterDefinition": [
+          "access_policy_id",
+          "study_id"
+        ],
+        "EncounterDefinition_activity_definition_id": [],
+        "EncounterDefinition_external_id": [],
+        "Encounter_external_id": [],
+        "Family": [
+          "access_policy_id",
+          "study_id"
+        ],
+        "FamilyMembership": [
+          "family_id",
+          "subject_id",
+          "access_policy_id",
+          "study_id"
+        ],
+        "FamilyMembership_external_id": [],
+        "FamilyRelationship": [
+          "family_member_id",
+          "relation",
+          "subject_id",
+          "access_policy_id",
+          "study_id"
+        ],
+        "FamilyRelationship_external_id": [],
+        "Family_external_id": [],
+        "File": [
+          "file_extension",
+          "access_policy_id",
+          "study_id"
+        ],
+        "File_external_id": [],
+        "File_hash": [],
+        "File_sample_id": [],
+        "File_subject_id": [],
+        "HashDigest": [],
+        "Investigator": [
+          "access_policy_id",
+          "study_id"
+        ],
+        "Investigator_external_id": [],
+        "Publication": [
+          "access_policy_id",
+          "study_id"
+        ],
+        "Publication_external_id": [],
+        "Sample": [
+          "sample_type",
+          "subject_id",
+          "access_policy_id",
+          "study_id"
+        ],
+        "Sample_external_id": [],
+        "Sample_processing": [],
+        "Sample_storage_method": [],
+        "Study": [
+          "study_title",
+          "study_code",
+          "study_description",
+          "access_policy_id"
+        ],
+        "StudyMetadata": [
+          "expected_number_of_participants",
+          "actual_number_of_participants",
+          "access_policy_id"
+        ],
+        "StudyMetadata_clinical_data_source_type": [],
+        "StudyMetadata_data_category": [],
+        "StudyMetadata_external_id": [],
+        "StudyMetadata_participant_lifespan_stage": [],
+        "StudyMetadata_research_domain": [],
+        "StudyMetadata_study_design": [],
+        "Study_contact": [],
+        "Study_external_id": [],
+        "Study_funding_source": [],
+        "Study_principal_investigator": [],
+        "Study_program": [],
+        "Study_publication": [],
+        "Subject": [
+          "subject_type",
+          "access_policy_id",
+          "study_id"
+        ],
+        "SubjectAssertion": [
+          "subject_id",
+          "access_policy_id",
+          "study_id"
+        ],
+        "SubjectAssertion_concept": [],
+        "SubjectAssertion_external_id": [],
+        "SubjectAssertion_value_concept": [],
+        "Subject_external_id": [],
+        "Synonym": [],
+        "VirtualBiorepository": [
+          "access_policy_id",
+          "study_id"
+        ],
+        "VirtualBiorepository_contact": [],
+        "VirtualBiorepository_external_id": [],
+        "Vocabulary": [
+          "vocabulary_uri",
+          "fhir_system"
+        ]
       },
       "tables": {
         "AccessPolicy": [
@@ -930,7 +1094,7 @@
     }
   },
   "packages": {
-    "common-access-model": "0.2.0.post4.dev0+5253ae3",
+    "common-access-model": "0.2.1",
     "factory-boy": "3.3.3",
     "faker": "40.39.0",
     "linkml": "1.11.1",
