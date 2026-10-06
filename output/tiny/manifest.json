@@ -219,8 +219,8 @@
   },
   "model": {
     "common_access_model": "0.2.1",
-    "schema_file": "common_access_model-0.2.0.yaml",
-    "schema_sha256": "d21e96c5029429ee4658fb4d56a1f5141c0d6af8d5c695a85a7238aa34ebeb4d",
+    "schema_file": "common_access_model-0.2.1.yaml",
+    "schema_sha256": "affdf23a0910320506d231b6eff9c720a8fb65b857b62ff783f8b909a350ec4a",
     "shape": {
       "enums": {
         "EnumAssayType": {
