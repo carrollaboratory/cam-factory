@@ -2,8 +2,8 @@
 
 Problems found in the model while building test data. Not fixed here (AGENTS.md
 rule 3); each lists its status and how this repo works around it. Status
-reflects the user's notes of 2026-10-02 and the installed build
-`0.2.0.post4.dev0+5253ae3`.
+reflects the user's notes of 2026-10-02 and the installed release
+`0.2.1` (checked 2026-10-06).
 
 **Status key:** ✅ fixed in the installed build · 🔜 fix in progress upstream
 (PR or planned) · 🟰 by design / accepted · ❓ open
@@ -61,10 +61,8 @@ reflects the user's notes of 2026-10-02 and the installed build
     purpose: `Sample.biospecimen_collection_id`,
     `BiospecimenCollection.encounter_id` stay nullable by design.
     *Workaround:* R4. We always set them, so we never generate orphans.
-21. ❓ **Record-mixin `study_id` / `access_policy_id` are nullable.** Believed to
-    be an oversight (expected to become required; unconfirmed). *Workaround:* R1
-    treats them as required. If nullable turns out to be intended, add an
-    example without them.
+21. ✅ **Record-mixin `study_id` / `access_policy_id` were nullable.** Required
+    (NOT NULL) since v0.2.1. R1 still checks them.
 23. ❓ **`File.size` is a 32-bit `INTEGER`** in the DDL, so sizes over
     2,147,483,647 bytes (~2.1 GB) can't be stored, and real CRAM/BAM files are
     often tens of GB. Needs a 64-bit range (BIGINT). *Workaround:* generated sizes

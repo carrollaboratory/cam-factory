@@ -6,6 +6,7 @@ from typing import Any
 
 import pytest
 from sqlalchemy import Table, delete, insert, update
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from cam_testdata import db
@@ -39,12 +40,15 @@ def test_valid_dataset_passes_every_rule(session: Session, data: Dataset) -> Non
 
 
 def test_r1_scope_columns_and_parent_study(session: Session, data: Dataset) -> None:
-    run(
-        session,
-        update(T("Subject"))
-        .where(T("Subject").c.subject_id == data["father"].subject_id)
-        .values(access_policy_id=None),
-    )
+    # Since CAM v0.2.1 the DDL itself rejects NULL scoping (MODEL_ISSUES #21) ...
+    with pytest.raises(IntegrityError), session.begin_nested():
+        run(
+            session,
+            update(T("Subject"))
+            .where(T("Subject").c.subject_id == data["father"].subject_id)
+            .values(access_policy_id=None),
+        )
+    # ... so R1's job here is the parent chain
     run(
         session,
         update(T("Encounter"))
@@ -52,7 +56,6 @@ def test_r1_scope_columns_and_parent_study(session: Session, data: Dataset) -> N
         .values(study_id=data["s2"].study_id),
     )
     details = {(v.table, v.detail.split(":")[0]) for v in check(session, "R1")}
-    assert ("Subject", "access_policy_id is NULL") in details
     assert any(t == "Encounter" and d.startswith("subject_id=") for t, d in details)
 
 

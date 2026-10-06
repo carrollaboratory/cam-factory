@@ -2,7 +2,6 @@
 
 import copy
 import json
-import shutil
 from pathlib import Path
 from typing import Any
 
@@ -100,18 +99,45 @@ def test_compare_shapes_reports_changes() -> None:
     ]
 
 
+def test_compare_shapes_reports_nullability_changes() -> None:
+    old = {"tables": {"A": ["x", "y"]}, "not_null": {"A": ["x"]}}
+    new = {"tables": {"A": ["x", "y"]}, "not_null": {"A": ["y"]}}
+    assert compare_shapes(old, new) == [
+        "column now NOT NULL: A.y",
+        "column now nullable: A.x",
+    ]
+
+
 def test_check_drift_cli(tmp_path: Path) -> None:
+    from importlib.metadata import version
+
+    from cam_testdata.drift import model_shape
+    from cam_testdata.export.manifest import sha256
+    from cam_testdata.schema_introspect import get_model
+    from cam_testdata.settings import SCHEMA_PATH
+
     runner = CliRunner()
-    tiny = Path("output/tiny")
+    current = {
+        "model": {
+            "common_access_model": version("common-access-model"),
+            "schema_sha256": sha256(SCHEMA_PATH),
+            "shape": model_shape(get_model()),
+        }
+    }
+    clean = tmp_path / "clean"
+    clean.mkdir()
+    (clean / "manifest.json").write_text(json.dumps(current))
     result = runner.invoke(
-        app, ["check-drift", "--profile", "tiny", "--out-dir", str(tiny)]
+        app, ["check-drift", "--profile", "tiny", "--out-dir", str(clean)]
     )
     assert result.exit_code == 0, result.output
-    doctored = tmp_path / "tiny"
+
+    doctored = tmp_path / "doctored"
     doctored.mkdir()
-    manifest = json.loads((tiny / "manifest.json").read_text())
+    manifest = json.loads(json.dumps(current))
     manifest["model"]["common_access_model"] = "0.0.1"
     manifest["model"]["shape"]["tables"]["Subject"].append("flavor")
+    manifest["model"]["shape"]["not_null"]["Subject"].remove("study_id")
     (doctored / "manifest.json").write_text(json.dumps(manifest))
     result = runner.invoke(
         app, ["check-drift", "--profile", "tiny", "--out-dir", str(doctored)]
@@ -119,4 +145,4 @@ def test_check_drift_cli(tmp_path: Path) -> None:
     assert result.exit_code == 1
     assert "model version: built 0.0.1" in result.output
     assert "column removed: Subject.flavor" in result.output
-    shutil.rmtree(doctored)
+    assert "column now NOT NULL: Subject.study_id" in result.output
