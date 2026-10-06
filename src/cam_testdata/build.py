@@ -17,13 +17,12 @@ from collections import defaultdict
 from collections.abc import Iterator
 from contextlib import contextmanager
 from contextvars import ContextVar
+from graphlib import CycleError, TopologicalSorter
 from typing import Any
 
 from faker import Faker
 from sqlalchemy import Table, inspect
 from sqlalchemy.orm import Session
-from sqlalchemy.schema import sort_tables_and_constraints
-from sqlalchemy.sql.schema import ForeignKeyConstraint
 from sqlalchemy.sql.sqltypes import String
 
 from cam_testdata import db
@@ -179,24 +178,44 @@ def _pk_key(obj: Any) -> tuple[str, ...]:
 
 
 def _insert_order(tables: list[Table]) -> tuple[list[Table], dict[str, list[str]]]:
-    """Tables in FK order, plus the cycle-forming FK columns per table (inserted NULL, set after)."""
-    order: list[Table] = []
-    cyclic: dict[str, list[str]] = defaultdict(list)
-    for table, fkcs in sort_tables_and_constraints(tables):  # type: ignore[no-untyped-call]
-        if table is not None:
-            order.append(table)
-            continue
-        for fkc in fkcs:
-            assert isinstance(fkc, ForeignKeyConstraint)
-            if fkc.referred_table is fkc.table:
-                continue  # self-reference: handled by row order, not NULLs
+    """Tables in FK order, plus the FK columns deferred to break cycles (inserted NULL, set after).
+
+    Only real cycle edges are broken, and only at nullable columns (DESIGN §6.1:
+    Study.do_id). Self-references are handled by row order instead.
+    """
+    by_name = {t.name: t for t in tables}
+    # (table, column key) -> referred table, for single-column FKs between these tables
+    edges: dict[tuple[str, str], str] = {}
+    for table in tables:
+        for fkc in table.foreign_key_constraints:
+            referred = fkc.referred_table.name
+            if referred == table.name or referred not in by_name:
+                continue
             for col in fkc.columns:
-                if not col.nullable:
-                    raise BuildError(
-                        f"FK cycle through NOT NULL {fkc.table.name}.{col.name}"
-                    )
-                cyclic[fkc.table.name].append(col.key)
-    return order, cyclic
+                edges[(table.name, col.key)] = referred
+
+    cyclic: dict[str, list[str]] = defaultdict(list)
+    while True:
+        graph: dict[str, set[str]] = {name: set() for name in sorted(by_name)}
+        for (name, _), referred in edges.items():
+            graph[name].add(referred)
+        try:
+            order = [by_name[n] for n in TopologicalSorter(graph).static_order()]
+            return order, dict(cyclic)
+        except CycleError as exc:
+            cycle = set(exc.args[1])
+            breakable = sorted(
+                (name, key)
+                for (name, key), referred in edges.items()
+                if name in cycle and referred in cycle and by_name[name].c[key].nullable
+            )
+            if not breakable:
+                raise BuildError(
+                    f"FK cycle with no nullable column to defer: {sorted(cycle)}"
+                ) from exc
+            name, key = breakable[0]
+            cyclic[name].append(key)
+            del edges[(name, key)]
 
 
 def _parents_first(table: Table, rows: list[Any]) -> list[Any]:

@@ -17,7 +17,7 @@ class RoundTripError(RuntimeError):
 
 def _admin(settings: Settings, sql: str) -> None:
     cmd = [
-        *settings.database.psql,
+        *settings.database.psql_cmd(),
         "-d",
         "postgres",
         "-v",
@@ -44,7 +44,14 @@ def verify_sql(
         _admin(settings, f'DROP DATABASE IF EXISTS "{scratch_db}"')
         _admin(settings, f'CREATE DATABASE "{scratch_db}"')
         load = subprocess.run(
-            [*settings.database.psql, "-d", scratch_db, "-v", "ON_ERROR_STOP=1", "-q"],
+            [
+                *settings.database.psql_cmd(),
+                "-d",
+                scratch_db,
+                "-v",
+                "ON_ERROR_STOP=1",
+                "-q",
+            ],
             input=dump.read_text(encoding="utf-8"),
             capture_output=True,
             text=True,

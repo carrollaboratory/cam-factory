@@ -18,7 +18,7 @@ def pg_dump(dbname: str, *extra: str, settings: Settings | None = None) -> str:
     settings = settings or get_settings()
     database = settings.database
     cmd = [
-        *database.pg_dump,
+        *database.pg_dump_cmd(),
         "-d",
         dbname,
         f"--schema={database.schema_name}",
@@ -32,7 +32,7 @@ def pg_dump(dbname: str, *extra: str, settings: Settings | None = None) -> str:
 
 def pg_dump_version(settings: Settings | None = None) -> str:
     settings = settings or get_settings()
-    cmd = settings.database.pg_dump
+    cmd = settings.database.pg_dump_cmd()
     # --version must stand alone, so drop options that follow the program (e.g. -U postgres)
     program = next(i for i, part in enumerate(cmd) if part.endswith("pg_dump"))
     out = subprocess.run(

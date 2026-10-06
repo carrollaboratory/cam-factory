@@ -1,0 +1,55 @@
+# `just check` on every push and pull request: lint, tests against a real
+# Postgres, rebuild tiny, and fail if output/tiny differs from what's committed.
+#
+# As locally, pg_dump/psql run inside the Postgres container (here the service
+# container, via `docker exec`), so client and server versions always match.
+# The image is pinned to the same version as the justfile default: the dump
+# header records it, so a different version would change output/tiny/sql.
+#
+# NOTE: `uv sync --locked` needs every dependency to be fetchable. While
+# pyproject.toml points common-access-model at a local wheel path
+# (../common-access-model/dist/...), this job can't install it; switch back to
+# a release URL first.
+
+name: check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    services:
+      postgres:
+        image: postgres:18.6@sha256:5a5a84b19854a9ffaa54082c166ff4ec27473a361e496e5ea167f298f2da9722 # same as pg_image in the justfile
+        env:
+          POSTGRES_HOST_AUTH_METHOD: trust
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Point pg_dump / psql at the service container
+        run: |
+          pg="${{ job.services.postgres.id }}"
+          echo "CAM_PG_DUMP=docker exec $pg pg_dump -U postgres" >> "$GITHUB_ENV"
+          echo "CAM_PSQL=docker exec -i $pg psql -U postgres" >> "$GITHUB_ENV"
+          for db in cam_testdata_tiny cam_testdata_small cam_testdata_portal cam_testdata_test; do
+            docker exec "$pg" createdb -U postgres "$db"
+          done
+
+      - uses: astral-sh/setup-uv@v6
+
+      - uses: extractions/setup-just@v2
+
+      - name: Install
+        run: uv sync --locked
+
+      - name: just check
+        run: just check

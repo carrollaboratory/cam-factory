@@ -2,6 +2,7 @@
 
 import os
 import re
+import shlex
 from functools import cache
 from pathlib import Path
 
@@ -53,6 +54,16 @@ class DatabaseSettings(_Strict):
     pg_dump: list[str]
     psql: list[str]
     restrict_key: str
+
+    def pg_dump_cmd(self) -> list[str]:
+        """The pg_dump command; CAM_PG_DUMP overrides it (e.g. in CI, without Docker)."""
+        override = os.environ.get("CAM_PG_DUMP")
+        return shlex.split(override) if override else list(self.pg_dump)
+
+    def psql_cmd(self) -> list[str]:
+        """The psql command; CAM_PSQL overrides it."""
+        override = os.environ.get("CAM_PSQL")
+        return shlex.split(override) if override else list(self.psql)
 
     def url(self, profile: str) -> str:
         """Database URL for a profile; CAM_PG_URL overrides it."""

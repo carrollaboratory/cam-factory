@@ -43,8 +43,8 @@ source = "vcs"
 packages = ["src/cam_testdata"]
 
 [tool.uv.sources]
-# common-access-model = { url = "https://github.com/include-dcc/common-access-model/releases/download/v0.2.0/common_access_model-0.2.0-py3-none-any.whl" }
-common-access-model = { path = "../common-access-model/dist/common_access_model-0.2.0.post4.dev0+5253ae3-py3-none-any.whl" }
+common-access-model = { url = "https://github.com/include-dcc/common-access-model/releases/download/v0.2.1/common_access_model-0.2.1-py3-none-any.whl" }
+# common-access-model = { path = "../common-access-model/dist/common_access_model-0.2.0.post4.dev0+5253ae3-py3-none-any.whl" }
 the-caddie = { git = "https://github.com/carrollaboratory/the-caddie" }
 
 [tool.ruff]

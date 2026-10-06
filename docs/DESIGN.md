@@ -114,7 +114,8 @@ cam-testdata/
 
 ## 4. Database handling
 
-- Postgres runs in a local Docker container (`just pg-up`; image `postgres:18`,
+- Postgres runs in a local Docker container (`just pg-up`; image `postgres:18.6` pinned by digest, since
+  the SQL dump headers record the server version,
   `POSTGRES_HOST_AUTH_METHOD=trust`, published on `127.0.0.1` only). `pg-up`
   creates `cam_testdata_{tiny,small,portal,test}` if missing.
 - One database per profile: `cam_testdata_<profile>`, URL
@@ -575,7 +576,7 @@ add new ones here as `Q11`, `Q12`, ….
 | Q4 | `Any` / `Record` / `Record_external_id` tables | LinkML SQL-generator artifacts; skipped, no data |
 | Q5 | Structure of `vocab_content.yaml` | See §2 |
 | Q6 | Which outputs are release artifacts | small and portal (portal not committed; tiny and small committed) |
-| Q7 | Postgres version for dumps | 18, from the Docker image; `pg_dump` runs in the container |
+| Q7 | Postgres version for dumps | 18.6, pinned by digest in the justfile and CI; `pg_dump` runs in the container |
 | Q8 | SubjectAssertion ID prefix | `ob` only. `de` (Device) and `ms` (MedicationStatement) are deferred until the expected data is clearer |
 | Q9 | Package name | `cam-testdata` (repo name is the user's call) |
 | Q10 | dbt | Out of scope for now: no dbt dependency, no dbt yml or seed test |

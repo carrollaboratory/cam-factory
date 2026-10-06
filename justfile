@@ -1,5 +1,7 @@
 pg_container := env_var_or_default("CAM_PG_CONTAINER", "cam-testdata-pg")
-pg_image := env_var_or_default("CAM_PG_IMAGE", "postgres:18")
+# Pinned by digest: SQL dump headers record the server/package version, so a
+# different image would change output/tiny/sql. Keep .github/workflows/check.yml in step.
+pg_image := env_var_or_default("CAM_PG_IMAGE", "postgres:18.6@sha256:5a5a84b19854a9ffaa54082c166ff4ec27473a361e496e5ea167f298f2da9722")
 pg_port := env_var_or_default("CAM_PG_PORT", "5432")
 pg_volume := pg_container + "-data"
 pg_dbs := "cam_testdata_tiny cam_testdata_small cam_testdata_portal cam_testdata_test"

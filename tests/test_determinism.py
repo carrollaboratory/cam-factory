@@ -13,7 +13,7 @@ DBS = ("determinism_a", "determinism_b")
 
 
 def _admin(sql: str) -> None:
-    cmd = [*get_settings().database.psql, "-d", "postgres", "-q", "-c", sql]
+    cmd = [*get_settings().database.psql_cmd(), "-d", "postgres", "-q", "-c", sql]
     subprocess.run(cmd, check=True, capture_output=True)
 
 
