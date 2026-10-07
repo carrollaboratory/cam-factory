@@ -1,6 +1,7 @@
 Assay_assay_id,external_id
 di-018qhpluzl,https://example.org/cam-testdata/small/Assay/s01-f0006-father-wgs
 di-0n7dsy0tyc,https://example.org/cam-testdata/small/Assay/s02-f0006-proband-wgs
+di-16frwrlysi,https://example.org/cam-testdata/small/Assay/s02-returning-s01-f0005-proband-wgs
 di-1jo2sftayh,https://example.org/cam-testdata/small/Assay/s02-f0004-proband-wgs
 di-3dn314uc1d,https://example.org/cam-testdata/small/Assay/s01-f0002-proband-wgs
 di-45r2fzatnx,https://example.org/cam-testdata/small/Assay/s01-f0002-mother-wgs

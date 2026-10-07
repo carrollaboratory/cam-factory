@@ -264,6 +264,18 @@
   - https://example.org/cam-testdata/small/Demographics/s02-f0008-proband
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
+- subject_id: pt-g7k8bawahu
+  sex: snomedct:261665006  # Unknown
+  race:
+  - CDCREC:2118-8  # Middle Eastern or North African
+  ethnicity: CDCREC:2186-5  # Not Hispanic or Latino
+  age_at_last_vital_status: 4104
+  vital_status: snomedct:419099009  # Dead
+  age_at_first_engagement: 3247
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-returning-s01-f0005-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
 - subject_id: pt-hmejx0uz9s
   sex: snomedct:248153007  # Male
   race:
@@ -311,6 +323,18 @@
   age_at_first_engagement: 2017
   external_id:
   - https://example.org/cam-testdata/small/Demographics/s02-f0002-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-ljkuzx3y8h
+  sex: snomedct:248152002  # Female
+  race:
+  - CDCREC:2106-3  # White
+  ethnicity: CDCREC:2186-5  # Not Hispanic or Latino
+  age_at_last_vital_status: 7872
+  vital_status: snomedct:438949009  # Alive
+  age_at_first_engagement: 6546
+  external_id:
+  - https://example.org/cam-testdata/small/Demographics/s02-returning-s01-f0011-proband
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-ljv5blx4vb

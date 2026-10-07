@@ -190,12 +190,28 @@
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0003-mother-blood-draw
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
+- biospecimen_collection_id: bsc-r6rxtowdgg
+  age_at_collection: 17.92
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
+  encounter_id: en-evajlznqjs
+  external_id:
+  - https://example.org/cam-testdata/small/BiospecimenCollection/s02-returning-s01-f0011-proband-blood-draw
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-rwwy83axy6
   age_at_collection: 12.5
   method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-iuq1y5pok6
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0005-proband-blood-draw
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- biospecimen_collection_id: bsc-s4kdcpj958
+  age_at_collection: 8.89
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
+  encounter_id: en-7fmm7lgyl3
+  external_id:
+  - https://example.org/cam-testdata/small/BiospecimenCollection/s02-returning-s01-f0005-proband-blood-draw
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-t2k6bwj9eg

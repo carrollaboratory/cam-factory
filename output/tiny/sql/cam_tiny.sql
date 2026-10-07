@@ -4327,6 +4327,37 @@ ALTER SEQUENCE cam."Investigator_id_seq" OWNED BY cam."Investigator".id;
 
 
 --
+-- Name: Person; Type: TABLE; Schema: cam; Owner: -
+--
+
+CREATE TABLE cam."Person" (
+    person_id text NOT NULL,
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
+);
+
+
+--
+-- Name: Person_external_id; Type: TABLE; Schema: cam; Owner: -
+--
+
+CREATE TABLE cam."Person_external_id" (
+    "Person_person_id" text NOT NULL,
+    external_id text NOT NULL
+);
+
+
+--
+-- Name: Person_subject_id; Type: TABLE; Schema: cam; Owner: -
+--
+
+CREATE TABLE cam."Person_subject_id" (
+    "Person_person_id" text NOT NULL,
+    subject_id_subject_id text NOT NULL
+);
+
+
+--
 -- Name: Publication; Type: TABLE; Schema: cam; Owner: -
 --
 
@@ -4778,6 +4809,7 @@ ALTER TABLE ONLY cam."Synonym" ALTER COLUMN id SET DEFAULT nextval('cam."Synonym
 
 COPY cam."AccessPolicy" (access_policy_id, data_use_accession, data_use_permission, data_use_modifier, disease_limitation, access_description, website) FROM stdin;
 co-ajdm9fyxxz	DBGAP:phs000000	DUO:0000007	DUO:0000021	mesh:D012919	Use limited to studies of growth rate.	\N
+co-puem3gdzaf	\N	DUO:0000042	\N	\N	Data may be used for any research on anatine health.	\N
 co-t869rg8xx6	\N	DUO:0000042	DUO:0000045	\N	Open to general research use; please credit the farm.	\N
 \.
 
@@ -5347,6 +5379,33 @@ COPY cam."Investigator_external_id" ("Investigator_id", external_id) FROM stdin;
 
 
 --
+-- Data for Name: Person; Type: TABLE DATA; Schema: cam; Owner: -
+--
+
+COPY cam."Person" (person_id, access_policy_id, study_id) FROM stdin;
+pn-qhhalhdrfd	co-puem3gdzaf	sd-8kurbmb04j
+\.
+
+
+--
+-- Data for Name: Person_external_id; Type: TABLE DATA; Schema: cam; Owner: -
+--
+
+COPY cam."Person_external_id" ("Person_person_id", external_id) FROM stdin;
+pn-qhhalhdrfd	https://example.org/cam-testdata/tiny/Person/trio1-proband
+\.
+
+
+--
+-- Data for Name: Person_subject_id; Type: TABLE DATA; Schema: cam; Owner: -
+--
+
+COPY cam."Person_subject_id" ("Person_person_id", subject_id_subject_id) FROM stdin;
+pn-qhhalhdrfd	pt-0u4gl52nuc
+\.
+
+
+--
 -- Data for Name: Publication; Type: TABLE DATA; Schema: cam; Owner: -
 --
 
@@ -5418,6 +5477,7 @@ bs-x1o5ezuit1	OBI:0000915
 --
 
 COPY cam."Study" (parent_study, study_title, study_code, study_short_name, study_description, website, acknowledgments, citation_statement, do_id, access_policy_id, study_id) FROM stdin;
+\N	Old MacDonald's Farm	FARM	\N	Umbrella record for Person links across the farm's studies. Holds no subjects of its own.	\N	\N	\N	\N	co-puem3gdzaf	sd-8kurbmb04j
 sd-7hwpqzc2yr	Tiny Follow-on Study	TINY-S2	\N	Minimal child study of S1 with one open-access participant.	\N	\N	\N	\N	co-t869rg8xx6	sd-upp74psk4k
 \N	Madamoiselle Moo's Marvelous Research Study	M00M00	M00M00 Study	Synthetic trio study used to exercise every CAM table and FHIR mapping path. All people and data are fictional.	\N	\N	\N	https://doi.org/10.5072/cam-testdata.bc5dx08a	co-ajdm9fyxxz	sd-7hwpqzc2yr
 \.
@@ -5429,6 +5489,7 @@ sd-7hwpqzc2yr	Tiny Follow-on Study	TINY-S2	\N	Minimal child study of S1 with one
 
 COPY cam."StudyMetadata" (study_id, selection_criteria, vbr_id, expected_number_of_participants, actual_number_of_participants, access_policy_id) FROM stdin;
 sd-7hwpqzc2yr	\N	or-t6jcy1rgzy	4	3	co-ajdm9fyxxz
+sd-8kurbmb04j	\N	\N	0	0	co-puem3gdzaf
 sd-upp74psk4k	\N	\N	1	1	co-t869rg8xx6
 \.
 
@@ -5440,6 +5501,7 @@ sd-upp74psk4k	\N	\N	1	1	co-t869rg8xx6
 COPY cam."StudyMetadata_clinical_data_source_type" ("StudyMetadata_study_id", clinical_data_source_type) FROM stdin;
 sd-7hwpqzc2yr	CAMO:0000011
 sd-7hwpqzc2yr	CAMO:0000014
+sd-8kurbmb04j	CAMO:0000011
 sd-upp74psk4k	CAMO:0000010
 \.
 
@@ -5451,6 +5513,7 @@ sd-upp74psk4k	CAMO:0000010
 COPY cam."StudyMetadata_data_category" ("StudyMetadata_study_id", data_category_concept_curie) FROM stdin;
 sd-7hwpqzc2yr	edam:topic_0625
 sd-7hwpqzc2yr	edam:topic_3673
+sd-8kurbmb04j	edam:topic_0625
 sd-upp74psk4k	edam:topic_0625
 \.
 
@@ -5461,6 +5524,7 @@ sd-upp74psk4k	edam:topic_0625
 
 COPY cam."StudyMetadata_external_id" ("StudyMetadata_study_id", external_id) FROM stdin;
 sd-7hwpqzc2yr	https://example.org/cam-testdata/tiny/StudyMetadata/s1
+sd-8kurbmb04j	https://example.org/cam-testdata/tiny/StudyMetadata/farm
 sd-upp74psk4k	https://example.org/cam-testdata/tiny/StudyMetadata/s2
 \.
 
@@ -5472,6 +5536,7 @@ sd-upp74psk4k	https://example.org/cam-testdata/tiny/StudyMetadata/s2
 COPY cam."StudyMetadata_participant_lifespan_stage" ("StudyMetadata_study_id", participant_lifespan_stage) FROM stdin;
 sd-7hwpqzc2yr	NCIT:C199314
 sd-7hwpqzc2yr	NCIT:C89345
+sd-8kurbmb04j	NCIT:C199314
 sd-upp74psk4k	NCIT:C199314
 \.
 
@@ -5482,6 +5547,7 @@ sd-upp74psk4k	NCIT:C199314
 
 COPY cam."StudyMetadata_research_domain" ("StudyMetadata_study_id", research_domain_concept_curie) FROM stdin;
 sd-7hwpqzc2yr	mesh:D006330
+sd-8kurbmb04j	mesh:D013568
 sd-upp74psk4k	mesh:D013568
 \.
 
@@ -5493,6 +5559,7 @@ sd-upp74psk4k	mesh:D013568
 COPY cam."StudyMetadata_study_design" ("StudyMetadata_study_id", study_design_concept_curie) FROM stdin;
 sd-7hwpqzc2yr	mesh:D008137
 sd-7hwpqzc2yr	mesh:D015331
+sd-8kurbmb04j	mesh:D015331
 sd-upp74psk4k	mesh:D003430
 \.
 
@@ -5503,6 +5570,7 @@ sd-upp74psk4k	mesh:D003430
 
 COPY cam."Study_contact" ("Study_study_id", contact_id) FROM stdin;
 sd-7hwpqzc2yr	184571446
+sd-8kurbmb04j	184571446
 sd-upp74psk4k	184571446
 \.
 
@@ -5514,6 +5582,7 @@ sd-upp74psk4k	184571446
 COPY cam."Study_external_id" ("Study_study_id", external_id) FROM stdin;
 sd-7hwpqzc2yr	https://studies.cows-come-home.gov/cud?id=M00M00-01
 sd-7hwpqzc2yr	https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000000
+sd-8kurbmb04j	https://example.org/cam-testdata/tiny/Study/farm
 sd-upp74psk4k	https://example.org/cam-testdata/tiny/Study/s2
 \.
 
@@ -5533,6 +5602,7 @@ sd-7hwpqzc2yr	Fictional Foundation for Test Data
 
 COPY cam."Study_principal_investigator" ("Study_study_id", principal_investigator_id) FROM stdin;
 sd-7hwpqzc2yr	1874742071
+sd-8kurbmb04j	1874742071
 sd-upp74psk4k	1874742071
 \.
 
@@ -5543,6 +5613,7 @@ sd-upp74psk4k	1874742071
 
 COPY cam."Study_program" ("Study_study_id", program) FROM stdin;
 sd-7hwpqzc2yr	https://www.nih.gov/include-project
+sd-8kurbmb04j	https://www.nih.gov/include-project
 sd-upp74psk4k	https://www.nih.gov/include-project
 \.
 
@@ -6080,6 +6151,30 @@ ALTER TABLE ONLY cam."Investigator_external_id"
 
 ALTER TABLE ONLY cam."Investigator"
     ADD CONSTRAINT "Investigator_pkey" PRIMARY KEY (id);
+
+
+--
+-- Name: Person_external_id Person_external_id_pkey; Type: CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_external_id"
+    ADD CONSTRAINT "Person_external_id_pkey" PRIMARY KEY ("Person_person_id", external_id);
+
+
+--
+-- Name: Person Person_pkey; Type: CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person"
+    ADD CONSTRAINT "Person_pkey" PRIMARY KEY (person_id);
+
+
+--
+-- Name: Person_subject_id Person_subject_id_pkey; Type: CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_subject_id"
+    ADD CONSTRAINT "Person_subject_id_pkey" PRIMARY KEY ("Person_person_id", subject_id_subject_id);
 
 
 --
@@ -7032,6 +7127,46 @@ ALTER TABLE ONLY cam."Investigator_external_id"
 
 ALTER TABLE ONLY cam."Investigator"
     ADD CONSTRAINT "Investigator_study_id_fkey" FOREIGN KEY (study_id) REFERENCES cam."Study"(study_id);
+
+
+--
+-- Name: Person Person_access_policy_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person"
+    ADD CONSTRAINT "Person_access_policy_id_fkey" FOREIGN KEY (access_policy_id) REFERENCES cam."AccessPolicy"(access_policy_id);
+
+
+--
+-- Name: Person_external_id Person_external_id_Person_person_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_external_id"
+    ADD CONSTRAINT "Person_external_id_Person_person_id_fkey" FOREIGN KEY ("Person_person_id") REFERENCES cam."Person"(person_id);
+
+
+--
+-- Name: Person Person_study_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person"
+    ADD CONSTRAINT "Person_study_id_fkey" FOREIGN KEY (study_id) REFERENCES cam."Study"(study_id);
+
+
+--
+-- Name: Person_subject_id Person_subject_id_Person_person_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_subject_id"
+    ADD CONSTRAINT "Person_subject_id_Person_person_id_fkey" FOREIGN KEY ("Person_person_id") REFERENCES cam."Person"(person_id);
+
+
+--
+-- Name: Person_subject_id Person_subject_id_subject_id_subject_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_subject_id"
+    ADD CONSTRAINT "Person_subject_id_subject_id_subject_id_fkey" FOREIGN KEY (subject_id_subject_id) REFERENCES cam."Subject"(subject_id);
 
 
 --

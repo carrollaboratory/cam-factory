@@ -36,15 +36,16 @@ the table.
 
 ## Schema overview
 
-74 tables in `cam`:
+77 tables in `cam`:
 
-- **23 entity tables**:
+- **24 entity tables**:
   - Study and access: AccessPolicy, Study, StudyMetadata, VirtualBiorepository, DOI, Investigator, Publication
   - Participants: Subject, Demographics, Family, FamilyMembership, FamilyRelationship
   - Clinical: EncounterDefinition, ActivityDefinition, Encounter, SubjectAssertion
   - Biospecimens: BiospecimenCollection, Sample, Aliquot
   - Data: File, HashDigest, Assay, Dataset
-- **46 join tables** for multivalued slots, named `<Class>_<slot>`:
+  - Linking: Person (one individual across studies)
+- **48 join tables** for multivalued slots, named `<Class>_<slot>`:
   - `*_external_id` on every record (external IDs are URIs)
   - entity links: `Study_principal_investigator`, `File_subject_id`, `Assay_file_id`, …
   - coded values: `Demographics_race`, `SubjectAssertion_concept`, `StudyMetadata_study_design`, …
@@ -106,6 +107,7 @@ resource, a hyphen, and 10 characters of `[0-9a-z]`. `manifest.json` →
 | `dr` | DocumentReference | File.file_id |
 | `di` | DiagnosticReport | Assay.assay_id |
 | `ls` | List | Dataset.dataset_id |
+| `pn` | Person | Person.person_id |
 
 Demographics and StudyMetadata reuse their parent's ID. Non-global IDs:
 FamilyMembership `fmb-…`, BiospecimenCollection `bsc-…`, Aliquot `alq-…`; DOIs
@@ -124,6 +126,10 @@ Full list with status: [MODEL_ISSUES.md](MODEL_ISSUES.md).
   are nullable by design (#20); always set here.
 - `File.size` is a 32-bit `INTEGER` (#23), so sizes here stay under ~2.1 GB.
 - An investigator can be linked from studies other than its own (#24).
+- A Person (#25) belongs to an umbrella "Farm" study (`study_code` FARM) that
+  holds no subjects; its `Person_subject_id` rows point at Subjects in real
+  studies. A Person may list just one Subject (the others' studies aren't
+  ingested yet).
 - There's no Condition class (#22): diagnoses and observations are all `ob`
   SubjectAssertions with a present/absent value concept.
 - The Study ↔ DOI FK cycle (#5) means you can't insert either row first with

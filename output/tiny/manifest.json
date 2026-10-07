@@ -1,6 +1,6 @@
 {
   "artifacts": {
-    "csv/AccessPolicy.csv": "4535d3b28d92a80c242ca1ecd112db3fa9126b06d1658f1d2ef533ca6b175c3c",
+    "csv/AccessPolicy.csv": "f868974dc8a9a6e52b9fc3689233a0882bedf0dcffb59d3fb24b31e05eab465b",
     "csv/ActivityDefinition.csv": "abb6c2d4d7fc054413d69d4bc1f93e6544991005ae9bb71b572f7afaba8dde7e",
     "csv/ActivityDefinition_external_id.csv": "1da2cd5ddc14a556ff7cedd901e6f5a0492bd840c89fe26101ff6bbe7855ab3f",
     "csv/Aliquot.csv": "64d7a37e8064011e686a91bade64466ca2e8844a61bd2e044bd9836bebe6e42a",
@@ -43,25 +43,28 @@
     "csv/HashDigest.csv": "43d59d968445f1b1e50dc31a808e49c745be8425e9aa9eaf54225afda757a5a9",
     "csv/Investigator.csv": "3ea47109e2bf60cc603ff47fe4924063fea5e9626be2792998f4bdf635f3667d",
     "csv/Investigator_external_id.csv": "ebdf1ddc57e36a7f0aca3517afd425af80b68c38e5c3703ebd7bc31c6c012c0f",
+    "csv/Person.csv": "55716163474965ea587f6107aaa3ae9d517345cbdf181e21bc9317db30a0b5f1",
+    "csv/Person_external_id.csv": "a855859e06d2a0c9a2d363da1b2d573c814f6d00dd3f9679fa284e792dbcdec7",
+    "csv/Person_subject_id.csv": "9ba648b8684154d9fdb960a7e8ec1455e1fd7014944526f104488cc1ec006ac6",
     "csv/Publication.csv": "0c424d827db832ef0d4d5d1b194daad7993a8999b7ec7deac527ba85d7cd0aaf",
     "csv/Publication_external_id.csv": "e9854084f56b8b1ac097723ffebca4f165f3b1adfe3a135f96137d2e1381aad6",
     "csv/Sample.csv": "a6aff84fecdeea97188cfa617051f285b41b8ed2e01cd20c5a2b5aba8885da51",
     "csv/Sample_external_id.csv": "18ae326aa75359a92cb3ab47d46581cb37a5b988cc5e2418042ca874d88603f9",
     "csv/Sample_processing.csv": "6436a233c81aa1d7b366f54291ba48d8c0059f9e1e84b4fb998809c0e99bce45",
     "csv/Sample_storage_method.csv": "806962988a146f88d10f9dc36973208f2aa97b5e514edda4cc9009606c95e976",
-    "csv/Study.csv": "73a1ff44be641fffe977853c75afdbd02f3eaf84e05d155d87bf0c7993c49a34",
-    "csv/StudyMetadata.csv": "e4a446b16c92a60c7a7c4918c18b0eef82fec67144e3110b4466bd2514ba7dd0",
-    "csv/StudyMetadata_clinical_data_source_type.csv": "146292d582a3e8d4b6bb58c20a8022e35e4976c677fb63f02127fb8a35176198",
-    "csv/StudyMetadata_data_category.csv": "05fe32acaede03aa0d2dc6d274c5b21589d9a902c9e7bb9a190d873912e7a850",
-    "csv/StudyMetadata_external_id.csv": "1247f727fd828504632c13e5a9453c4b8e90ec8200ec6a8af3de0a3e20bfc2db",
-    "csv/StudyMetadata_participant_lifespan_stage.csv": "fda1832d39408e3a465f9648f59b4ba1169a2c04cbf3298266095c4e22b9c635",
-    "csv/StudyMetadata_research_domain.csv": "eaa6e6544d2c8d27029f918a9b9d610271be10e1d8fe4c446d50239dd308d03e",
-    "csv/StudyMetadata_study_design.csv": "17aa87df2f3507e372fad38557866db618834e3dd876b580a37088677dec94e4",
-    "csv/Study_contact.csv": "b72a06fc2349cec29a72404cd2b103b25a59927642f9a394dcc6bddeb390314a",
-    "csv/Study_external_id.csv": "ced3eaf2de34b8e6a5027ecf2628d3518a15f8f3936608ebb25c3fc50b23f881",
+    "csv/Study.csv": "0d5507041c4a2f95e4da2557b7375fcf21b78a766f2545b94888c51376e9f586",
+    "csv/StudyMetadata.csv": "6a7b9778e062a635c5675220d98fe6bed51a232e5924f399ced99ed574314a23",
+    "csv/StudyMetadata_clinical_data_source_type.csv": "992e5dbd84ac7e7667b726867a3a1feef66df1baa52cc2184b3d7aba84ac1cb4",
+    "csv/StudyMetadata_data_category.csv": "2c402a73d0e9b686bb93630af93c105d6f19a60d661b6079889e45b57c442de2",
+    "csv/StudyMetadata_external_id.csv": "ca94ba305a13185c7de43db6cc26b135c18273f7dc19d3b405fbb6fd666943d0",
+    "csv/StudyMetadata_participant_lifespan_stage.csv": "8487d8abaf12f185ccff4584604df7431220025698746c8684281a57a0cb32f9",
+    "csv/StudyMetadata_research_domain.csv": "859d071e31abc32ab8af6a514095b3199ce9ef65be99046009bccb85005078e6",
+    "csv/StudyMetadata_study_design.csv": "c9366baa792803f854c94ad79f82835d926b17fb40851e57dcd249f70aa3c0d7",
+    "csv/Study_contact.csv": "db71af399ad309f9fa4b89f2d2d98f2586c61c1b40e13c1575017c3fc5ec7998",
+    "csv/Study_external_id.csv": "1e394d57951f8387815ca4bb6f96869afd577adf52f086052e0237db4fdf4d4e",
     "csv/Study_funding_source.csv": "6e2f4e7081e1d7b428ecdb2e7c4e10b31d227c4ecdc492c9a1a35b28b04f284b",
-    "csv/Study_principal_investigator.csv": "9a43e07ed286f22cb4c492fcbc10ff0ac064081851bff3947b1b29d28af41b2e",
-    "csv/Study_program.csv": "40f65c3f9b2a3f23950be96d2f3bec0aada029a5de97c5ce46d18c27dba3b0f0",
+    "csv/Study_principal_investigator.csv": "7d2dbb3c908a8b73327835f8c3a6c9b10248006f70b42e22debe9435638d29ef",
+    "csv/Study_program.csv": "a69bfba39cbd055b2f2b4e79fd6dcdc098659b44b168d6947d2fdfa77ec19d2b",
     "csv/Study_publication.csv": "fa12856782f8dca1d46dd95a51f8d1b5d12241801d1a71a9d05b306ee03d58b8",
     "csv/Subject.csv": "2bce654fe2361423ae779f989788c9f2a1e86375326513f11b3afd27f6a306c0",
     "csv/SubjectAssertion.csv": "8595d8119d056ad635615cb4c84da1036f148bc0c763de397f1c70347c14332c",
@@ -91,6 +94,7 @@
     "examples/File-001.yaml": "c86165add9c17845b5c6a7422c9470e77ed1d47e900d9b31f93fbdf145f4be51",
     "examples/HashDigest-001.yaml": "b951b3914de0ec3a3c61ed57b49b220882ca657134b63c6618875739e3d86129",
     "examples/Investigator-001.yaml": "2c9cc8a7911290b20b91157223defb258baeb2c10408995e1de62cba1672c6b1",
+    "examples/Person-001.yaml": "2555a4491c4368c53c2882478f4306ada2a564185131378cc1c4149fb279e25c",
     "examples/Publication-001.yaml": "eb48e40c8f9b119add4fd5e748d713d58eca53fd617b9b44a3060f286bd9b1c1",
     "examples/Sample-001.yaml": "8aa7236d62dca12edc7b054e0d6b23fd8850f3eb30114ffde153ac81aec43bf7",
     "examples/Study-001.yaml": "923f1c71d8c92a4a99c2fb82a72074fe1f189ac994b2a1ac864b5b6f5629946a",
@@ -99,10 +103,10 @@
     "examples/SubjectAssertion-001.yaml": "4e7c25753993ef45863d7503b92a359dc81a9ca8a29f3049fb0c5ead762d7760",
     "examples/VirtualBiorepository-001.yaml": "f1e95b1945d7bbf2391a73dc7c580025291a6b813efe77f3c702e69226d1cbe4",
     "examples/Vocabulary-001.yaml": "32be53ec8aa6c64f83dc77dbea09d955c68b117ec4ce98e5673388eaefc868c3",
-    "id_map.csv": "063b9d648f3376a4f824af489485ec4c7704b51cd20979d063a194ba758d2d1a",
-    "sql/cam_tiny.sql": "17794f3c4da390179e6c771187d41f0891ed629aef9cc4585a5f3ca240548619",
-    "sql/cam_tiny_inserts.sql": "e3569dfbb609a9a16888a6c40350493eb38da79bd12791c54463b0909be970a3",
-    "yaml/AccessPolicy.yaml": "3c910142a2eeb993920ec4f70a66977c5cc179cc9d4be3817cff1c3ab4718b1c",
+    "id_map.csv": "68e5a16360471a174060bc5f3a40e7afa61b6afef1f5bd0ddc6ac2c33da46e7a",
+    "sql/cam_tiny.sql": "9c1d5e33d632b98a3bce4feb78d4e199be14e17dea5b54950ac20930f838fbcd",
+    "sql/cam_tiny_inserts.sql": "c03855f1608ab29e1bfc82a83584c138363267bb3098116bf380b932edc76f25",
+    "yaml/AccessPolicy.yaml": "9e845a290371fb94aee70f8620ffbe3e1666adaca7d2b3bede4a98f8d29bf2a5",
     "yaml/ActivityDefinition.yaml": "f766c84fe20c5019a251fcac338542b74de98257996922d0bc82bc83b7915a0f",
     "yaml/Aliquot.yaml": "83b87a6d009d4851bba651615e1f30d4b7755d7d7bc1a01f70ab1a6c10258bc4",
     "yaml/Assay.yaml": "50354439d62e0eb4a4d3862dfe17e32435e26aa38e1ed9d87d2b0a52a9bc0005",
@@ -119,10 +123,11 @@
     "yaml/File.yaml": "2052c4bb8ca001500d127d4d67b1c7003bac25508eeabcef0f03be15b0407a56",
     "yaml/HashDigest.yaml": "191da50d7c3e359605597f69eb44ab3305ef80fff29b96c31b69b1e09ad680d7",
     "yaml/Investigator.yaml": "e10514be745362428995b281ffc3bba9220c85e04d189a2db3c99d3a6b5734be",
+    "yaml/Person.yaml": "01d642c1776016fc8871675ed37c6083ac977ed401e7a1819c1e34c75c97f057",
     "yaml/Publication.yaml": "9ae45306fcd845a8699c08757119c51d0bcbe486809808b19de9fc45218fbbb6",
     "yaml/Sample.yaml": "0c788b95de5f5c2d3a426e6854627495ee12c3bafff95a43ed4ea7f4950154a7",
-    "yaml/Study.yaml": "c7539d5cf6e066aafce2b86756ba57fccc09ca418499468750d3676b4fcae423",
-    "yaml/StudyMetadata.yaml": "3f51c742bfebb43ef711931907aa8457eb6ae470fbae61a81037e08a43420eec",
+    "yaml/Study.yaml": "1b24940e33a6d5991909608c083d83e067cb09246776062eca04f07e758c7869",
+    "yaml/StudyMetadata.yaml": "2eb23275b96069eb9db51315c8867bc05d90569f791f73209fa48d0e31bcb358",
     "yaml/Subject.yaml": "7bd05c0fbcf66916c0c4a88bf065d7ab6665ed98f0bb11404c0b1d48d8969486",
     "yaml/SubjectAssertion.yaml": "11ae4ff4e32f87c6022d60e9401344c636e3cd3d3295f3c035cf1bc1ed413bef",
     "yaml/VirtualBiorepository.yaml": "7741e62e7e1d2f20d09d208cf77912b97163db614a1b202d36437589d933fe90",
@@ -188,6 +193,10 @@
     "numeric_assertion_ucum": [
       "tiny/SubjectAssertion/trio1-proband-height"
     ],
+    "person_across_studies": [],
+    "person_record": [
+      "tiny/Person/trio1-proband"
+    ],
     "study_doi_cycle": [
       "tiny/Study/s1"
     ],
@@ -204,7 +213,7 @@
   "fhir_counts_by_prefix": {
     "ad": 3,
     "bs": 6,
-    "co": 2,
+    "co": 3,
     "di": 3,
     "dr": 5,
     "en": 5,
@@ -214,13 +223,14 @@
     "ob": 6,
     "or": 1,
     "pd": 2,
+    "pn": 1,
     "pt": 5,
-    "sd": 2
+    "sd": 3
   },
   "model": {
-    "common_access_model": "0.2.1.post1.dev0+3e9c9ac",
-    "schema_file": "common_access_model-0.2.1.yaml",
-    "schema_sha256": "affdf23a0910320506d231b6eff9c720a8fb65b857b62ff783f8b909a350ec4a",
+    "common_access_model": "0.2.2",
+    "schema_file": "common_access_model-0.2.2.yaml",
+    "schema_sha256": "706faa4fd18e1729c70179f14bfa01b8a06ed1bf19bcc1cdd5b5c7984ee2db19",
     "shape": {
       "enums": {
         "EnumAssayType": {
@@ -445,6 +455,12 @@
           "study_id"
         ],
         "Investigator_external_id": [],
+        "Person": [
+          "access_policy_id",
+          "study_id"
+        ],
+        "Person_external_id": [],
+        "Person_subject_id": [],
         "Publication": [
           "access_policy_id",
           "study_id"
@@ -767,6 +783,19 @@
           "Investigator_id",
           "external_id"
         ],
+        "Person": [
+          "person_id",
+          "access_policy_id",
+          "study_id"
+        ],
+        "Person_external_id": [
+          "Person_person_id",
+          "external_id"
+        ],
+        "Person_subject_id": [
+          "Person_person_id",
+          "subject_id_subject_id"
+        ],
         "Publication": [
           "id",
           "bibliographic_reference",
@@ -949,7 +978,7 @@
     }
   },
   "packages": {
-    "common-access-model": "0.2.1.post1.dev0+3e9c9ac",
+    "common-access-model": "0.2.2",
     "factory-boy": "3.3.3",
     "faker": "40.39.0",
     "linkml": "1.11.1",
@@ -960,7 +989,7 @@
   "pg_dump": "pg_dump (PostgreSQL) 18.6 (Debian 18.6-1.pgdg13+2)",
   "profile": "tiny",
   "row_counts": {
-    "AccessPolicy": 2,
+    "AccessPolicy": 3,
     "ActivityDefinition": 3,
     "ActivityDefinition_external_id": 3,
     "Aliquot": 7,
@@ -1003,25 +1032,28 @@
     "HashDigest": 6,
     "Investigator": 2,
     "Investigator_external_id": 2,
+    "Person": 1,
+    "Person_external_id": 1,
+    "Person_subject_id": 1,
     "Publication": 1,
     "Publication_external_id": 1,
     "Sample": 6,
     "Sample_external_id": 6,
     "Sample_processing": 3,
     "Sample_storage_method": 2,
-    "Study": 2,
-    "StudyMetadata": 2,
-    "StudyMetadata_clinical_data_source_type": 3,
-    "StudyMetadata_data_category": 3,
-    "StudyMetadata_external_id": 2,
-    "StudyMetadata_participant_lifespan_stage": 3,
-    "StudyMetadata_research_domain": 2,
-    "StudyMetadata_study_design": 3,
-    "Study_contact": 2,
-    "Study_external_id": 3,
+    "Study": 3,
+    "StudyMetadata": 3,
+    "StudyMetadata_clinical_data_source_type": 4,
+    "StudyMetadata_data_category": 4,
+    "StudyMetadata_external_id": 3,
+    "StudyMetadata_participant_lifespan_stage": 4,
+    "StudyMetadata_research_domain": 3,
+    "StudyMetadata_study_design": 4,
+    "Study_contact": 3,
+    "Study_external_id": 4,
     "Study_funding_source": 1,
-    "Study_principal_investigator": 2,
-    "Study_program": 2,
+    "Study_principal_investigator": 3,
+    "Study_program": 3,
     "Study_publication": 1,
     "Subject": 5,
     "SubjectAssertion": 6,

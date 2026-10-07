@@ -70,6 +70,9 @@ def render(
             f"{key(s['parent_study']) if s['parent_study'] else '—'} |"
         )
 
+    persons: dict[str, str] = {}
+    for row in conn.execute(select(_t("Person_subject_id"))).mappings():
+        persons[row["subject_id_subject_id"]] = row["Person_person_id"]
     roles: dict[str, str] = {}
     for m in conn.execute(select(_t("FamilyMembership"))).mappings():
         roles[m["subject_id"]] = f"{key(m['family_id'])}: {name(m['family_role'])}"
@@ -133,6 +136,8 @@ def render(
         lines.append(f"- Type: {name(s['subject_type'])}")
         if sid in roles:
             lines.append(f"- Family role: {roles[sid]}")
+        if sid in persons:
+            lines.append(f"- Person: {key(persons[sid])} (`{persons[sid]}`)")
         if d:
             vital = (
                 f"; {name(d['vital_status'])} at day {d['age_at_last_vital_status']}"

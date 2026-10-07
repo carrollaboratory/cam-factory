@@ -26,7 +26,7 @@ Each profile builds into `output/<profile>/`:
 
 | Profile | Size | Where |
 |---|---|---|
-| `tiny` | ~330 rows, every edge case once | committed; cast of characters in [docs/SCENARIO_TINY.md](docs/SCENARIO_TINY.md) |
+| `tiny` | ~350 rows, every edge case once | committed; cast of characters in [docs/SCENARIO_TINY.md](docs/SCENARIO_TINY.md) |
 | `small` | ~2,100 rows | committed, and published as a release archive |
 | `portal` | ~75,000 rows, full reference vocabulary | gitignored; release archive only |
 

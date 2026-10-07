@@ -34,6 +34,9 @@ CROSS_STUDY_FKS = {("Study", "parent_study")}
 # Records that may be linked from any study: one investigator can serve several
 # studies (MODEL_ISSUES #24; the Record mixin on Investigator is likely an error).
 CROSS_STUDY_TARGETS = {"Investigator"}
+# Records whose links cross studies by design: a Person (scoped to the Farm
+# umbrella study) ties together Subjects enrolled in other studies (MODEL_ISSUES #25).
+CROSS_STUDY_OWNERS = {"Person"}
 AGE_UNITS = {"d", "a"}  # UCUM day / year
 
 
@@ -129,7 +132,10 @@ def r1_record_scoping(conn: Connection, model: Model) -> list[Violation]:
             target_fk = next(iter(store.value_column.foreign_keys), None)
             if target_fk is None or target_fk.column.table not in record_tables:
                 continue
-            if target_fk.column.table.name in CROSS_STUDY_TARGETS:
+            if (
+                target_fk.column.table.name in CROSS_STUDY_TARGETS
+                or cls in CROSS_STUDY_OWNERS
+            ):
                 continue
             owner, target = _t(model, cls), target_fk.column.table.alias("target")
             stmt = (

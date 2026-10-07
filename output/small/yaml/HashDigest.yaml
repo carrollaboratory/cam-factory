@@ -49,6 +49,8 @@
 - hash_type: MS:1000569  # SHA-1
   hash_value: 3cd66e5ca74760db7562f171b73f1aa18d9c467b
 - hash_type: MS:1000568  # MD5
+  hash_value: 1c518bc65e8081f3009680496ba6980d
+- hash_type: MS:1000568  # MD5
   hash_value: eb27359b7290f1d3b506add5b6fb0e4b
 - hash_type: MS:1000568  # MD5
   hash_value: 9e77f8a008469cef6a034fd28f26d876

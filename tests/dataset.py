@@ -38,6 +38,7 @@ from cam_testdata.factories.study import (
 from cam_testdata.factories.subject import (
     NON_PARTICIPANT,
     DemographicsFactory,
+    PersonFactory,
     SubjectFactory,
 )
 
@@ -135,6 +136,17 @@ def build_dataset(profile: str = "test") -> Dataset:
             age_at_last_vital_status=25550,
         )
         _metadata(s2, h("StudyMetadata", "s2"), 1)
+
+        # the umbrella Farm and a Person spanning S1 and S2
+        farm = StudyFactory(
+            handle=h("Study", "farm"), access_policy=ap2, program=[INCLUDE]
+        )
+        link(farm, "principal_investigator", [pi])
+        link(farm, "contact", [s1_contact])
+        _metadata(farm, h("StudyMetadata", "farm"), 0)
+        o["person"] = PersonFactory(
+            handle=h("Person", "p1"), scope=farm, subject_id=[unit.proband, s2p1]
+        )
 
         # clinical
         wgs = ActivityDefinitionFactory(handle=h("ActivityDefinition", "wgs"), scope=s1)

@@ -1,5 +1,6 @@
 handle,table,id,external_id
 tiny/AccessPolicy/ap-controlled,AccessPolicy,co-ajdm9fyxxz,
+tiny/AccessPolicy/ap-farm,AccessPolicy,co-puem3gdzaf,
 tiny/AccessPolicy/ap-open,AccessPolicy,co-t869rg8xx6,
 tiny/ActivityDefinition/blood-draw,ActivityDefinition,ad-rcmx6wtmst,https://example.org/cam-testdata/tiny/ActivityDefinition/blood-draw
 tiny/ActivityDefinition/clinical-assessment,ActivityDefinition,ad-h4vzhilve0,https://example.org/cam-testdata/tiny/ActivityDefinition/clinical-assessment
@@ -51,6 +52,7 @@ tiny/File/trio1-proband-cram#MS:1000568,HashDigest,94578652,
 tiny/File/trio1-proband-cram#MS:1000569,HashDigest,752654469,
 tiny/Investigator/s1-contact,Investigator,184571446,https://example.org/cam-testdata/tiny/Investigator/s1-contact
 tiny/Investigator/s1-pi,Investigator,1874742071,https://example.org/cam-testdata/tiny/Investigator/s1-pi
+tiny/Person/trio1-proband,Person,pn-qhhalhdrfd,https://example.org/cam-testdata/tiny/Person/trio1-proband
 tiny/Publication/s1-pub1,Publication,1445226289,https://example.org/cam-testdata/tiny/Publication/s1-pub1
 tiny/Sample/trio1-father-blood,Sample,bs-9k9idinw9y,https://example.org/cam-testdata/tiny/Sample/trio1-father-blood
 tiny/Sample/trio1-father-dna,Sample,bs-55cg5o8i0k,https://example.org/cam-testdata/tiny/Sample/trio1-father-dna
@@ -58,8 +60,10 @@ tiny/Sample/trio1-mother-blood,Sample,bs-zkbwm6i1ez,https://example.org/cam-test
 tiny/Sample/trio1-mother-dna,Sample,bs-dy45fxh8vr,https://example.org/cam-testdata/tiny/Sample/trio1-mother-dna
 tiny/Sample/trio1-proband-blood,Sample,bs-1zcz596f79,https://example.org/cam-testdata/tiny/Sample/trio1-proband-blood
 tiny/Sample/trio1-proband-dna,Sample,bs-x1o5ezuit1,https://example.org/cam-testdata/tiny/Sample/trio1-proband-dna
+tiny/Study/farm,Study,sd-8kurbmb04j,https://example.org/cam-testdata/tiny/Study/farm
 tiny/Study/s1,Study,sd-7hwpqzc2yr,https://studies.cows-come-home.gov/cud?id=M00M00-01
 tiny/Study/s2,Study,sd-upp74psk4k,https://example.org/cam-testdata/tiny/Study/s2
+tiny/StudyMetadata/farm,StudyMetadata,sd-8kurbmb04j,https://example.org/cam-testdata/tiny/StudyMetadata/farm
 tiny/StudyMetadata/s1,StudyMetadata,sd-7hwpqzc2yr,https://example.org/cam-testdata/tiny/StudyMetadata/s1
 tiny/StudyMetadata/s2,StudyMetadata,sd-upp74psk4k,https://example.org/cam-testdata/tiny/StudyMetadata/s2
 tiny/Subject/s2-p1,Subject,pt-lahn13sl6m,https://example.org/cam-testdata/tiny/Subject/s2-p1

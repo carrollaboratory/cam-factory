@@ -76,6 +76,13 @@ reflects the user's notes of 2026-10-02 and the installed release
     modeler; the mixin is likely an error. *Workaround:* R1 lets Study and
     VirtualBiorepository link to an investigator from another study; the
     investigator row still carries its home study's scoping.
+25. ❓ **`Person` uses the `Record` mixin** (v0.2.2), so it needs a `study_id`,
+    but a Person ties together Subjects in several studies (possibly across
+    programs). The study is really a program-level umbrella; the ID minting
+    service being study-oriented is the likely reason. *Workaround:* one
+    umbrella "Farm" Study (own open access policy, required metadata, no
+    subjects, no study points to it) owns every Person; R1 lets
+    `Person_subject_id` cross studies; R11 keeps a Subject in at most one Person.
 
 7. ✅ **`Sample` had no direct subject link.** New required `Sample.subject_id`.
    That makes the subject reachable two ways (directly, and via the

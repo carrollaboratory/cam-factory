@@ -4327,6 +4327,37 @@ ALTER SEQUENCE cam."Investigator_id_seq" OWNED BY cam."Investigator".id;
 
 
 --
+-- Name: Person; Type: TABLE; Schema: cam; Owner: -
+--
+
+CREATE TABLE cam."Person" (
+    person_id text NOT NULL,
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
+);
+
+
+--
+-- Name: Person_external_id; Type: TABLE; Schema: cam; Owner: -
+--
+
+CREATE TABLE cam."Person_external_id" (
+    "Person_person_id" text NOT NULL,
+    external_id text NOT NULL
+);
+
+
+--
+-- Name: Person_subject_id; Type: TABLE; Schema: cam; Owner: -
+--
+
+CREATE TABLE cam."Person_subject_id" (
+    "Person_person_id" text NOT NULL,
+    subject_id_subject_id text NOT NULL
+);
+
+
+--
 -- Name: Publication; Type: TABLE; Schema: cam; Owner: -
 --
 
@@ -4777,6 +4808,7 @@ ALTER TABLE ONLY cam."Synonym" ALTER COLUMN id SET DEFAULT nextval('cam."Synonym
 --
 
 COPY cam."AccessPolicy" (access_policy_id, data_use_accession, data_use_permission, data_use_modifier, disease_limitation, access_description, website) FROM stdin;
+co-4rbnrtd218	\N	DUO:0000042	\N	\N	Open to general research use; please credit the farm.	\N
 co-tam2ciyi45	\N	DUO:0000007	DUO:0000021	mesh:D012919	Data may be used for any research on feline health.	\N
 co-yly4xno8c0	\N	DUO:0000042	DUO:0000045	\N	Use limited to studies of sleep quality.	\N
 \.
@@ -4821,6 +4853,7 @@ alq-16ss9qo29h	bs-ownnxjyr9y	snomedct:103328004	0.1	ucum:ml	92.5	ucum:ng/uL	co-y
 alq-1v4p1q2610	bs-fryz5wjfh3	snomedct:103328004	1.1	ucum:ml	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 alq-22f1jtgs35	bs-8oa86ma9ot	snomedct:103328004	0.1	ucum:ml	60	ucum:ng/uL	co-yly4xno8c0	sd-2lx98atcp0
 alq-2gjrrrb8tb	bs-p6nwre1wat	snomedct:103328004	1	ucum:ml	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
+alq-3dy3ay2j15	bs-xtttky72oh	snomedct:103328004	0.1	ucum:ml	72.4	ucum:ng/uL	co-yly4xno8c0	sd-2lx98atcp0
 alq-3o7ca8raq9	bs-4ez6za4vnj	snomedct:103328004	0.1	ucum:ml	62.8	ucum:ng/uL	co-tam2ciyi45	sd-3s8wpdnf71
 alq-3pyyvmsble	bs-xl9a6llxio	snomedct:103328004	0.1	ucum:ml	19	ucum:ng/uL	co-yly4xno8c0	sd-2lx98atcp0
 alq-3rbmj3ugmz	bs-aq1hmsfl13	snomedct:103329007	0.1	ucum:ml	119.8	ucum:ng/uL	co-yly4xno8c0	sd-2lx98atcp0
@@ -4834,6 +4867,7 @@ alq-4vlwadvloh	bs-mff31jzxtq	snomedct:103328004	1	ucum:ml	\N	\N	co-yly4xno8c0	sd
 alq-54m59kizhx	bs-wjfv7ftvkq	snomedct:103328004	1.8	ucum:ml	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 alq-5aksfh520m	bs-gv857swx92	snomedct:103328004	1.5	ucum:ml	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 alq-5t3k3oo1sw	bs-79nfayxcy4	snomedct:103328004	1.5	ucum:ml	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
+alq-6ce6wcr8zh	bs-2lujybqhao	snomedct:103328004	0.1	ucum:ml	96.5	ucum:ng/uL	co-yly4xno8c0	sd-2lx98atcp0
 alq-6e15rf2ieb	bs-mkwfg60t6o	snomedct:103328004	0.1	ucum:ml	34.3	ucum:ng/uL	co-tam2ciyi45	sd-3s8wpdnf71
 alq-6mmjmii4ho	bs-be24j2t4up	snomedct:103328004	1.1	ucum:ml	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 alq-6p6orj1hj6	bs-6jmtt7z870	snomedct:103328004	1.2	ucum:ml	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
@@ -4861,6 +4895,7 @@ alq-ckgbuhekax	bs-7i4ai02qm7	snomedct:103328004	0.1	ucum:ml	36.3	ucum:ng/uL	co-y
 alq-csde1c1rba	bs-fpd4arpkia	snomedct:103328004	0.1	ucum:ml	43.7	ucum:ng/uL	co-tam2ciyi45	sd-3s8wpdnf71
 alq-detgv1pb6p	bs-mff31jzxtq	snomedct:103328004	0.6	ucum:ml	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 alq-dob0skdoec	bs-79nfayxcy4	snomedct:103328004	0.5	ucum:ml	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
+alq-e6qhz5ddqr	bs-2lujybqhao	snomedct:103328004	0.1	ucum:ml	12.3	ucum:ng/uL	co-yly4xno8c0	sd-2lx98atcp0
 alq-ee86mv5s1t	bs-8w1pmyml8t	snomedct:103328004	2	ucum:ml	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 alq-egx5qy4h9p	bs-3d9plqby6e	snomedct:103328004	0.7	ucum:ml	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 alq-fdcq5iaip7	bs-o1smndjojs	snomedct:103329007	0.1	ucum:ml	54.3	ucum:ng/uL	co-yly4xno8c0	sd-2lx98atcp0
@@ -4899,6 +4934,7 @@ alq-qvunau8fl1	bs-tx6bnw1a0x	snomedct:103328004	0.1	ucum:ml	103.5	ucum:ng/uL	co-
 alq-s87pmz6f5l	bs-o1smndjojs	snomedct:103328004	0.1	ucum:ml	105.3	ucum:ng/uL	co-yly4xno8c0	sd-2lx98atcp0
 alq-sozfhus5kf	bs-fryz5wjfh3	snomedct:103328004	0.7	ucum:ml	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 alq-sy5uejza11	bs-5rgzjle102	snomedct:103328004	0.1	ucum:ml	110.7	ucum:ng/uL	co-yly4xno8c0	sd-2lx98atcp0
+alq-trdwry25pk	bs-y8mi9al2z2	snomedct:103328004	1.6	ucum:ml	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 alq-u5g50hnjly	bs-08dyug60bv	snomedct:103328004	0.1	ucum:ml	82.2	ucum:ng/uL	co-yly4xno8c0	sd-2lx98atcp0
 alq-ug4ys71w65	bs-puia6w6tod	snomedct:103328004	0.8	ucum:ml	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 alq-ukrk0ov3t0	bs-xl9a6llxio	snomedct:103328004	0.1	ucum:ml	13.4	ucum:ng/uL	co-yly4xno8c0	sd-2lx98atcp0
@@ -4907,9 +4943,11 @@ alq-uw6xb9ube5	bs-debyobor67	snomedct:103328004	0.1	ucum:ml	13.1	ucum:ng/uL	co-y
 alq-vacfuvfvkn	bs-8r09gjn2f4	snomedct:103328004	0.9	ucum:ml	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 alq-wq4nrrmnpd	bs-9tgznswrol	snomedct:103328004	1.1	ucum:ml	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 alq-wtsdrbtu27	bs-8w1pmyml8t	snomedct:103328004	1	ucum:ml	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
+alq-xh6ugxwur7	bs-m8xj37twhd	snomedct:103329007	1.5	ucum:ml	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 alq-xs9kbtawn7	bs-21qpxwci7x	snomedct:103328004	0.1	ucum:ml	44.5	ucum:ng/uL	co-tam2ciyi45	sd-3s8wpdnf71
 alq-y6hqmjvafq	bs-mkwfg60t6o	snomedct:103328004	0.1	ucum:ml	106.6	ucum:ng/uL	co-tam2ciyi45	sd-3s8wpdnf71
 alq-yegrxjetsk	bs-20483amku9	snomedct:103328004	0.1	ucum:ml	112.9	ucum:ng/uL	co-tam2ciyi45	sd-3s8wpdnf71
+alq-ylp55fyary	bs-2lujybqhao	snomedct:103328004	0.1	ucum:ml	18.3	ucum:ng/uL	co-yly4xno8c0	sd-2lx98atcp0
 alq-yq50qpmmwx	bs-4ez6za4vnj	snomedct:103328004	0.1	ucum:ml	54.1	ucum:ng/uL	co-tam2ciyi45	sd-3s8wpdnf71
 alq-zcp4avhohv	bs-pzhds8cdc8	snomedct:103328004	0.1	ucum:ml	56.1	ucum:ng/uL	co-yly4xno8c0	sd-2lx98atcp0
 \.
@@ -4926,6 +4964,7 @@ alq-16ss9qo29h	https://example.org/cam-testdata/small/Aliquot/s02-f0001-proband-
 alq-1v4p1q2610	https://example.org/cam-testdata/small/Aliquot/s01-f0010-mother-blood-a1
 alq-22f1jtgs35	https://example.org/cam-testdata/small/Aliquot/s02-f0003-father-dna-a1
 alq-2gjrrrb8tb	https://example.org/cam-testdata/small/Aliquot/s02-f0008-proband-blood-a1
+alq-3dy3ay2j15	https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0011-proband-dna-a1
 alq-3o7ca8raq9	https://example.org/cam-testdata/small/Aliquot/s01-f0004-proband-dna-a1
 alq-3pyyvmsble	https://example.org/cam-testdata/small/Aliquot/s02-f0002-proband-dna-a2
 alq-3rbmj3ugmz	https://example.org/cam-testdata/small/Aliquot/s02-f0002-mother-dna-a1
@@ -4939,6 +4978,7 @@ alq-4vlwadvloh	https://example.org/cam-testdata/small/Aliquot/s02-f0004-proband-
 alq-54m59kizhx	https://example.org/cam-testdata/small/Aliquot/s02-f0011-proband-blood-a2
 alq-5aksfh520m	https://example.org/cam-testdata/small/Aliquot/s01-f0002-mother-blood-a1
 alq-5t3k3oo1sw	https://example.org/cam-testdata/small/Aliquot/s02-f0001-proband-blood-a1
+alq-6ce6wcr8zh	https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0005-proband-dna-a3
 alq-6e15rf2ieb	https://example.org/cam-testdata/small/Aliquot/s01-f0002-proband-dna-a1
 alq-6mmjmii4ho	https://example.org/cam-testdata/small/Aliquot/s01-f0011-father-blood-a1
 alq-6p6orj1hj6	https://example.org/cam-testdata/small/Aliquot/s02-f0009-father-blood-a1
@@ -4966,6 +5006,7 @@ alq-ckgbuhekax	https://example.org/cam-testdata/small/Aliquot/s02-f0003-proband-
 alq-csde1c1rba	https://example.org/cam-testdata/small/Aliquot/s01-f0002-mother-dna-a1
 alq-detgv1pb6p	https://example.org/cam-testdata/small/Aliquot/s02-f0004-proband-blood-a1
 alq-dob0skdoec	https://example.org/cam-testdata/small/Aliquot/s02-f0001-proband-blood-a2
+alq-e6qhz5ddqr	https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0005-proband-dna-a1
 alq-ee86mv5s1t	https://example.org/cam-testdata/small/Aliquot/s01-f0002-proband-blood-a2
 alq-egx5qy4h9p	https://example.org/cam-testdata/small/Aliquot/s01-f0011-proband-blood-a1
 alq-fdcq5iaip7	https://example.org/cam-testdata/small/Aliquot/s02-f0006-proband-dna-a1
@@ -5004,6 +5045,7 @@ alq-qvunau8fl1	https://example.org/cam-testdata/small/Aliquot/s02-f0011-proband-
 alq-s87pmz6f5l	https://example.org/cam-testdata/small/Aliquot/s02-f0006-proband-dna-a2
 alq-sozfhus5kf	https://example.org/cam-testdata/small/Aliquot/s01-f0010-mother-blood-a2
 alq-sy5uejza11	https://example.org/cam-testdata/small/Aliquot/s02-f0005-proband-dna-a1
+alq-trdwry25pk	https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0005-proband-blood-a1
 alq-u5g50hnjly	https://example.org/cam-testdata/small/Aliquot/s02-f0004-proband-dna-a1
 alq-ug4ys71w65	https://example.org/cam-testdata/small/Aliquot/s01-f0004-proband-blood-a1
 alq-ukrk0ov3t0	https://example.org/cam-testdata/small/Aliquot/s02-f0002-proband-dna-a1
@@ -5012,9 +5054,11 @@ alq-uw6xb9ube5	https://example.org/cam-testdata/small/Aliquot/s02-f0012-mother-d
 alq-vacfuvfvkn	https://example.org/cam-testdata/small/Aliquot/s02-f0002-proband-blood-a1
 alq-wq4nrrmnpd	https://example.org/cam-testdata/small/Aliquot/s01-f0003-proband-blood-a1
 alq-wtsdrbtu27	https://example.org/cam-testdata/small/Aliquot/s01-f0002-proband-blood-a1
+alq-xh6ugxwur7	https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0011-proband-blood-a1
 alq-xs9kbtawn7	https://example.org/cam-testdata/small/Aliquot/s01-f0011-mother-dna-a1
 alq-y6hqmjvafq	https://example.org/cam-testdata/small/Aliquot/s01-f0002-proband-dna-a2
 alq-yegrxjetsk	https://example.org/cam-testdata/small/Aliquot/s01-f0012-proband-dna-a1
+alq-ylp55fyary	https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0005-proband-dna-a2
 alq-yq50qpmmwx	https://example.org/cam-testdata/small/Aliquot/s01-f0004-proband-dna-a2
 alq-zcp4avhohv	https://example.org/cam-testdata/small/Aliquot/s02-f0003-mother-dna-a1
 \.
@@ -5027,6 +5071,7 @@ alq-zcp4avhohv	https://example.org/cam-testdata/small/Aliquot/s02-f0003-mother-d
 COPY cam."Assay" (assay_id, assay_type, assay_source, activity_definition_id, access_policy_id, study_id) FROM stdin;
 di-018qhpluzl	OBI:0002117	\N	ad-9xi4otnkl6	co-tam2ciyi45	sd-3s8wpdnf71
 di-0n7dsy0tyc	OBI:0002117	\N	ad-4b1di32cvz	co-yly4xno8c0	sd-2lx98atcp0
+di-16frwrlysi	OBI:0002117	\N	ad-4b1di32cvz	co-yly4xno8c0	sd-2lx98atcp0
 di-1jo2sftayh	OBI:0002117	\N	ad-4b1di32cvz	co-yly4xno8c0	sd-2lx98atcp0
 di-3dn314uc1d	OBI:0002117	\N	ad-9xi4otnkl6	co-tam2ciyi45	sd-3s8wpdnf71
 di-45r2fzatnx	OBI:0002117	\N	ad-9xi4otnkl6	co-tam2ciyi45	sd-3s8wpdnf71
@@ -5059,6 +5104,7 @@ di-zlhxt3hvlm	OBI:0002117	\N	ad-4b1di32cvz	co-yly4xno8c0	sd-2lx98atcp0
 COPY cam."Assay_external_id" ("Assay_assay_id", external_id) FROM stdin;
 di-018qhpluzl	https://example.org/cam-testdata/small/Assay/s01-f0006-father-wgs
 di-0n7dsy0tyc	https://example.org/cam-testdata/small/Assay/s02-f0006-proband-wgs
+di-16frwrlysi	https://example.org/cam-testdata/small/Assay/s02-returning-s01-f0005-proband-wgs
 di-1jo2sftayh	https://example.org/cam-testdata/small/Assay/s02-f0004-proband-wgs
 di-3dn314uc1d	https://example.org/cam-testdata/small/Assay/s01-f0002-proband-wgs
 di-45r2fzatnx	https://example.org/cam-testdata/small/Assay/s01-f0002-mother-wgs
@@ -5091,6 +5137,7 @@ di-zlhxt3hvlm	https://example.org/cam-testdata/small/Assay/s02-f0009-father-wgs
 COPY cam."Assay_file_id" ("Assay_assay_id", file_id_file_id) FROM stdin;
 di-018qhpluzl	dr-l2tutwpe1u
 di-0n7dsy0tyc	dr-wjooqqfn1g
+di-16frwrlysi	dr-57nzhcprk0
 di-1jo2sftayh	dr-vqp87va56v
 di-3dn314uc1d	dr-3ay88rjpq7
 di-45r2fzatnx	dr-fpe7cm9118
@@ -5123,6 +5170,7 @@ di-zlhxt3hvlm	dr-ko8n1f4o85
 COPY cam."Assay_sample_id" ("Assay_assay_id", sample_id_sample_id) FROM stdin;
 di-018qhpluzl	bs-po7nbit95v
 di-0n7dsy0tyc	bs-o1smndjojs
+di-16frwrlysi	bs-2lujybqhao
 di-1jo2sftayh	bs-08dyug60bv
 di-3dn314uc1d	bs-mkwfg60t6o
 di-45r2fzatnx	bs-fpd4arpkia
@@ -5155,6 +5203,7 @@ di-zlhxt3hvlm	bs-k29u6tlui0
 COPY cam."Assay_subject_id" ("Assay_assay_id", subject_id_subject_id) FROM stdin;
 di-018qhpluzl	pt-9gk8jq9c8a
 di-0n7dsy0tyc	pt-pkqb7v1zxd
+di-16frwrlysi	pt-g7k8bawahu
 di-1jo2sftayh	pt-tyk26seuny
 di-3dn314uc1d	pt-p8lz6kia0j
 di-45r2fzatnx	pt-rxqwqab2pf
@@ -5209,7 +5258,9 @@ bsc-iw86raqc18	1.39	snomedct:82078001	\N	\N	\N	en-ianln70jil	co-yly4xno8c0	sd-2l
 bsc-lcx5u85hto	13.38	snomedct:82078001	\N	\N	\N	en-33pjcj2zyr	co-yly4xno8c0	sd-2lx98atcp0
 bsc-m4df3fz6lt	2.63	snomedct:82078001	\N	\N	\N	en-fhc4rsoon8	co-yly4xno8c0	sd-2lx98atcp0
 bsc-qge59vsp9x	49.16	snomedct:82078001	\N	\N	\N	en-m9b9fyjc49	co-yly4xno8c0	sd-2lx98atcp0
+bsc-r6rxtowdgg	17.92	snomedct:82078001	\N	\N	\N	en-evajlznqjs	co-yly4xno8c0	sd-2lx98atcp0
 bsc-rwwy83axy6	12.5	snomedct:82078001	\N	\N	\N	en-iuq1y5pok6	co-yly4xno8c0	sd-2lx98atcp0
+bsc-s4kdcpj958	8.89	snomedct:82078001	\N	\N	\N	en-7fmm7lgyl3	co-yly4xno8c0	sd-2lx98atcp0
 bsc-t2k6bwj9eg	29.2	snomedct:82078001	\N	\N	\N	en-psdcahprqw	co-yly4xno8c0	sd-2lx98atcp0
 bsc-w1a2uebbvu	14.09	snomedct:82078001	\N	\N	\N	en-hty32ttirv	co-tam2ciyi45	sd-3s8wpdnf71
 bsc-xe1t4yz07s	3.97	snomedct:82078001	\N	\N	\N	en-bnamypeobm	co-yly4xno8c0	sd-2lx98atcp0
@@ -5250,7 +5301,9 @@ bsc-iw86raqc18	https://example.org/cam-testdata/small/BiospecimenCollection/s02-
 bsc-lcx5u85hto	https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0004-proband-blood-draw
 bsc-m4df3fz6lt	https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0008-proband-blood-draw
 bsc-qge59vsp9x	https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0003-mother-blood-draw
+bsc-r6rxtowdgg	https://example.org/cam-testdata/small/BiospecimenCollection/s02-returning-s01-f0011-proband-blood-draw
 bsc-rwwy83axy6	https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0005-proband-blood-draw
+bsc-s4kdcpj958	https://example.org/cam-testdata/small/BiospecimenCollection/s02-returning-s01-f0005-proband-blood-draw
 bsc-t2k6bwj9eg	https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0002-father-blood-draw
 bsc-w1a2uebbvu	https://example.org/cam-testdata/small/BiospecimenCollection/s01-f0003-proband-blood-draw
 bsc-xe1t4yz07s	https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0001-proband-blood-draw
@@ -5420,6 +5473,7 @@ ls-ba4m1f3o7k	https://example.org/cam-testdata/small/Dataset/s01-release-1
 --
 
 COPY cam."Dataset_file_id" ("Dataset_dataset_id", file_id_file_id) FROM stdin;
+ls-1154czjcje	dr-57nzhcprk0
 ls-1154czjcje	dr-6rz35r1dcn
 ls-1154czjcje	dr-7cmrrchrb2
 ls-1154czjcje	dr-9gn7m31rwj
@@ -5490,10 +5544,12 @@ pt-a15eslmrz3	snomedct:248152002	CDCREC:2186-5	12656	snomedct:438949009	11982	co
 pt-e1qowyg6qe	snomedct:248152002	CDCREC:2186-5	4950	snomedct:438949009	4950	co-tam2ciyi45	sd-3s8wpdnf71
 pt-f39hc6n8dq	snomedct:248153007	CDCREC:2135-2	620	snomedct:438949009	509	co-yly4xno8c0	sd-2lx98atcp0
 pt-fhfb8mfhx3	snomedct:248153007	CDCREC:2135-2	960	snomedct:438949009	960	co-yly4xno8c0	sd-2lx98atcp0
+pt-g7k8bawahu	snomedct:261665006	CDCREC:2186-5	4104	snomedct:419099009	3247	co-yly4xno8c0	sd-2lx98atcp0
 pt-hmejx0uz9s	snomedct:248153007	CDCREC:2186-5	2574	snomedct:419099009	1690	co-yly4xno8c0	sd-2lx98atcp0
 pt-j86rjc1yiy	snomedct:248153007	CDCREC:2186-5	11671	snomedct:438949009	11671	co-yly4xno8c0	sd-2lx98atcp0
 pt-ju11ude3rq	snomedct:261665006	CDCREC:2186-5	3284	snomedct:438949009	1914	co-tam2ciyi45	sd-3s8wpdnf71
 pt-l98koluj11	snomedct:248153007	snomedct:261665006	2706	snomedct:438949009	2017	co-yly4xno8c0	sd-2lx98atcp0
+pt-ljkuzx3y8h	snomedct:248152002	CDCREC:2186-5	7872	snomedct:438949009	6546	co-yly4xno8c0	sd-2lx98atcp0
 pt-ljv5blx4vb	snomedct:248152002	snomedct:261665006	18232	snomedct:438949009	16546	co-yly4xno8c0	sd-2lx98atcp0
 pt-lo3ubn20z3	snomedct:248152002	CDCREC:2135-2	4164	snomedct:438949009	3575	co-tam2ciyi45	sd-3s8wpdnf71
 pt-m9q9s4y6en	snomedct:248152002	CDCREC:2135-2	8081	snomedct:438949009	7862	co-tam2ciyi45	sd-3s8wpdnf71
@@ -5548,10 +5604,12 @@ pt-a15eslmrz3	https://example.org/cam-testdata/small/Demographics/s01-f0004-moth
 pt-e1qowyg6qe	https://example.org/cam-testdata/small/Demographics/s01-f0011-proband
 pt-f39hc6n8dq	https://example.org/cam-testdata/small/Demographics/s02-f0012-proband
 pt-fhfb8mfhx3	https://example.org/cam-testdata/small/Demographics/s02-f0008-proband
+pt-g7k8bawahu	https://example.org/cam-testdata/small/Demographics/s02-returning-s01-f0005-proband
 pt-hmejx0uz9s	https://example.org/cam-testdata/small/Demographics/s02-f0009-proband
 pt-j86rjc1yiy	https://example.org/cam-testdata/small/Demographics/s02-f0012-father
 pt-ju11ude3rq	https://example.org/cam-testdata/small/Demographics/s01-f0005-proband
 pt-l98koluj11	https://example.org/cam-testdata/small/Demographics/s02-f0002-proband
+pt-ljkuzx3y8h	https://example.org/cam-testdata/small/Demographics/s02-returning-s01-f0011-proband
 pt-ljv5blx4vb	https://example.org/cam-testdata/small/Demographics/s02-f0006-mother
 pt-lo3ubn20z3	https://example.org/cam-testdata/small/Demographics/s01-f0001-proband
 pt-m9q9s4y6en	https://example.org/cam-testdata/small/Demographics/s01-f0010-mother
@@ -5608,11 +5666,13 @@ pt-a15eslmrz3	CDCREC:2028-9
 pt-e1qowyg6qe	CDCREC:2106-3
 pt-f39hc6n8dq	CDCREC:2106-3
 pt-fhfb8mfhx3	CDCREC:2118-8
+pt-g7k8bawahu	CDCREC:2118-8
 pt-hmejx0uz9s	CDCREC:2054-5
 pt-j86rjc1yiy	CDCREC:2028-9
 pt-j86rjc1yiy	CDCREC:2054-5
 pt-ju11ude3rq	CDCREC:2118-8
 pt-l98koluj11	CDCREC:1002-5
+pt-ljkuzx3y8h	CDCREC:2106-3
 pt-ljv5blx4vb	CDCREC:2076-8
 pt-lo3ubn20z3	CDCREC:1002-5
 pt-m9q9s4y6en	CDCREC:1002-5
@@ -5680,6 +5740,7 @@ en-70d572s02w	pt-oic36wj8i0	pd-1xae2rmewt	5641	co-tam2ciyi45	sd-3s8wpdnf71
 en-71pdhbpci8	pt-sv38knyk22	pd-58ok1sysct	2314	co-tam2ciyi45	sd-3s8wpdnf71
 en-7a001sfm8n	pt-z07ixekmp1	pd-58ok1sysct	6455	co-tam2ciyi45	sd-3s8wpdnf71
 en-7b47r8p2wu	pt-r8x9pj0tys	pd-1nasrhdjhv	12183	co-yly4xno8c0	sd-2lx98atcp0
+en-7fmm7lgyl3	pt-g7k8bawahu	pd-v5mqi1nr9t	3247	co-yly4xno8c0	sd-2lx98atcp0
 en-7u8yj7j9a2	pt-pkqb7v1zxd	pd-1nasrhdjhv	6815	co-yly4xno8c0	sd-2lx98atcp0
 en-8ex1k0x1j9	pt-vvn9rj70ad	pd-1nasrhdjhv	5212	co-yly4xno8c0	sd-2lx98atcp0
 en-8hv34ena0p	pt-8737trkhec	pd-1nasrhdjhv	10337	co-yly4xno8c0	sd-2lx98atcp0
@@ -5702,12 +5763,14 @@ en-b8e014pn1b	pt-oic36wj8i0	pd-58ok1sysct	7470	co-tam2ciyi45	sd-3s8wpdnf71
 en-b9c8kpg1fv	pt-2px245swmn	pd-v5mqi1nr9t	12448	co-yly4xno8c0	sd-2lx98atcp0
 en-bnamypeobm	pt-r22hejnzwv	pd-v5mqi1nr9t	1450	co-yly4xno8c0	sd-2lx98atcp0
 en-bpadpmgmn4	pt-89rj8wzflm	pd-58ok1sysct	4946	co-tam2ciyi45	sd-3s8wpdnf71
+en-cmnfpzmxej	pt-g7k8bawahu	pd-1nasrhdjhv	3779	co-yly4xno8c0	sd-2lx98atcp0
 en-cpskfds6y0	pt-0mz8ptoiqy	pd-v5mqi1nr9t	17252	co-yly4xno8c0	sd-2lx98atcp0
 en-d324se3bz1	pt-oic36wj8i0	pd-58ok1sysct	6948	co-tam2ciyi45	sd-3s8wpdnf71
 en-dnj7mbpxwy	pt-223dzfx7g4	pd-1xae2rmewt	17634	co-tam2ciyi45	sd-3s8wpdnf71
 en-du9cflvbxm	pt-9gk8jq9c8a	pd-58ok1sysct	8452	co-tam2ciyi45	sd-3s8wpdnf71
 en-ectdqj2grd	pt-z07ixekmp1	pd-1xae2rmewt	6181	co-tam2ciyi45	sd-3s8wpdnf71
 en-eeg8biszms	pt-l98koluj11	pd-1nasrhdjhv	2706	co-yly4xno8c0	sd-2lx98atcp0
+en-evajlznqjs	pt-ljkuzx3y8h	pd-v5mqi1nr9t	6546	co-yly4xno8c0	sd-2lx98atcp0
 en-eyo6kevwnt	pt-m9q9s4y6en	pd-58ok1sysct	8081	co-tam2ciyi45	sd-3s8wpdnf71
 en-fbi141a90w	pt-ju11ude3rq	pd-58ok1sysct	2065	co-tam2ciyi45	sd-3s8wpdnf71
 en-fffupimvbd	pt-3heturwy6c	pd-v5mqi1nr9t	16242	co-yly4xno8c0	sd-2lx98atcp0
@@ -5717,6 +5780,8 @@ en-fllm9cpfrm	pt-q5abjhzige	pd-v5mqi1nr9t	17160	co-yly4xno8c0	sd-2lx98atcp0
 en-fxlvq5v9oq	pt-t3ll8jhskm	pd-1nasrhdjhv	11566	co-yly4xno8c0	sd-2lx98atcp0
 en-fzvv6gtysy	pt-x2oc43ni3s	pd-1xae2rmewt	3282	co-tam2ciyi45	sd-3s8wpdnf71
 en-h0f37za8k9	pt-l98koluj11	pd-v5mqi1nr9t	2017	co-yly4xno8c0	sd-2lx98atcp0
+en-h1gi961wve	pt-ljkuzx3y8h	pd-1nasrhdjhv	7185	co-yly4xno8c0	sd-2lx98atcp0
+en-hgpl44qs2r	pt-g7k8bawahu	pd-1nasrhdjhv	3374	co-yly4xno8c0	sd-2lx98atcp0
 en-hty32ttirv	pt-xoyf6cflcc	pd-1xae2rmewt	5145	co-tam2ciyi45	sd-3s8wpdnf71
 en-ianln70jil	pt-f39hc6n8dq	pd-v5mqi1nr9t	509	co-yly4xno8c0	sd-2lx98atcp0
 en-iuq1y5pok6	pt-vvn9rj70ad	pd-v5mqi1nr9t	4567	co-yly4xno8c0	sd-2lx98atcp0
@@ -5724,6 +5789,7 @@ en-j4tyrlcsdx	pt-2tcvf9d0mr	pd-1nasrhdjhv	18205	co-yly4xno8c0	sd-2lx98atcp0
 en-jeiqsk3o75	pt-tyk26seuny	pd-1nasrhdjhv	6009	co-yly4xno8c0	sd-2lx98atcp0
 en-jhi9nl200b	pt-oic36wj8i0	pd-58ok1sysct	7254	co-tam2ciyi45	sd-3s8wpdnf71
 en-k1vlefv7sl	pt-oic36wj8i0	pd-58ok1sysct	6642	co-tam2ciyi45	sd-3s8wpdnf71
+en-knrjk0a1gp	pt-ljkuzx3y8h	pd-1nasrhdjhv	7007	co-yly4xno8c0	sd-2lx98atcp0
 en-l299mdx29i	pt-ljv5blx4vb	pd-1nasrhdjhv	17654	co-yly4xno8c0	sd-2lx98atcp0
 en-m7srkh9qay	pt-r22hejnzwv	pd-1nasrhdjhv	2078	co-yly4xno8c0	sd-2lx98atcp0
 en-m8g4iq6aze	pt-tyk26seuny	pd-1nasrhdjhv	5509	co-yly4xno8c0	sd-2lx98atcp0
@@ -5741,6 +5807,7 @@ en-q1egnr34ll	pt-pkqb7v1zxd	pd-1nasrhdjhv	7106	co-yly4xno8c0	sd-2lx98atcp0
 en-qartmoyz85	pt-54i7xpb3so	pd-1nasrhdjhv	4715	co-yly4xno8c0	sd-2lx98atcp0
 en-qaspjjc6xk	pt-3746e85sta	pd-1xae2rmewt	9809	co-tam2ciyi45	sd-3s8wpdnf71
 en-r7bzto7yv0	pt-3heturwy6c	pd-1nasrhdjhv	16383	co-yly4xno8c0	sd-2lx98atcp0
+en-r9jmff4gz5	pt-ljkuzx3y8h	pd-1nasrhdjhv	7872	co-yly4xno8c0	sd-2lx98atcp0
 en-re5c9kzl4g	pt-54i7xpb3so	pd-v5mqi1nr9t	3847	co-yly4xno8c0	sd-2lx98atcp0
 en-sihh36j4bo	pt-r8x9pj0tys	pd-1nasrhdjhv	12364	co-yly4xno8c0	sd-2lx98atcp0
 en-snfsdthc3l	pt-p8lz6kia0j	pd-1xae2rmewt	782	co-tam2ciyi45	sd-3s8wpdnf71
@@ -5847,6 +5914,7 @@ en-70d572s02w	https://example.org/cam-testdata/small/Encounter/s01-f0006-proband
 en-71pdhbpci8	https://example.org/cam-testdata/small/Encounter/s01-f0007-proband-e2
 en-7a001sfm8n	https://example.org/cam-testdata/small/Encounter/s01-f0012-proband-e2
 en-7b47r8p2wu	https://example.org/cam-testdata/small/Encounter/s02-f0009-father-e2
+en-7fmm7lgyl3	https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0005-proband-e1
 en-7u8yj7j9a2	https://example.org/cam-testdata/small/Encounter/s02-f0006-proband-e3
 en-8ex1k0x1j9	https://example.org/cam-testdata/small/Encounter/s02-f0005-proband-e2
 en-8hv34ena0p	https://example.org/cam-testdata/small/Encounter/s02-f0011-mother-e3
@@ -5869,12 +5937,14 @@ en-b8e014pn1b	https://example.org/cam-testdata/small/Encounter/s01-f0006-proband
 en-b9c8kpg1fv	https://example.org/cam-testdata/small/Encounter/s02-f0010-mother-e1
 en-bnamypeobm	https://example.org/cam-testdata/small/Encounter/s02-f0001-proband-e1
 en-bpadpmgmn4	https://example.org/cam-testdata/small/Encounter/s01-f0008-proband-e2
+en-cmnfpzmxej	https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0005-proband-e3
 en-cpskfds6y0	https://example.org/cam-testdata/small/Encounter/s02-f0004-mother-e1
 en-d324se3bz1	https://example.org/cam-testdata/small/Encounter/s01-f0006-proband-e4
 en-dnj7mbpxwy	https://example.org/cam-testdata/small/Encounter/s01-f0002-father-e1
 en-du9cflvbxm	https://example.org/cam-testdata/small/Encounter/s01-f0006-father-e2
 en-ectdqj2grd	https://example.org/cam-testdata/small/Encounter/s01-f0012-proband-e1
 en-eeg8biszms	https://example.org/cam-testdata/small/Encounter/s02-f0002-proband-e4
+en-evajlznqjs	https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0011-proband-e1
 en-eyo6kevwnt	https://example.org/cam-testdata/small/Encounter/s01-f0010-mother-e2
 en-fbi141a90w	https://example.org/cam-testdata/small/Encounter/s01-f0005-proband-e2
 en-fffupimvbd	https://example.org/cam-testdata/small/Encounter/s02-f0011-father-e1
@@ -5884,6 +5954,8 @@ en-fllm9cpfrm	https://example.org/cam-testdata/small/Encounter/s02-f0001-mother-
 en-fxlvq5v9oq	https://example.org/cam-testdata/small/Encounter/s02-f0001-father-e2
 en-fzvv6gtysy	https://example.org/cam-testdata/small/Encounter/s01-f0004-proband-e1
 en-h0f37za8k9	https://example.org/cam-testdata/small/Encounter/s02-f0002-proband-e1
+en-h1gi961wve	https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0011-proband-e3
+en-hgpl44qs2r	https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0005-proband-e2
 en-hty32ttirv	https://example.org/cam-testdata/small/Encounter/s01-f0003-proband-e1
 en-ianln70jil	https://example.org/cam-testdata/small/Encounter/s02-f0012-proband-e1
 en-iuq1y5pok6	https://example.org/cam-testdata/small/Encounter/s02-f0005-proband-e1
@@ -5891,6 +5963,7 @@ en-j4tyrlcsdx	https://example.org/cam-testdata/small/Encounter/s02-f0003-mother-
 en-jeiqsk3o75	https://example.org/cam-testdata/small/Encounter/s02-f0004-proband-e3
 en-jhi9nl200b	https://example.org/cam-testdata/small/Encounter/s01-f0006-proband-e5
 en-k1vlefv7sl	https://example.org/cam-testdata/small/Encounter/s01-f0006-proband-e3
+en-knrjk0a1gp	https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0011-proband-e2
 en-l299mdx29i	https://example.org/cam-testdata/small/Encounter/s02-f0006-mother-e3
 en-m7srkh9qay	https://example.org/cam-testdata/small/Encounter/s02-f0001-proband-e2
 en-m8g4iq6aze	https://example.org/cam-testdata/small/Encounter/s02-f0004-proband-e2
@@ -5908,6 +5981,7 @@ en-q1egnr34ll	https://example.org/cam-testdata/small/Encounter/s02-f0006-proband
 en-qartmoyz85	https://example.org/cam-testdata/small/Encounter/s02-f0011-proband-e3
 en-qaspjjc6xk	https://example.org/cam-testdata/small/Encounter/s01-f0006-mother-e1
 en-r7bzto7yv0	https://example.org/cam-testdata/small/Encounter/s02-f0011-father-e2
+en-r9jmff4gz5	https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0011-proband-e4
 en-re5c9kzl4g	https://example.org/cam-testdata/small/Encounter/s02-f0011-proband-e1
 en-sihh36j4bo	https://example.org/cam-testdata/small/Encounter/s02-f0009-father-e3
 en-snfsdthc3l	https://example.org/cam-testdata/small/Encounter/s01-f0002-proband-e1
@@ -6208,6 +6282,7 @@ gr-znyuulhgxc	https://example.org/cam-testdata/small/Family/s01-f0011
 
 COPY cam."File" (file_id, filename, file_extension, data_category, data_type, format, size, internal_uri, release_uri, drs_uri, storage_class, availability, access_policy_id, study_id) FROM stdin;
 dr-3ay88rjpq7	s01-f0002-proband-cram.cram	.cram	edam:topic_3673	edam:data_0863	edam:format_3462	269148449	\N	\N	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
+dr-57nzhcprk0	s02-returning-s01-f0005-proband-cram.cram	.cram	edam:topic_3673	edam:data_0863	edam:format_3462	1759646869	\N	\N	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 dr-5u4yj6t1qz	s01-f0002-joint-vcf.vcf.gz	.vcf.gz	edam:topic_0199	edam:data_3498	edam:format_3016	241393766	\N	\N	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 dr-6rz35r1dcn	s02-f0002-father-cram.cram	.cram	edam:topic_3673	edam:data_0863	edam:format_3462	2030818155	\N	\N	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 dr-7cmrrchrb2	s02-f0004-father-cram.cram	.cram	edam:topic_3673	edam:data_0863	edam:format_3462	1617726871	\N	\N	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
@@ -6246,6 +6321,7 @@ dr-zmk9npxmdg	s02-f0002-proband-cram.cram	.cram	edam:topic_3673	edam:data_0863	e
 
 COPY cam."File_external_id" ("File_file_id", external_id) FROM stdin;
 dr-3ay88rjpq7	https://example.org/cam-testdata/small/File/s01-f0002-proband-cram
+dr-57nzhcprk0	https://example.org/cam-testdata/small/File/s02-returning-s01-f0005-proband-cram
 dr-5u4yj6t1qz	https://example.org/cam-testdata/small/File/s01-f0002-joint-vcf
 dr-6rz35r1dcn	https://example.org/cam-testdata/small/File/s02-f0002-father-cram
 dr-7cmrrchrb2	https://example.org/cam-testdata/small/File/s02-f0004-father-cram
@@ -6285,6 +6361,7 @@ dr-zmk9npxmdg	https://example.org/cam-testdata/small/File/s02-f0002-proband-cram
 COPY cam."File_hash" ("File_file_id", hash_id) FROM stdin;
 dr-3ay88rjpq7	1646318231
 dr-3ay88rjpq7	454235717
+dr-57nzhcprk0	1265009556
 dr-5u4yj6t1qz	1811443486
 dr-6rz35r1dcn	998471853
 dr-7cmrrchrb2	610082337
@@ -6327,6 +6404,7 @@ dr-zmk9npxmdg	73171820
 
 COPY cam."File_sample_id" ("File_file_id", sample_id_sample_id) FROM stdin;
 dr-3ay88rjpq7	bs-mkwfg60t6o
+dr-57nzhcprk0	bs-2lujybqhao
 dr-5u4yj6t1qz	bs-fpd4arpkia
 dr-5u4yj6t1qz	bs-mkwfg60t6o
 dr-6rz35r1dcn	bs-zznq3y70wq
@@ -6369,6 +6447,7 @@ dr-zmk9npxmdg	bs-xl9a6llxio
 
 COPY cam."File_subject_id" ("File_file_id", subject_id_subject_id) FROM stdin;
 dr-3ay88rjpq7	pt-p8lz6kia0j
+dr-57nzhcprk0	pt-g7k8bawahu
 dr-5u4yj6t1qz	pt-p8lz6kia0j
 dr-5u4yj6t1qz	pt-rxqwqab2pf
 dr-6rz35r1dcn	pt-undm70vrd3
@@ -6403,9 +6482,11 @@ dr-lix3bceyj5	pt-8737trkhec
 dr-lix3bceyj5	pt-9mylk1ozmd
 dr-lix3bceyj5	pt-f39hc6n8dq
 dr-lix3bceyj5	pt-fhfb8mfhx3
+dr-lix3bceyj5	pt-g7k8bawahu
 dr-lix3bceyj5	pt-hmejx0uz9s
 dr-lix3bceyj5	pt-j86rjc1yiy
 dr-lix3bceyj5	pt-l98koluj11
+dr-lix3bceyj5	pt-ljkuzx3y8h
 dr-lix3bceyj5	pt-ljv5blx4vb
 dr-lix3bceyj5	pt-pkqb7v1zxd
 dr-lix3bceyj5	pt-q5abjhzige
@@ -6462,6 +6543,7 @@ dr-zmk9npxmdg	pt-l98koluj11
 COPY cam."HashDigest" (id, hash_type, hash_value) FROM stdin;
 100398029	MS:1000568	d42b5d50485308a6d4d2f69a4fa9c9d1
 1134906529	MS:1000569	3cd66e5ca74760db7562f171b73f1aa18d9c467b
+1265009556	MS:1000568	1c518bc65e8081f3009680496ba6980d
 1310446253	MS:1000568	eb27359b7290f1d3b506add5b6fb0e4b
 1448894435	MS:1000568	9e77f8a008469cef6a034fd28f26d876
 1456863985	MS:1000568	7b08955ef57d8785cef93f07655b8169
@@ -6523,6 +6605,44 @@ COPY cam."Investigator_external_id" ("Investigator_id", external_id) FROM stdin;
 
 
 --
+-- Data for Name: Person; Type: TABLE DATA; Schema: cam; Owner: -
+--
+
+COPY cam."Person" (person_id, access_policy_id, study_id) FROM stdin;
+pn-eibey13n30	co-4rbnrtd218	sd-46ci4zfldo
+pn-kq3h0c3rxh	co-4rbnrtd218	sd-46ci4zfldo
+pn-wmkzhwqk6q	co-4rbnrtd218	sd-46ci4zfldo
+pn-zir779af5y	co-4rbnrtd218	sd-46ci4zfldo
+\.
+
+
+--
+-- Data for Name: Person_external_id; Type: TABLE DATA; Schema: cam; Owner: -
+--
+
+COPY cam."Person_external_id" ("Person_person_id", external_id) FROM stdin;
+pn-eibey13n30	https://example.org/cam-testdata/small/Person/s01-f0009-proband
+pn-kq3h0c3rxh	https://example.org/cam-testdata/small/Person/s01-f0011-proband
+pn-wmkzhwqk6q	https://example.org/cam-testdata/small/Person/s01-f0001-proband
+pn-zir779af5y	https://example.org/cam-testdata/small/Person/s01-f0005-proband
+\.
+
+
+--
+-- Data for Name: Person_subject_id; Type: TABLE DATA; Schema: cam; Owner: -
+--
+
+COPY cam."Person_subject_id" ("Person_person_id", subject_id_subject_id) FROM stdin;
+pn-eibey13n30	pt-ti0pzgxycp
+pn-kq3h0c3rxh	pt-e1qowyg6qe
+pn-kq3h0c3rxh	pt-ljkuzx3y8h
+pn-wmkzhwqk6q	pt-lo3ubn20z3
+pn-zir779af5y	pt-g7k8bawahu
+pn-zir779af5y	pt-ju11ude3rq
+\.
+
+
+--
 -- Data for Name: Publication; Type: TABLE DATA; Schema: cam; Owner: -
 --
 
@@ -6554,6 +6674,8 @@ bs-q5a6b9u1zn	bsc-576p85idzp	\N	UBERON:0000178	pt-z07ixekmp1	snomedct:103328004	
 bs-20483amku9	bsc-576p85idzp	bs-q5a6b9u1zn	OBI:0001051	pt-z07ixekmp1	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 bs-xfa4h8iruu	bsc-4aflfyecd3	\N	UBERON:0000178	pt-455yp3stzr	snomedct:103328004	3.3	ucum:ml	co-tam2ciyi45	sd-3s8wpdnf71
 bs-21qpxwci7x	bsc-4aflfyecd3	bs-xfa4h8iruu	OBI:0001051	pt-455yp3stzr	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
+bs-y8mi9al2z2	bsc-s4kdcpj958	\N	UBERON:0000178	pt-g7k8bawahu	snomedct:103328004	6.1	ucum:ml	co-yly4xno8c0	sd-2lx98atcp0
+bs-2lujybqhao	bsc-s4kdcpj958	bs-y8mi9al2z2	OBI:0001051	pt-g7k8bawahu	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 bs-4b9ztjfcp5	bsc-ych91dvz45	\N	UBERON:0000178	pt-89rj8wzflm	snomedct:103328004	3.4	ucum:ml	co-tam2ciyi45	sd-3s8wpdnf71
 bs-3cqvhqxu4b	bsc-ych91dvz45	bs-4b9ztjfcp5	OBI:0001051	pt-89rj8wzflm	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 bs-3d9plqby6e	bsc-xmvx574ulv	\N	UBERON:0000178	pt-e1qowyg6qe	snomedct:103328004	6.2	ucum:ml	co-tam2ciyi45	sd-3s8wpdnf71
@@ -6591,6 +6713,7 @@ bs-i68v99tbwy	bsc-xmvx574ulv	bs-3d9plqby6e	OBI:0001051	pt-e1qowyg6qe	\N	\N	\N	co
 bs-v2lr3u155f	bsc-fpnhjdh9mn	\N	UBERON:0000178	pt-ti0pzgxycp	snomedct:103328004	6.7	ucum:ml	co-tam2ciyi45	sd-3s8wpdnf71
 bs-ienhf20njw	bsc-fpnhjdh9mn	bs-v2lr3u155f	OBI:0001051	pt-ti0pzgxycp	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 bs-k29u6tlui0	bsc-0p2uztsm0k	bs-6jmtt7z870	OBI:0001051	pt-r8x9pj0tys	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
+bs-m8xj37twhd	bsc-r6rxtowdgg	\N	UBERON:0000178	pt-ljkuzx3y8h	snomedct:103328004	9.3	ucum:ml	co-yly4xno8c0	sd-2lx98atcp0
 bs-mkwfg60t6o	bsc-fkqy2ieno2	bs-8w1pmyml8t	OBI:0001051	pt-p8lz6kia0j	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 bs-mmwh4u6xgb	bsc-aiptm14ear	\N	UBERON:0000178	pt-9gk8jq9c8a	snomedct:103328004	9	ucum:ml	co-tam2ciyi45	sd-3s8wpdnf71
 bs-n0rtotub0w	bsc-t2k6bwj9eg	\N	UBERON:0000178	pt-undm70vrd3	snomedct:103328004	5.7	ucum:ml	co-yly4xno8c0	sd-2lx98atcp0
@@ -6608,6 +6731,7 @@ bs-wjfv7ftvkq	bsc-0fdgkol1qm	\N	UBERON:0000178	pt-54i7xpb3so	snomedct:103328004	
 bs-tx6bnw1a0x	bsc-0fdgkol1qm	bs-wjfv7ftvkq	OBI:0001051	pt-54i7xpb3so	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 bs-x12ulavrim	bsc-h2t6mxqssl	bs-0qv6n0y2td	OBI:0001051	pt-3heturwy6c	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 bs-xl9a6llxio	bsc-ax86yg2qis	bs-8r09gjn2f4	OBI:0001051	pt-l98koluj11	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
+bs-xtttky72oh	bsc-r6rxtowdgg	bs-m8xj37twhd	OBI:0001051	pt-ljkuzx3y8h	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 bs-y341t447ov	bsc-b7q94aowax	bs-be24j2t4up	OBI:0001051	pt-p9wydbuq5q	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 bs-zznq3y70wq	bsc-t2k6bwj9eg	bs-n0rtotub0w	OBI:0001051	pt-undm70vrd3	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 \.
@@ -6622,6 +6746,7 @@ bs-08dyug60bv	https://example.org/cam-testdata/small/Sample/s02-f0004-proband-dn
 bs-0qv6n0y2td	https://example.org/cam-testdata/small/Sample/s02-f0011-father-blood
 bs-20483amku9	https://example.org/cam-testdata/small/Sample/s01-f0012-proband-dna
 bs-21qpxwci7x	https://example.org/cam-testdata/small/Sample/s01-f0011-mother-dna
+bs-2lujybqhao	https://example.org/cam-testdata/small/Sample/s02-returning-s01-f0005-proband-dna
 bs-3cqvhqxu4b	https://example.org/cam-testdata/small/Sample/s01-f0008-proband-dna
 bs-3d9plqby6e	https://example.org/cam-testdata/small/Sample/s01-f0011-proband-blood
 bs-4738chr6tm	https://example.org/cam-testdata/small/Sample/s02-f0004-father-dna
@@ -6653,6 +6778,7 @@ bs-i68v99tbwy	https://example.org/cam-testdata/small/Sample/s01-f0011-proband-dn
 bs-ienhf20njw	https://example.org/cam-testdata/small/Sample/s01-f0009-proband-dna
 bs-k29u6tlui0	https://example.org/cam-testdata/small/Sample/s02-f0009-father-dna
 bs-lvyp2a2swe	https://example.org/cam-testdata/small/Sample/s02-f0004-father-blood
+bs-m8xj37twhd	https://example.org/cam-testdata/small/Sample/s02-returning-s01-f0011-proband-blood
 bs-mff31jzxtq	https://example.org/cam-testdata/small/Sample/s02-f0004-proband-blood
 bs-mkwfg60t6o	https://example.org/cam-testdata/small/Sample/s01-f0002-proband-dna
 bs-mmwh4u6xgb	https://example.org/cam-testdata/small/Sample/s01-f0006-father-blood
@@ -6677,7 +6803,9 @@ bs-wjfv7ftvkq	https://example.org/cam-testdata/small/Sample/s02-f0011-proband-bl
 bs-x12ulavrim	https://example.org/cam-testdata/small/Sample/s02-f0011-father-dna
 bs-xfa4h8iruu	https://example.org/cam-testdata/small/Sample/s01-f0011-mother-blood
 bs-xl9a6llxio	https://example.org/cam-testdata/small/Sample/s02-f0002-proband-dna
+bs-xtttky72oh	https://example.org/cam-testdata/small/Sample/s02-returning-s01-f0011-proband-dna
 bs-y341t447ov	https://example.org/cam-testdata/small/Sample/s01-f0011-father-dna
+bs-y8mi9al2z2	https://example.org/cam-testdata/small/Sample/s02-returning-s01-f0005-proband-blood
 bs-z08ja02mb2	https://example.org/cam-testdata/small/Sample/s02-f0003-mother-blood
 bs-zgjm1sylgy	https://example.org/cam-testdata/small/Sample/s02-f0002-mother-blood
 bs-zznq3y70wq	https://example.org/cam-testdata/small/Sample/s02-f0002-father-dna
@@ -6692,6 +6820,7 @@ COPY cam."Sample_processing" ("Sample_sample_id", processing) FROM stdin;
 bs-08dyug60bv	OBI:0000257
 bs-20483amku9	OBI:0000257
 bs-21qpxwci7x	OBI:0000257
+bs-2lujybqhao	OBI:0000257
 bs-3cqvhqxu4b	OBI:0000257
 bs-4738chr6tm	OBI:0000257
 bs-4ez6za4vnj	OBI:0000257
@@ -6717,6 +6846,7 @@ bs-qm0dlp7ik5	OBI:0000257
 bs-tx6bnw1a0x	OBI:0000257
 bs-x12ulavrim	OBI:0000257
 bs-xl9a6llxio	OBI:0000257
+bs-xtttky72oh	OBI:0000257
 bs-y341t447ov	OBI:0000257
 bs-zznq3y70wq	OBI:0000257
 \.
@@ -6730,6 +6860,7 @@ COPY cam."Sample_storage_method" ("Sample_sample_id", storage_method) FROM stdin
 bs-08dyug60bv	OBI:0000915
 bs-20483amku9	OBI:0000915
 bs-21qpxwci7x	OBI:0000915
+bs-2lujybqhao	OBI:0000915
 bs-3cqvhqxu4b	OBI:0000915
 bs-4738chr6tm	OBI:0000915
 bs-4ez6za4vnj	OBI:0000915
@@ -6750,6 +6881,7 @@ bs-i68v99tbwy	OBI:0000915
 bs-ienhf20njw	OBI:0000915
 bs-k29u6tlui0	OBI:0000915
 bs-lvyp2a2swe	OBI:0000819
+bs-m8xj37twhd	OBI:0000819
 bs-mff31jzxtq	OBI:0000819
 bs-mkwfg60t6o	OBI:0000915
 bs-mmwh4u6xgb	OBI:0000819
@@ -6767,6 +6899,7 @@ bs-tx6bnw1a0x	OBI:0000915
 bs-x12ulavrim	OBI:0000915
 bs-xfa4h8iruu	OBI:0000819
 bs-xl9a6llxio	OBI:0000915
+bs-xtttky72oh	OBI:0000915
 bs-y341t447ov	OBI:0000915
 bs-z08ja02mb2	OBI:0000819
 bs-zgjm1sylgy	OBI:0000819
@@ -6779,6 +6912,7 @@ bs-zznq3y70wq	OBI:0000915
 --
 
 COPY cam."Study" (parent_study, study_title, study_code, study_short_name, study_description, website, acknowledgments, citation_statement, do_id, access_policy_id, study_id) FROM stdin;
+\N	Old MacDonald's Farm	FARM	\N	Umbrella record for Person links across the farm's studies. Holds no subjects of its own.	\N	\N	\N	\N	co-4rbnrtd218	sd-46ci4zfldo
 sd-3s8wpdnf71	HumHum Family-Based Camelid Cohort	S02	\N	A fictional study of thyroid function in llamas raised on farms around Pasture Point. Each herd is followed with regular visits, and sleep quality is recorded along the way. All participants and data are synthetic.	\N	\N	\N	https://doi.org/10.5072/cam-testdata.grdggrel	co-yly4xno8c0	sd-2lx98atcp0
 \N	QuackQuack Longitudinal Anatine Initiative	S01	\N	A fictional study of sleep quality in ducks raised on farms around Clover Hill. Each paddling is followed with regular visits, and lifespan is recorded along the way. All participants and data are synthetic.	\N	\N	\N	https://doi.org/10.5072/cam-testdata.jiktz896	co-tam2ciyi45	sd-3s8wpdnf71
 \.
@@ -6789,8 +6923,9 @@ sd-3s8wpdnf71	HumHum Family-Based Camelid Cohort	S02	\N	A fictional study of thy
 --
 
 COPY cam."StudyMetadata" (study_id, selection_criteria, vbr_id, expected_number_of_participants, actual_number_of_participants, access_policy_id) FROM stdin;
-sd-2lx98atcp0	\N	or-qldlz7ot0k	30	28	co-yly4xno8c0
+sd-2lx98atcp0	\N	or-qldlz7ot0k	32	30	co-yly4xno8c0
 sd-3s8wpdnf71	\N	or-gi4q7opjnl	31	22	co-tam2ciyi45
+sd-46ci4zfldo	\N	\N	0	0	co-4rbnrtd218
 \.
 
 
@@ -6803,6 +6938,7 @@ sd-2lx98atcp0	CAMO:0000011
 sd-2lx98atcp0	CAMO:0000014
 sd-3s8wpdnf71	CAMO:0000010
 sd-3s8wpdnf71	CAMO:0000011
+sd-46ci4zfldo	CAMO:0000011
 \.
 
 
@@ -6815,6 +6951,7 @@ sd-2lx98atcp0	edam:topic_0625
 sd-2lx98atcp0	edam:topic_3673
 sd-3s8wpdnf71	edam:topic_3170
 sd-3s8wpdnf71	edam:topic_3673
+sd-46ci4zfldo	edam:topic_3170
 \.
 
 
@@ -6825,6 +6962,7 @@ sd-3s8wpdnf71	edam:topic_3673
 COPY cam."StudyMetadata_external_id" ("StudyMetadata_study_id", external_id) FROM stdin;
 sd-2lx98atcp0	https://example.org/cam-testdata/small/StudyMetadata/s02
 sd-3s8wpdnf71	https://example.org/cam-testdata/small/StudyMetadata/s01
+sd-46ci4zfldo	https://example.org/cam-testdata/small/StudyMetadata/farm
 \.
 
 
@@ -6837,6 +6975,7 @@ sd-2lx98atcp0	NCIT:C199314
 sd-2lx98atcp0	NCIT:C89345
 sd-3s8wpdnf71	NCIT:C89345
 sd-3s8wpdnf71	NCIT:C89889
+sd-46ci4zfldo	NCIT:C89889
 \.
 
 
@@ -6847,6 +6986,7 @@ sd-3s8wpdnf71	NCIT:C89889
 COPY cam."StudyMetadata_research_domain" ("StudyMetadata_study_id", research_domain_concept_curie) FROM stdin;
 sd-2lx98atcp0	mesh:D006330
 sd-3s8wpdnf71	mesh:D013568
+sd-46ci4zfldo	mesh:D001520
 \.
 
 
@@ -6859,6 +6999,7 @@ sd-2lx98atcp0	mesh:D008137
 sd-2lx98atcp0	mesh:D016022
 sd-3s8wpdnf71	mesh:D003430
 sd-3s8wpdnf71	mesh:D008137
+sd-46ci4zfldo	mesh:D016022
 \.
 
 
@@ -6869,6 +7010,7 @@ sd-3s8wpdnf71	mesh:D008137
 COPY cam."Study_contact" ("Study_study_id", contact_id) FROM stdin;
 sd-2lx98atcp0	1864588521
 sd-3s8wpdnf71	1474227128
+sd-46ci4zfldo	1474227128
 \.
 
 
@@ -6879,6 +7021,7 @@ sd-3s8wpdnf71	1474227128
 COPY cam."Study_external_id" ("Study_study_id", external_id) FROM stdin;
 sd-2lx98atcp0	https://example.org/cam-testdata/small/Study/s02
 sd-3s8wpdnf71	https://example.org/cam-testdata/small/Study/s01
+sd-46ci4zfldo	https://example.org/cam-testdata/small/Study/farm
 \.
 
 
@@ -6899,6 +7042,7 @@ sd-3s8wpdnf71	Fictional Foundation for Test Data
 COPY cam."Study_principal_investigator" ("Study_study_id", principal_investigator_id) FROM stdin;
 sd-2lx98atcp0	126719377
 sd-3s8wpdnf71	191685718
+sd-46ci4zfldo	191685718
 \.
 
 
@@ -6909,6 +7053,7 @@ sd-3s8wpdnf71	191685718
 COPY cam."Study_program" ("Study_study_id", program) FROM stdin;
 sd-2lx98atcp0	https://www.nih.gov/include-project
 sd-3s8wpdnf71	https://www.nih.gov/include-project
+sd-46ci4zfldo	https://www.nih.gov/include-project
 \.
 
 
@@ -6949,11 +7094,13 @@ pt-a15eslmrz3	CAMO:0000024	\N	co-tam2ciyi45	sd-3s8wpdnf71
 pt-e1qowyg6qe	CAMO:0000024	\N	co-tam2ciyi45	sd-3s8wpdnf71
 pt-f39hc6n8dq	CAMO:0000024	\N	co-yly4xno8c0	sd-2lx98atcp0
 pt-fhfb8mfhx3	CAMO:0000024	\N	co-yly4xno8c0	sd-2lx98atcp0
+pt-g7k8bawahu	CAMO:0000024	\N	co-yly4xno8c0	sd-2lx98atcp0
 pt-hmejx0uz9s	CAMO:0000024	\N	co-yly4xno8c0	sd-2lx98atcp0
 pt-j86rjc1yiy	CAMO:0000024	\N	co-yly4xno8c0	sd-2lx98atcp0
 pt-ju11ude3rq	CAMO:0000024	\N	co-tam2ciyi45	sd-3s8wpdnf71
 pt-k6m1krw8rg	CAMO:0000025	\N	co-tam2ciyi45	sd-3s8wpdnf71
 pt-l98koluj11	CAMO:0000024	\N	co-yly4xno8c0	sd-2lx98atcp0
+pt-ljkuzx3y8h	CAMO:0000024	\N	co-yly4xno8c0	sd-2lx98atcp0
 pt-ljv5blx4vb	CAMO:0000024	\N	co-yly4xno8c0	sd-2lx98atcp0
 pt-lo3ubn20z3	CAMO:0000024	\N	co-tam2ciyi45	sd-3s8wpdnf71
 pt-m9q9s4y6en	CAMO:0000024	\N	co-tam2ciyi45	sd-3s8wpdnf71
@@ -7014,12 +7161,14 @@ ob-5ocwif8f7h	pt-72iwinqiw2	en-vwr8pv583f	CAMO:0000017	CAMO:0000014	9857	\N	\N	\
 ob-5p6v69rwhm	pt-8737trkhec	en-8hv34ena0p	CAMO:0000016	CAMO:0000010	10337	4609	\N	\N	\N	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 ob-5sb1sy59d2	pt-2qhnztec9g	en-8k56b91q99	CAMO:0000016	CAMO:0000010	\N	4395	\N	\N	25.6	\N	ucum:kg/m2	\N	co-yly4xno8c0	sd-2lx98atcp0
 ob-5zzox8519x	pt-yuolgzovn5	en-462rqvpjnl	CAMO:0000017	CAMO:0000014	12183	824	\N	\N	\N	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
+ob-624mh51411	pt-g7k8bawahu	en-7fmm7lgyl3	CAMO:0000016	CAMO:0000014	3247	3105	\N	\N	\N	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 ob-64w3zhkcw3	pt-f39hc6n8dq	en-ianln70jil	CAMO:0000016	CAMO:0000011	509	258	\N	\N	\N	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 ob-6lmo0ess49	pt-0y0gjl36rz	\N	CAMO:0000017	CAMO:0000011	\N	13960	\N	\N	51	\N	ucum:cm	\N	co-yly4xno8c0	sd-2lx98atcp0
 ob-8hq7l06k88	pt-rxqwqab2pf	en-5rb4xuwxbw	CAMO:0000019	CAMO:0000011	16073	\N	\N	\N	\N	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 ob-8vpra2ayrg	pt-ti0pzgxycp	en-p7bwjxjr89	CAMO:0000016	CAMO:0000010	5732	3879	\N	\N	\N	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 ob-941d3lg2xt	pt-2qhnztec9g	en-8k56b91q99	CAMO:0000019	CAMO:0000010	4395	3668	\N	\N	\N	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 ob-9ok8np4pct	pt-sdhpmoh9yq	en-4ftj1wn9eu	CAMO:0000016	CAMO:0000014	12396	11012	\N	\N	\N	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
+ob-9r0gkm9a0v	pt-g7k8bawahu	\N	CAMO:0000019	CAMO:0000010	3247	\N	\N	\N	\N	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 ob-9wv520nakf	pt-f39hc6n8dq	en-ianln70jil	CAMO:0000016	CAMO:0000014	\N	509	\N	\N	3.7	\N	ucum:kg	\N	co-yly4xno8c0	sd-2lx98atcp0
 ob-a1mdiqw21i	pt-sdhpmoh9yq	en-4ftj1wn9eu	CAMO:0000016	CAMO:0000010	12396	\N	\N	\N	\N	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 ob-a8n11ck7py	pt-r22hejnzwv	\N	CAMO:0000019	CAMO:0000011	\N	1450	\N	\N	71.3	\N	ucum:kg	\N	co-yly4xno8c0	sd-2lx98atcp0
@@ -7037,6 +7186,8 @@ ob-fquhcpaw0s	pt-pkqb7v1zxd	en-2e0c9af4hv	CAMO:0000017	CAMO:0000010	5931	3385	\N
 ob-g0px7jqssh	pt-z07ixekmp1	\N	CAMO:0000019	CAMO:0000011	6181	\N	\N	\N	\N	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 ob-h2qtdap1m7	pt-0y0gjl36rz	en-vm322d7vf8	CAMO:0000016	CAMO:0000010	14106	5001	\N	\N	\N	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 ob-htk7avml6x	pt-223dzfx7g4	en-dnj7mbpxwy	CAMO:0000019	CAMO:0000011	17634	4693	\N	\N	\N	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
+ob-hv17llr2lv	pt-g7k8bawahu	en-cmnfpzmxej	CAMO:0000019	CAMO:0000011	3779	1628	\N	\N	\N	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
+ob-ih2t2v0e6t	pt-g7k8bawahu	en-7fmm7lgyl3	CAMO:0000017	CAMO:0000010	\N	3247	\N	\N	7	\N	ucum:kg	\N	co-yly4xno8c0	sd-2lx98atcp0
 ob-irbaooji7l	pt-p8lz6kia0j	en-snfsdthc3l	CAMO:0000019	CAMO:0000014	782	767	\N	\N	\N	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 ob-iw1m17fhef	pt-r8x9pj0tys	en-0ajbzdihrl	CAMO:0000019	CAMO:0000010	13312	13209	\N	\N	\N	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 ob-jj27upzz1q	pt-89rj8wzflm	en-bpadpmgmn4	CAMO:0000019	CAMO:0000011	4946	\N	\N	\N	\N	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
@@ -7068,11 +7219,13 @@ ob-whg2cuw90l	pt-2qhnztec9g	en-8k56b91q99	CAMO:0000016	CAMO:0000010	4395	2990	\N
 ob-wuv1f67ft6	pt-223dzfx7g4	\N	CAMO:0000019	CAMO:0000014	\N	17634	\N	\N	68.4	\N	ucum:cm	\N	co-tam2ciyi45	sd-3s8wpdnf71
 ob-xa73tbpyx3	pt-x2oc43ni3s	en-fzvv6gtysy	CAMO:0000017	CAMO:0000011	3282	269	\N	\N	\N	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 ob-xbt5jd77l3	pt-hmejx0uz9s	\N	CAMO:0000016	CAMO:0000014	\N	1690	\N	\N	31.5	\N	ucum:kg	\N	co-yly4xno8c0	sd-2lx98atcp0
+ob-xfo2wc2xv5	pt-g7k8bawahu	en-cmnfpzmxej	CAMO:0000017	CAMO:0000011	3779	3093	\N	\N	\N	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 ob-xzea0tg5nn	pt-455yp3stzr	\N	CAMO:0000017	CAMO:0000014	8651	7834	\N	\N	\N	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 ob-y6owd4p9jf	pt-tyk26seuny	en-jeiqsk3o75	CAMO:0000019	CAMO:0000011	6009	4531	\N	\N	\N	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 ob-yap6f4l0fa	pt-r8x9pj0tys	en-7b47r8p2wu	CAMO:0000016	CAMO:0000011	12183	6617	\N	\N	\N	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 ob-ycsswekqji	pt-ti0pzgxycp	en-p7bwjxjr89	CAMO:0000017	CAMO:0000010	5732	\N	\N	\N	\N	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 ob-yi5ioecqje	pt-xoyf6cflcc	en-hty32ttirv	CAMO:0000016	CAMO:0000010	5145	\N	\N	\N	\N	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
+ob-ykf3jetwvd	pt-g7k8bawahu	en-7fmm7lgyl3	CAMO:0000019	CAMO:0000010	3247	\N	\N	\N	\N	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 ob-ypnbvvn2kj	pt-p8lz6kia0j	en-snfsdthc3l	CAMO:0000019	CAMO:0000011	782	\N	\N	\N	\N	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 ob-z5aoibr9md	pt-6vj8yjqt9f	en-wk37ruji9h	CAMO:0000017	CAMO:0000014	10108	5913	\N	\N	\N	\N	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
 ob-zlpaom14md	pt-sdhpmoh9yq	en-4ftj1wn9eu	CAMO:0000016	CAMO:0000014	12396	5026	\N	\N	\N	\N	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
@@ -7113,12 +7266,14 @@ ob-5ocwif8f7h	HP:0030148
 ob-5p6v69rwhm	HP:0000821
 ob-5sb1sy59d2	loinc:39156-5
 ob-5zzox8519x	MONDO:0008608
+ob-624mh51411	HP:0030148
 ob-64w3zhkcw3	HP:0030148
 ob-6lmo0ess49	loinc:8302-2
 ob-8hq7l06k88	HP:0006695
 ob-8vpra2ayrg	HP:0001631
 ob-941d3lg2xt	HP:0006695
 ob-9ok8np4pct	MONDO:0008608
+ob-9r0gkm9a0v	HP:0000821
 ob-9wv520nakf	loinc:29463-7
 ob-a1mdiqw21i	HP:0001631
 ob-a8n11ck7py	loinc:29463-7
@@ -7136,6 +7291,8 @@ ob-fquhcpaw0s	HP:0001631
 ob-g0px7jqssh	HP:0001252
 ob-h2qtdap1m7	HP:0001631
 ob-htk7avml6x	HP:0001629
+ob-hv17llr2lv	HP:0001629
+ob-ih2t2v0e6t	loinc:29463-7
 ob-irbaooji7l	MONDO:0002070
 ob-iw1m17fhef	MONDO:0002070
 ob-jj27upzz1q	MONDO:0008608
@@ -7167,11 +7324,13 @@ ob-whg2cuw90l	MONDO:0002070
 ob-wuv1f67ft6	loinc:8302-2
 ob-xa73tbpyx3	HP:0006695
 ob-xbt5jd77l3	loinc:29463-7
+ob-xfo2wc2xv5	HP:0001252
 ob-xzea0tg5nn	HP:0001631
 ob-y6owd4p9jf	HP:0000821
 ob-yap6f4l0fa	HP:0001252
 ob-ycsswekqji	HP:0001252
 ob-yi5ioecqje	HP:0001252
+ob-ykf3jetwvd	HP:0001631
 ob-ypnbvvn2kj	MONDO:0002070
 ob-z5aoibr9md	HP:0006695
 ob-zlpaom14md	HP:0030148
@@ -7212,12 +7371,14 @@ ob-5ocwif8f7h	https://example.org/cam-testdata/small/SubjectAssertion/s01-f0010-
 ob-5p6v69rwhm	https://example.org/cam-testdata/small/SubjectAssertion/s02-f0011-mother-a1
 ob-5sb1sy59d2	https://example.org/cam-testdata/small/SubjectAssertion/s02-f0010-proband-a1
 ob-5zzox8519x	https://example.org/cam-testdata/small/SubjectAssertion/s02-f0004-father-a1
+ob-624mh51411	https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a5
 ob-64w3zhkcw3	https://example.org/cam-testdata/small/SubjectAssertion/s02-f0012-proband-a3
 ob-6lmo0ess49	https://example.org/cam-testdata/small/SubjectAssertion/s02-f0002-mother-a4
 ob-8hq7l06k88	https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-mother-a1
 ob-8vpra2ayrg	https://example.org/cam-testdata/small/SubjectAssertion/s01-f0009-proband-a1
 ob-941d3lg2xt	https://example.org/cam-testdata/small/SubjectAssertion/s02-f0010-proband-a3
 ob-9ok8np4pct	https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-father-a3
+ob-9r0gkm9a0v	https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a4
 ob-9wv520nakf	https://example.org/cam-testdata/small/SubjectAssertion/s02-f0012-proband-a1
 ob-a1mdiqw21i	https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-father-a1
 ob-a8n11ck7py	https://example.org/cam-testdata/small/SubjectAssertion/s02-f0001-proband-a1
@@ -7235,6 +7396,8 @@ ob-fquhcpaw0s	https://example.org/cam-testdata/small/SubjectAssertion/s02-f0006-
 ob-g0px7jqssh	https://example.org/cam-testdata/small/SubjectAssertion/s01-f0012-proband-a1
 ob-h2qtdap1m7	https://example.org/cam-testdata/small/SubjectAssertion/s02-f0002-mother-a2
 ob-htk7avml6x	https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-father-a1
+ob-hv17llr2lv	https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a6
+ob-ih2t2v0e6t	https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a3
 ob-irbaooji7l	https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-proband-a3
 ob-iw1m17fhef	https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-father-a1
 ob-jj27upzz1q	https://example.org/cam-testdata/small/SubjectAssertion/s01-f0008-proband-a1
@@ -7266,11 +7429,13 @@ ob-whg2cuw90l	https://example.org/cam-testdata/small/SubjectAssertion/s02-f0010-
 ob-wuv1f67ft6	https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-father-a2
 ob-xa73tbpyx3	https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-proband-a1
 ob-xbt5jd77l3	https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-proband-a2
+ob-xfo2wc2xv5	https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a2
 ob-xzea0tg5nn	https://example.org/cam-testdata/small/SubjectAssertion/s01-f0011-mother-a1
 ob-y6owd4p9jf	https://example.org/cam-testdata/small/SubjectAssertion/s02-f0004-proband-a1
 ob-yap6f4l0fa	https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-father-a3
 ob-ycsswekqji	https://example.org/cam-testdata/small/SubjectAssertion/s01-f0009-proband-a2
 ob-yi5ioecqje	https://example.org/cam-testdata/small/SubjectAssertion/s01-f0003-proband-a1
+ob-ykf3jetwvd	https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a1
 ob-ypnbvvn2kj	https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-proband-a2
 ob-z5aoibr9md	https://example.org/cam-testdata/small/SubjectAssertion/s02-f0003-father-a1
 ob-zlpaom14md	https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-father-a6
@@ -7306,11 +7471,13 @@ ob-5gf0na3qx6	snomedct:410515003
 ob-5ocwif8f7h	snomedct:410516002
 ob-5p6v69rwhm	snomedct:410515003
 ob-5zzox8519x	snomedct:410515003
+ob-624mh51411	snomedct:410515003
 ob-64w3zhkcw3	snomedct:410515003
 ob-8hq7l06k88	snomedct:410516002
 ob-8vpra2ayrg	snomedct:410515003
 ob-941d3lg2xt	snomedct:410515003
 ob-9ok8np4pct	snomedct:410515003
+ob-9r0gkm9a0v	snomedct:410516002
 ob-a1mdiqw21i	snomedct:410516002
 ob-bivhr56z0q	snomedct:410515003
 ob-cnrubgx669	snomedct:410515003
@@ -7323,6 +7490,7 @@ ob-fquhcpaw0s	snomedct:410515003
 ob-g0px7jqssh	snomedct:410516002
 ob-h2qtdap1m7	snomedct:410515003
 ob-htk7avml6x	snomedct:410515003
+ob-hv17llr2lv	snomedct:410515003
 ob-irbaooji7l	snomedct:410515003
 ob-iw1m17fhef	snomedct:410515003
 ob-jj27upzz1q	snomedct:410516002
@@ -7341,11 +7509,13 @@ ob-u3cv6g91yn	snomedct:410516002
 ob-uieesu2hpm	snomedct:410516002
 ob-whg2cuw90l	snomedct:410515003
 ob-xa73tbpyx3	snomedct:410515003
+ob-xfo2wc2xv5	snomedct:410515003
 ob-xzea0tg5nn	snomedct:410515003
 ob-y6owd4p9jf	snomedct:410515003
 ob-yap6f4l0fa	snomedct:410515003
 ob-ycsswekqji	snomedct:410516002
 ob-yi5ioecqje	snomedct:410516002
+ob-ykf3jetwvd	snomedct:410516002
 ob-ypnbvvn2kj	snomedct:410516002
 ob-z5aoibr9md	snomedct:410515003
 ob-zlpaom14md	snomedct:410515003
@@ -7381,11 +7551,13 @@ pt-a15eslmrz3	https://example.org/cam-testdata/small/Subject/s01-f0004-mother
 pt-e1qowyg6qe	https://example.org/cam-testdata/small/Subject/s01-f0011-proband
 pt-f39hc6n8dq	https://example.org/cam-testdata/small/Subject/s02-f0012-proband
 pt-fhfb8mfhx3	https://example.org/cam-testdata/small/Subject/s02-f0008-proband
+pt-g7k8bawahu	https://example.org/cam-testdata/small/Subject/s02-returning-s01-f0005-proband
 pt-hmejx0uz9s	https://example.org/cam-testdata/small/Subject/s02-f0009-proband
 pt-j86rjc1yiy	https://example.org/cam-testdata/small/Subject/s02-f0012-father
 pt-ju11ude3rq	https://example.org/cam-testdata/small/Subject/s01-f0005-proband
 pt-k6m1krw8rg	https://example.org/cam-testdata/small/Subject/s01-f0012-sibling
 pt-l98koluj11	https://example.org/cam-testdata/small/Subject/s02-f0002-proband
+pt-ljkuzx3y8h	https://example.org/cam-testdata/small/Subject/s02-returning-s01-f0011-proband
 pt-ljv5blx4vb	https://example.org/cam-testdata/small/Subject/s02-f0006-mother
 pt-lo3ubn20z3	https://example.org/cam-testdata/small/Subject/s01-f0001-proband
 pt-m9q9s4y6en	https://example.org/cam-testdata/small/Subject/s01-f0010-mother
@@ -7859,6 +8031,30 @@ ALTER TABLE ONLY cam."Investigator_external_id"
 
 ALTER TABLE ONLY cam."Investigator"
     ADD CONSTRAINT "Investigator_pkey" PRIMARY KEY (id);
+
+
+--
+-- Name: Person_external_id Person_external_id_pkey; Type: CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_external_id"
+    ADD CONSTRAINT "Person_external_id_pkey" PRIMARY KEY ("Person_person_id", external_id);
+
+
+--
+-- Name: Person Person_pkey; Type: CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person"
+    ADD CONSTRAINT "Person_pkey" PRIMARY KEY (person_id);
+
+
+--
+-- Name: Person_subject_id Person_subject_id_pkey; Type: CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_subject_id"
+    ADD CONSTRAINT "Person_subject_id_pkey" PRIMARY KEY ("Person_person_id", subject_id_subject_id);
 
 
 --
@@ -8811,6 +9007,46 @@ ALTER TABLE ONLY cam."Investigator_external_id"
 
 ALTER TABLE ONLY cam."Investigator"
     ADD CONSTRAINT "Investigator_study_id_fkey" FOREIGN KEY (study_id) REFERENCES cam."Study"(study_id);
+
+
+--
+-- Name: Person Person_access_policy_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person"
+    ADD CONSTRAINT "Person_access_policy_id_fkey" FOREIGN KEY (access_policy_id) REFERENCES cam."AccessPolicy"(access_policy_id);
+
+
+--
+-- Name: Person_external_id Person_external_id_Person_person_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_external_id"
+    ADD CONSTRAINT "Person_external_id_Person_person_id_fkey" FOREIGN KEY ("Person_person_id") REFERENCES cam."Person"(person_id);
+
+
+--
+-- Name: Person Person_study_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person"
+    ADD CONSTRAINT "Person_study_id_fkey" FOREIGN KEY (study_id) REFERENCES cam."Study"(study_id);
+
+
+--
+-- Name: Person_subject_id Person_subject_id_Person_person_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_subject_id"
+    ADD CONSTRAINT "Person_subject_id_Person_person_id_fkey" FOREIGN KEY ("Person_person_id") REFERENCES cam."Person"(person_id);
+
+
+--
+-- Name: Person_subject_id Person_subject_id_subject_id_subject_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_subject_id"
+    ADD CONSTRAINT "Person_subject_id_subject_id_subject_id_fkey" FOREIGN KEY (subject_id_subject_id) REFERENCES cam."Subject"(subject_id);
 
 
 --

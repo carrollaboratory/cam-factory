@@ -18,6 +18,24 @@
   - https://example.org/cam-testdata/small/File/s01-f0002-proband-cram
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
+- file_id: dr-57nzhcprk0
+  subject_id:
+  - pt-g7k8bawahu
+  sample_id:
+  - bs-2lujybqhao
+  filename: s02-returning-s01-f0005-proband-cram.cram
+  file_extension: .cram
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
+  size: 1759646869
+  hash:
+  - hash_type: MS:1000568  # MD5
+    hash_value: 1c518bc65e8081f3009680496ba6980d
+  external_id:
+  - https://example.org/cam-testdata/small/File/s02-returning-s01-f0005-proband-cram
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
 - file_id: dr-5u4yj6t1qz
   subject_id:
   - pt-p8lz6kia0j
@@ -348,9 +366,11 @@
   - pt-9mylk1ozmd
   - pt-f39hc6n8dq
   - pt-fhfb8mfhx3
+  - pt-g7k8bawahu
   - pt-hmejx0uz9s
   - pt-j86rjc1yiy
   - pt-l98koluj11
+  - pt-ljkuzx3y8h
   - pt-ljv5blx4vb
   - pt-pkqb7v1zxd
   - pt-q5abjhzige

@@ -386,6 +386,21 @@
   - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0004-father-a1
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
+- assertion_id: ob-624mh51411
+  subject_id: pt-g7k8bawahu
+  encounter_id: en-7fmm7lgyl3
+  asserter_type: CAMO:0000016  # Research Staff Asserted
+  assertion_source_type: CAMO:0000014  # Electronic Health Record
+  age_at_assertion: 3247
+  age_at_event: 3105
+  concept:
+  - HP:0030148  # Heart murmur
+  value_concept:
+  - snomedct:410515003  # Known present
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a5
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
 - assertion_id: ob-64w3zhkcw3
   subject_id: pt-f39hc6n8dq
   encounter_id: en-ianln70jil
@@ -473,6 +488,19 @@
   - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-father-a3
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
+- assertion_id: ob-9r0gkm9a0v
+  subject_id: pt-g7k8bawahu
+  asserter_type: CAMO:0000019  # Participant Asserted
+  assertion_source_type: CAMO:0000010  # Survey
+  age_at_assertion: 3247
+  concept:
+  - HP:0000821  # Hypothyroidism
+  value_concept:
+  - snomedct:410516002  # Known absent
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a4
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
 - assertion_id: ob-9wv520nakf
   subject_id: pt-f39hc6n8dq
   encounter_id: en-ianln70jil
@@ -717,6 +745,35 @@
   - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-father-a1
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
+- assertion_id: ob-hv17llr2lv
+  subject_id: pt-g7k8bawahu
+  encounter_id: en-cmnfpzmxej
+  asserter_type: CAMO:0000019  # Participant Asserted
+  assertion_source_type: CAMO:0000011  # Research Assessment
+  age_at_assertion: 3779
+  age_at_event: 1628
+  concept:
+  - HP:0001629  # Ventricular septal defect
+  value_concept:
+  - snomedct:410515003  # Known present
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a6
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assertion_id: ob-ih2t2v0e6t
+  subject_id: pt-g7k8bawahu
+  encounter_id: en-7fmm7lgyl3
+  asserter_type: CAMO:0000017  # Healthcare Asserted
+  assertion_source_type: CAMO:0000010  # Survey
+  age_at_event: 3247
+  concept:
+  - loinc:29463-7  # Body Weight
+  value_number: 7.0
+  value_unit: ucum:kg  # Kilograms
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a3
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
 - assertion_id: ob-irbaooji7l
   subject_id: pt-p8lz6kia0j
   encounter_id: en-snfsdthc3l
@@ -1157,6 +1214,21 @@
   - https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-proband-a2
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
+- assertion_id: ob-xfo2wc2xv5
+  subject_id: pt-g7k8bawahu
+  encounter_id: en-cmnfpzmxej
+  asserter_type: CAMO:0000017  # Healthcare Asserted
+  assertion_source_type: CAMO:0000011  # Research Assessment
+  age_at_assertion: 3779
+  age_at_event: 3093
+  concept:
+  - HP:0001252  # Hypotonia
+  value_concept:
+  - snomedct:410515003  # Known present
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
 - assertion_id: ob-xzea0tg5nn
   subject_id: pt-455yp3stzr
   asserter_type: CAMO:0000017  # Healthcare Asserted
@@ -1229,6 +1301,20 @@
   - https://example.org/cam-testdata/small/SubjectAssertion/s01-f0003-proband-a1
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
+- assertion_id: ob-ykf3jetwvd
+  subject_id: pt-g7k8bawahu
+  encounter_id: en-7fmm7lgyl3
+  asserter_type: CAMO:0000019  # Participant Asserted
+  assertion_source_type: CAMO:0000010  # Survey
+  age_at_assertion: 3247
+  concept:
+  - HP:0001631  # Atrial septal defect
+  value_concept:
+  - snomedct:410516002  # Known absent
+  external_id:
+  - https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
 - assertion_id: ob-ypnbvvn2kj
   subject_id: pt-p8lz6kia0j
   encounter_id: en-snfsdthc3l

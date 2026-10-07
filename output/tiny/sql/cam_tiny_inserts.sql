@@ -4327,6 +4327,37 @@ ALTER SEQUENCE cam."Investigator_id_seq" OWNED BY cam."Investigator".id;
 
 
 --
+-- Name: Person; Type: TABLE; Schema: cam; Owner: -
+--
+
+CREATE TABLE cam."Person" (
+    person_id text NOT NULL,
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
+);
+
+
+--
+-- Name: Person_external_id; Type: TABLE; Schema: cam; Owner: -
+--
+
+CREATE TABLE cam."Person_external_id" (
+    "Person_person_id" text NOT NULL,
+    external_id text NOT NULL
+);
+
+
+--
+-- Name: Person_subject_id; Type: TABLE; Schema: cam; Owner: -
+--
+
+CREATE TABLE cam."Person_subject_id" (
+    "Person_person_id" text NOT NULL,
+    subject_id_subject_id text NOT NULL
+);
+
+
+--
 -- Name: Publication; Type: TABLE; Schema: cam; Owner: -
 --
 
@@ -4777,6 +4808,7 @@ ALTER TABLE ONLY cam."Synonym" ALTER COLUMN id SET DEFAULT nextval('cam."Synonym
 --
 
 INSERT INTO cam."AccessPolicy" (access_policy_id, data_use_accession, data_use_permission, data_use_modifier, disease_limitation, access_description, website) VALUES ('co-ajdm9fyxxz', 'DBGAP:phs000000', 'DUO:0000007', 'DUO:0000021', 'mesh:D012919', 'Use limited to studies of growth rate.', NULL);
+INSERT INTO cam."AccessPolicy" (access_policy_id, data_use_accession, data_use_permission, data_use_modifier, disease_limitation, access_description, website) VALUES ('co-puem3gdzaf', NULL, 'DUO:0000042', NULL, NULL, 'Data may be used for any research on anatine health.', NULL);
 INSERT INTO cam."AccessPolicy" (access_policy_id, data_use_accession, data_use_permission, data_use_modifier, disease_limitation, access_description, website) VALUES ('co-t869rg8xx6', NULL, 'DUO:0000042', 'DUO:0000045', NULL, 'Open to general research use; please credit the farm.', NULL);
 
 
@@ -5261,6 +5293,27 @@ INSERT INTO cam."Investigator_external_id" ("Investigator_id", external_id) VALU
 
 
 --
+-- Data for Name: Person; Type: TABLE DATA; Schema: cam; Owner: -
+--
+
+INSERT INTO cam."Person" (person_id, access_policy_id, study_id) VALUES ('pn-qhhalhdrfd', 'co-puem3gdzaf', 'sd-8kurbmb04j');
+
+
+--
+-- Data for Name: Person_external_id; Type: TABLE DATA; Schema: cam; Owner: -
+--
+
+INSERT INTO cam."Person_external_id" ("Person_person_id", external_id) VALUES ('pn-qhhalhdrfd', 'https://example.org/cam-testdata/tiny/Person/trio1-proband');
+
+
+--
+-- Data for Name: Person_subject_id; Type: TABLE DATA; Schema: cam; Owner: -
+--
+
+INSERT INTO cam."Person_subject_id" ("Person_person_id", subject_id_subject_id) VALUES ('pn-qhhalhdrfd', 'pt-0u4gl52nuc');
+
+
+--
 -- Data for Name: Publication; Type: TABLE DATA; Schema: cam; Owner: -
 --
 
@@ -5319,6 +5372,7 @@ INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VAL
 -- Data for Name: Study; Type: TABLE DATA; Schema: cam; Owner: -
 --
 
+INSERT INTO cam."Study" (parent_study, study_title, study_code, study_short_name, study_description, website, acknowledgments, citation_statement, do_id, access_policy_id, study_id) VALUES (NULL, 'Old MacDonald''s Farm', 'FARM', NULL, 'Umbrella record for Person links across the farm''s studies. Holds no subjects of its own.', NULL, NULL, NULL, NULL, 'co-puem3gdzaf', 'sd-8kurbmb04j');
 INSERT INTO cam."Study" (parent_study, study_title, study_code, study_short_name, study_description, website, acknowledgments, citation_statement, do_id, access_policy_id, study_id) VALUES ('sd-7hwpqzc2yr', 'Tiny Follow-on Study', 'TINY-S2', NULL, 'Minimal child study of S1 with one open-access participant.', NULL, NULL, NULL, NULL, 'co-t869rg8xx6', 'sd-upp74psk4k');
 INSERT INTO cam."Study" (parent_study, study_title, study_code, study_short_name, study_description, website, acknowledgments, citation_statement, do_id, access_policy_id, study_id) VALUES (NULL, 'Madamoiselle Moo''s Marvelous Research Study', 'M00M00', 'M00M00 Study', 'Synthetic trio study used to exercise every CAM table and FHIR mapping path. All people and data are fictional.', NULL, NULL, NULL, 'https://doi.org/10.5072/cam-testdata.bc5dx08a', 'co-ajdm9fyxxz', 'sd-7hwpqzc2yr');
 
@@ -5328,6 +5382,7 @@ INSERT INTO cam."Study" (parent_study, study_title, study_code, study_short_name
 --
 
 INSERT INTO cam."StudyMetadata" (study_id, selection_criteria, vbr_id, expected_number_of_participants, actual_number_of_participants, access_policy_id) VALUES ('sd-7hwpqzc2yr', NULL, 'or-t6jcy1rgzy', 4, 3, 'co-ajdm9fyxxz');
+INSERT INTO cam."StudyMetadata" (study_id, selection_criteria, vbr_id, expected_number_of_participants, actual_number_of_participants, access_policy_id) VALUES ('sd-8kurbmb04j', NULL, NULL, 0, 0, 'co-puem3gdzaf');
 INSERT INTO cam."StudyMetadata" (study_id, selection_criteria, vbr_id, expected_number_of_participants, actual_number_of_participants, access_policy_id) VALUES ('sd-upp74psk4k', NULL, NULL, 1, 1, 'co-t869rg8xx6');
 
 
@@ -5337,6 +5392,7 @@ INSERT INTO cam."StudyMetadata" (study_id, selection_criteria, vbr_id, expected_
 
 INSERT INTO cam."StudyMetadata_clinical_data_source_type" ("StudyMetadata_study_id", clinical_data_source_type) VALUES ('sd-7hwpqzc2yr', 'CAMO:0000011');
 INSERT INTO cam."StudyMetadata_clinical_data_source_type" ("StudyMetadata_study_id", clinical_data_source_type) VALUES ('sd-7hwpqzc2yr', 'CAMO:0000014');
+INSERT INTO cam."StudyMetadata_clinical_data_source_type" ("StudyMetadata_study_id", clinical_data_source_type) VALUES ('sd-8kurbmb04j', 'CAMO:0000011');
 INSERT INTO cam."StudyMetadata_clinical_data_source_type" ("StudyMetadata_study_id", clinical_data_source_type) VALUES ('sd-upp74psk4k', 'CAMO:0000010');
 
 
@@ -5346,6 +5402,7 @@ INSERT INTO cam."StudyMetadata_clinical_data_source_type" ("StudyMetadata_study_
 
 INSERT INTO cam."StudyMetadata_data_category" ("StudyMetadata_study_id", data_category_concept_curie) VALUES ('sd-7hwpqzc2yr', 'edam:topic_0625');
 INSERT INTO cam."StudyMetadata_data_category" ("StudyMetadata_study_id", data_category_concept_curie) VALUES ('sd-7hwpqzc2yr', 'edam:topic_3673');
+INSERT INTO cam."StudyMetadata_data_category" ("StudyMetadata_study_id", data_category_concept_curie) VALUES ('sd-8kurbmb04j', 'edam:topic_0625');
 INSERT INTO cam."StudyMetadata_data_category" ("StudyMetadata_study_id", data_category_concept_curie) VALUES ('sd-upp74psk4k', 'edam:topic_0625');
 
 
@@ -5354,6 +5411,7 @@ INSERT INTO cam."StudyMetadata_data_category" ("StudyMetadata_study_id", data_ca
 --
 
 INSERT INTO cam."StudyMetadata_external_id" ("StudyMetadata_study_id", external_id) VALUES ('sd-7hwpqzc2yr', 'https://example.org/cam-testdata/tiny/StudyMetadata/s1');
+INSERT INTO cam."StudyMetadata_external_id" ("StudyMetadata_study_id", external_id) VALUES ('sd-8kurbmb04j', 'https://example.org/cam-testdata/tiny/StudyMetadata/farm');
 INSERT INTO cam."StudyMetadata_external_id" ("StudyMetadata_study_id", external_id) VALUES ('sd-upp74psk4k', 'https://example.org/cam-testdata/tiny/StudyMetadata/s2');
 
 
@@ -5363,6 +5421,7 @@ INSERT INTO cam."StudyMetadata_external_id" ("StudyMetadata_study_id", external_
 
 INSERT INTO cam."StudyMetadata_participant_lifespan_stage" ("StudyMetadata_study_id", participant_lifespan_stage) VALUES ('sd-7hwpqzc2yr', 'NCIT:C199314');
 INSERT INTO cam."StudyMetadata_participant_lifespan_stage" ("StudyMetadata_study_id", participant_lifespan_stage) VALUES ('sd-7hwpqzc2yr', 'NCIT:C89345');
+INSERT INTO cam."StudyMetadata_participant_lifespan_stage" ("StudyMetadata_study_id", participant_lifespan_stage) VALUES ('sd-8kurbmb04j', 'NCIT:C199314');
 INSERT INTO cam."StudyMetadata_participant_lifespan_stage" ("StudyMetadata_study_id", participant_lifespan_stage) VALUES ('sd-upp74psk4k', 'NCIT:C199314');
 
 
@@ -5371,6 +5430,7 @@ INSERT INTO cam."StudyMetadata_participant_lifespan_stage" ("StudyMetadata_study
 --
 
 INSERT INTO cam."StudyMetadata_research_domain" ("StudyMetadata_study_id", research_domain_concept_curie) VALUES ('sd-7hwpqzc2yr', 'mesh:D006330');
+INSERT INTO cam."StudyMetadata_research_domain" ("StudyMetadata_study_id", research_domain_concept_curie) VALUES ('sd-8kurbmb04j', 'mesh:D013568');
 INSERT INTO cam."StudyMetadata_research_domain" ("StudyMetadata_study_id", research_domain_concept_curie) VALUES ('sd-upp74psk4k', 'mesh:D013568');
 
 
@@ -5380,6 +5440,7 @@ INSERT INTO cam."StudyMetadata_research_domain" ("StudyMetadata_study_id", resea
 
 INSERT INTO cam."StudyMetadata_study_design" ("StudyMetadata_study_id", study_design_concept_curie) VALUES ('sd-7hwpqzc2yr', 'mesh:D008137');
 INSERT INTO cam."StudyMetadata_study_design" ("StudyMetadata_study_id", study_design_concept_curie) VALUES ('sd-7hwpqzc2yr', 'mesh:D015331');
+INSERT INTO cam."StudyMetadata_study_design" ("StudyMetadata_study_id", study_design_concept_curie) VALUES ('sd-8kurbmb04j', 'mesh:D015331');
 INSERT INTO cam."StudyMetadata_study_design" ("StudyMetadata_study_id", study_design_concept_curie) VALUES ('sd-upp74psk4k', 'mesh:D003430');
 
 
@@ -5388,6 +5449,7 @@ INSERT INTO cam."StudyMetadata_study_design" ("StudyMetadata_study_id", study_de
 --
 
 INSERT INTO cam."Study_contact" ("Study_study_id", contact_id) VALUES ('sd-7hwpqzc2yr', 184571446);
+INSERT INTO cam."Study_contact" ("Study_study_id", contact_id) VALUES ('sd-8kurbmb04j', 184571446);
 INSERT INTO cam."Study_contact" ("Study_study_id", contact_id) VALUES ('sd-upp74psk4k', 184571446);
 
 
@@ -5397,6 +5459,7 @@ INSERT INTO cam."Study_contact" ("Study_study_id", contact_id) VALUES ('sd-upp74
 
 INSERT INTO cam."Study_external_id" ("Study_study_id", external_id) VALUES ('sd-7hwpqzc2yr', 'https://studies.cows-come-home.gov/cud?id=M00M00-01');
 INSERT INTO cam."Study_external_id" ("Study_study_id", external_id) VALUES ('sd-7hwpqzc2yr', 'https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000000');
+INSERT INTO cam."Study_external_id" ("Study_study_id", external_id) VALUES ('sd-8kurbmb04j', 'https://example.org/cam-testdata/tiny/Study/farm');
 INSERT INTO cam."Study_external_id" ("Study_study_id", external_id) VALUES ('sd-upp74psk4k', 'https://example.org/cam-testdata/tiny/Study/s2');
 
 
@@ -5412,6 +5475,7 @@ INSERT INTO cam."Study_funding_source" ("Study_study_id", funding_source) VALUES
 --
 
 INSERT INTO cam."Study_principal_investigator" ("Study_study_id", principal_investigator_id) VALUES ('sd-7hwpqzc2yr', 1874742071);
+INSERT INTO cam."Study_principal_investigator" ("Study_study_id", principal_investigator_id) VALUES ('sd-8kurbmb04j', 1874742071);
 INSERT INTO cam."Study_principal_investigator" ("Study_study_id", principal_investigator_id) VALUES ('sd-upp74psk4k', 1874742071);
 
 
@@ -5420,6 +5484,7 @@ INSERT INTO cam."Study_principal_investigator" ("Study_study_id", principal_inve
 --
 
 INSERT INTO cam."Study_program" ("Study_study_id", program) VALUES ('sd-7hwpqzc2yr', 'https://www.nih.gov/include-project');
+INSERT INTO cam."Study_program" ("Study_study_id", program) VALUES ('sd-8kurbmb04j', 'https://www.nih.gov/include-project');
 INSERT INTO cam."Study_program" ("Study_study_id", program) VALUES ('sd-upp74psk4k', 'https://www.nih.gov/include-project');
 
 
@@ -5932,6 +5997,30 @@ ALTER TABLE ONLY cam."Investigator_external_id"
 
 ALTER TABLE ONLY cam."Investigator"
     ADD CONSTRAINT "Investigator_pkey" PRIMARY KEY (id);
+
+
+--
+-- Name: Person_external_id Person_external_id_pkey; Type: CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_external_id"
+    ADD CONSTRAINT "Person_external_id_pkey" PRIMARY KEY ("Person_person_id", external_id);
+
+
+--
+-- Name: Person Person_pkey; Type: CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person"
+    ADD CONSTRAINT "Person_pkey" PRIMARY KEY (person_id);
+
+
+--
+-- Name: Person_subject_id Person_subject_id_pkey; Type: CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_subject_id"
+    ADD CONSTRAINT "Person_subject_id_pkey" PRIMARY KEY ("Person_person_id", subject_id_subject_id);
 
 
 --
@@ -6884,6 +6973,46 @@ ALTER TABLE ONLY cam."Investigator_external_id"
 
 ALTER TABLE ONLY cam."Investigator"
     ADD CONSTRAINT "Investigator_study_id_fkey" FOREIGN KEY (study_id) REFERENCES cam."Study"(study_id);
+
+
+--
+-- Name: Person Person_access_policy_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person"
+    ADD CONSTRAINT "Person_access_policy_id_fkey" FOREIGN KEY (access_policy_id) REFERENCES cam."AccessPolicy"(access_policy_id);
+
+
+--
+-- Name: Person_external_id Person_external_id_Person_person_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_external_id"
+    ADD CONSTRAINT "Person_external_id_Person_person_id_fkey" FOREIGN KEY ("Person_person_id") REFERENCES cam."Person"(person_id);
+
+
+--
+-- Name: Person Person_study_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person"
+    ADD CONSTRAINT "Person_study_id_fkey" FOREIGN KEY (study_id) REFERENCES cam."Study"(study_id);
+
+
+--
+-- Name: Person_subject_id Person_subject_id_Person_person_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_subject_id"
+    ADD CONSTRAINT "Person_subject_id_Person_person_id_fkey" FOREIGN KEY ("Person_person_id") REFERENCES cam."Person"(person_id);
+
+
+--
+-- Name: Person_subject_id Person_subject_id_subject_id_subject_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_subject_id"
+    ADD CONSTRAINT "Person_subject_id_subject_id_subject_id_fkey" FOREIGN KEY (subject_id_subject_id) REFERENCES cam."Subject"(subject_id);
 
 
 --

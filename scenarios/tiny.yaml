@@ -24,6 +24,8 @@ records:
       id: co-t869rg8xx6                      # pinned from old seeds
       data_use_permission: DUO:0000042       # [enum] general research use
       data_use_modifier: DUO:0000045         # [enum] not for profit organisation use only
+    - key: ap-farm                           # the Farm's own policy, at least as open as any study
+      data_use_permission: DUO:0000042       # [enum] general research use, no modifiers
 
   Investigator:
     - key: s1-pi
@@ -68,6 +70,19 @@ records:
       program: [https://www.nih.gov/include-project]
       principal_investigator: [s1-pi]
       contact: [s1-contact]
+    # The umbrella "study" Person records belong to (Person derives from Record and
+    # the ID minting service is study-oriented; MODEL_ISSUES #25). Not a study in its
+    # own right: no study points to it, and it has no subjects of its own.
+    - key: farm
+      study_title: Old MacDonald's Farm
+      study_code: FARM
+      study_description: >-
+        Umbrella record for Person links across the farm's studies. Holds no
+        subjects of its own.
+      access_policy_id: ap-farm
+      program: [https://www.nih.gov/include-project]
+      principal_investigator: [s1-pi]                   # investigators may serve several studies
+      contact: [s1-contact]
 
   VirtualBiorepository:
     - key: s1-vbr
@@ -91,6 +106,13 @@ records:
       clinical_data_source_type: [CAMO:0000010]                 # [enum] Survey
       data_category: [edam:topic_0625]
       research_domain: [mesh:D013568]                           # [enum][vc] All Co-occurring Conditions
+    - key: farm                                                 # required by the model even for the umbrella
+      expected_number_of_participants: 0
+      participant_lifespan_stage: [NCIT:C199314]
+      study_design: [mesh:D015331]
+      clinical_data_source_type: [CAMO:0000011]
+      data_category: [edam:topic_0625]
+      research_domain: [mesh:D013568]
 
   Subject:
     - {key: trio1-proband, study_id: s1, subject_type: CAMO:0000024, organism_type: NCBITaxon:9606}  # [enum] Participant, Human
@@ -123,6 +145,11 @@ records:
       ethnicity: CDCREC:2135-2               # [enum] Hispanic or Latino
       vital_status: snomedct:419099009       # [enum] Dead
       age_at_last_vital_status: 25550
+
+  Person:                                    # FHIR Person, scoped to the Farm
+    - key: trio1-proband
+      study_id: farm
+      subject_id: [trio1-proband]            # one subject so far: the first study ingested, later ones add theirs
 
   Family:
     - key: trio1

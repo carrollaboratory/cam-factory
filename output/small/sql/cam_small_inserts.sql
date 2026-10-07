@@ -4327,6 +4327,37 @@ ALTER SEQUENCE cam."Investigator_id_seq" OWNED BY cam."Investigator".id;
 
 
 --
+-- Name: Person; Type: TABLE; Schema: cam; Owner: -
+--
+
+CREATE TABLE cam."Person" (
+    person_id text NOT NULL,
+    access_policy_id text NOT NULL,
+    study_id text NOT NULL
+);
+
+
+--
+-- Name: Person_external_id; Type: TABLE; Schema: cam; Owner: -
+--
+
+CREATE TABLE cam."Person_external_id" (
+    "Person_person_id" text NOT NULL,
+    external_id text NOT NULL
+);
+
+
+--
+-- Name: Person_subject_id; Type: TABLE; Schema: cam; Owner: -
+--
+
+CREATE TABLE cam."Person_subject_id" (
+    "Person_person_id" text NOT NULL,
+    subject_id_subject_id text NOT NULL
+);
+
+
+--
 -- Name: Publication; Type: TABLE; Schema: cam; Owner: -
 --
 
@@ -4776,6 +4807,7 @@ ALTER TABLE ONLY cam."Synonym" ALTER COLUMN id SET DEFAULT nextval('cam."Synonym
 -- Data for Name: AccessPolicy; Type: TABLE DATA; Schema: cam; Owner: -
 --
 
+INSERT INTO cam."AccessPolicy" (access_policy_id, data_use_accession, data_use_permission, data_use_modifier, disease_limitation, access_description, website) VALUES ('co-4rbnrtd218', NULL, 'DUO:0000042', NULL, NULL, 'Open to general research use; please credit the farm.', NULL);
 INSERT INTO cam."AccessPolicy" (access_policy_id, data_use_accession, data_use_permission, data_use_modifier, disease_limitation, access_description, website) VALUES ('co-tam2ciyi45', NULL, 'DUO:0000007', 'DUO:0000021', 'mesh:D012919', 'Data may be used for any research on feline health.', NULL);
 INSERT INTO cam."AccessPolicy" (access_policy_id, data_use_accession, data_use_permission, data_use_modifier, disease_limitation, access_description, website) VALUES ('co-yly4xno8c0', NULL, 'DUO:0000042', 'DUO:0000045', NULL, 'Use limited to studies of sleep quality.', NULL);
 
@@ -4814,6 +4846,7 @@ INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-1v4p1q2610', 'bs-fryz5wjfh3', 'snomedct:103328004', 1.1, 'ucum:ml', NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-22f1jtgs35', 'bs-8oa86ma9ot', 'snomedct:103328004', 0.1, 'ucum:ml', 60, 'ucum:ng/uL', 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-2gjrrrb8tb', 'bs-p6nwre1wat', 'snomedct:103328004', 1, 'ucum:ml', NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-3dy3ay2j15', 'bs-xtttky72oh', 'snomedct:103328004', 0.1, 'ucum:ml', 72.4, 'ucum:ng/uL', 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-3o7ca8raq9', 'bs-4ez6za4vnj', 'snomedct:103328004', 0.1, 'ucum:ml', 62.8, 'ucum:ng/uL', 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-3pyyvmsble', 'bs-xl9a6llxio', 'snomedct:103328004', 0.1, 'ucum:ml', 19, 'ucum:ng/uL', 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-3rbmj3ugmz', 'bs-aq1hmsfl13', 'snomedct:103329007', 0.1, 'ucum:ml', 119.8, 'ucum:ng/uL', 'co-yly4xno8c0', 'sd-2lx98atcp0');
@@ -4827,6 +4860,7 @@ INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-54m59kizhx', 'bs-wjfv7ftvkq', 'snomedct:103328004', 1.8, 'ucum:ml', NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-5aksfh520m', 'bs-gv857swx92', 'snomedct:103328004', 1.5, 'ucum:ml', NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-5t3k3oo1sw', 'bs-79nfayxcy4', 'snomedct:103328004', 1.5, 'ucum:ml', NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-6ce6wcr8zh', 'bs-2lujybqhao', 'snomedct:103328004', 0.1, 'ucum:ml', 96.5, 'ucum:ng/uL', 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-6e15rf2ieb', 'bs-mkwfg60t6o', 'snomedct:103328004', 0.1, 'ucum:ml', 34.3, 'ucum:ng/uL', 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-6mmjmii4ho', 'bs-be24j2t4up', 'snomedct:103328004', 1.1, 'ucum:ml', NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-6p6orj1hj6', 'bs-6jmtt7z870', 'snomedct:103328004', 1.2, 'ucum:ml', NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
@@ -4854,6 +4888,7 @@ INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-csde1c1rba', 'bs-fpd4arpkia', 'snomedct:103328004', 0.1, 'ucum:ml', 43.7, 'ucum:ng/uL', 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-detgv1pb6p', 'bs-mff31jzxtq', 'snomedct:103328004', 0.6, 'ucum:ml', NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-dob0skdoec', 'bs-79nfayxcy4', 'snomedct:103328004', 0.5, 'ucum:ml', NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-e6qhz5ddqr', 'bs-2lujybqhao', 'snomedct:103328004', 0.1, 'ucum:ml', 12.3, 'ucum:ng/uL', 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-ee86mv5s1t', 'bs-8w1pmyml8t', 'snomedct:103328004', 2, 'ucum:ml', NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-egx5qy4h9p', 'bs-3d9plqby6e', 'snomedct:103328004', 0.7, 'ucum:ml', NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-fdcq5iaip7', 'bs-o1smndjojs', 'snomedct:103329007', 0.1, 'ucum:ml', 54.3, 'ucum:ng/uL', 'co-yly4xno8c0', 'sd-2lx98atcp0');
@@ -4892,6 +4927,7 @@ INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-s87pmz6f5l', 'bs-o1smndjojs', 'snomedct:103328004', 0.1, 'ucum:ml', 105.3, 'ucum:ng/uL', 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-sozfhus5kf', 'bs-fryz5wjfh3', 'snomedct:103328004', 0.7, 'ucum:ml', NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-sy5uejza11', 'bs-5rgzjle102', 'snomedct:103328004', 0.1, 'ucum:ml', 110.7, 'ucum:ng/uL', 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-trdwry25pk', 'bs-y8mi9al2z2', 'snomedct:103328004', 1.6, 'ucum:ml', NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-u5g50hnjly', 'bs-08dyug60bv', 'snomedct:103328004', 0.1, 'ucum:ml', 82.2, 'ucum:ng/uL', 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-ug4ys71w65', 'bs-puia6w6tod', 'snomedct:103328004', 0.8, 'ucum:ml', NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-ukrk0ov3t0', 'bs-xl9a6llxio', 'snomedct:103328004', 0.1, 'ucum:ml', 13.4, 'ucum:ng/uL', 'co-yly4xno8c0', 'sd-2lx98atcp0');
@@ -4900,9 +4936,11 @@ INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-vacfuvfvkn', 'bs-8r09gjn2f4', 'snomedct:103328004', 0.9, 'ucum:ml', NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-wq4nrrmnpd', 'bs-9tgznswrol', 'snomedct:103328004', 1.1, 'ucum:ml', NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-wtsdrbtu27', 'bs-8w1pmyml8t', 'snomedct:103328004', 1, 'ucum:ml', NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
+INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-xh6ugxwur7', 'bs-m8xj37twhd', 'snomedct:103329007', 1.5, 'ucum:ml', NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-xs9kbtawn7', 'bs-21qpxwci7x', 'snomedct:103328004', 0.1, 'ucum:ml', 44.5, 'ucum:ng/uL', 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-y6hqmjvafq', 'bs-mkwfg60t6o', 'snomedct:103328004', 0.1, 'ucum:ml', 106.6, 'ucum:ng/uL', 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-yegrxjetsk', 'bs-20483amku9', 'snomedct:103328004', 0.1, 'ucum:ml', 112.9, 'ucum:ng/uL', 'co-tam2ciyi45', 'sd-3s8wpdnf71');
+INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-ylp55fyary', 'bs-2lujybqhao', 'snomedct:103328004', 0.1, 'ucum:ml', 18.3, 'ucum:ng/uL', 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-yq50qpmmwx', 'bs-4ez6za4vnj', 'snomedct:103328004', 0.1, 'ucum:ml', 54.1, 'ucum:ng/uL', 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Aliquot" (aliquot_id, sample_id, availability_status, quantity_number, quantity_unit, concentration_number, concentration_unit, access_policy_id, study_id) VALUES ('alq-zcp4avhohv', 'bs-pzhds8cdc8', 'snomedct:103328004', 0.1, 'ucum:ml', 56.1, 'ucum:ng/uL', 'co-yly4xno8c0', 'sd-2lx98atcp0');
 
@@ -4917,6 +4955,7 @@ INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-1v4p1q2610', 'https://example.org/cam-testdata/small/Aliquot/s01-f0010-mother-blood-a1');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-22f1jtgs35', 'https://example.org/cam-testdata/small/Aliquot/s02-f0003-father-dna-a1');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-2gjrrrb8tb', 'https://example.org/cam-testdata/small/Aliquot/s02-f0008-proband-blood-a1');
+INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-3dy3ay2j15', 'https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0011-proband-dna-a1');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-3o7ca8raq9', 'https://example.org/cam-testdata/small/Aliquot/s01-f0004-proband-dna-a1');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-3pyyvmsble', 'https://example.org/cam-testdata/small/Aliquot/s02-f0002-proband-dna-a2');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-3rbmj3ugmz', 'https://example.org/cam-testdata/small/Aliquot/s02-f0002-mother-dna-a1');
@@ -4930,6 +4969,7 @@ INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-54m59kizhx', 'https://example.org/cam-testdata/small/Aliquot/s02-f0011-proband-blood-a2');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-5aksfh520m', 'https://example.org/cam-testdata/small/Aliquot/s01-f0002-mother-blood-a1');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-5t3k3oo1sw', 'https://example.org/cam-testdata/small/Aliquot/s02-f0001-proband-blood-a1');
+INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-6ce6wcr8zh', 'https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0005-proband-dna-a3');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-6e15rf2ieb', 'https://example.org/cam-testdata/small/Aliquot/s01-f0002-proband-dna-a1');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-6mmjmii4ho', 'https://example.org/cam-testdata/small/Aliquot/s01-f0011-father-blood-a1');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-6p6orj1hj6', 'https://example.org/cam-testdata/small/Aliquot/s02-f0009-father-blood-a1');
@@ -4957,6 +4997,7 @@ INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-csde1c1rba', 'https://example.org/cam-testdata/small/Aliquot/s01-f0002-mother-dna-a1');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-detgv1pb6p', 'https://example.org/cam-testdata/small/Aliquot/s02-f0004-proband-blood-a1');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-dob0skdoec', 'https://example.org/cam-testdata/small/Aliquot/s02-f0001-proband-blood-a2');
+INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-e6qhz5ddqr', 'https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0005-proband-dna-a1');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-ee86mv5s1t', 'https://example.org/cam-testdata/small/Aliquot/s01-f0002-proband-blood-a2');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-egx5qy4h9p', 'https://example.org/cam-testdata/small/Aliquot/s01-f0011-proband-blood-a1');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-fdcq5iaip7', 'https://example.org/cam-testdata/small/Aliquot/s02-f0006-proband-dna-a1');
@@ -4995,6 +5036,7 @@ INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-s87pmz6f5l', 'https://example.org/cam-testdata/small/Aliquot/s02-f0006-proband-dna-a2');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-sozfhus5kf', 'https://example.org/cam-testdata/small/Aliquot/s01-f0010-mother-blood-a2');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-sy5uejza11', 'https://example.org/cam-testdata/small/Aliquot/s02-f0005-proband-dna-a1');
+INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-trdwry25pk', 'https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0005-proband-blood-a1');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-u5g50hnjly', 'https://example.org/cam-testdata/small/Aliquot/s02-f0004-proband-dna-a1');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-ug4ys71w65', 'https://example.org/cam-testdata/small/Aliquot/s01-f0004-proband-blood-a1');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-ukrk0ov3t0', 'https://example.org/cam-testdata/small/Aliquot/s02-f0002-proband-dna-a1');
@@ -5003,9 +5045,11 @@ INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-vacfuvfvkn', 'https://example.org/cam-testdata/small/Aliquot/s02-f0002-proband-blood-a1');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-wq4nrrmnpd', 'https://example.org/cam-testdata/small/Aliquot/s01-f0003-proband-blood-a1');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-wtsdrbtu27', 'https://example.org/cam-testdata/small/Aliquot/s01-f0002-proband-blood-a1');
+INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-xh6ugxwur7', 'https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0011-proband-blood-a1');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-xs9kbtawn7', 'https://example.org/cam-testdata/small/Aliquot/s01-f0011-mother-dna-a1');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-y6hqmjvafq', 'https://example.org/cam-testdata/small/Aliquot/s01-f0002-proband-dna-a2');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-yegrxjetsk', 'https://example.org/cam-testdata/small/Aliquot/s01-f0012-proband-dna-a1');
+INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-ylp55fyary', 'https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0005-proband-dna-a2');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-yq50qpmmwx', 'https://example.org/cam-testdata/small/Aliquot/s01-f0004-proband-dna-a2');
 INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES ('alq-zcp4avhohv', 'https://example.org/cam-testdata/small/Aliquot/s02-f0003-mother-dna-a1');
 
@@ -5016,6 +5060,7 @@ INSERT INTO cam."Aliquot_external_id" ("Aliquot_aliquot_id", external_id) VALUES
 
 INSERT INTO cam."Assay" (assay_id, assay_type, assay_source, activity_definition_id, access_policy_id, study_id) VALUES ('di-018qhpluzl', 'OBI:0002117', NULL, 'ad-9xi4otnkl6', 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Assay" (assay_id, assay_type, assay_source, activity_definition_id, access_policy_id, study_id) VALUES ('di-0n7dsy0tyc', 'OBI:0002117', NULL, 'ad-4b1di32cvz', 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."Assay" (assay_id, assay_type, assay_source, activity_definition_id, access_policy_id, study_id) VALUES ('di-16frwrlysi', 'OBI:0002117', NULL, 'ad-4b1di32cvz', 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Assay" (assay_id, assay_type, assay_source, activity_definition_id, access_policy_id, study_id) VALUES ('di-1jo2sftayh', 'OBI:0002117', NULL, 'ad-4b1di32cvz', 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Assay" (assay_id, assay_type, assay_source, activity_definition_id, access_policy_id, study_id) VALUES ('di-3dn314uc1d', 'OBI:0002117', NULL, 'ad-9xi4otnkl6', 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Assay" (assay_id, assay_type, assay_source, activity_definition_id, access_policy_id, study_id) VALUES ('di-45r2fzatnx', 'OBI:0002117', NULL, 'ad-9xi4otnkl6', 'co-tam2ciyi45', 'sd-3s8wpdnf71');
@@ -5046,6 +5091,7 @@ INSERT INTO cam."Assay" (assay_id, assay_type, assay_source, activity_definition
 
 INSERT INTO cam."Assay_external_id" ("Assay_assay_id", external_id) VALUES ('di-018qhpluzl', 'https://example.org/cam-testdata/small/Assay/s01-f0006-father-wgs');
 INSERT INTO cam."Assay_external_id" ("Assay_assay_id", external_id) VALUES ('di-0n7dsy0tyc', 'https://example.org/cam-testdata/small/Assay/s02-f0006-proband-wgs');
+INSERT INTO cam."Assay_external_id" ("Assay_assay_id", external_id) VALUES ('di-16frwrlysi', 'https://example.org/cam-testdata/small/Assay/s02-returning-s01-f0005-proband-wgs');
 INSERT INTO cam."Assay_external_id" ("Assay_assay_id", external_id) VALUES ('di-1jo2sftayh', 'https://example.org/cam-testdata/small/Assay/s02-f0004-proband-wgs');
 INSERT INTO cam."Assay_external_id" ("Assay_assay_id", external_id) VALUES ('di-3dn314uc1d', 'https://example.org/cam-testdata/small/Assay/s01-f0002-proband-wgs');
 INSERT INTO cam."Assay_external_id" ("Assay_assay_id", external_id) VALUES ('di-45r2fzatnx', 'https://example.org/cam-testdata/small/Assay/s01-f0002-mother-wgs');
@@ -5076,6 +5122,7 @@ INSERT INTO cam."Assay_external_id" ("Assay_assay_id", external_id) VALUES ('di-
 
 INSERT INTO cam."Assay_file_id" ("Assay_assay_id", file_id_file_id) VALUES ('di-018qhpluzl', 'dr-l2tutwpe1u');
 INSERT INTO cam."Assay_file_id" ("Assay_assay_id", file_id_file_id) VALUES ('di-0n7dsy0tyc', 'dr-wjooqqfn1g');
+INSERT INTO cam."Assay_file_id" ("Assay_assay_id", file_id_file_id) VALUES ('di-16frwrlysi', 'dr-57nzhcprk0');
 INSERT INTO cam."Assay_file_id" ("Assay_assay_id", file_id_file_id) VALUES ('di-1jo2sftayh', 'dr-vqp87va56v');
 INSERT INTO cam."Assay_file_id" ("Assay_assay_id", file_id_file_id) VALUES ('di-3dn314uc1d', 'dr-3ay88rjpq7');
 INSERT INTO cam."Assay_file_id" ("Assay_assay_id", file_id_file_id) VALUES ('di-45r2fzatnx', 'dr-fpe7cm9118');
@@ -5106,6 +5153,7 @@ INSERT INTO cam."Assay_file_id" ("Assay_assay_id", file_id_file_id) VALUES ('di-
 
 INSERT INTO cam."Assay_sample_id" ("Assay_assay_id", sample_id_sample_id) VALUES ('di-018qhpluzl', 'bs-po7nbit95v');
 INSERT INTO cam."Assay_sample_id" ("Assay_assay_id", sample_id_sample_id) VALUES ('di-0n7dsy0tyc', 'bs-o1smndjojs');
+INSERT INTO cam."Assay_sample_id" ("Assay_assay_id", sample_id_sample_id) VALUES ('di-16frwrlysi', 'bs-2lujybqhao');
 INSERT INTO cam."Assay_sample_id" ("Assay_assay_id", sample_id_sample_id) VALUES ('di-1jo2sftayh', 'bs-08dyug60bv');
 INSERT INTO cam."Assay_sample_id" ("Assay_assay_id", sample_id_sample_id) VALUES ('di-3dn314uc1d', 'bs-mkwfg60t6o');
 INSERT INTO cam."Assay_sample_id" ("Assay_assay_id", sample_id_sample_id) VALUES ('di-45r2fzatnx', 'bs-fpd4arpkia');
@@ -5136,6 +5184,7 @@ INSERT INTO cam."Assay_sample_id" ("Assay_assay_id", sample_id_sample_id) VALUES
 
 INSERT INTO cam."Assay_subject_id" ("Assay_assay_id", subject_id_subject_id) VALUES ('di-018qhpluzl', 'pt-9gk8jq9c8a');
 INSERT INTO cam."Assay_subject_id" ("Assay_assay_id", subject_id_subject_id) VALUES ('di-0n7dsy0tyc', 'pt-pkqb7v1zxd');
+INSERT INTO cam."Assay_subject_id" ("Assay_assay_id", subject_id_subject_id) VALUES ('di-16frwrlysi', 'pt-g7k8bawahu');
 INSERT INTO cam."Assay_subject_id" ("Assay_assay_id", subject_id_subject_id) VALUES ('di-1jo2sftayh', 'pt-tyk26seuny');
 INSERT INTO cam."Assay_subject_id" ("Assay_assay_id", subject_id_subject_id) VALUES ('di-3dn314uc1d', 'pt-p8lz6kia0j');
 INSERT INTO cam."Assay_subject_id" ("Assay_assay_id", subject_id_subject_id) VALUES ('di-45r2fzatnx', 'pt-rxqwqab2pf');
@@ -5188,7 +5237,9 @@ INSERT INTO cam."BiospecimenCollection" (biospecimen_collection_id, age_at_colle
 INSERT INTO cam."BiospecimenCollection" (biospecimen_collection_id, age_at_collection, method, site, spatial_qualifier, laterality, encounter_id, access_policy_id, study_id) VALUES ('bsc-lcx5u85hto', 13.38, 'snomedct:82078001', NULL, NULL, NULL, 'en-33pjcj2zyr', 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."BiospecimenCollection" (biospecimen_collection_id, age_at_collection, method, site, spatial_qualifier, laterality, encounter_id, access_policy_id, study_id) VALUES ('bsc-m4df3fz6lt', 2.63, 'snomedct:82078001', NULL, NULL, NULL, 'en-fhc4rsoon8', 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."BiospecimenCollection" (biospecimen_collection_id, age_at_collection, method, site, spatial_qualifier, laterality, encounter_id, access_policy_id, study_id) VALUES ('bsc-qge59vsp9x', 49.16, 'snomedct:82078001', NULL, NULL, NULL, 'en-m9b9fyjc49', 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."BiospecimenCollection" (biospecimen_collection_id, age_at_collection, method, site, spatial_qualifier, laterality, encounter_id, access_policy_id, study_id) VALUES ('bsc-r6rxtowdgg', 17.92, 'snomedct:82078001', NULL, NULL, NULL, 'en-evajlznqjs', 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."BiospecimenCollection" (biospecimen_collection_id, age_at_collection, method, site, spatial_qualifier, laterality, encounter_id, access_policy_id, study_id) VALUES ('bsc-rwwy83axy6', 12.5, 'snomedct:82078001', NULL, NULL, NULL, 'en-iuq1y5pok6', 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."BiospecimenCollection" (biospecimen_collection_id, age_at_collection, method, site, spatial_qualifier, laterality, encounter_id, access_policy_id, study_id) VALUES ('bsc-s4kdcpj958', 8.89, 'snomedct:82078001', NULL, NULL, NULL, 'en-7fmm7lgyl3', 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."BiospecimenCollection" (biospecimen_collection_id, age_at_collection, method, site, spatial_qualifier, laterality, encounter_id, access_policy_id, study_id) VALUES ('bsc-t2k6bwj9eg', 29.2, 'snomedct:82078001', NULL, NULL, NULL, 'en-psdcahprqw', 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."BiospecimenCollection" (biospecimen_collection_id, age_at_collection, method, site, spatial_qualifier, laterality, encounter_id, access_policy_id, study_id) VALUES ('bsc-w1a2uebbvu', 14.09, 'snomedct:82078001', NULL, NULL, NULL, 'en-hty32ttirv', 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."BiospecimenCollection" (biospecimen_collection_id, age_at_collection, method, site, spatial_qualifier, laterality, encounter_id, access_policy_id, study_id) VALUES ('bsc-xe1t4yz07s', 3.97, 'snomedct:82078001', NULL, NULL, NULL, 'en-bnamypeobm', 'co-yly4xno8c0', 'sd-2lx98atcp0');
@@ -5227,7 +5278,9 @@ INSERT INTO cam."BiospecimenCollection_external_id" ("BiospecimenCollection_bios
 INSERT INTO cam."BiospecimenCollection_external_id" ("BiospecimenCollection_biospecimen_collection_id", external_id) VALUES ('bsc-lcx5u85hto', 'https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0004-proband-blood-draw');
 INSERT INTO cam."BiospecimenCollection_external_id" ("BiospecimenCollection_biospecimen_collection_id", external_id) VALUES ('bsc-m4df3fz6lt', 'https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0008-proband-blood-draw');
 INSERT INTO cam."BiospecimenCollection_external_id" ("BiospecimenCollection_biospecimen_collection_id", external_id) VALUES ('bsc-qge59vsp9x', 'https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0003-mother-blood-draw');
+INSERT INTO cam."BiospecimenCollection_external_id" ("BiospecimenCollection_biospecimen_collection_id", external_id) VALUES ('bsc-r6rxtowdgg', 'https://example.org/cam-testdata/small/BiospecimenCollection/s02-returning-s01-f0011-proband-blood-draw');
 INSERT INTO cam."BiospecimenCollection_external_id" ("BiospecimenCollection_biospecimen_collection_id", external_id) VALUES ('bsc-rwwy83axy6', 'https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0005-proband-blood-draw');
+INSERT INTO cam."BiospecimenCollection_external_id" ("BiospecimenCollection_biospecimen_collection_id", external_id) VALUES ('bsc-s4kdcpj958', 'https://example.org/cam-testdata/small/BiospecimenCollection/s02-returning-s01-f0005-proband-blood-draw');
 INSERT INTO cam."BiospecimenCollection_external_id" ("BiospecimenCollection_biospecimen_collection_id", external_id) VALUES ('bsc-t2k6bwj9eg', 'https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0002-father-blood-draw');
 INSERT INTO cam."BiospecimenCollection_external_id" ("BiospecimenCollection_biospecimen_collection_id", external_id) VALUES ('bsc-w1a2uebbvu', 'https://example.org/cam-testdata/small/BiospecimenCollection/s01-f0003-proband-blood-draw');
 INSERT INTO cam."BiospecimenCollection_external_id" ("BiospecimenCollection_biospecimen_collection_id", external_id) VALUES ('bsc-xe1t4yz07s', 'https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0001-proband-blood-draw');
@@ -5383,6 +5436,7 @@ INSERT INTO cam."Dataset_external_id" ("Dataset_dataset_id", external_id) VALUES
 -- Data for Name: Dataset_file_id; Type: TABLE DATA; Schema: cam; Owner: -
 --
 
+INSERT INTO cam."Dataset_file_id" ("Dataset_dataset_id", file_id_file_id) VALUES ('ls-1154czjcje', 'dr-57nzhcprk0');
 INSERT INTO cam."Dataset_file_id" ("Dataset_dataset_id", file_id_file_id) VALUES ('ls-1154czjcje', 'dr-6rz35r1dcn');
 INSERT INTO cam."Dataset_file_id" ("Dataset_dataset_id", file_id_file_id) VALUES ('ls-1154czjcje', 'dr-7cmrrchrb2');
 INSERT INTO cam."Dataset_file_id" ("Dataset_dataset_id", file_id_file_id) VALUES ('ls-1154czjcje', 'dr-9gn7m31rwj');
@@ -5449,10 +5503,12 @@ INSERT INTO cam."Demographics" (subject_id, sex, ethnicity, age_at_last_vital_st
 INSERT INTO cam."Demographics" (subject_id, sex, ethnicity, age_at_last_vital_status, vital_status, age_at_first_engagement, access_policy_id, study_id) VALUES ('pt-e1qowyg6qe', 'snomedct:248152002', 'CDCREC:2186-5', 4950, 'snomedct:438949009', 4950, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Demographics" (subject_id, sex, ethnicity, age_at_last_vital_status, vital_status, age_at_first_engagement, access_policy_id, study_id) VALUES ('pt-f39hc6n8dq', 'snomedct:248153007', 'CDCREC:2135-2', 620, 'snomedct:438949009', 509, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Demographics" (subject_id, sex, ethnicity, age_at_last_vital_status, vital_status, age_at_first_engagement, access_policy_id, study_id) VALUES ('pt-fhfb8mfhx3', 'snomedct:248153007', 'CDCREC:2135-2', 960, 'snomedct:438949009', 960, 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."Demographics" (subject_id, sex, ethnicity, age_at_last_vital_status, vital_status, age_at_first_engagement, access_policy_id, study_id) VALUES ('pt-g7k8bawahu', 'snomedct:261665006', 'CDCREC:2186-5', 4104, 'snomedct:419099009', 3247, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Demographics" (subject_id, sex, ethnicity, age_at_last_vital_status, vital_status, age_at_first_engagement, access_policy_id, study_id) VALUES ('pt-hmejx0uz9s', 'snomedct:248153007', 'CDCREC:2186-5', 2574, 'snomedct:419099009', 1690, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Demographics" (subject_id, sex, ethnicity, age_at_last_vital_status, vital_status, age_at_first_engagement, access_policy_id, study_id) VALUES ('pt-j86rjc1yiy', 'snomedct:248153007', 'CDCREC:2186-5', 11671, 'snomedct:438949009', 11671, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Demographics" (subject_id, sex, ethnicity, age_at_last_vital_status, vital_status, age_at_first_engagement, access_policy_id, study_id) VALUES ('pt-ju11ude3rq', 'snomedct:261665006', 'CDCREC:2186-5', 3284, 'snomedct:438949009', 1914, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Demographics" (subject_id, sex, ethnicity, age_at_last_vital_status, vital_status, age_at_first_engagement, access_policy_id, study_id) VALUES ('pt-l98koluj11', 'snomedct:248153007', 'snomedct:261665006', 2706, 'snomedct:438949009', 2017, 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."Demographics" (subject_id, sex, ethnicity, age_at_last_vital_status, vital_status, age_at_first_engagement, access_policy_id, study_id) VALUES ('pt-ljkuzx3y8h', 'snomedct:248152002', 'CDCREC:2186-5', 7872, 'snomedct:438949009', 6546, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Demographics" (subject_id, sex, ethnicity, age_at_last_vital_status, vital_status, age_at_first_engagement, access_policy_id, study_id) VALUES ('pt-ljv5blx4vb', 'snomedct:248152002', 'snomedct:261665006', 18232, 'snomedct:438949009', 16546, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Demographics" (subject_id, sex, ethnicity, age_at_last_vital_status, vital_status, age_at_first_engagement, access_policy_id, study_id) VALUES ('pt-lo3ubn20z3', 'snomedct:248152002', 'CDCREC:2135-2', 4164, 'snomedct:438949009', 3575, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Demographics" (subject_id, sex, ethnicity, age_at_last_vital_status, vital_status, age_at_first_engagement, access_policy_id, study_id) VALUES ('pt-m9q9s4y6en', 'snomedct:248152002', 'CDCREC:2135-2', 8081, 'snomedct:438949009', 7862, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
@@ -5505,10 +5561,12 @@ INSERT INTO cam."Demographics_external_id" ("Demographics_subject_id", external_
 INSERT INTO cam."Demographics_external_id" ("Demographics_subject_id", external_id) VALUES ('pt-e1qowyg6qe', 'https://example.org/cam-testdata/small/Demographics/s01-f0011-proband');
 INSERT INTO cam."Demographics_external_id" ("Demographics_subject_id", external_id) VALUES ('pt-f39hc6n8dq', 'https://example.org/cam-testdata/small/Demographics/s02-f0012-proband');
 INSERT INTO cam."Demographics_external_id" ("Demographics_subject_id", external_id) VALUES ('pt-fhfb8mfhx3', 'https://example.org/cam-testdata/small/Demographics/s02-f0008-proband');
+INSERT INTO cam."Demographics_external_id" ("Demographics_subject_id", external_id) VALUES ('pt-g7k8bawahu', 'https://example.org/cam-testdata/small/Demographics/s02-returning-s01-f0005-proband');
 INSERT INTO cam."Demographics_external_id" ("Demographics_subject_id", external_id) VALUES ('pt-hmejx0uz9s', 'https://example.org/cam-testdata/small/Demographics/s02-f0009-proband');
 INSERT INTO cam."Demographics_external_id" ("Demographics_subject_id", external_id) VALUES ('pt-j86rjc1yiy', 'https://example.org/cam-testdata/small/Demographics/s02-f0012-father');
 INSERT INTO cam."Demographics_external_id" ("Demographics_subject_id", external_id) VALUES ('pt-ju11ude3rq', 'https://example.org/cam-testdata/small/Demographics/s01-f0005-proband');
 INSERT INTO cam."Demographics_external_id" ("Demographics_subject_id", external_id) VALUES ('pt-l98koluj11', 'https://example.org/cam-testdata/small/Demographics/s02-f0002-proband');
+INSERT INTO cam."Demographics_external_id" ("Demographics_subject_id", external_id) VALUES ('pt-ljkuzx3y8h', 'https://example.org/cam-testdata/small/Demographics/s02-returning-s01-f0011-proband');
 INSERT INTO cam."Demographics_external_id" ("Demographics_subject_id", external_id) VALUES ('pt-ljv5blx4vb', 'https://example.org/cam-testdata/small/Demographics/s02-f0006-mother');
 INSERT INTO cam."Demographics_external_id" ("Demographics_subject_id", external_id) VALUES ('pt-lo3ubn20z3', 'https://example.org/cam-testdata/small/Demographics/s01-f0001-proband');
 INSERT INTO cam."Demographics_external_id" ("Demographics_subject_id", external_id) VALUES ('pt-m9q9s4y6en', 'https://example.org/cam-testdata/small/Demographics/s01-f0010-mother');
@@ -5563,11 +5621,13 @@ INSERT INTO cam."Demographics_race" ("Demographics_subject_id", race_concept_cur
 INSERT INTO cam."Demographics_race" ("Demographics_subject_id", race_concept_curie) VALUES ('pt-e1qowyg6qe', 'CDCREC:2106-3');
 INSERT INTO cam."Demographics_race" ("Demographics_subject_id", race_concept_curie) VALUES ('pt-f39hc6n8dq', 'CDCREC:2106-3');
 INSERT INTO cam."Demographics_race" ("Demographics_subject_id", race_concept_curie) VALUES ('pt-fhfb8mfhx3', 'CDCREC:2118-8');
+INSERT INTO cam."Demographics_race" ("Demographics_subject_id", race_concept_curie) VALUES ('pt-g7k8bawahu', 'CDCREC:2118-8');
 INSERT INTO cam."Demographics_race" ("Demographics_subject_id", race_concept_curie) VALUES ('pt-hmejx0uz9s', 'CDCREC:2054-5');
 INSERT INTO cam."Demographics_race" ("Demographics_subject_id", race_concept_curie) VALUES ('pt-j86rjc1yiy', 'CDCREC:2028-9');
 INSERT INTO cam."Demographics_race" ("Demographics_subject_id", race_concept_curie) VALUES ('pt-j86rjc1yiy', 'CDCREC:2054-5');
 INSERT INTO cam."Demographics_race" ("Demographics_subject_id", race_concept_curie) VALUES ('pt-ju11ude3rq', 'CDCREC:2118-8');
 INSERT INTO cam."Demographics_race" ("Demographics_subject_id", race_concept_curie) VALUES ('pt-l98koluj11', 'CDCREC:1002-5');
+INSERT INTO cam."Demographics_race" ("Demographics_subject_id", race_concept_curie) VALUES ('pt-ljkuzx3y8h', 'CDCREC:2106-3');
 INSERT INTO cam."Demographics_race" ("Demographics_subject_id", race_concept_curie) VALUES ('pt-ljv5blx4vb', 'CDCREC:2076-8');
 INSERT INTO cam."Demographics_race" ("Demographics_subject_id", race_concept_curie) VALUES ('pt-lo3ubn20z3', 'CDCREC:1002-5');
 INSERT INTO cam."Demographics_race" ("Demographics_subject_id", race_concept_curie) VALUES ('pt-m9q9s4y6en', 'CDCREC:1002-5');
@@ -5631,6 +5691,7 @@ INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, 
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-71pdhbpci8', 'pt-sv38knyk22', 'pd-58ok1sysct', 2314, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-7a001sfm8n', 'pt-z07ixekmp1', 'pd-58ok1sysct', 6455, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-7b47r8p2wu', 'pt-r8x9pj0tys', 'pd-1nasrhdjhv', 12183, 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-7fmm7lgyl3', 'pt-g7k8bawahu', 'pd-v5mqi1nr9t', 3247, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-7u8yj7j9a2', 'pt-pkqb7v1zxd', 'pd-1nasrhdjhv', 6815, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-8ex1k0x1j9', 'pt-vvn9rj70ad', 'pd-1nasrhdjhv', 5212, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-8hv34ena0p', 'pt-8737trkhec', 'pd-1nasrhdjhv', 10337, 'co-yly4xno8c0', 'sd-2lx98atcp0');
@@ -5653,12 +5714,14 @@ INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, 
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-b9c8kpg1fv', 'pt-2px245swmn', 'pd-v5mqi1nr9t', 12448, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-bnamypeobm', 'pt-r22hejnzwv', 'pd-v5mqi1nr9t', 1450, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-bpadpmgmn4', 'pt-89rj8wzflm', 'pd-58ok1sysct', 4946, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
+INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-cmnfpzmxej', 'pt-g7k8bawahu', 'pd-1nasrhdjhv', 3779, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-cpskfds6y0', 'pt-0mz8ptoiqy', 'pd-v5mqi1nr9t', 17252, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-d324se3bz1', 'pt-oic36wj8i0', 'pd-58ok1sysct', 6948, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-dnj7mbpxwy', 'pt-223dzfx7g4', 'pd-1xae2rmewt', 17634, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-du9cflvbxm', 'pt-9gk8jq9c8a', 'pd-58ok1sysct', 8452, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-ectdqj2grd', 'pt-z07ixekmp1', 'pd-1xae2rmewt', 6181, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-eeg8biszms', 'pt-l98koluj11', 'pd-1nasrhdjhv', 2706, 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-evajlznqjs', 'pt-ljkuzx3y8h', 'pd-v5mqi1nr9t', 6546, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-eyo6kevwnt', 'pt-m9q9s4y6en', 'pd-58ok1sysct', 8081, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-fbi141a90w', 'pt-ju11ude3rq', 'pd-58ok1sysct', 2065, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-fffupimvbd', 'pt-3heturwy6c', 'pd-v5mqi1nr9t', 16242, 'co-yly4xno8c0', 'sd-2lx98atcp0');
@@ -5668,6 +5731,8 @@ INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, 
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-fxlvq5v9oq', 'pt-t3ll8jhskm', 'pd-1nasrhdjhv', 11566, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-fzvv6gtysy', 'pt-x2oc43ni3s', 'pd-1xae2rmewt', 3282, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-h0f37za8k9', 'pt-l98koluj11', 'pd-v5mqi1nr9t', 2017, 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-h1gi961wve', 'pt-ljkuzx3y8h', 'pd-1nasrhdjhv', 7185, 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-hgpl44qs2r', 'pt-g7k8bawahu', 'pd-1nasrhdjhv', 3374, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-hty32ttirv', 'pt-xoyf6cflcc', 'pd-1xae2rmewt', 5145, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-ianln70jil', 'pt-f39hc6n8dq', 'pd-v5mqi1nr9t', 509, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-iuq1y5pok6', 'pt-vvn9rj70ad', 'pd-v5mqi1nr9t', 4567, 'co-yly4xno8c0', 'sd-2lx98atcp0');
@@ -5675,6 +5740,7 @@ INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, 
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-jeiqsk3o75', 'pt-tyk26seuny', 'pd-1nasrhdjhv', 6009, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-jhi9nl200b', 'pt-oic36wj8i0', 'pd-58ok1sysct', 7254, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-k1vlefv7sl', 'pt-oic36wj8i0', 'pd-58ok1sysct', 6642, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
+INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-knrjk0a1gp', 'pt-ljkuzx3y8h', 'pd-1nasrhdjhv', 7007, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-l299mdx29i', 'pt-ljv5blx4vb', 'pd-1nasrhdjhv', 17654, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-m7srkh9qay', 'pt-r22hejnzwv', 'pd-1nasrhdjhv', 2078, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-m8g4iq6aze', 'pt-tyk26seuny', 'pd-1nasrhdjhv', 5509, 'co-yly4xno8c0', 'sd-2lx98atcp0');
@@ -5692,6 +5758,7 @@ INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, 
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-qartmoyz85', 'pt-54i7xpb3so', 'pd-1nasrhdjhv', 4715, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-qaspjjc6xk', 'pt-3746e85sta', 'pd-1xae2rmewt', 9809, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-r7bzto7yv0', 'pt-3heturwy6c', 'pd-1nasrhdjhv', 16383, 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-r9jmff4gz5', 'pt-ljkuzx3y8h', 'pd-1nasrhdjhv', 7872, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-re5c9kzl4g', 'pt-54i7xpb3so', 'pd-v5mqi1nr9t', 3847, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-sihh36j4bo', 'pt-r8x9pj0tys', 'pd-1nasrhdjhv', 12364, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Encounter" (encounter_id, subject_id, encounter_definition_id, age_at_event, access_policy_id, study_id) VALUES ('en-snfsdthc3l', 'pt-p8lz6kia0j', 'pd-1xae2rmewt', 782, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
@@ -5790,6 +5857,7 @@ INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) 
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-71pdhbpci8', 'https://example.org/cam-testdata/small/Encounter/s01-f0007-proband-e2');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-7a001sfm8n', 'https://example.org/cam-testdata/small/Encounter/s01-f0012-proband-e2');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-7b47r8p2wu', 'https://example.org/cam-testdata/small/Encounter/s02-f0009-father-e2');
+INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-7fmm7lgyl3', 'https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0005-proband-e1');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-7u8yj7j9a2', 'https://example.org/cam-testdata/small/Encounter/s02-f0006-proband-e3');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-8ex1k0x1j9', 'https://example.org/cam-testdata/small/Encounter/s02-f0005-proband-e2');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-8hv34ena0p', 'https://example.org/cam-testdata/small/Encounter/s02-f0011-mother-e3');
@@ -5812,12 +5880,14 @@ INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) 
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-b9c8kpg1fv', 'https://example.org/cam-testdata/small/Encounter/s02-f0010-mother-e1');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-bnamypeobm', 'https://example.org/cam-testdata/small/Encounter/s02-f0001-proband-e1');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-bpadpmgmn4', 'https://example.org/cam-testdata/small/Encounter/s01-f0008-proband-e2');
+INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-cmnfpzmxej', 'https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0005-proband-e3');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-cpskfds6y0', 'https://example.org/cam-testdata/small/Encounter/s02-f0004-mother-e1');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-d324se3bz1', 'https://example.org/cam-testdata/small/Encounter/s01-f0006-proband-e4');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-dnj7mbpxwy', 'https://example.org/cam-testdata/small/Encounter/s01-f0002-father-e1');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-du9cflvbxm', 'https://example.org/cam-testdata/small/Encounter/s01-f0006-father-e2');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-ectdqj2grd', 'https://example.org/cam-testdata/small/Encounter/s01-f0012-proband-e1');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-eeg8biszms', 'https://example.org/cam-testdata/small/Encounter/s02-f0002-proband-e4');
+INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-evajlznqjs', 'https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0011-proband-e1');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-eyo6kevwnt', 'https://example.org/cam-testdata/small/Encounter/s01-f0010-mother-e2');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-fbi141a90w', 'https://example.org/cam-testdata/small/Encounter/s01-f0005-proband-e2');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-fffupimvbd', 'https://example.org/cam-testdata/small/Encounter/s02-f0011-father-e1');
@@ -5827,6 +5897,8 @@ INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) 
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-fxlvq5v9oq', 'https://example.org/cam-testdata/small/Encounter/s02-f0001-father-e2');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-fzvv6gtysy', 'https://example.org/cam-testdata/small/Encounter/s01-f0004-proband-e1');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-h0f37za8k9', 'https://example.org/cam-testdata/small/Encounter/s02-f0002-proband-e1');
+INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-h1gi961wve', 'https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0011-proband-e3');
+INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-hgpl44qs2r', 'https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0005-proband-e2');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-hty32ttirv', 'https://example.org/cam-testdata/small/Encounter/s01-f0003-proband-e1');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-ianln70jil', 'https://example.org/cam-testdata/small/Encounter/s02-f0012-proband-e1');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-iuq1y5pok6', 'https://example.org/cam-testdata/small/Encounter/s02-f0005-proband-e1');
@@ -5834,6 +5906,7 @@ INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) 
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-jeiqsk3o75', 'https://example.org/cam-testdata/small/Encounter/s02-f0004-proband-e3');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-jhi9nl200b', 'https://example.org/cam-testdata/small/Encounter/s01-f0006-proband-e5');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-k1vlefv7sl', 'https://example.org/cam-testdata/small/Encounter/s01-f0006-proband-e3');
+INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-knrjk0a1gp', 'https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0011-proband-e2');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-l299mdx29i', 'https://example.org/cam-testdata/small/Encounter/s02-f0006-mother-e3');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-m7srkh9qay', 'https://example.org/cam-testdata/small/Encounter/s02-f0001-proband-e2');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-m8g4iq6aze', 'https://example.org/cam-testdata/small/Encounter/s02-f0004-proband-e2');
@@ -5851,6 +5924,7 @@ INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) 
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-qartmoyz85', 'https://example.org/cam-testdata/small/Encounter/s02-f0011-proband-e3');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-qaspjjc6xk', 'https://example.org/cam-testdata/small/Encounter/s01-f0006-mother-e1');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-r7bzto7yv0', 'https://example.org/cam-testdata/small/Encounter/s02-f0011-father-e2');
+INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-r9jmff4gz5', 'https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0011-proband-e4');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-re5c9kzl4g', 'https://example.org/cam-testdata/small/Encounter/s02-f0011-proband-e1');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-sihh36j4bo', 'https://example.org/cam-testdata/small/Encounter/s02-f0009-father-e3');
 INSERT INTO cam."Encounter_external_id" ("Encounter_encounter_id", external_id) VALUES ('en-snfsdthc3l', 'https://example.org/cam-testdata/small/Encounter/s01-f0002-proband-e1');
@@ -6137,6 +6211,7 @@ INSERT INTO cam."Family_external_id" ("Family_family_id", external_id) VALUES ('
 --
 
 INSERT INTO cam."File" (file_id, filename, file_extension, data_category, data_type, format, size, internal_uri, release_uri, drs_uri, storage_class, availability, access_policy_id, study_id) VALUES ('dr-3ay88rjpq7', 's01-f0002-proband-cram.cram', '.cram', 'edam:topic_3673', 'edam:data_0863', 'edam:format_3462', 269148449, NULL, NULL, NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
+INSERT INTO cam."File" (file_id, filename, file_extension, data_category, data_type, format, size, internal_uri, release_uri, drs_uri, storage_class, availability, access_policy_id, study_id) VALUES ('dr-57nzhcprk0', 's02-returning-s01-f0005-proband-cram.cram', '.cram', 'edam:topic_3673', 'edam:data_0863', 'edam:format_3462', 1759646869, NULL, NULL, NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."File" (file_id, filename, file_extension, data_category, data_type, format, size, internal_uri, release_uri, drs_uri, storage_class, availability, access_policy_id, study_id) VALUES ('dr-5u4yj6t1qz', 's01-f0002-joint-vcf.vcf.gz', '.vcf.gz', 'edam:topic_0199', 'edam:data_3498', 'edam:format_3016', 241393766, NULL, NULL, NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."File" (file_id, filename, file_extension, data_category, data_type, format, size, internal_uri, release_uri, drs_uri, storage_class, availability, access_policy_id, study_id) VALUES ('dr-6rz35r1dcn', 's02-f0002-father-cram.cram', '.cram', 'edam:topic_3673', 'edam:data_0863', 'edam:format_3462', 2030818155, NULL, NULL, NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."File" (file_id, filename, file_extension, data_category, data_type, format, size, internal_uri, release_uri, drs_uri, storage_class, availability, access_policy_id, study_id) VALUES ('dr-7cmrrchrb2', 's02-f0004-father-cram.cram', '.cram', 'edam:topic_3673', 'edam:data_0863', 'edam:format_3462', 1617726871, NULL, NULL, NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
@@ -6173,6 +6248,7 @@ INSERT INTO cam."File" (file_id, filename, file_extension, data_category, data_t
 --
 
 INSERT INTO cam."File_external_id" ("File_file_id", external_id) VALUES ('dr-3ay88rjpq7', 'https://example.org/cam-testdata/small/File/s01-f0002-proband-cram');
+INSERT INTO cam."File_external_id" ("File_file_id", external_id) VALUES ('dr-57nzhcprk0', 'https://example.org/cam-testdata/small/File/s02-returning-s01-f0005-proband-cram');
 INSERT INTO cam."File_external_id" ("File_file_id", external_id) VALUES ('dr-5u4yj6t1qz', 'https://example.org/cam-testdata/small/File/s01-f0002-joint-vcf');
 INSERT INTO cam."File_external_id" ("File_file_id", external_id) VALUES ('dr-6rz35r1dcn', 'https://example.org/cam-testdata/small/File/s02-f0002-father-cram');
 INSERT INTO cam."File_external_id" ("File_file_id", external_id) VALUES ('dr-7cmrrchrb2', 'https://example.org/cam-testdata/small/File/s02-f0004-father-cram');
@@ -6210,6 +6286,7 @@ INSERT INTO cam."File_external_id" ("File_file_id", external_id) VALUES ('dr-zmk
 
 INSERT INTO cam."File_hash" ("File_file_id", hash_id) VALUES ('dr-3ay88rjpq7', 1646318231);
 INSERT INTO cam."File_hash" ("File_file_id", hash_id) VALUES ('dr-3ay88rjpq7', 454235717);
+INSERT INTO cam."File_hash" ("File_file_id", hash_id) VALUES ('dr-57nzhcprk0', 1265009556);
 INSERT INTO cam."File_hash" ("File_file_id", hash_id) VALUES ('dr-5u4yj6t1qz', 1811443486);
 INSERT INTO cam."File_hash" ("File_file_id", hash_id) VALUES ('dr-6rz35r1dcn', 998471853);
 INSERT INTO cam."File_hash" ("File_file_id", hash_id) VALUES ('dr-7cmrrchrb2', 610082337);
@@ -6250,6 +6327,7 @@ INSERT INTO cam."File_hash" ("File_file_id", hash_id) VALUES ('dr-zmk9npxmdg', 7
 --
 
 INSERT INTO cam."File_sample_id" ("File_file_id", sample_id_sample_id) VALUES ('dr-3ay88rjpq7', 'bs-mkwfg60t6o');
+INSERT INTO cam."File_sample_id" ("File_file_id", sample_id_sample_id) VALUES ('dr-57nzhcprk0', 'bs-2lujybqhao');
 INSERT INTO cam."File_sample_id" ("File_file_id", sample_id_sample_id) VALUES ('dr-5u4yj6t1qz', 'bs-fpd4arpkia');
 INSERT INTO cam."File_sample_id" ("File_file_id", sample_id_sample_id) VALUES ('dr-5u4yj6t1qz', 'bs-mkwfg60t6o');
 INSERT INTO cam."File_sample_id" ("File_file_id", sample_id_sample_id) VALUES ('dr-6rz35r1dcn', 'bs-zznq3y70wq');
@@ -6290,6 +6368,7 @@ INSERT INTO cam."File_sample_id" ("File_file_id", sample_id_sample_id) VALUES ('
 --
 
 INSERT INTO cam."File_subject_id" ("File_file_id", subject_id_subject_id) VALUES ('dr-3ay88rjpq7', 'pt-p8lz6kia0j');
+INSERT INTO cam."File_subject_id" ("File_file_id", subject_id_subject_id) VALUES ('dr-57nzhcprk0', 'pt-g7k8bawahu');
 INSERT INTO cam."File_subject_id" ("File_file_id", subject_id_subject_id) VALUES ('dr-5u4yj6t1qz', 'pt-p8lz6kia0j');
 INSERT INTO cam."File_subject_id" ("File_file_id", subject_id_subject_id) VALUES ('dr-5u4yj6t1qz', 'pt-rxqwqab2pf');
 INSERT INTO cam."File_subject_id" ("File_file_id", subject_id_subject_id) VALUES ('dr-6rz35r1dcn', 'pt-undm70vrd3');
@@ -6324,9 +6403,11 @@ INSERT INTO cam."File_subject_id" ("File_file_id", subject_id_subject_id) VALUES
 INSERT INTO cam."File_subject_id" ("File_file_id", subject_id_subject_id) VALUES ('dr-lix3bceyj5', 'pt-9mylk1ozmd');
 INSERT INTO cam."File_subject_id" ("File_file_id", subject_id_subject_id) VALUES ('dr-lix3bceyj5', 'pt-f39hc6n8dq');
 INSERT INTO cam."File_subject_id" ("File_file_id", subject_id_subject_id) VALUES ('dr-lix3bceyj5', 'pt-fhfb8mfhx3');
+INSERT INTO cam."File_subject_id" ("File_file_id", subject_id_subject_id) VALUES ('dr-lix3bceyj5', 'pt-g7k8bawahu');
 INSERT INTO cam."File_subject_id" ("File_file_id", subject_id_subject_id) VALUES ('dr-lix3bceyj5', 'pt-hmejx0uz9s');
 INSERT INTO cam."File_subject_id" ("File_file_id", subject_id_subject_id) VALUES ('dr-lix3bceyj5', 'pt-j86rjc1yiy');
 INSERT INTO cam."File_subject_id" ("File_file_id", subject_id_subject_id) VALUES ('dr-lix3bceyj5', 'pt-l98koluj11');
+INSERT INTO cam."File_subject_id" ("File_file_id", subject_id_subject_id) VALUES ('dr-lix3bceyj5', 'pt-ljkuzx3y8h');
 INSERT INTO cam."File_subject_id" ("File_file_id", subject_id_subject_id) VALUES ('dr-lix3bceyj5', 'pt-ljv5blx4vb');
 INSERT INTO cam."File_subject_id" ("File_file_id", subject_id_subject_id) VALUES ('dr-lix3bceyj5', 'pt-pkqb7v1zxd');
 INSERT INTO cam."File_subject_id" ("File_file_id", subject_id_subject_id) VALUES ('dr-lix3bceyj5', 'pt-q5abjhzige');
@@ -6381,6 +6462,7 @@ INSERT INTO cam."File_subject_id" ("File_file_id", subject_id_subject_id) VALUES
 
 INSERT INTO cam."HashDigest" (id, hash_type, hash_value) VALUES (100398029, 'MS:1000568', 'd42b5d50485308a6d4d2f69a4fa9c9d1');
 INSERT INTO cam."HashDigest" (id, hash_type, hash_value) VALUES (1134906529, 'MS:1000569', '3cd66e5ca74760db7562f171b73f1aa18d9c467b');
+INSERT INTO cam."HashDigest" (id, hash_type, hash_value) VALUES (1265009556, 'MS:1000568', '1c518bc65e8081f3009680496ba6980d');
 INSERT INTO cam."HashDigest" (id, hash_type, hash_value) VALUES (1310446253, 'MS:1000568', 'eb27359b7290f1d3b506add5b6fb0e4b');
 INSERT INTO cam."HashDigest" (id, hash_type, hash_value) VALUES (1448894435, 'MS:1000568', '9e77f8a008469cef6a034fd28f26d876');
 INSERT INTO cam."HashDigest" (id, hash_type, hash_value) VALUES (1456863985, 'MS:1000568', '7b08955ef57d8785cef93f07655b8169');
@@ -6437,6 +6519,38 @@ INSERT INTO cam."Investigator_external_id" ("Investigator_id", external_id) VALU
 
 
 --
+-- Data for Name: Person; Type: TABLE DATA; Schema: cam; Owner: -
+--
+
+INSERT INTO cam."Person" (person_id, access_policy_id, study_id) VALUES ('pn-eibey13n30', 'co-4rbnrtd218', 'sd-46ci4zfldo');
+INSERT INTO cam."Person" (person_id, access_policy_id, study_id) VALUES ('pn-kq3h0c3rxh', 'co-4rbnrtd218', 'sd-46ci4zfldo');
+INSERT INTO cam."Person" (person_id, access_policy_id, study_id) VALUES ('pn-wmkzhwqk6q', 'co-4rbnrtd218', 'sd-46ci4zfldo');
+INSERT INTO cam."Person" (person_id, access_policy_id, study_id) VALUES ('pn-zir779af5y', 'co-4rbnrtd218', 'sd-46ci4zfldo');
+
+
+--
+-- Data for Name: Person_external_id; Type: TABLE DATA; Schema: cam; Owner: -
+--
+
+INSERT INTO cam."Person_external_id" ("Person_person_id", external_id) VALUES ('pn-eibey13n30', 'https://example.org/cam-testdata/small/Person/s01-f0009-proband');
+INSERT INTO cam."Person_external_id" ("Person_person_id", external_id) VALUES ('pn-kq3h0c3rxh', 'https://example.org/cam-testdata/small/Person/s01-f0011-proband');
+INSERT INTO cam."Person_external_id" ("Person_person_id", external_id) VALUES ('pn-wmkzhwqk6q', 'https://example.org/cam-testdata/small/Person/s01-f0001-proband');
+INSERT INTO cam."Person_external_id" ("Person_person_id", external_id) VALUES ('pn-zir779af5y', 'https://example.org/cam-testdata/small/Person/s01-f0005-proband');
+
+
+--
+-- Data for Name: Person_subject_id; Type: TABLE DATA; Schema: cam; Owner: -
+--
+
+INSERT INTO cam."Person_subject_id" ("Person_person_id", subject_id_subject_id) VALUES ('pn-eibey13n30', 'pt-ti0pzgxycp');
+INSERT INTO cam."Person_subject_id" ("Person_person_id", subject_id_subject_id) VALUES ('pn-kq3h0c3rxh', 'pt-e1qowyg6qe');
+INSERT INTO cam."Person_subject_id" ("Person_person_id", subject_id_subject_id) VALUES ('pn-kq3h0c3rxh', 'pt-ljkuzx3y8h');
+INSERT INTO cam."Person_subject_id" ("Person_person_id", subject_id_subject_id) VALUES ('pn-wmkzhwqk6q', 'pt-lo3ubn20z3');
+INSERT INTO cam."Person_subject_id" ("Person_person_id", subject_id_subject_id) VALUES ('pn-zir779af5y', 'pt-g7k8bawahu');
+INSERT INTO cam."Person_subject_id" ("Person_person_id", subject_id_subject_id) VALUES ('pn-zir779af5y', 'pt-ju11ude3rq');
+
+
+--
 -- Data for Name: Publication; Type: TABLE DATA; Schema: cam; Owner: -
 --
 
@@ -6463,6 +6577,8 @@ INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id
 INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-20483amku9', 'bsc-576p85idzp', 'bs-q5a6b9u1zn', 'OBI:0001051', 'pt-z07ixekmp1', NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-xfa4h8iruu', 'bsc-4aflfyecd3', NULL, 'UBERON:0000178', 'pt-455yp3stzr', 'snomedct:103328004', 3.3, 'ucum:ml', 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-21qpxwci7x', 'bsc-4aflfyecd3', 'bs-xfa4h8iruu', 'OBI:0001051', 'pt-455yp3stzr', NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
+INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-y8mi9al2z2', 'bsc-s4kdcpj958', NULL, 'UBERON:0000178', 'pt-g7k8bawahu', 'snomedct:103328004', 6.1, 'ucum:ml', 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-2lujybqhao', 'bsc-s4kdcpj958', 'bs-y8mi9al2z2', 'OBI:0001051', 'pt-g7k8bawahu', NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-4b9ztjfcp5', 'bsc-ych91dvz45', NULL, 'UBERON:0000178', 'pt-89rj8wzflm', 'snomedct:103328004', 3.4, 'ucum:ml', 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-3cqvhqxu4b', 'bsc-ych91dvz45', 'bs-4b9ztjfcp5', 'OBI:0001051', 'pt-89rj8wzflm', NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-3d9plqby6e', 'bsc-xmvx574ulv', NULL, 'UBERON:0000178', 'pt-e1qowyg6qe', 'snomedct:103328004', 6.2, 'ucum:ml', 'co-tam2ciyi45', 'sd-3s8wpdnf71');
@@ -6500,6 +6616,7 @@ INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id
 INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-v2lr3u155f', 'bsc-fpnhjdh9mn', NULL, 'UBERON:0000178', 'pt-ti0pzgxycp', 'snomedct:103328004', 6.7, 'ucum:ml', 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-ienhf20njw', 'bsc-fpnhjdh9mn', 'bs-v2lr3u155f', 'OBI:0001051', 'pt-ti0pzgxycp', NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-k29u6tlui0', 'bsc-0p2uztsm0k', 'bs-6jmtt7z870', 'OBI:0001051', 'pt-r8x9pj0tys', NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-m8xj37twhd', 'bsc-r6rxtowdgg', NULL, 'UBERON:0000178', 'pt-ljkuzx3y8h', 'snomedct:103328004', 9.3, 'ucum:ml', 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-mkwfg60t6o', 'bsc-fkqy2ieno2', 'bs-8w1pmyml8t', 'OBI:0001051', 'pt-p8lz6kia0j', NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-mmwh4u6xgb', 'bsc-aiptm14ear', NULL, 'UBERON:0000178', 'pt-9gk8jq9c8a', 'snomedct:103328004', 9, 'ucum:ml', 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-n0rtotub0w', 'bsc-t2k6bwj9eg', NULL, 'UBERON:0000178', 'pt-undm70vrd3', 'snomedct:103328004', 5.7, 'ucum:ml', 'co-yly4xno8c0', 'sd-2lx98atcp0');
@@ -6517,6 +6634,7 @@ INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id
 INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-tx6bnw1a0x', 'bsc-0fdgkol1qm', 'bs-wjfv7ftvkq', 'OBI:0001051', 'pt-54i7xpb3so', NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-x12ulavrim', 'bsc-h2t6mxqssl', 'bs-0qv6n0y2td', 'OBI:0001051', 'pt-3heturwy6c', NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-xl9a6llxio', 'bsc-ax86yg2qis', 'bs-8r09gjn2f4', 'OBI:0001051', 'pt-l98koluj11', NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-xtttky72oh', 'bsc-r6rxtowdgg', 'bs-m8xj37twhd', 'OBI:0001051', 'pt-ljkuzx3y8h', NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-y341t447ov', 'bsc-b7q94aowax', 'bs-be24j2t4up', 'OBI:0001051', 'pt-p9wydbuq5q', NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Sample" (sample_id, biospecimen_collection_id, parent_sample_id, sample_type, subject_id, availability_status, quantity_number, quantity_unit, access_policy_id, study_id) VALUES ('bs-zznq3y70wq', 'bsc-t2k6bwj9eg', 'bs-n0rtotub0w', 'OBI:0001051', 'pt-undm70vrd3', NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 
@@ -6529,6 +6647,7 @@ INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-0qv6n0y2td', 'https://example.org/cam-testdata/small/Sample/s02-f0011-father-blood');
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-20483amku9', 'https://example.org/cam-testdata/small/Sample/s01-f0012-proband-dna');
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-21qpxwci7x', 'https://example.org/cam-testdata/small/Sample/s01-f0011-mother-dna');
+INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-2lujybqhao', 'https://example.org/cam-testdata/small/Sample/s02-returning-s01-f0005-proband-dna');
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-3cqvhqxu4b', 'https://example.org/cam-testdata/small/Sample/s01-f0008-proband-dna');
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-3d9plqby6e', 'https://example.org/cam-testdata/small/Sample/s01-f0011-proband-blood');
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-4738chr6tm', 'https://example.org/cam-testdata/small/Sample/s02-f0004-father-dna');
@@ -6560,6 +6679,7 @@ INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-ienhf20njw', 'https://example.org/cam-testdata/small/Sample/s01-f0009-proband-dna');
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-k29u6tlui0', 'https://example.org/cam-testdata/small/Sample/s02-f0009-father-dna');
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-lvyp2a2swe', 'https://example.org/cam-testdata/small/Sample/s02-f0004-father-blood');
+INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-m8xj37twhd', 'https://example.org/cam-testdata/small/Sample/s02-returning-s01-f0011-proband-blood');
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-mff31jzxtq', 'https://example.org/cam-testdata/small/Sample/s02-f0004-proband-blood');
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-mkwfg60t6o', 'https://example.org/cam-testdata/small/Sample/s01-f0002-proband-dna');
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-mmwh4u6xgb', 'https://example.org/cam-testdata/small/Sample/s01-f0006-father-blood');
@@ -6584,7 +6704,9 @@ INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-x12ulavrim', 'https://example.org/cam-testdata/small/Sample/s02-f0011-father-dna');
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-xfa4h8iruu', 'https://example.org/cam-testdata/small/Sample/s01-f0011-mother-blood');
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-xl9a6llxio', 'https://example.org/cam-testdata/small/Sample/s02-f0002-proband-dna');
+INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-xtttky72oh', 'https://example.org/cam-testdata/small/Sample/s02-returning-s01-f0011-proband-dna');
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-y341t447ov', 'https://example.org/cam-testdata/small/Sample/s01-f0011-father-dna');
+INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-y8mi9al2z2', 'https://example.org/cam-testdata/small/Sample/s02-returning-s01-f0005-proband-blood');
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-z08ja02mb2', 'https://example.org/cam-testdata/small/Sample/s02-f0003-mother-blood');
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-zgjm1sylgy', 'https://example.org/cam-testdata/small/Sample/s02-f0002-mother-blood');
 INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('bs-zznq3y70wq', 'https://example.org/cam-testdata/small/Sample/s02-f0002-father-dna');
@@ -6597,6 +6719,7 @@ INSERT INTO cam."Sample_external_id" ("Sample_sample_id", external_id) VALUES ('
 INSERT INTO cam."Sample_processing" ("Sample_sample_id", processing) VALUES ('bs-08dyug60bv', 'OBI:0000257');
 INSERT INTO cam."Sample_processing" ("Sample_sample_id", processing) VALUES ('bs-20483amku9', 'OBI:0000257');
 INSERT INTO cam."Sample_processing" ("Sample_sample_id", processing) VALUES ('bs-21qpxwci7x', 'OBI:0000257');
+INSERT INTO cam."Sample_processing" ("Sample_sample_id", processing) VALUES ('bs-2lujybqhao', 'OBI:0000257');
 INSERT INTO cam."Sample_processing" ("Sample_sample_id", processing) VALUES ('bs-3cqvhqxu4b', 'OBI:0000257');
 INSERT INTO cam."Sample_processing" ("Sample_sample_id", processing) VALUES ('bs-4738chr6tm', 'OBI:0000257');
 INSERT INTO cam."Sample_processing" ("Sample_sample_id", processing) VALUES ('bs-4ez6za4vnj', 'OBI:0000257');
@@ -6622,6 +6745,7 @@ INSERT INTO cam."Sample_processing" ("Sample_sample_id", processing) VALUES ('bs
 INSERT INTO cam."Sample_processing" ("Sample_sample_id", processing) VALUES ('bs-tx6bnw1a0x', 'OBI:0000257');
 INSERT INTO cam."Sample_processing" ("Sample_sample_id", processing) VALUES ('bs-x12ulavrim', 'OBI:0000257');
 INSERT INTO cam."Sample_processing" ("Sample_sample_id", processing) VALUES ('bs-xl9a6llxio', 'OBI:0000257');
+INSERT INTO cam."Sample_processing" ("Sample_sample_id", processing) VALUES ('bs-xtttky72oh', 'OBI:0000257');
 INSERT INTO cam."Sample_processing" ("Sample_sample_id", processing) VALUES ('bs-y341t447ov', 'OBI:0000257');
 INSERT INTO cam."Sample_processing" ("Sample_sample_id", processing) VALUES ('bs-zznq3y70wq', 'OBI:0000257');
 
@@ -6633,6 +6757,7 @@ INSERT INTO cam."Sample_processing" ("Sample_sample_id", processing) VALUES ('bs
 INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-08dyug60bv', 'OBI:0000915');
 INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-20483amku9', 'OBI:0000915');
 INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-21qpxwci7x', 'OBI:0000915');
+INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-2lujybqhao', 'OBI:0000915');
 INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-3cqvhqxu4b', 'OBI:0000915');
 INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-4738chr6tm', 'OBI:0000915');
 INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-4ez6za4vnj', 'OBI:0000915');
@@ -6653,6 +6778,7 @@ INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VAL
 INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-ienhf20njw', 'OBI:0000915');
 INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-k29u6tlui0', 'OBI:0000915');
 INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-lvyp2a2swe', 'OBI:0000819');
+INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-m8xj37twhd', 'OBI:0000819');
 INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-mff31jzxtq', 'OBI:0000819');
 INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-mkwfg60t6o', 'OBI:0000915');
 INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-mmwh4u6xgb', 'OBI:0000819');
@@ -6670,6 +6796,7 @@ INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VAL
 INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-x12ulavrim', 'OBI:0000915');
 INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-xfa4h8iruu', 'OBI:0000819');
 INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-xl9a6llxio', 'OBI:0000915');
+INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-xtttky72oh', 'OBI:0000915');
 INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-y341t447ov', 'OBI:0000915');
 INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-z08ja02mb2', 'OBI:0000819');
 INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VALUES ('bs-zgjm1sylgy', 'OBI:0000819');
@@ -6680,6 +6807,7 @@ INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VAL
 -- Data for Name: Study; Type: TABLE DATA; Schema: cam; Owner: -
 --
 
+INSERT INTO cam."Study" (parent_study, study_title, study_code, study_short_name, study_description, website, acknowledgments, citation_statement, do_id, access_policy_id, study_id) VALUES (NULL, 'Old MacDonald''s Farm', 'FARM', NULL, 'Umbrella record for Person links across the farm''s studies. Holds no subjects of its own.', NULL, NULL, NULL, NULL, 'co-4rbnrtd218', 'sd-46ci4zfldo');
 INSERT INTO cam."Study" (parent_study, study_title, study_code, study_short_name, study_description, website, acknowledgments, citation_statement, do_id, access_policy_id, study_id) VALUES ('sd-3s8wpdnf71', 'HumHum Family-Based Camelid Cohort', 'S02', NULL, 'A fictional study of thyroid function in llamas raised on farms around Pasture Point. Each herd is followed with regular visits, and sleep quality is recorded along the way. All participants and data are synthetic.', NULL, NULL, NULL, 'https://doi.org/10.5072/cam-testdata.grdggrel', 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Study" (parent_study, study_title, study_code, study_short_name, study_description, website, acknowledgments, citation_statement, do_id, access_policy_id, study_id) VALUES (NULL, 'QuackQuack Longitudinal Anatine Initiative', 'S01', NULL, 'A fictional study of sleep quality in ducks raised on farms around Clover Hill. Each paddling is followed with regular visits, and lifespan is recorded along the way. All participants and data are synthetic.', NULL, NULL, NULL, 'https://doi.org/10.5072/cam-testdata.jiktz896', 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 
@@ -6688,8 +6816,9 @@ INSERT INTO cam."Study" (parent_study, study_title, study_code, study_short_name
 -- Data for Name: StudyMetadata; Type: TABLE DATA; Schema: cam; Owner: -
 --
 
-INSERT INTO cam."StudyMetadata" (study_id, selection_criteria, vbr_id, expected_number_of_participants, actual_number_of_participants, access_policy_id) VALUES ('sd-2lx98atcp0', NULL, 'or-qldlz7ot0k', 30, 28, 'co-yly4xno8c0');
+INSERT INTO cam."StudyMetadata" (study_id, selection_criteria, vbr_id, expected_number_of_participants, actual_number_of_participants, access_policy_id) VALUES ('sd-2lx98atcp0', NULL, 'or-qldlz7ot0k', 32, 30, 'co-yly4xno8c0');
 INSERT INTO cam."StudyMetadata" (study_id, selection_criteria, vbr_id, expected_number_of_participants, actual_number_of_participants, access_policy_id) VALUES ('sd-3s8wpdnf71', NULL, 'or-gi4q7opjnl', 31, 22, 'co-tam2ciyi45');
+INSERT INTO cam."StudyMetadata" (study_id, selection_criteria, vbr_id, expected_number_of_participants, actual_number_of_participants, access_policy_id) VALUES ('sd-46ci4zfldo', NULL, NULL, 0, 0, 'co-4rbnrtd218');
 
 
 --
@@ -6700,6 +6829,7 @@ INSERT INTO cam."StudyMetadata_clinical_data_source_type" ("StudyMetadata_study_
 INSERT INTO cam."StudyMetadata_clinical_data_source_type" ("StudyMetadata_study_id", clinical_data_source_type) VALUES ('sd-2lx98atcp0', 'CAMO:0000014');
 INSERT INTO cam."StudyMetadata_clinical_data_source_type" ("StudyMetadata_study_id", clinical_data_source_type) VALUES ('sd-3s8wpdnf71', 'CAMO:0000010');
 INSERT INTO cam."StudyMetadata_clinical_data_source_type" ("StudyMetadata_study_id", clinical_data_source_type) VALUES ('sd-3s8wpdnf71', 'CAMO:0000011');
+INSERT INTO cam."StudyMetadata_clinical_data_source_type" ("StudyMetadata_study_id", clinical_data_source_type) VALUES ('sd-46ci4zfldo', 'CAMO:0000011');
 
 
 --
@@ -6710,6 +6840,7 @@ INSERT INTO cam."StudyMetadata_data_category" ("StudyMetadata_study_id", data_ca
 INSERT INTO cam."StudyMetadata_data_category" ("StudyMetadata_study_id", data_category_concept_curie) VALUES ('sd-2lx98atcp0', 'edam:topic_3673');
 INSERT INTO cam."StudyMetadata_data_category" ("StudyMetadata_study_id", data_category_concept_curie) VALUES ('sd-3s8wpdnf71', 'edam:topic_3170');
 INSERT INTO cam."StudyMetadata_data_category" ("StudyMetadata_study_id", data_category_concept_curie) VALUES ('sd-3s8wpdnf71', 'edam:topic_3673');
+INSERT INTO cam."StudyMetadata_data_category" ("StudyMetadata_study_id", data_category_concept_curie) VALUES ('sd-46ci4zfldo', 'edam:topic_3170');
 
 
 --
@@ -6718,6 +6849,7 @@ INSERT INTO cam."StudyMetadata_data_category" ("StudyMetadata_study_id", data_ca
 
 INSERT INTO cam."StudyMetadata_external_id" ("StudyMetadata_study_id", external_id) VALUES ('sd-2lx98atcp0', 'https://example.org/cam-testdata/small/StudyMetadata/s02');
 INSERT INTO cam."StudyMetadata_external_id" ("StudyMetadata_study_id", external_id) VALUES ('sd-3s8wpdnf71', 'https://example.org/cam-testdata/small/StudyMetadata/s01');
+INSERT INTO cam."StudyMetadata_external_id" ("StudyMetadata_study_id", external_id) VALUES ('sd-46ci4zfldo', 'https://example.org/cam-testdata/small/StudyMetadata/farm');
 
 
 --
@@ -6728,6 +6860,7 @@ INSERT INTO cam."StudyMetadata_participant_lifespan_stage" ("StudyMetadata_study
 INSERT INTO cam."StudyMetadata_participant_lifespan_stage" ("StudyMetadata_study_id", participant_lifespan_stage) VALUES ('sd-2lx98atcp0', 'NCIT:C89345');
 INSERT INTO cam."StudyMetadata_participant_lifespan_stage" ("StudyMetadata_study_id", participant_lifespan_stage) VALUES ('sd-3s8wpdnf71', 'NCIT:C89345');
 INSERT INTO cam."StudyMetadata_participant_lifespan_stage" ("StudyMetadata_study_id", participant_lifespan_stage) VALUES ('sd-3s8wpdnf71', 'NCIT:C89889');
+INSERT INTO cam."StudyMetadata_participant_lifespan_stage" ("StudyMetadata_study_id", participant_lifespan_stage) VALUES ('sd-46ci4zfldo', 'NCIT:C89889');
 
 
 --
@@ -6736,6 +6869,7 @@ INSERT INTO cam."StudyMetadata_participant_lifespan_stage" ("StudyMetadata_study
 
 INSERT INTO cam."StudyMetadata_research_domain" ("StudyMetadata_study_id", research_domain_concept_curie) VALUES ('sd-2lx98atcp0', 'mesh:D006330');
 INSERT INTO cam."StudyMetadata_research_domain" ("StudyMetadata_study_id", research_domain_concept_curie) VALUES ('sd-3s8wpdnf71', 'mesh:D013568');
+INSERT INTO cam."StudyMetadata_research_domain" ("StudyMetadata_study_id", research_domain_concept_curie) VALUES ('sd-46ci4zfldo', 'mesh:D001520');
 
 
 --
@@ -6746,6 +6880,7 @@ INSERT INTO cam."StudyMetadata_study_design" ("StudyMetadata_study_id", study_de
 INSERT INTO cam."StudyMetadata_study_design" ("StudyMetadata_study_id", study_design_concept_curie) VALUES ('sd-2lx98atcp0', 'mesh:D016022');
 INSERT INTO cam."StudyMetadata_study_design" ("StudyMetadata_study_id", study_design_concept_curie) VALUES ('sd-3s8wpdnf71', 'mesh:D003430');
 INSERT INTO cam."StudyMetadata_study_design" ("StudyMetadata_study_id", study_design_concept_curie) VALUES ('sd-3s8wpdnf71', 'mesh:D008137');
+INSERT INTO cam."StudyMetadata_study_design" ("StudyMetadata_study_id", study_design_concept_curie) VALUES ('sd-46ci4zfldo', 'mesh:D016022');
 
 
 --
@@ -6754,6 +6889,7 @@ INSERT INTO cam."StudyMetadata_study_design" ("StudyMetadata_study_id", study_de
 
 INSERT INTO cam."Study_contact" ("Study_study_id", contact_id) VALUES ('sd-2lx98atcp0', 1864588521);
 INSERT INTO cam."Study_contact" ("Study_study_id", contact_id) VALUES ('sd-3s8wpdnf71', 1474227128);
+INSERT INTO cam."Study_contact" ("Study_study_id", contact_id) VALUES ('sd-46ci4zfldo', 1474227128);
 
 
 --
@@ -6762,6 +6898,7 @@ INSERT INTO cam."Study_contact" ("Study_study_id", contact_id) VALUES ('sd-3s8wp
 
 INSERT INTO cam."Study_external_id" ("Study_study_id", external_id) VALUES ('sd-2lx98atcp0', 'https://example.org/cam-testdata/small/Study/s02');
 INSERT INTO cam."Study_external_id" ("Study_study_id", external_id) VALUES ('sd-3s8wpdnf71', 'https://example.org/cam-testdata/small/Study/s01');
+INSERT INTO cam."Study_external_id" ("Study_study_id", external_id) VALUES ('sd-46ci4zfldo', 'https://example.org/cam-testdata/small/Study/farm');
 
 
 --
@@ -6778,6 +6915,7 @@ INSERT INTO cam."Study_funding_source" ("Study_study_id", funding_source) VALUES
 
 INSERT INTO cam."Study_principal_investigator" ("Study_study_id", principal_investigator_id) VALUES ('sd-2lx98atcp0', 126719377);
 INSERT INTO cam."Study_principal_investigator" ("Study_study_id", principal_investigator_id) VALUES ('sd-3s8wpdnf71', 191685718);
+INSERT INTO cam."Study_principal_investigator" ("Study_study_id", principal_investigator_id) VALUES ('sd-46ci4zfldo', 191685718);
 
 
 --
@@ -6786,6 +6924,7 @@ INSERT INTO cam."Study_principal_investigator" ("Study_study_id", principal_inve
 
 INSERT INTO cam."Study_program" ("Study_study_id", program) VALUES ('sd-2lx98atcp0', 'https://www.nih.gov/include-project');
 INSERT INTO cam."Study_program" ("Study_study_id", program) VALUES ('sd-3s8wpdnf71', 'https://www.nih.gov/include-project');
+INSERT INTO cam."Study_program" ("Study_study_id", program) VALUES ('sd-46ci4zfldo', 'https://www.nih.gov/include-project');
 
 
 --
@@ -6822,11 +6961,13 @@ INSERT INTO cam."Subject" (subject_id, subject_type, organism_type, access_polic
 INSERT INTO cam."Subject" (subject_id, subject_type, organism_type, access_policy_id, study_id) VALUES ('pt-e1qowyg6qe', 'CAMO:0000024', NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Subject" (subject_id, subject_type, organism_type, access_policy_id, study_id) VALUES ('pt-f39hc6n8dq', 'CAMO:0000024', NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Subject" (subject_id, subject_type, organism_type, access_policy_id, study_id) VALUES ('pt-fhfb8mfhx3', 'CAMO:0000024', NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."Subject" (subject_id, subject_type, organism_type, access_policy_id, study_id) VALUES ('pt-g7k8bawahu', 'CAMO:0000024', NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Subject" (subject_id, subject_type, organism_type, access_policy_id, study_id) VALUES ('pt-hmejx0uz9s', 'CAMO:0000024', NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Subject" (subject_id, subject_type, organism_type, access_policy_id, study_id) VALUES ('pt-j86rjc1yiy', 'CAMO:0000024', NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Subject" (subject_id, subject_type, organism_type, access_policy_id, study_id) VALUES ('pt-ju11ude3rq', 'CAMO:0000024', NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Subject" (subject_id, subject_type, organism_type, access_policy_id, study_id) VALUES ('pt-k6m1krw8rg', 'CAMO:0000025', NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Subject" (subject_id, subject_type, organism_type, access_policy_id, study_id) VALUES ('pt-l98koluj11', 'CAMO:0000024', NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."Subject" (subject_id, subject_type, organism_type, access_policy_id, study_id) VALUES ('pt-ljkuzx3y8h', 'CAMO:0000024', NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Subject" (subject_id, subject_type, organism_type, access_policy_id, study_id) VALUES ('pt-ljv5blx4vb', 'CAMO:0000024', NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."Subject" (subject_id, subject_type, organism_type, access_policy_id, study_id) VALUES ('pt-lo3ubn20z3', 'CAMO:0000024', NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."Subject" (subject_id, subject_type, organism_type, access_policy_id, study_id) VALUES ('pt-m9q9s4y6en', 'CAMO:0000024', NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
@@ -6885,12 +7026,14 @@ INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asse
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-5p6v69rwhm', 'pt-8737trkhec', 'en-8hv34ena0p', 'CAMO:0000016', 'CAMO:0000010', 10337, 4609, NULL, NULL, NULL, NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-5sb1sy59d2', 'pt-2qhnztec9g', 'en-8k56b91q99', 'CAMO:0000016', 'CAMO:0000010', NULL, 4395, NULL, NULL, 25.6, NULL, 'ucum:kg/m2', NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-5zzox8519x', 'pt-yuolgzovn5', 'en-462rqvpjnl', 'CAMO:0000017', 'CAMO:0000014', 12183, 824, NULL, NULL, NULL, NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-624mh51411', 'pt-g7k8bawahu', 'en-7fmm7lgyl3', 'CAMO:0000016', 'CAMO:0000014', 3247, 3105, NULL, NULL, NULL, NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-64w3zhkcw3', 'pt-f39hc6n8dq', 'en-ianln70jil', 'CAMO:0000016', 'CAMO:0000011', 509, 258, NULL, NULL, NULL, NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-6lmo0ess49', 'pt-0y0gjl36rz', NULL, 'CAMO:0000017', 'CAMO:0000011', NULL, 13960, NULL, NULL, 51, NULL, 'ucum:cm', NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-8hq7l06k88', 'pt-rxqwqab2pf', 'en-5rb4xuwxbw', 'CAMO:0000019', 'CAMO:0000011', 16073, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-8vpra2ayrg', 'pt-ti0pzgxycp', 'en-p7bwjxjr89', 'CAMO:0000016', 'CAMO:0000010', 5732, 3879, NULL, NULL, NULL, NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-941d3lg2xt', 'pt-2qhnztec9g', 'en-8k56b91q99', 'CAMO:0000019', 'CAMO:0000010', 4395, 3668, NULL, NULL, NULL, NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-9ok8np4pct', 'pt-sdhpmoh9yq', 'en-4ftj1wn9eu', 'CAMO:0000016', 'CAMO:0000014', 12396, 11012, NULL, NULL, NULL, NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
+INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-9r0gkm9a0v', 'pt-g7k8bawahu', NULL, 'CAMO:0000019', 'CAMO:0000010', 3247, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-9wv520nakf', 'pt-f39hc6n8dq', 'en-ianln70jil', 'CAMO:0000016', 'CAMO:0000014', NULL, 509, NULL, NULL, 3.7, NULL, 'ucum:kg', NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-a1mdiqw21i', 'pt-sdhpmoh9yq', 'en-4ftj1wn9eu', 'CAMO:0000016', 'CAMO:0000010', 12396, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-a8n11ck7py', 'pt-r22hejnzwv', NULL, 'CAMO:0000019', 'CAMO:0000011', NULL, 1450, NULL, NULL, 71.3, NULL, 'ucum:kg', NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
@@ -6908,6 +7051,8 @@ INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asse
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-g0px7jqssh', 'pt-z07ixekmp1', NULL, 'CAMO:0000019', 'CAMO:0000011', 6181, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-h2qtdap1m7', 'pt-0y0gjl36rz', 'en-vm322d7vf8', 'CAMO:0000016', 'CAMO:0000010', 14106, 5001, NULL, NULL, NULL, NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-htk7avml6x', 'pt-223dzfx7g4', 'en-dnj7mbpxwy', 'CAMO:0000019', 'CAMO:0000011', 17634, 4693, NULL, NULL, NULL, NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
+INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-hv17llr2lv', 'pt-g7k8bawahu', 'en-cmnfpzmxej', 'CAMO:0000019', 'CAMO:0000011', 3779, 1628, NULL, NULL, NULL, NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-ih2t2v0e6t', 'pt-g7k8bawahu', 'en-7fmm7lgyl3', 'CAMO:0000017', 'CAMO:0000010', NULL, 3247, NULL, NULL, 7, NULL, 'ucum:kg', NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-irbaooji7l', 'pt-p8lz6kia0j', 'en-snfsdthc3l', 'CAMO:0000019', 'CAMO:0000014', 782, 767, NULL, NULL, NULL, NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-iw1m17fhef', 'pt-r8x9pj0tys', 'en-0ajbzdihrl', 'CAMO:0000019', 'CAMO:0000010', 13312, 13209, NULL, NULL, NULL, NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-jj27upzz1q', 'pt-89rj8wzflm', 'en-bpadpmgmn4', 'CAMO:0000019', 'CAMO:0000011', 4946, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
@@ -6939,11 +7084,13 @@ INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asse
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-wuv1f67ft6', 'pt-223dzfx7g4', NULL, 'CAMO:0000019', 'CAMO:0000014', NULL, 17634, NULL, NULL, 68.4, NULL, 'ucum:cm', NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-xa73tbpyx3', 'pt-x2oc43ni3s', 'en-fzvv6gtysy', 'CAMO:0000017', 'CAMO:0000011', 3282, 269, NULL, NULL, NULL, NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-xbt5jd77l3', 'pt-hmejx0uz9s', NULL, 'CAMO:0000016', 'CAMO:0000014', NULL, 1690, NULL, NULL, 31.5, NULL, 'ucum:kg', NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
+INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-xfo2wc2xv5', 'pt-g7k8bawahu', 'en-cmnfpzmxej', 'CAMO:0000017', 'CAMO:0000011', 3779, 3093, NULL, NULL, NULL, NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-xzea0tg5nn', 'pt-455yp3stzr', NULL, 'CAMO:0000017', 'CAMO:0000014', 8651, 7834, NULL, NULL, NULL, NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-y6owd4p9jf', 'pt-tyk26seuny', 'en-jeiqsk3o75', 'CAMO:0000019', 'CAMO:0000011', 6009, 4531, NULL, NULL, NULL, NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-yap6f4l0fa', 'pt-r8x9pj0tys', 'en-7b47r8p2wu', 'CAMO:0000016', 'CAMO:0000011', 12183, 6617, NULL, NULL, NULL, NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-ycsswekqji', 'pt-ti0pzgxycp', 'en-p7bwjxjr89', 'CAMO:0000017', 'CAMO:0000010', 5732, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-yi5ioecqje', 'pt-xoyf6cflcc', 'en-hty32ttirv', 'CAMO:0000016', 'CAMO:0000010', 5145, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
+INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-ykf3jetwvd', 'pt-g7k8bawahu', 'en-7fmm7lgyl3', 'CAMO:0000019', 'CAMO:0000010', 3247, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-ypnbvvn2kj', 'pt-p8lz6kia0j', 'en-snfsdthc3l', 'CAMO:0000019', 'CAMO:0000011', 782, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-z5aoibr9md', 'pt-6vj8yjqt9f', 'en-wk37ruji9h', 'CAMO:0000017', 'CAMO:0000014', 10108, 5913, NULL, NULL, NULL, NULL, NULL, NULL, 'co-yly4xno8c0', 'sd-2lx98atcp0');
 INSERT INTO cam."SubjectAssertion" (assertion_id, subject_id, encounter_id, asserter_type, assertion_source_type, age_at_assertion, age_at_event, age_at_resolution, concept_source, value_number, value_source, value_unit, value_unit_source, access_policy_id, study_id) VALUES ('ob-zlpaom14md', 'pt-sdhpmoh9yq', 'en-4ftj1wn9eu', 'CAMO:0000016', 'CAMO:0000014', 12396, 5026, NULL, NULL, NULL, NULL, NULL, NULL, 'co-tam2ciyi45', 'sd-3s8wpdnf71');
@@ -6982,12 +7129,14 @@ INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", con
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-5p6v69rwhm', 'HP:0000821');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-5sb1sy59d2', 'loinc:39156-5');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-5zzox8519x', 'MONDO:0008608');
+INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-624mh51411', 'HP:0030148');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-64w3zhkcw3', 'HP:0030148');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-6lmo0ess49', 'loinc:8302-2');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-8hq7l06k88', 'HP:0006695');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-8vpra2ayrg', 'HP:0001631');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-941d3lg2xt', 'HP:0006695');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-9ok8np4pct', 'MONDO:0008608');
+INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-9r0gkm9a0v', 'HP:0000821');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-9wv520nakf', 'loinc:29463-7');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-a1mdiqw21i', 'HP:0001631');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-a8n11ck7py', 'loinc:29463-7');
@@ -7005,6 +7154,8 @@ INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", con
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-g0px7jqssh', 'HP:0001252');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-h2qtdap1m7', 'HP:0001631');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-htk7avml6x', 'HP:0001629');
+INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-hv17llr2lv', 'HP:0001629');
+INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-ih2t2v0e6t', 'loinc:29463-7');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-irbaooji7l', 'MONDO:0002070');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-iw1m17fhef', 'MONDO:0002070');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-jj27upzz1q', 'MONDO:0008608');
@@ -7036,11 +7187,13 @@ INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", con
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-wuv1f67ft6', 'loinc:8302-2');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-xa73tbpyx3', 'HP:0006695');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-xbt5jd77l3', 'loinc:29463-7');
+INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-xfo2wc2xv5', 'HP:0001252');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-xzea0tg5nn', 'HP:0001631');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-y6owd4p9jf', 'HP:0000821');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-yap6f4l0fa', 'HP:0001252');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-ycsswekqji', 'HP:0001252');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-yi5ioecqje', 'HP:0001252');
+INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-ykf3jetwvd', 'HP:0001631');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-ypnbvvn2kj', 'MONDO:0002070');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-z5aoibr9md', 'HP:0006695');
 INSERT INTO cam."SubjectAssertion_concept" ("SubjectAssertion_assertion_id", concept_concept_curie) VALUES ('ob-zlpaom14md', 'HP:0030148');
@@ -7079,12 +7232,14 @@ INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id",
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-5p6v69rwhm', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-f0011-mother-a1');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-5sb1sy59d2', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-f0010-proband-a1');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-5zzox8519x', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-f0004-father-a1');
+INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-624mh51411', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a5');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-64w3zhkcw3', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-f0012-proband-a3');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-6lmo0ess49', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-f0002-mother-a4');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-8hq7l06k88', 'https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-mother-a1');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-8vpra2ayrg', 'https://example.org/cam-testdata/small/SubjectAssertion/s01-f0009-proband-a1');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-941d3lg2xt', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-f0010-proband-a3');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-9ok8np4pct', 'https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-father-a3');
+INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-9r0gkm9a0v', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a4');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-9wv520nakf', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-f0012-proband-a1');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-a1mdiqw21i', 'https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-father-a1');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-a8n11ck7py', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-f0001-proband-a1');
@@ -7102,6 +7257,8 @@ INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id",
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-g0px7jqssh', 'https://example.org/cam-testdata/small/SubjectAssertion/s01-f0012-proband-a1');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-h2qtdap1m7', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-f0002-mother-a2');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-htk7avml6x', 'https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-father-a1');
+INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-hv17llr2lv', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a6');
+INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-ih2t2v0e6t', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a3');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-irbaooji7l', 'https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-proband-a3');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-iw1m17fhef', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-father-a1');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-jj27upzz1q', 'https://example.org/cam-testdata/small/SubjectAssertion/s01-f0008-proband-a1');
@@ -7133,11 +7290,13 @@ INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id",
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-wuv1f67ft6', 'https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-father-a2');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-xa73tbpyx3', 'https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-proband-a1');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-xbt5jd77l3', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-proband-a2');
+INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-xfo2wc2xv5', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a2');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-xzea0tg5nn', 'https://example.org/cam-testdata/small/SubjectAssertion/s01-f0011-mother-a1');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-y6owd4p9jf', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-f0004-proband-a1');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-yap6f4l0fa', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-father-a3');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-ycsswekqji', 'https://example.org/cam-testdata/small/SubjectAssertion/s01-f0009-proband-a2');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-yi5ioecqje', 'https://example.org/cam-testdata/small/SubjectAssertion/s01-f0003-proband-a1');
+INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-ykf3jetwvd', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a1');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-ypnbvvn2kj', 'https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-proband-a2');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-z5aoibr9md', 'https://example.org/cam-testdata/small/SubjectAssertion/s02-f0003-father-a1');
 INSERT INTO cam."SubjectAssertion_external_id" ("SubjectAssertion_assertion_id", external_id) VALUES ('ob-zlpaom14md', 'https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-father-a6');
@@ -7171,11 +7330,13 @@ INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-5ocwif8f7h', 'snomedct:410516002');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-5p6v69rwhm', 'snomedct:410515003');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-5zzox8519x', 'snomedct:410515003');
+INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-624mh51411', 'snomedct:410515003');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-64w3zhkcw3', 'snomedct:410515003');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-8hq7l06k88', 'snomedct:410516002');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-8vpra2ayrg', 'snomedct:410515003');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-941d3lg2xt', 'snomedct:410515003');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-9ok8np4pct', 'snomedct:410515003');
+INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-9r0gkm9a0v', 'snomedct:410516002');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-a1mdiqw21i', 'snomedct:410516002');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-bivhr56z0q', 'snomedct:410515003');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-cnrubgx669', 'snomedct:410515003');
@@ -7188,6 +7349,7 @@ INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-g0px7jqssh', 'snomedct:410516002');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-h2qtdap1m7', 'snomedct:410515003');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-htk7avml6x', 'snomedct:410515003');
+INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-hv17llr2lv', 'snomedct:410515003');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-irbaooji7l', 'snomedct:410515003');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-iw1m17fhef', 'snomedct:410515003');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-jj27upzz1q', 'snomedct:410516002');
@@ -7206,11 +7368,13 @@ INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-uieesu2hpm', 'snomedct:410516002');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-whg2cuw90l', 'snomedct:410515003');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-xa73tbpyx3', 'snomedct:410515003');
+INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-xfo2wc2xv5', 'snomedct:410515003');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-xzea0tg5nn', 'snomedct:410515003');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-y6owd4p9jf', 'snomedct:410515003');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-yap6f4l0fa', 'snomedct:410515003');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-ycsswekqji', 'snomedct:410516002');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-yi5ioecqje', 'snomedct:410516002');
+INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-ykf3jetwvd', 'snomedct:410516002');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-ypnbvvn2kj', 'snomedct:410516002');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-z5aoibr9md', 'snomedct:410515003');
 INSERT INTO cam."SubjectAssertion_value_concept" ("SubjectAssertion_assertion_id", value_concept_concept_curie) VALUES ('ob-zlpaom14md', 'snomedct:410515003');
@@ -7244,11 +7408,13 @@ INSERT INTO cam."Subject_external_id" ("Subject_subject_id", external_id) VALUES
 INSERT INTO cam."Subject_external_id" ("Subject_subject_id", external_id) VALUES ('pt-e1qowyg6qe', 'https://example.org/cam-testdata/small/Subject/s01-f0011-proband');
 INSERT INTO cam."Subject_external_id" ("Subject_subject_id", external_id) VALUES ('pt-f39hc6n8dq', 'https://example.org/cam-testdata/small/Subject/s02-f0012-proband');
 INSERT INTO cam."Subject_external_id" ("Subject_subject_id", external_id) VALUES ('pt-fhfb8mfhx3', 'https://example.org/cam-testdata/small/Subject/s02-f0008-proband');
+INSERT INTO cam."Subject_external_id" ("Subject_subject_id", external_id) VALUES ('pt-g7k8bawahu', 'https://example.org/cam-testdata/small/Subject/s02-returning-s01-f0005-proband');
 INSERT INTO cam."Subject_external_id" ("Subject_subject_id", external_id) VALUES ('pt-hmejx0uz9s', 'https://example.org/cam-testdata/small/Subject/s02-f0009-proband');
 INSERT INTO cam."Subject_external_id" ("Subject_subject_id", external_id) VALUES ('pt-j86rjc1yiy', 'https://example.org/cam-testdata/small/Subject/s02-f0012-father');
 INSERT INTO cam."Subject_external_id" ("Subject_subject_id", external_id) VALUES ('pt-ju11ude3rq', 'https://example.org/cam-testdata/small/Subject/s01-f0005-proband');
 INSERT INTO cam."Subject_external_id" ("Subject_subject_id", external_id) VALUES ('pt-k6m1krw8rg', 'https://example.org/cam-testdata/small/Subject/s01-f0012-sibling');
 INSERT INTO cam."Subject_external_id" ("Subject_subject_id", external_id) VALUES ('pt-l98koluj11', 'https://example.org/cam-testdata/small/Subject/s02-f0002-proband');
+INSERT INTO cam."Subject_external_id" ("Subject_subject_id", external_id) VALUES ('pt-ljkuzx3y8h', 'https://example.org/cam-testdata/small/Subject/s02-returning-s01-f0011-proband');
 INSERT INTO cam."Subject_external_id" ("Subject_subject_id", external_id) VALUES ('pt-ljv5blx4vb', 'https://example.org/cam-testdata/small/Subject/s02-f0006-mother');
 INSERT INTO cam."Subject_external_id" ("Subject_subject_id", external_id) VALUES ('pt-lo3ubn20z3', 'https://example.org/cam-testdata/small/Subject/s01-f0001-proband');
 INSERT INTO cam."Subject_external_id" ("Subject_subject_id", external_id) VALUES ('pt-m9q9s4y6en', 'https://example.org/cam-testdata/small/Subject/s01-f0010-mother');
@@ -7711,6 +7877,30 @@ ALTER TABLE ONLY cam."Investigator_external_id"
 
 ALTER TABLE ONLY cam."Investigator"
     ADD CONSTRAINT "Investigator_pkey" PRIMARY KEY (id);
+
+
+--
+-- Name: Person_external_id Person_external_id_pkey; Type: CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_external_id"
+    ADD CONSTRAINT "Person_external_id_pkey" PRIMARY KEY ("Person_person_id", external_id);
+
+
+--
+-- Name: Person Person_pkey; Type: CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person"
+    ADD CONSTRAINT "Person_pkey" PRIMARY KEY (person_id);
+
+
+--
+-- Name: Person_subject_id Person_subject_id_pkey; Type: CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_subject_id"
+    ADD CONSTRAINT "Person_subject_id_pkey" PRIMARY KEY ("Person_person_id", subject_id_subject_id);
 
 
 --
@@ -8663,6 +8853,46 @@ ALTER TABLE ONLY cam."Investigator_external_id"
 
 ALTER TABLE ONLY cam."Investigator"
     ADD CONSTRAINT "Investigator_study_id_fkey" FOREIGN KEY (study_id) REFERENCES cam."Study"(study_id);
+
+
+--
+-- Name: Person Person_access_policy_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person"
+    ADD CONSTRAINT "Person_access_policy_id_fkey" FOREIGN KEY (access_policy_id) REFERENCES cam."AccessPolicy"(access_policy_id);
+
+
+--
+-- Name: Person_external_id Person_external_id_Person_person_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_external_id"
+    ADD CONSTRAINT "Person_external_id_Person_person_id_fkey" FOREIGN KEY ("Person_person_id") REFERENCES cam."Person"(person_id);
+
+
+--
+-- Name: Person Person_study_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person"
+    ADD CONSTRAINT "Person_study_id_fkey" FOREIGN KEY (study_id) REFERENCES cam."Study"(study_id);
+
+
+--
+-- Name: Person_subject_id Person_subject_id_Person_person_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_subject_id"
+    ADD CONSTRAINT "Person_subject_id_Person_person_id_fkey" FOREIGN KEY ("Person_person_id") REFERENCES cam."Person"(person_id);
+
+
+--
+-- Name: Person_subject_id Person_subject_id_subject_id_subject_id_fkey; Type: FK CONSTRAINT; Schema: cam; Owner: -
+--
+
+ALTER TABLE ONLY cam."Person_subject_id"
+    ADD CONSTRAINT "Person_subject_id_subject_id_subject_id_fkey" FOREIGN KEY (subject_id_subject_id) REFERENCES cam."Subject"(subject_id);
 
 
 --

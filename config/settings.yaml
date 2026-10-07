@@ -56,6 +56,8 @@ natural_keys:
   FamilyMembership: [[family_id, subject_id]]
   FamilyRelationship: [[family_member_id, relation, subject_id]]
   HashDigest: [[hash_type, hash_value]]
+  # a Subject is part of at most one Person
+  Person_subject_id: [[subject_id_subject_id]]
 
 profiles:
   tiny: {seed: "cam-testdata/tiny/v1"}

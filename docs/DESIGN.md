@@ -169,6 +169,7 @@ derive this mapping from SchemaView, don't hard-code it. The schema's
 | File | file_id | dr (DocumentReference) |
 | Assay | assay_id | di (DiagnosticReport) |
 | Dataset | dataset_id | ls (List) |
+| Person | person_id | pn (Person) |
 
 Demographics and StudyMetadata reuse their parent's ID (`subject_id`, `study_id`).
 
@@ -414,6 +415,13 @@ at least once.
   also has SHA-1. Hash values are the real digest of a deterministic string.
 - **Assays (3)**: WGS per DNA sample, linked to sample, subject, and CRAM.
 - **Dataset (1)**: S1 files, DOI, publication.
+- **Farm (umbrella study) + Person (1)**: Person derives from Record, so it
+  needs a study. It belongs to an umbrella "Farm" Study with its own open
+  access policy, required metadata, no subjects, and no study pointing to it.
+  The one Person links only `trio1-proband` (a Person is created when the first
+  study is ingested; later studies add their subjects). The scaled profiles add
+  returning participants with two-subject Persons (`config/profiles/*.yaml`,
+  `persons:`).
 
 `manifest.json` includes expected FHIR resource counts by ID prefix, which the
 dbt project can assert against directly.

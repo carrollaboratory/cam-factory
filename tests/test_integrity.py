@@ -290,3 +290,24 @@ def test_every_rule_has_a_negative_test() -> None:
         if name.startswith("test_r") and name[6].isdigit()
     }
     assert tested == set(RULES)
+
+
+def test_r1_allows_person_links_across_studies(session: Session, data: Dataset) -> None:
+    # the dataset's Person (scoped to the Farm) links subjects in S1 and S2
+    assert check(session, "R1") == []
+
+
+def test_r11_subject_in_two_persons(session: Session, data: Dataset) -> None:
+    person, link_table = T("Person"), T("Person_subject_id")
+    row = session.execute(person.select()).mappings().one()
+    run(session, insert(person).values({**row, "person_id": "pn-0000000000"}))
+    run(
+        session,
+        insert(link_table).values(
+            Person_person_id="pn-0000000000",
+            subject_id_subject_id=data["s2p1"].subject_id,
+        ),
+    )
+    assert [(v.table, v.key) for v in check(session, "R11")] == [
+        ("Person_subject_id", data["s2p1"].subject_id)
+    ]

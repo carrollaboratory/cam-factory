@@ -60,6 +60,17 @@
   - https://example.org/cam-testdata/small/Aliquot/s02-f0008-proband-blood-a1
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
+- aliquot_id: alq-3dy3ay2j15
+  sample_id: bs-xtttky72oh
+  availability_status: snomedct:103328004  # Available
+  quantity_number: 0.1
+  quantity_unit: ucum:ml  # ml
+  concentration_number: 72.4
+  concentration_unit: ucum:ng/uL  # nanogram per microliter
+  external_id:
+  - https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0011-proband-dna-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
 - aliquot_id: alq-3o7ca8raq9
   sample_id: bs-4ez6za4vnj
   availability_status: snomedct:103328004  # Available
@@ -187,6 +198,17 @@
   quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Aliquot/s02-f0001-proband-blood-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- aliquot_id: alq-6ce6wcr8zh
+  sample_id: bs-2lujybqhao
+  availability_status: snomedct:103328004  # Available
+  quantity_number: 0.1
+  quantity_unit: ucum:ml  # ml
+  concentration_number: 96.5
+  concentration_unit: ucum:ng/uL  # nanogram per microliter
+  external_id:
+  - https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0005-proband-dna-a3
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - aliquot_id: alq-6e15rf2ieb
@@ -450,6 +472,17 @@
   quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Aliquot/s02-f0001-proband-blood-a2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- aliquot_id: alq-e6qhz5ddqr
+  sample_id: bs-2lujybqhao
+  availability_status: snomedct:103328004  # Available
+  quantity_number: 0.1
+  quantity_unit: ucum:ml  # ml
+  concentration_number: 12.3
+  concentration_unit: ucum:ng/uL  # nanogram per microliter
+  external_id:
+  - https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0005-proband-dna-a1
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - aliquot_id: alq-ee86mv5s1t
@@ -832,6 +865,15 @@
   - https://example.org/cam-testdata/small/Aliquot/s02-f0005-proband-dna-a1
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
+- aliquot_id: alq-trdwry25pk
+  sample_id: bs-y8mi9al2z2
+  availability_status: snomedct:103328004  # Available
+  quantity_number: 1.6
+  quantity_unit: ucum:ml  # ml
+  external_id:
+  - https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0005-proband-blood-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
 - aliquot_id: alq-u5g50hnjly
   sample_id: bs-08dyug60bv
   availability_status: snomedct:103328004  # Available
@@ -912,6 +954,15 @@
   - https://example.org/cam-testdata/small/Aliquot/s01-f0002-proband-blood-a1
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
+- aliquot_id: alq-xh6ugxwur7
+  sample_id: bs-m8xj37twhd
+  availability_status: snomedct:103329007  # Unavailable
+  quantity_number: 1.5
+  quantity_unit: ucum:ml  # ml
+  external_id:
+  - https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0011-proband-blood-a1
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
 - aliquot_id: alq-xs9kbtawn7
   sample_id: bs-21qpxwci7x
   availability_status: snomedct:103328004  # Available
@@ -945,6 +996,17 @@
   - https://example.org/cam-testdata/small/Aliquot/s01-f0012-proband-dna-a1
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
+- aliquot_id: alq-ylp55fyary
+  sample_id: bs-2lujybqhao
+  availability_status: snomedct:103328004  # Available
+  quantity_number: 0.1
+  quantity_unit: ucum:ml  # ml
+  concentration_number: 18.3
+  concentration_unit: ucum:ng/uL  # nanogram per microliter
+  external_id:
+  - https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0005-proband-dna-a2
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
 - aliquot_id: alq-yq50qpmmwx
   sample_id: bs-4ez6za4vnj
   availability_status: snomedct:103328004  # Available

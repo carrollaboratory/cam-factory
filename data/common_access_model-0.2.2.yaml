@@ -84,6 +84,12 @@ types:
     from_schema: https://includedcc.org/common-access-model
     base: str
     uri: xsd:string
+  pnGlobalID:
+    name: pnGlobalID
+    description: Dewrangle pn global ID. For FHIR Person Resources.
+    from_schema: https://includedcc.org/common-access-model
+    base: str
+    uri: xsd:string
   obGlobalID:
     name: obGlobalID
     description: Dewrangle ob global ID. For FHIR Observation Resources.
@@ -28433,6 +28439,13 @@ slots:
     from_schema: https://includedcc.org/common-access-model
     range: Subject
     multivalued: false
+  person_id:
+    name: person_id
+    description: Global ID for the Person record
+    title: Person ID
+    from_schema: https://includedcc.org/common-access-model
+    range: Person
+    multivalued: false
   assertion_id:
     name: assertion_id
     description: INCLUDE Global ID for the Assertion
@@ -29407,7 +29420,7 @@ classes:
       do_id:
         name: do_id
         identifier: true
-        range: string
+        range: uri
         required: true
   Investigator:
     name: Investigator
@@ -29471,6 +29484,27 @@ classes:
         name: subject_id
         identifier: true
         required: true
+  Person:
+    name: Person
+    description: Links Subjects across study contexts. All Subjects in a given person
+      record are known to be the same individual.
+    title: Person
+    from_schema: https://includedcc.org/common-access-model
+    mixins:
+    - Record
+    slots:
+    - person_id
+    - subject_id
+    slot_usage:
+      person_id:
+        name: person_id
+        identifier: true
+        range: pnGlobalID
+        required: true
+      subject_id:
+        name: subject_id
+        required: true
+        multivalued: true
   Family:
     name: Family
     description: A group of individuals of some relation who are grouped together

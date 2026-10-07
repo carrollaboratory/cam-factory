@@ -26,12 +26,14 @@ ob-5ocwif8f7h,https://example.org/cam-testdata/small/SubjectAssertion/s01-f0010-
 ob-5p6v69rwhm,https://example.org/cam-testdata/small/SubjectAssertion/s02-f0011-mother-a1
 ob-5sb1sy59d2,https://example.org/cam-testdata/small/SubjectAssertion/s02-f0010-proband-a1
 ob-5zzox8519x,https://example.org/cam-testdata/small/SubjectAssertion/s02-f0004-father-a1
+ob-624mh51411,https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a5
 ob-64w3zhkcw3,https://example.org/cam-testdata/small/SubjectAssertion/s02-f0012-proband-a3
 ob-6lmo0ess49,https://example.org/cam-testdata/small/SubjectAssertion/s02-f0002-mother-a4
 ob-8hq7l06k88,https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-mother-a1
 ob-8vpra2ayrg,https://example.org/cam-testdata/small/SubjectAssertion/s01-f0009-proband-a1
 ob-941d3lg2xt,https://example.org/cam-testdata/small/SubjectAssertion/s02-f0010-proband-a3
 ob-9ok8np4pct,https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-father-a3
+ob-9r0gkm9a0v,https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a4
 ob-9wv520nakf,https://example.org/cam-testdata/small/SubjectAssertion/s02-f0012-proband-a1
 ob-a1mdiqw21i,https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-father-a1
 ob-a8n11ck7py,https://example.org/cam-testdata/small/SubjectAssertion/s02-f0001-proband-a1
@@ -49,6 +51,8 @@ ob-fquhcpaw0s,https://example.org/cam-testdata/small/SubjectAssertion/s02-f0006-
 ob-g0px7jqssh,https://example.org/cam-testdata/small/SubjectAssertion/s01-f0012-proband-a1
 ob-h2qtdap1m7,https://example.org/cam-testdata/small/SubjectAssertion/s02-f0002-mother-a2
 ob-htk7avml6x,https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-father-a1
+ob-hv17llr2lv,https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a6
+ob-ih2t2v0e6t,https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a3
 ob-irbaooji7l,https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-proband-a3
 ob-iw1m17fhef,https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-father-a1
 ob-jj27upzz1q,https://example.org/cam-testdata/small/SubjectAssertion/s01-f0008-proband-a1
@@ -80,11 +84,13 @@ ob-whg2cuw90l,https://example.org/cam-testdata/small/SubjectAssertion/s02-f0010-
 ob-wuv1f67ft6,https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-father-a2
 ob-xa73tbpyx3,https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-proband-a1
 ob-xbt5jd77l3,https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-proband-a2
+ob-xfo2wc2xv5,https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a2
 ob-xzea0tg5nn,https://example.org/cam-testdata/small/SubjectAssertion/s01-f0011-mother-a1
 ob-y6owd4p9jf,https://example.org/cam-testdata/small/SubjectAssertion/s02-f0004-proband-a1
 ob-yap6f4l0fa,https://example.org/cam-testdata/small/SubjectAssertion/s02-f0009-father-a3
 ob-ycsswekqji,https://example.org/cam-testdata/small/SubjectAssertion/s01-f0009-proband-a2
 ob-yi5ioecqje,https://example.org/cam-testdata/small/SubjectAssertion/s01-f0003-proband-a1
+ob-ykf3jetwvd,https://example.org/cam-testdata/small/SubjectAssertion/s02-returning-s01-f0005-proband-a1
 ob-ypnbvvn2kj,https://example.org/cam-testdata/small/SubjectAssertion/s01-f0002-proband-a2
 ob-z5aoibr9md,https://example.org/cam-testdata/small/SubjectAssertion/s02-f0003-father-a1
 ob-zlpaom14md,https://example.org/cam-testdata/small/SubjectAssertion/s01-f0004-father-a6

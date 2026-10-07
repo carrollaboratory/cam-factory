@@ -130,6 +130,12 @@
   - https://example.org/cam-testdata/small/Subject/s02-f0008-proband
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
+- subject_id: pt-g7k8bawahu
+  subject_type: CAMO:0000024  # Participant
+  external_id:
+  - https://example.org/cam-testdata/small/Subject/s02-returning-s01-f0005-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
 - subject_id: pt-hmejx0uz9s
   subject_type: CAMO:0000024  # Participant
   external_id:
@@ -158,6 +164,12 @@
   subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0002-proband
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- subject_id: pt-ljkuzx3y8h
+  subject_type: CAMO:0000024  # Participant
+  external_id:
+  - https://example.org/cam-testdata/small/Subject/s02-returning-s01-f0011-proband
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-ljv5blx4vb

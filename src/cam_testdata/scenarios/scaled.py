@@ -44,7 +44,13 @@ from cam_testdata.factories.study import (
     VirtualBiorepositoryFactory,
     attach_doi,
 )
-from cam_testdata.factories.subject import NON_PARTICIPANT, UNKNOWN, SubjectFactory
+from cam_testdata.factories.subject import (
+    NON_PARTICIPANT,
+    UNKNOWN,
+    DemographicsFactory,
+    PersonFactory,
+    SubjectFactory,
+)
 from cam_testdata.settings import PROJECT_ROOT
 
 PROFILES_DIR = PROJECT_ROOT / "config" / "profiles"
@@ -93,7 +99,10 @@ class StudyContext:
     doi: Any
     publication: Any
     metadata: Any
+    pi: Any = None
+    contact: Any = None
     participants: list[Any] = field(default_factory=list)
+    probands: list[tuple[str, Any, dict[str, Any]]] = field(default_factory=list)
     files: list[Any] = field(default_factory=list)
 
 
@@ -144,6 +153,10 @@ class ScaledScenario:
         for ctx in studies:
             for f in range(1, int(self.c["families_per_study"]) + 1):
                 self.family(ctx, f"{ctx.key}-f{f:04d}")
+        self.farm_and_persons(
+            studies
+        )  # before files: returning participants count in their new study
+        for ctx in studies:
             self.study_files(ctx)
 
     def study(self, key: str, controlled: bool, parent: Any) -> StudyContext:
@@ -234,7 +247,18 @@ class ScaledScenario:
             name="Follow-up visit",
             activity_definition_id=[activities["clinical"]],
         )
-        return StudyContext(key, study, activities, baseline, follow_up, doi, pub, meta)
+        return StudyContext(
+            key,
+            study,
+            activities,
+            baseline,
+            follow_up,
+            doi,
+            pub,
+            meta,
+            pi=pi,
+            contact=contact,
+        )
 
     def family(self, ctx: StudyContext, key: str) -> None:
         mix = self.c["family_mix"]
@@ -249,6 +273,7 @@ class ScaledScenario:
         unit: FamilyUnit = make_family(
             kind, ctx.study, key, member_demographics=demographics
         )
+        ctx.probands.append((f"{key}-proband", unit.proband, demographics["proband"]))
         if self.chance(
             "Family", key, "sibling", float(self.c.get("non_participant_sibling", 0))
         ):
@@ -476,6 +501,79 @@ class ScaledScenario:
                 availability_status=status,
                 **extra,
             )
+
+    def farm_and_persons(self, studies: list[StudyContext]) -> None:
+        """The umbrella Farm study and Person records (MODEL_ISSUES #25).
+
+        A Person links Subjects known to be the same individual. Some s01 probands
+        get a single-subject Person (a later study isn't ingested yet); others are
+        returning participants, with a new Subject in a later study.
+        """
+        persons = self.c.get("persons")
+        if not persons:
+            return
+        first, others = studies[0], studies[1:]
+        ap = AccessPolicyFactory(
+            handle=self.h("AccessPolicy", "ap-farm"), data_use_permission="DUO:0000042"
+        )
+        farm = StudyFactory(
+            handle=self.h("Study", "farm"),
+            access_policy=ap,
+            program=[INCLUDE],
+            study_title="Old MacDonald's Farm",
+            study_code="FARM",
+            study_description="Umbrella record for Person links across the farm's studies. Holds no subjects of its own.",
+            principal_investigator=[first.pi],
+            contact=[first.contact],
+        )
+        StudyMetadataFactory(
+            handle=self.h("StudyMetadata", "farm"),
+            study=farm,
+            expected_number_of_participants=0,
+            actual_number_of_participants=0,
+            participant_lifespan_stage=self.pick(
+                "StudyMetadata", "farm", "StudyMetadata.participant_lifespan_stage"
+            ),
+            study_design=self.pick(
+                "StudyMetadata", "farm", "StudyMetadata.study_design"
+            ),
+            clinical_data_source_type=self.pick(
+                "StudyMetadata", "farm", "StudyMetadata.clinical_data_source_type"
+            ),
+            data_category=self.pick(
+                "StudyMetadata", "farm", "StudyMetadata.data_category"
+            ),
+            research_domain=self.pick(
+                "StudyMetadata", "farm", "StudyMetadata.research_domain"
+            ),
+        )
+        returning, single = (
+            float(persons.get("returning", 0)),
+            float(persons.get("single", 0)),
+        )
+        for key, subject, demo in first.probands:
+            r = self.rng("Person", key, "person")
+            roll = r.random()
+            if others and roll < returning:
+                other = r.choice(others)
+                new_key = f"{other.key}-returning-{key}"
+                again = SubjectFactory(
+                    handle=self.h("Subject", new_key), scope=other.study
+                )
+                demographics = DemographicsFactory(
+                    handle=self.h("Demographics", new_key), subject=again, **demo
+                )
+                self.participant(other, new_key, again, demographics, child=True)
+                other.participants.append(again)
+                PersonFactory(
+                    handle=self.h("Person", key),
+                    scope=farm,
+                    subject_id=[subject, again],
+                )
+            elif roll < returning + single:
+                PersonFactory(
+                    handle=self.h("Person", key), scope=farm, subject_id=[subject]
+                )
 
     def study_files(self, ctx: StudyContext) -> None:
         files = list(ctx.files)

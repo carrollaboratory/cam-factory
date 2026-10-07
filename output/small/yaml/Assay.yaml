@@ -24,6 +24,19 @@
   - https://example.org/cam-testdata/small/Assay/s02-f0006-proband-wgs
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
+- assay_id: di-16frwrlysi
+  subject_id:
+  - pt-g7k8bawahu
+  sample_id:
+  - bs-2lujybqhao
+  file_id:
+  - dr-57nzhcprk0
+  assay_type: OBI:0002117  # whole genome sequencing assay
+  activity_definition_id: ad-4b1di32cvz
+  external_id:
+  - https://example.org/cam-testdata/small/Assay/s02-returning-s01-f0005-proband-wgs
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
 - assay_id: di-1jo2sftayh
   subject_id:
   - pt-tyk26seuny

@@ -26,12 +26,14 @@ ob-5ocwif8f7h,HP:0030148
 ob-5p6v69rwhm,HP:0000821
 ob-5sb1sy59d2,loinc:39156-5
 ob-5zzox8519x,MONDO:0008608
+ob-624mh51411,HP:0030148
 ob-64w3zhkcw3,HP:0030148
 ob-6lmo0ess49,loinc:8302-2
 ob-8hq7l06k88,HP:0006695
 ob-8vpra2ayrg,HP:0001631
 ob-941d3lg2xt,HP:0006695
 ob-9ok8np4pct,MONDO:0008608
+ob-9r0gkm9a0v,HP:0000821
 ob-9wv520nakf,loinc:29463-7
 ob-a1mdiqw21i,HP:0001631
 ob-a8n11ck7py,loinc:29463-7
@@ -49,6 +51,8 @@ ob-fquhcpaw0s,HP:0001631
 ob-g0px7jqssh,HP:0001252
 ob-h2qtdap1m7,HP:0001631
 ob-htk7avml6x,HP:0001629
+ob-hv17llr2lv,HP:0001629
+ob-ih2t2v0e6t,loinc:29463-7
 ob-irbaooji7l,MONDO:0002070
 ob-iw1m17fhef,MONDO:0002070
 ob-jj27upzz1q,MONDO:0008608
@@ -80,11 +84,13 @@ ob-whg2cuw90l,MONDO:0002070
 ob-wuv1f67ft6,loinc:8302-2
 ob-xa73tbpyx3,HP:0006695
 ob-xbt5jd77l3,loinc:29463-7
+ob-xfo2wc2xv5,HP:0001252
 ob-xzea0tg5nn,HP:0001631
 ob-y6owd4p9jf,HP:0000821
 ob-yap6f4l0fa,HP:0001252
 ob-ycsswekqji,HP:0001252
 ob-yi5ioecqje,HP:0001252
+ob-ykf3jetwvd,HP:0001631
 ob-ypnbvvn2kj,MONDO:0002070
 ob-z5aoibr9md,HP:0006695
 ob-zlpaom14md,HP:0030148

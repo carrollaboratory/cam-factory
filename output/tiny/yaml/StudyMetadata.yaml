@@ -19,6 +19,22 @@
   external_id:
   - https://example.org/cam-testdata/tiny/StudyMetadata/s1
   access_policy_id: co-ajdm9fyxxz
+- study_id: sd-8kurbmb04j
+  participant_lifespan_stage:
+  - NCIT:C199314  # Adulthood
+  study_design:
+  - mesh:D015331  # Cohort Studies
+  clinical_data_source_type:
+  - CAMO:0000011  # Research Assessment
+  data_category:
+  - edam:topic_0625  # Genotype and phenotype
+  research_domain:
+  - mesh:D013568  # All Co-occurring Conditions
+  expected_number_of_participants: 0
+  actual_number_of_participants: 0
+  external_id:
+  - https://example.org/cam-testdata/tiny/StudyMetadata/farm
+  access_policy_id: co-puem3gdzaf
 - study_id: sd-upp74psk4k
   participant_lifespan_stage:
   - NCIT:C199314  # Adulthood

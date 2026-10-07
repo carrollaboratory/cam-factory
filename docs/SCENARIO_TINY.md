@@ -9,6 +9,7 @@ Source: `scenarios/tiny.yaml`. IDs are minted from handles (`tiny/<Class>/<key>`
 | key | ID | title | code | access policy | parent |
 |---|---|---|---|---|---|
 | s1 | `sd-7hwpqzc2yr` | Madamoiselle Moo's Marvelous Research Study | M00M00 | ap-controlled: disease specific research (`DUO:0000007`) | — |
+| farm | `sd-8kurbmb04j` | Old MacDonald's Farm | FARM | ap-farm: general research use (`DUO:0000042`) | — |
 | s2 | `sd-upp74psk4k` | Tiny Follow-on Study | TINY-S2 | ap-open: general research use (`DUO:0000042`) | s1 |
 
 ## Subjects
@@ -17,6 +18,7 @@ Source: `scenarios/tiny.yaml`. IDs are minted from handles (`tiny/<Class>/<key>`
 
 - Type: Participant (`CAMO:0000024`)
 - Family role: trio1: Proband (`snomedct:85900004`)
+- Person: trio1-proband (`pn-qhhalhdrfd`)
 - Sex: Female (`snomedct:248152002`); ethnicity: Not Hispanic or Latino (`CDCREC:2186-5`); Alive (`snomedct:438949009`) at day 2190
 - Encounters: trio1-proband-baseline (day 1826); trio1-proband-follow-up (day 2190)
 - Assertions: trio1-proband-avsd: Atrioventricular canal defect (`HP:0006695`) = Known present; trio1-proband-ds: Down syndrome (`MONDO:0008608`) = Known present; trio1-proband-height: Body Height (`loinc:8302-2`) = 109.2 cm; trio1-proband-hypothyroid-absent: Hypothyroidism (`HP:0000821`) = Known absent
@@ -61,7 +63,7 @@ Source: `scenarios/tiny.yaml`. IDs are minted from handles (`tiny/<Class>/<key>`
 |---|---|
 | `ad` | 3 |
 | `bs` | 6 |
-| `co` | 2 |
+| `co` | 3 |
 | `di` | 3 |
 | `dr` | 5 |
 | `en` | 5 |
@@ -71,8 +73,9 @@ Source: `scenarios/tiny.yaml`. IDs are minted from handles (`tiny/<Class>/<key>`
 | `ob` | 6 |
 | `or` | 1 |
 | `pd` | 2 |
+| `pn` | 1 |
 | `pt` | 5 |
-| `sd` | 2 |
+| `sd` | 3 |
 
 ## Coverage features
 
@@ -95,6 +98,8 @@ Source: `scenarios/tiny.yaml`. IDs are minted from handles (`tiny/<Class>/<key>`
 | multiple_races | trio1-proband |
 | non_participant_without_demographics | trio1-sibling |
 | numeric_assertion_ucum | trio1-proband-height |
+| person_across_studies |  |
+| person_record | trio1-proband |
 | study_doi_cycle | s1 |
 | unavailable_aliquot | trio1-father-blood-a1 |
 | unknown_ethnicity | trio1-father |
@@ -104,7 +109,7 @@ Source: `scenarios/tiny.yaml`. IDs are minted from handles (`tiny/<Class>/<key>`
 
 | table | rows |
 |---|---|
-| AccessPolicy | 2 |
+| AccessPolicy | 3 |
 | ActivityDefinition | 3 |
 | ActivityDefinition_external_id | 3 |
 | Aliquot | 7 |
@@ -145,25 +150,28 @@ Source: `scenarios/tiny.yaml`. IDs are minted from handles (`tiny/<Class>/<key>`
 | HashDigest | 6 |
 | Investigator | 2 |
 | Investigator_external_id | 2 |
+| Person | 1 |
+| Person_external_id | 1 |
+| Person_subject_id | 1 |
 | Publication | 1 |
 | Publication_external_id | 1 |
 | Sample | 6 |
 | Sample_external_id | 6 |
 | Sample_processing | 3 |
 | Sample_storage_method | 2 |
-| Study | 2 |
-| StudyMetadata | 2 |
-| StudyMetadata_clinical_data_source_type | 3 |
-| StudyMetadata_data_category | 3 |
-| StudyMetadata_external_id | 2 |
-| StudyMetadata_participant_lifespan_stage | 3 |
-| StudyMetadata_research_domain | 2 |
-| StudyMetadata_study_design | 3 |
-| Study_contact | 2 |
-| Study_external_id | 3 |
+| Study | 3 |
+| StudyMetadata | 3 |
+| StudyMetadata_clinical_data_source_type | 4 |
+| StudyMetadata_data_category | 4 |
+| StudyMetadata_external_id | 3 |
+| StudyMetadata_participant_lifespan_stage | 4 |
+| StudyMetadata_research_domain | 3 |
+| StudyMetadata_study_design | 4 |
+| Study_contact | 3 |
+| Study_external_id | 4 |
 | Study_funding_source | 1 |
-| Study_principal_investigator | 2 |
-| Study_program | 2 |
+| Study_principal_investigator | 3 |
+| Study_program | 3 |
 | Study_publication | 1 |
 | Subject | 5 |
 | SubjectAssertion | 6 |
