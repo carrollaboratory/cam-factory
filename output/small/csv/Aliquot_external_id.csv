@@ -5,6 +5,7 @@ alq-16ss9qo29h,https://example.org/cam-testdata/small/Aliquot/s02-f0001-proband-
 alq-1v4p1q2610,https://example.org/cam-testdata/small/Aliquot/s01-f0010-mother-blood-a1
 alq-22f1jtgs35,https://example.org/cam-testdata/small/Aliquot/s02-f0003-father-dna-a1
 alq-2gjrrrb8tb,https://example.org/cam-testdata/small/Aliquot/s02-f0008-proband-blood-a1
+alq-3dy3ay2j15,https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0011-proband-dna-a1
 alq-3o7ca8raq9,https://example.org/cam-testdata/small/Aliquot/s01-f0004-proband-dna-a1
 alq-3pyyvmsble,https://example.org/cam-testdata/small/Aliquot/s02-f0002-proband-dna-a2
 alq-3rbmj3ugmz,https://example.org/cam-testdata/small/Aliquot/s02-f0002-mother-dna-a1
@@ -18,6 +19,7 @@ alq-4vlwadvloh,https://example.org/cam-testdata/small/Aliquot/s02-f0004-proband-
 alq-54m59kizhx,https://example.org/cam-testdata/small/Aliquot/s02-f0011-proband-blood-a2
 alq-5aksfh520m,https://example.org/cam-testdata/small/Aliquot/s01-f0002-mother-blood-a1
 alq-5t3k3oo1sw,https://example.org/cam-testdata/small/Aliquot/s02-f0001-proband-blood-a1
+alq-6ce6wcr8zh,https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0005-proband-dna-a3
 alq-6e15rf2ieb,https://example.org/cam-testdata/small/Aliquot/s01-f0002-proband-dna-a1
 alq-6mmjmii4ho,https://example.org/cam-testdata/small/Aliquot/s01-f0011-father-blood-a1
 alq-6p6orj1hj6,https://example.org/cam-testdata/small/Aliquot/s02-f0009-father-blood-a1
@@ -45,6 +47,7 @@ alq-ckgbuhekax,https://example.org/cam-testdata/small/Aliquot/s02-f0003-proband-
 alq-csde1c1rba,https://example.org/cam-testdata/small/Aliquot/s01-f0002-mother-dna-a1
 alq-detgv1pb6p,https://example.org/cam-testdata/small/Aliquot/s02-f0004-proband-blood-a1
 alq-dob0skdoec,https://example.org/cam-testdata/small/Aliquot/s02-f0001-proband-blood-a2
+alq-e6qhz5ddqr,https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0005-proband-dna-a1
 alq-ee86mv5s1t,https://example.org/cam-testdata/small/Aliquot/s01-f0002-proband-blood-a2
 alq-egx5qy4h9p,https://example.org/cam-testdata/small/Aliquot/s01-f0011-proband-blood-a1
 alq-fdcq5iaip7,https://example.org/cam-testdata/small/Aliquot/s02-f0006-proband-dna-a1
@@ -83,6 +86,7 @@ alq-qvunau8fl1,https://example.org/cam-testdata/small/Aliquot/s02-f0011-proband-
 alq-s87pmz6f5l,https://example.org/cam-testdata/small/Aliquot/s02-f0006-proband-dna-a2
 alq-sozfhus5kf,https://example.org/cam-testdata/small/Aliquot/s01-f0010-mother-blood-a2
 alq-sy5uejza11,https://example.org/cam-testdata/small/Aliquot/s02-f0005-proband-dna-a1
+alq-trdwry25pk,https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0005-proband-blood-a1
 alq-u5g50hnjly,https://example.org/cam-testdata/small/Aliquot/s02-f0004-proband-dna-a1
 alq-ug4ys71w65,https://example.org/cam-testdata/small/Aliquot/s01-f0004-proband-blood-a1
 alq-ukrk0ov3t0,https://example.org/cam-testdata/small/Aliquot/s02-f0002-proband-dna-a1
@@ -91,8 +95,10 @@ alq-uw6xb9ube5,https://example.org/cam-testdata/small/Aliquot/s02-f0012-mother-d
 alq-vacfuvfvkn,https://example.org/cam-testdata/small/Aliquot/s02-f0002-proband-blood-a1
 alq-wq4nrrmnpd,https://example.org/cam-testdata/small/Aliquot/s01-f0003-proband-blood-a1
 alq-wtsdrbtu27,https://example.org/cam-testdata/small/Aliquot/s01-f0002-proband-blood-a1
+alq-xh6ugxwur7,https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0011-proband-blood-a1
 alq-xs9kbtawn7,https://example.org/cam-testdata/small/Aliquot/s01-f0011-mother-dna-a1
 alq-y6hqmjvafq,https://example.org/cam-testdata/small/Aliquot/s01-f0002-proband-dna-a2
 alq-yegrxjetsk,https://example.org/cam-testdata/small/Aliquot/s01-f0012-proband-dna-a1
+alq-ylp55fyary,https://example.org/cam-testdata/small/Aliquot/s02-returning-s01-f0005-proband-dna-a2
 alq-yq50qpmmwx,https://example.org/cam-testdata/small/Aliquot/s01-f0004-proband-dna-a2
 alq-zcp4avhohv,https://example.org/cam-testdata/small/Aliquot/s02-f0003-mother-dna-a1

@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 from cam_testdata.build import Build
 from cam_testdata.scenarios.loader import LoaderError, load_scenario
 from cam_testdata.settings import PROJECT_ROOT
-from cam_testdata.validate.coverage import missing_features
+from cam_testdata.validate.coverage import NOT_REQUIRED_IN_TINY, missing_features
 from cam_testdata.validate.integrity import run_all
 
 TINY = PROJECT_ROOT / "scenarios" / "tiny.yaml"
@@ -109,7 +109,7 @@ def test_one_to_one_uses_parent_key(tmp_path: Path) -> None:
 
 # Pinned per-table counts for tiny (update together with docs/SCENARIO_TINY.md).
 TINY_ENTITY_COUNTS = {
-    "AccessPolicy": 2,
+    "AccessPolicy": 3,  # controlled, open, Farm
     "ActivityDefinition": 3,
     "Aliquot": 7,
     "Assay": 3,
@@ -125,10 +125,11 @@ TINY_ENTITY_COUNTS = {
     "File": 5,
     "HashDigest": 6,
     "Investigator": 2,
+    "Person": 1,  # one subject so far (first study ingested)
     "Publication": 1,
     "Sample": 6,
-    "Study": 2,
-    "StudyMetadata": 2,
+    "Study": 3,  # S1, S2, Farm umbrella
+    "StudyMetadata": 3,
     "Subject": 5,
     "SubjectAssertion": 6,
     "VirtualBiorepository": 1,
@@ -142,9 +143,10 @@ def test_tiny_builds_valid_and_covers_every_feature(session: Session) -> None:
     assert {
         t: n for t, n in counts.items() if t in TINY_ENTITY_COUNTS
     } == TINY_ENTITY_COUNTS
-    assert sum(counts.values()) == 226
+    assert sum(counts.values()) == 242
     assert {rule: v for rule, v in run_all(session.connection()).items() if v} == {}
-    assert missing_features(session.connection()) == []
+    missing = set(missing_features(session.connection()))
+    assert missing <= NOT_REQUIRED_IN_TINY
     s1 = result[("Study", "s1")]
     assert (
         s1.study_id == "sd-7hwpqzc2yr" and s1.do_id == result[("DOI", "s1-doi")].do_id

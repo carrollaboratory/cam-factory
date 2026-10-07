@@ -99,7 +99,9 @@ def test_study_doi_cycle(session: Session) -> None:
         attach_doi(study, doi)
     build.write(session)
     session.refresh(study)
-    assert study.do_id == doi.do_id and doi.do_id.startswith("10.5072/cam-testdata.")
+    assert study.do_id == doi.do_id and doi.do_id.startswith(
+        "https://doi.org/10.5072/cam-testdata."
+    )
 
 
 def test_self_reference_parents_first(session: Session) -> None:

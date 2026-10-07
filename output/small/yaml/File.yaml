@@ -5,19 +5,37 @@
   - bs-mkwfg60t6o
   filename: s01-f0002-proband-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 269148449
   hash:
-  - hash_type: MS:1000569
+  - hash_type: MS:1000569  # SHA-1
     hash_value: 3448fa9a9acaeada864c58d81c12f14852fcd745
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: a3be416d6d8295ee629c9dd6b953187a
   external_id:
   - https://example.org/cam-testdata/small/File/s01-f0002-proband-cram
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
+- file_id: dr-57nzhcprk0
+  subject_id:
+  - pt-g7k8bawahu
+  sample_id:
+  - bs-2lujybqhao
+  filename: s02-returning-s01-f0005-proband-cram.cram
+  file_extension: .cram
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
+  size: 1759646869
+  hash:
+  - hash_type: MS:1000568  # MD5
+    hash_value: 1c518bc65e8081f3009680496ba6980d
+  external_id:
+  - https://example.org/cam-testdata/small/File/s02-returning-s01-f0005-proband-cram
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
 - file_id: dr-5u4yj6t1qz
   subject_id:
   - pt-p8lz6kia0j
@@ -27,12 +45,12 @@
   - bs-mkwfg60t6o
   filename: s01-f0002-joint-vcf.vcf.gz
   file_extension: .vcf.gz
-  data_category: edam:topic_0199
-  data_type: edam:data_3498
-  format: edam:format_3016
+  data_category: edam:topic_0199  # Genetic variation
+  data_type: edam:data_3498  # Sequence variations
+  format: edam:format_3016  # VCF
   size: 241393766
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: a2786eb5d29000526eb1eb812cdd4902
   external_id:
   - https://example.org/cam-testdata/small/File/s01-f0002-joint-vcf
@@ -45,12 +63,12 @@
   - bs-zznq3y70wq
   filename: s02-f0002-father-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 2030818155
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: c9c71369c3d7878f3b1bfe3bec10e730
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0002-father-cram
@@ -63,12 +81,12 @@
   - bs-4738chr6tm
   filename: s02-f0004-father-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 1617726871
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: e252c03596782a8d1663a7ba6f23de69
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0004-father-cram
@@ -85,12 +103,12 @@
   - bs-zznq3y70wq
   filename: s02-f0002-joint-vcf.vcf.gz
   file_extension: .vcf.gz
-  data_category: edam:topic_0199
-  data_type: edam:data_3498
-  format: edam:format_3016
+  data_category: edam:topic_0199  # Genetic variation
+  data_type: edam:data_3498  # Sequence variations
+  format: edam:format_3016  # VCF
   size: 3867325
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 354346173ea4dec48d98a4983ae47457
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0002-joint-vcf
@@ -103,12 +121,12 @@
   - bs-20483amku9
   filename: s01-f0012-proband-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 63999109
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 461bbe425c3a22422cf2b9cbcad5a868
   external_id:
   - https://example.org/cam-testdata/small/File/s01-f0012-proband-cram
@@ -121,12 +139,12 @@
   - bs-c9m3animcq
   filename: s02-f0012-father-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 1630338093
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 20c9ff43dbd127b052a799c8ef1881a9
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0012-father-cram
@@ -139,12 +157,12 @@
   - bs-bm46zush6y
   filename: s01-f0003-proband-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 2131530439
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 96e8c8b67baaf49d8443961249ec281a
   external_id:
   - https://example.org/cam-testdata/small/File/s01-f0003-proband-cram
@@ -157,12 +175,12 @@
   - bs-7i4ai02qm7
   filename: s02-f0003-proband-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 1824847113
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 525c596bf89948c56890721066137c4c
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0003-proband-cram
@@ -175,12 +193,12 @@
   - bs-pu48nhp9on
   filename: s02-f0008-proband-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 1818952457
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: d42b5d50485308a6d4d2f69a4fa9c9d1
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0008-proband-cram
@@ -193,12 +211,12 @@
   - bs-4ez6za4vnj
   filename: s01-f0004-proband-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 1191594557
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: d9d56493bd5ef4e1110d25753e1d46d1
   external_id:
   - https://example.org/cam-testdata/small/File/s01-f0004-proband-cram
@@ -211,12 +229,12 @@
   - bs-fpd4arpkia
   filename: s01-f0002-mother-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 29118500
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 2b3bbd21879470f178a7d845a72865f7
   external_id:
   - https://example.org/cam-testdata/small/File/s01-f0002-mother-cram
@@ -229,12 +247,12 @@
   - bs-ownnxjyr9y
   filename: s02-f0001-proband-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 1164088167
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 6e98191a5267d584a7bad3f721d9addd
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0001-proband-cram
@@ -247,12 +265,12 @@
   - bs-x12ulavrim
   filename: s02-f0011-father-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 1973164776
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 100939f550ae01d446fa1e72c9f7180a
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0011-father-cram
@@ -265,12 +283,12 @@
   - bs-k29u6tlui0
   filename: s02-f0009-father-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 293628947
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 1d545d25448131f82340cbaede782e2f
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0009-father-cram
@@ -283,12 +301,12 @@
   - bs-qfaoo63s3j
   filename: s02-f0012-proband-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 1149591326
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 36fafacecec39f6d2c5e114cd59ae222
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0012-proband-cram
@@ -301,12 +319,12 @@
   - bs-po7nbit95v
   filename: s01-f0006-father-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 722882313
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 2e7dfb13e7db1bdc76df2552b3157210
   external_id:
   - https://example.org/cam-testdata/small/File/s01-f0006-father-cram
@@ -319,14 +337,14 @@
   - bs-aq1hmsfl13
   filename: s02-f0002-mother-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 1615136916
   hash:
-  - hash_type: MS:1000569
+  - hash_type: MS:1000569  # SHA-1
     hash_value: 3cd66e5ca74760db7562f171b73f1aa18d9c467b
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: eb27359b7290f1d3b506add5b6fb0e4b
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0002-mother-cram
@@ -348,9 +366,11 @@
   - pt-9mylk1ozmd
   - pt-f39hc6n8dq
   - pt-fhfb8mfhx3
+  - pt-g7k8bawahu
   - pt-hmejx0uz9s
   - pt-j86rjc1yiy
   - pt-l98koluj11
+  - pt-ljkuzx3y8h
   - pt-ljv5blx4vb
   - pt-pkqb7v1zxd
   - pt-q5abjhzige
@@ -364,11 +384,11 @@
   - pt-yuolgzovn5
   filename: s02-clinical.tsv
   file_extension: .tsv
-  data_category: edam:topic_0625
-  format: edam:format_3475
+  data_category: edam:topic_0625  # Genotype and phenotype
+  format: edam:format_3475  # TSV
   size: 1990331037
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: c23a48d39c4db1c019e5196a6c331dfd
   external_id:
   - https://example.org/cam-testdata/small/File/s02-clinical
@@ -381,12 +401,12 @@
   - bs-5rgzjle102
   filename: s02-f0005-proband-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 617469313
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 7b08955ef57d8785cef93f07655b8169
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0005-proband-cram
@@ -418,11 +438,11 @@
   - pt-z07ixekmp1
   filename: s01-clinical.tsv
   file_extension: .tsv
-  data_category: edam:topic_0625
-  format: edam:format_3475
+  data_category: edam:topic_0625  # Genotype and phenotype
+  format: edam:format_3475  # TSV
   size: 806508016
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 5798f78bc6479fb66a752b2b2b7ac168
   external_id:
   - https://example.org/cam-testdata/small/File/s01-clinical
@@ -439,12 +459,12 @@
   - bs-qfaoo63s3j
   filename: s02-f0012-joint-vcf.vcf.gz
   file_extension: .vcf.gz
-  data_category: edam:topic_0199
-  data_type: edam:data_3498
-  format: edam:format_3016
+  data_category: edam:topic_0199  # Genetic variation
+  data_type: edam:data_3498  # Sequence variations
+  format: edam:format_3016  # VCF
   size: 425507732
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: ac5c73e79795e6cb49510d6fd78f9384
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0012-joint-vcf
@@ -457,12 +477,12 @@
   - bs-qm0dlp7ik5
   filename: s02-f0010-proband-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 1976321380
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 9e77f8a008469cef6a034fd28f26d876
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0010-proband-cram
@@ -475,12 +495,12 @@
   - bs-debyobor67
   filename: s02-f0012-mother-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 1203977945
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: a722f8e36358eb7d86996a0c23fc2dd9
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0012-mother-cram
@@ -495,12 +515,12 @@
   - bs-4738chr6tm
   filename: s02-f0004-joint-vcf.vcf.gz
   file_extension: .vcf.gz
-  data_category: edam:topic_0199
-  data_type: edam:data_3498
-  format: edam:format_3016
+  data_category: edam:topic_0199  # Genetic variation
+  data_type: edam:data_3498  # Sequence variations
+  format: edam:format_3016  # VCF
   size: 1355106419
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 4514d0cf128413b063af03e5a67d4770
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0004-joint-vcf
@@ -513,14 +533,14 @@
   - bs-08dyug60bv
   filename: s02-f0004-proband-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 229597494
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: bb7bd159c39dd4ebf13bc97737d3caa5
-  - hash_type: MS:1000569
+  - hash_type: MS:1000569  # SHA-1
     hash_value: c1cc45c991e8b8d7e965f766042ead6ecdbd1d88
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0004-proband-cram
@@ -533,14 +553,14 @@
   - bs-i68v99tbwy
   filename: s01-f0011-proband-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 906440326
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: b01cc90cb0cbb54e4790afc1c991d1f9
-  - hash_type: MS:1000569
+  - hash_type: MS:1000569  # SHA-1
     hash_value: 6257261af4d88fdbb700859ece9f1f392e80ff0d
   external_id:
   - https://example.org/cam-testdata/small/File/s01-f0011-proband-cram
@@ -553,14 +573,14 @@
   - bs-o1smndjojs
   filename: s02-f0006-proband-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 1204933874
   hash:
-  - hash_type: MS:1000569
+  - hash_type: MS:1000569  # SHA-1
     hash_value: 9f49014628a8929cdcf316210f6ae4c42474bb19
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 36ecfc28cd9e7981ff39f89d00d73207
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0006-proband-cram
@@ -573,12 +593,12 @@
   - bs-8oa86ma9ot
   filename: s02-f0003-father-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 935296599
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: bcda5e72812931775167eb952b4c7eb2
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0003-father-cram
@@ -591,12 +611,12 @@
   - bs-xl9a6llxio
   filename: s02-f0002-proband-cram.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 182732917
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 25cb5fba61e42686d51b11c0e0392841
   external_id:
   - https://example.org/cam-testdata/small/File/s02-f0002-proband-cram

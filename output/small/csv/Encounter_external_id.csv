@@ -24,6 +24,7 @@ en-70d572s02w,https://example.org/cam-testdata/small/Encounter/s01-f0006-proband
 en-71pdhbpci8,https://example.org/cam-testdata/small/Encounter/s01-f0007-proband-e2
 en-7a001sfm8n,https://example.org/cam-testdata/small/Encounter/s01-f0012-proband-e2
 en-7b47r8p2wu,https://example.org/cam-testdata/small/Encounter/s02-f0009-father-e2
+en-7fmm7lgyl3,https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0005-proband-e1
 en-7u8yj7j9a2,https://example.org/cam-testdata/small/Encounter/s02-f0006-proband-e3
 en-8ex1k0x1j9,https://example.org/cam-testdata/small/Encounter/s02-f0005-proband-e2
 en-8hv34ena0p,https://example.org/cam-testdata/small/Encounter/s02-f0011-mother-e3
@@ -46,12 +47,14 @@ en-b8e014pn1b,https://example.org/cam-testdata/small/Encounter/s01-f0006-proband
 en-b9c8kpg1fv,https://example.org/cam-testdata/small/Encounter/s02-f0010-mother-e1
 en-bnamypeobm,https://example.org/cam-testdata/small/Encounter/s02-f0001-proband-e1
 en-bpadpmgmn4,https://example.org/cam-testdata/small/Encounter/s01-f0008-proband-e2
+en-cmnfpzmxej,https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0005-proband-e3
 en-cpskfds6y0,https://example.org/cam-testdata/small/Encounter/s02-f0004-mother-e1
 en-d324se3bz1,https://example.org/cam-testdata/small/Encounter/s01-f0006-proband-e4
 en-dnj7mbpxwy,https://example.org/cam-testdata/small/Encounter/s01-f0002-father-e1
 en-du9cflvbxm,https://example.org/cam-testdata/small/Encounter/s01-f0006-father-e2
 en-ectdqj2grd,https://example.org/cam-testdata/small/Encounter/s01-f0012-proband-e1
 en-eeg8biszms,https://example.org/cam-testdata/small/Encounter/s02-f0002-proband-e4
+en-evajlznqjs,https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0011-proband-e1
 en-eyo6kevwnt,https://example.org/cam-testdata/small/Encounter/s01-f0010-mother-e2
 en-fbi141a90w,https://example.org/cam-testdata/small/Encounter/s01-f0005-proband-e2
 en-fffupimvbd,https://example.org/cam-testdata/small/Encounter/s02-f0011-father-e1
@@ -61,6 +64,8 @@ en-fllm9cpfrm,https://example.org/cam-testdata/small/Encounter/s02-f0001-mother-
 en-fxlvq5v9oq,https://example.org/cam-testdata/small/Encounter/s02-f0001-father-e2
 en-fzvv6gtysy,https://example.org/cam-testdata/small/Encounter/s01-f0004-proband-e1
 en-h0f37za8k9,https://example.org/cam-testdata/small/Encounter/s02-f0002-proband-e1
+en-h1gi961wve,https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0011-proband-e3
+en-hgpl44qs2r,https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0005-proband-e2
 en-hty32ttirv,https://example.org/cam-testdata/small/Encounter/s01-f0003-proband-e1
 en-ianln70jil,https://example.org/cam-testdata/small/Encounter/s02-f0012-proband-e1
 en-iuq1y5pok6,https://example.org/cam-testdata/small/Encounter/s02-f0005-proband-e1
@@ -68,6 +73,7 @@ en-j4tyrlcsdx,https://example.org/cam-testdata/small/Encounter/s02-f0003-mother-
 en-jeiqsk3o75,https://example.org/cam-testdata/small/Encounter/s02-f0004-proband-e3
 en-jhi9nl200b,https://example.org/cam-testdata/small/Encounter/s01-f0006-proband-e5
 en-k1vlefv7sl,https://example.org/cam-testdata/small/Encounter/s01-f0006-proband-e3
+en-knrjk0a1gp,https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0011-proband-e2
 en-l299mdx29i,https://example.org/cam-testdata/small/Encounter/s02-f0006-mother-e3
 en-m7srkh9qay,https://example.org/cam-testdata/small/Encounter/s02-f0001-proband-e2
 en-m8g4iq6aze,https://example.org/cam-testdata/small/Encounter/s02-f0004-proband-e2
@@ -85,6 +91,7 @@ en-q1egnr34ll,https://example.org/cam-testdata/small/Encounter/s02-f0006-proband
 en-qartmoyz85,https://example.org/cam-testdata/small/Encounter/s02-f0011-proband-e3
 en-qaspjjc6xk,https://example.org/cam-testdata/small/Encounter/s01-f0006-mother-e1
 en-r7bzto7yv0,https://example.org/cam-testdata/small/Encounter/s02-f0011-father-e2
+en-r9jmff4gz5,https://example.org/cam-testdata/small/Encounter/s02-returning-s01-f0011-proband-e4
 en-re5c9kzl4g,https://example.org/cam-testdata/small/Encounter/s02-f0011-proband-e1
 en-sihh36j4bo,https://example.org/cam-testdata/small/Encounter/s02-f0009-father-e3
 en-snfsdthc3l,https://example.org/cam-testdata/small/Encounter/s01-f0002-proband-e1

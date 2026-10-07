@@ -197,6 +197,24 @@ def dataset_with_doi_and_publication(conn: Connection) -> list[str]:
     )
 
 
+def person_record(conn: Connection) -> list[str]:
+    """A Person linking at least one Subject (FHIR Person)."""
+    p = _t("Person_subject_id")
+    return _keys(conn, select(p.c.Person_person_id))
+
+
+def person_across_studies(conn: Connection) -> list[str]:
+    """A Person whose Subjects are in more than one study (scaled profiles)."""
+    p, s = _t("Person_subject_id"), _t("Subject")
+    return _keys(
+        conn,
+        select(p.c.Person_person_id)
+        .join(s, s.c.subject_id == p.c.subject_id_subject_id)
+        .group_by(p.c.Person_person_id)
+        .having(func.count(func.distinct(s.c.study_id)) > 1),
+    )
+
+
 FEATURES: dict[str, Feature] = {
     f.__name__: f
     for f in (
@@ -221,8 +239,13 @@ FEATURES: dict[str, Feature] = {
         file_with_two_hashes,
         assay_links_subject_sample_file,
         dataset_with_doi_and_publication,
+        person_record,
+        person_across_studies,
     )
 }
+
+# Features tiny doesn't have to show (it has one Person with a single subject).
+NOT_REQUIRED_IN_TINY = {"person_across_studies"}
 
 
 def run_features(conn: Connection) -> dict[str, list[str]]:

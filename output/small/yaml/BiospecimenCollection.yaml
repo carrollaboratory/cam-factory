@@ -1,6 +1,6 @@
 - biospecimen_collection_id: bsc-0fdgkol1qm
   age_at_collection: 10.53
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-re5c9kzl4g
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0011-proband-blood-draw
@@ -8,7 +8,7 @@
   study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-0p2uztsm0k
   age_at_collection: 32.14
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-9anqudvpb6
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0009-father-blood-draw
@@ -16,7 +16,7 @@
   study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-4aflfyecd3
   age_at_collection: 23.69
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-xjnxwoy1n5
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s01-f0011-mother-blood-draw
@@ -24,7 +24,7 @@
   study_id: sd-3s8wpdnf71
 - biospecimen_collection_id: bsc-576p85idzp
   age_at_collection: 16.92
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-ectdqj2grd
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s01-f0012-proband-blood-draw
@@ -32,7 +32,7 @@
   study_id: sd-3s8wpdnf71
 - biospecimen_collection_id: bsc-5ycxjt04v0
   age_at_collection: 27.67
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-wk37ruji9h
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0003-father-blood-draw
@@ -40,7 +40,7 @@
   study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-7ppgj6m09d
   age_at_collection: 16.24
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-2e0c9af4hv
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0006-proband-blood-draw
@@ -48,7 +48,7 @@
   study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-7x4j5lg88l
   age_at_collection: 33.94
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-4ftj1wn9eu
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s01-f0004-father-blood-draw
@@ -56,7 +56,7 @@
   study_id: sd-3s8wpdnf71
 - biospecimen_collection_id: bsc-81rxkuftog
   age_at_collection: 2.96
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-t9bwyprx5q
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0003-proband-blood-draw
@@ -64,7 +64,7 @@
   study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-92e3t0yuwr
   age_at_collection: 12.03
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-8k56b91q99
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0010-proband-blood-draw
@@ -72,7 +72,7 @@
   study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-9cetpr0y47
   age_at_collection: 33.36
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-462rqvpjnl
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0004-father-blood-draw
@@ -80,7 +80,7 @@
   study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-ahm7zmwt16
   age_at_collection: 44.01
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-5rb4xuwxbw
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s01-f0002-mother-blood-draw
@@ -88,7 +88,7 @@
   study_id: sd-3s8wpdnf71
 - biospecimen_collection_id: bsc-aiptm14ear
   age_at_collection: 21.28
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-u91g5noeql
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s01-f0006-father-blood-draw
@@ -96,7 +96,7 @@
   study_id: sd-3s8wpdnf71
 - biospecimen_collection_id: bsc-ax86yg2qis
   age_at_collection: 5.52
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-h0f37za8k9
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0002-proband-blood-draw
@@ -104,7 +104,7 @@
   study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-b7q94aowax
   age_at_collection: 34.2
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-3r27knw98z
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s01-f0011-father-blood-draw
@@ -112,7 +112,7 @@
   study_id: sd-3s8wpdnf71
 - biospecimen_collection_id: bsc-ebp5r1lgor
   age_at_collection: 21.52
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-ac3zkhkoea
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s01-f0010-mother-blood-draw
@@ -120,7 +120,7 @@
   study_id: sd-3s8wpdnf71
 - biospecimen_collection_id: bsc-fkqy2ieno2
   age_at_collection: 2.14
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-snfsdthc3l
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s01-f0002-proband-blood-draw
@@ -128,7 +128,7 @@
   study_id: sd-3s8wpdnf71
 - biospecimen_collection_id: bsc-fpnhjdh9mn
   age_at_collection: 15.69
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-p7bwjxjr89
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s01-f0009-proband-blood-draw
@@ -136,7 +136,7 @@
   study_id: sd-3s8wpdnf71
 - biospecimen_collection_id: bsc-fwfvwlq7ea
   age_at_collection: 31.44
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-nv2jnkrhov
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0012-mother-blood-draw
@@ -144,7 +144,7 @@
   study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-gqstqesa4i
   age_at_collection: 31.95
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-43d39bonyc
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0012-father-blood-draw
@@ -152,7 +152,7 @@
   study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-h2t6mxqssl
   age_at_collection: 44.47
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-fffupimvbd
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0011-father-blood-draw
@@ -160,7 +160,7 @@
   study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-iw86raqc18
   age_at_collection: 1.39
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-ianln70jil
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0012-proband-blood-draw
@@ -168,7 +168,7 @@
   study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-lcx5u85hto
   age_at_collection: 13.38
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-33pjcj2zyr
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0004-proband-blood-draw
@@ -176,7 +176,7 @@
   study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-m4df3fz6lt
   age_at_collection: 2.63
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-fhc4rsoon8
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0008-proband-blood-draw
@@ -184,23 +184,39 @@
   study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-qge59vsp9x
   age_at_collection: 49.16
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-m9b9fyjc49
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0003-mother-blood-draw
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
+- biospecimen_collection_id: bsc-r6rxtowdgg
+  age_at_collection: 17.92
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
+  encounter_id: en-evajlznqjs
+  external_id:
+  - https://example.org/cam-testdata/small/BiospecimenCollection/s02-returning-s01-f0011-proband-blood-draw
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-rwwy83axy6
   age_at_collection: 12.5
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-iuq1y5pok6
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0005-proband-blood-draw
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
+- biospecimen_collection_id: bsc-s4kdcpj958
+  age_at_collection: 8.89
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
+  encounter_id: en-7fmm7lgyl3
+  external_id:
+  - https://example.org/cam-testdata/small/BiospecimenCollection/s02-returning-s01-f0005-proband-blood-draw
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-t2k6bwj9eg
   age_at_collection: 29.2
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-psdcahprqw
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0002-father-blood-draw
@@ -208,7 +224,7 @@
   study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-w1a2uebbvu
   age_at_collection: 14.09
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-hty32ttirv
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s01-f0003-proband-blood-draw
@@ -216,7 +232,7 @@
   study_id: sd-3s8wpdnf71
 - biospecimen_collection_id: bsc-xe1t4yz07s
   age_at_collection: 3.97
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-bnamypeobm
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0001-proband-blood-draw
@@ -224,7 +240,7 @@
   study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-xmvx574ulv
   age_at_collection: 13.55
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-uy3d597ur6
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s01-f0011-proband-blood-draw
@@ -232,7 +248,7 @@
   study_id: sd-3s8wpdnf71
 - biospecimen_collection_id: bsc-xoiqgmao8y
   age_at_collection: 38.22
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-0yzxa17due
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0002-mother-blood-draw
@@ -240,7 +256,7 @@
   study_id: sd-2lx98atcp0
 - biospecimen_collection_id: bsc-ybue3pod7g
   age_at_collection: 15.44
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-70d572s02w
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s01-f0006-proband-blood-draw
@@ -248,7 +264,7 @@
   study_id: sd-3s8wpdnf71
 - biospecimen_collection_id: bsc-ych91dvz45
   age_at_collection: 12.97
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-3w3yqj345a
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s01-f0008-proband-blood-draw
@@ -256,7 +272,7 @@
   study_id: sd-3s8wpdnf71
 - biospecimen_collection_id: bsc-zma9347umx
   age_at_collection: 8.99
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-fzvv6gtysy
   external_id:
   - https://example.org/cam-testdata/small/BiospecimenCollection/s01-f0004-proband-blood-draw

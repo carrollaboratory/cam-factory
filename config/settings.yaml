@@ -10,9 +10,10 @@ ids:
     FamilyMembership: fmb
     BiospecimenCollection: bsc
     Aliquot: alq
-  # DOI: DataCite test prefix + hashed suffix, for the class(es) whose ID is a DOI.
+  # DOI: a resolver URI (DOI.do_id has range uri) with the DataCite test prefix
+  # and a hashed suffix, for the class(es) whose ID is a DOI.
   doi_classes: [DOI]
-  doi_prefix: "10.5072/cam-testdata."
+  doi_prefix: "https://doi.org/10.5072/cam-testdata."
   doi_length: 8
   # Default external_id (DESIGN §5.3): <base>/<profile>/<Class>/<key>
   external_id_base: "https://example.org/cam-testdata"
@@ -55,6 +56,8 @@ natural_keys:
   FamilyMembership: [[family_id, subject_id]]
   FamilyRelationship: [[family_member_id, relation, subject_id]]
   HashDigest: [[hash_type, hash_value]]
+  # a Subject is part of at most one Person
+  Person_subject_id: [[subject_id_subject_id]]
 
 profiles:
   tiny: {seed: "cam-testdata/tiny/v1"}

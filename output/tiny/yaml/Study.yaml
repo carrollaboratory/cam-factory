@@ -30,12 +30,39 @@
     - https://example.org/cam-testdata/tiny/Publication/s1-pub1
     access_policy_id: co-ajdm9fyxxz
     study_id: sd-7hwpqzc2yr
-  do_id: 10.5072/cam-testdata.bc5dx08a
+  do_id: https://doi.org/10.5072/cam-testdata.bc5dx08a
   external_id:
   - https://studies.cows-come-home.gov/cud?id=M00M00-01
   - https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000000
   access_policy_id: co-ajdm9fyxxz
   study_id: sd-7hwpqzc2yr
+- study_title: Old MacDonald's Farm
+  study_code: FARM
+  program:
+  - https://www.nih.gov/include-project
+  principal_investigator:
+  - name: Nancy Ewing
+    institution: Sunny Acres School of Barnyard Sciences
+    investigator_title: Principal Investigator
+    email: nancy.ewing@example.org
+    external_id:
+    - https://example.org/cam-testdata/tiny/Investigator/s1-pi
+    access_policy_id: co-ajdm9fyxxz
+    study_id: sd-7hwpqzc2yr
+  contact:
+  - name: Austin Bowen
+    institution: Pasture Point Center for Galline Genomics
+    investigator_title: Study Coordinator
+    email: austin.bowen@example.org
+    external_id:
+    - https://example.org/cam-testdata/tiny/Investigator/s1-contact
+    access_policy_id: co-ajdm9fyxxz
+    study_id: sd-7hwpqzc2yr
+  study_description: Umbrella record for Person links across the farm's studies. Holds no subjects of its own.
+  external_id:
+  - https://example.org/cam-testdata/tiny/Study/farm
+  access_policy_id: co-puem3gdzaf
+  study_id: sd-8kurbmb04j
 - parent_study: sd-7hwpqzc2yr
   study_title: Tiny Follow-on Study
   study_code: TINY-S2

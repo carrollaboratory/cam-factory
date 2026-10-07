@@ -30,7 +30,7 @@
     - https://example.org/cam-testdata/small/Publication/s02-pub1
     access_policy_id: co-yly4xno8c0
     study_id: sd-2lx98atcp0
-  do_id: 10.5072/cam-testdata.grdggrel
+  do_id: https://doi.org/10.5072/cam-testdata.grdggrel
   external_id:
   - https://example.org/cam-testdata/small/Study/s02
   access_policy_id: co-yly4xno8c0
@@ -66,8 +66,35 @@
     - https://example.org/cam-testdata/small/Publication/s01-pub1
     access_policy_id: co-tam2ciyi45
     study_id: sd-3s8wpdnf71
-  do_id: 10.5072/cam-testdata.jiktz896
+  do_id: https://doi.org/10.5072/cam-testdata.jiktz896
   external_id:
   - https://example.org/cam-testdata/small/Study/s01
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
+- study_title: Old MacDonald's Farm
+  study_code: FARM
+  program:
+  - https://www.nih.gov/include-project
+  principal_investigator:
+  - name: Robert Davis
+    institution: Haystack Valley College of Anatine Medicine
+    investigator_title: Principal Investigator
+    email: robert.davis@example.org
+    external_id:
+    - https://example.org/cam-testdata/small/Investigator/s01-pi
+    access_policy_id: co-tam2ciyi45
+    study_id: sd-3s8wpdnf71
+  contact:
+  - name: Ian Lucas
+    institution: Fernfield Institute of Canine Studies
+    investigator_title: Study Coordinator
+    email: ian.lucas@example.org
+    external_id:
+    - https://example.org/cam-testdata/small/Investigator/s01-contact
+    access_policy_id: co-tam2ciyi45
+    study_id: sd-3s8wpdnf71
+  study_description: Umbrella record for Person links across the farm's studies. Holds no subjects of its own.
+  external_id:
+  - https://example.org/cam-testdata/small/Study/farm
+  access_policy_id: co-4rbnrtd218
+  study_id: sd-46ci4zfldo

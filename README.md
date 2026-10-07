@@ -26,7 +26,7 @@ Each profile builds into `output/<profile>/`:
 
 | Profile | Size | Where |
 |---|---|---|
-| `tiny` | ~330 rows, every edge case once | committed; cast of characters in [docs/SCENARIO_TINY.md](docs/SCENARIO_TINY.md) |
+| `tiny` | ~350 rows, every edge case once | committed; cast of characters in [docs/SCENARIO_TINY.md](docs/SCENARIO_TINY.md) |
 | `small` | ~2,100 rows | committed, and published as a release archive |
 | `portal` | ~75,000 rows, full reference vocabulary | gitignored; release archive only |
 
@@ -98,7 +98,7 @@ Four kinds, deliberately different:
 | | Example | What it is |
 |---|---|---|
 | **handle** | `tiny/Subject/trio1-proband` | Stable readable key: `<profile>/<Class>/<key>`. Never in the data; drives everything below. |
-| **CAM id** | `pt-0u4gl52nuc` | The record's ID. GlobalIDs are `<2-letter prefix>-<10 chars of [0-9a-z]>`, the prefix from the slot's type (`ptGlobalID` → `pt`, FHIR Patient). Minted as a hash of the profile seed and the handle, so adding records never changes existing IDs. Some are pinned (`sd-7hwpqzc2yr`). Non-global IDs: `fmb-`/`bsc-`/`alq-` + hash; DOIs `10.5072/cam-testdata.<hash>`. |
+| **CAM id** | `pt-0u4gl52nuc` | The record's ID. GlobalIDs are `<2-letter prefix>-<10 chars of [0-9a-z]>`, the prefix from the slot's type (`ptGlobalID` → `pt`, FHIR Patient). Minted as a hash of the profile seed and the handle, so adding records never changes existing IDs. Some are pinned (`sd-7hwpqzc2yr`). Non-global IDs: `fmb-`/`bsc-`/`alq-` + hash; DOIs `https://doi.org/10.5072/cam-testdata.<hash>`. |
 | **external_id** | `https://example.org/cam-testdata/tiny/Subject/trio1-proband` | A URI; defaults to the handle under `example.org` unless the scenario gives real-looking ones. |
 | **surrogate integer PK** | `Investigator.id = 717169176` | SQL-only keys for classes without a LinkML identifier (Investigator, Publication, HashDigest). Also minted from the handle; sequences are moved past them. |
 
@@ -147,6 +147,21 @@ or the schema's enum values. Nothing is bulk-downloaded.
 3. `uv run python scripts/follow_up_codes.py` looks the codes up and writes
    `data/additional_vocab_content.yaml`.
 4. Rebuild.
+
+## Releases
+
+`small` and `portal` are published as GitHub release archives. To cut one,
+create and push a tag named `data-v<model version>` (for example
+`data-v0.2.1`). `.github/workflows/release.yml` then:
+
+1. Checks that the committed outputs match the installed model (`check-drift`).
+2. Rebuilds small, which must reproduce the committed `output/small` byte for byte.
+3. Builds portal and runs `verify-sql` on both.
+4. Creates a **draft** release with both archives, `SHA256SUMS`, and notes
+   generated from the manifests.
+
+Review the draft and publish it. To build the archives locally instead, run
+`just dist small` / `just dist portal`.
 
 ## Validation
 

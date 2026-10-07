@@ -20,6 +20,11 @@ def test_every_feature_shows_up_in_the_valid_dataset(session: Session) -> None:
     assert found["file_with_two_hashes"] == [data["cram"].file_id]
     assert found["file_subjects_only"] == [data["tsv"].file_id]
     assert found["assay_links_subject_sample_file"] == [data["assay"].assay_id]
+    assert (
+        found["person_record"]
+        == found["person_across_studies"]
+        == [data["person"].person_id]
+    )
 
 
 def test_an_empty_database_shows_no_features(session: Session) -> None:

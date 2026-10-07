@@ -1,6 +1,6 @@
 - biospecimen_collection_id: bsc-8bf58h4x9t
   age_at_collection: 33.98
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-03iwm0w52x
   external_id:
   - https://example.org/cam-testdata/tiny/BiospecimenCollection/trio1-mother-blood-draw
@@ -8,7 +8,7 @@
   study_id: sd-7hwpqzc2yr
 - biospecimen_collection_id: bsc-rbwuuy21ne
   age_at_collection: 35.98
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-p0i0xr3d3b
   external_id:
   - https://example.org/cam-testdata/tiny/BiospecimenCollection/trio1-father-blood-draw
@@ -16,7 +16,7 @@
   study_id: sd-7hwpqzc2yr
 - biospecimen_collection_id: bsc-v721ubzcsj
   age_at_collection: 5.0
-  method: snomedct:82078001
+  method: snomedct:82078001  # Collection of blood specimen for laboratory
   encounter_id: en-wbpon00qtl
   external_id:
   - https://example.org/cam-testdata/tiny/BiospecimenCollection/trio1-proband-blood-draw

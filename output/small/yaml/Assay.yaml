@@ -5,7 +5,7 @@
   - bs-po7nbit95v
   file_id:
   - dr-l2tutwpe1u
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-9xi4otnkl6
   external_id:
   - https://example.org/cam-testdata/small/Assay/s01-f0006-father-wgs
@@ -18,10 +18,23 @@
   - bs-o1smndjojs
   file_id:
   - dr-wjooqqfn1g
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-4b1di32cvz
   external_id:
   - https://example.org/cam-testdata/small/Assay/s02-f0006-proband-wgs
+  access_policy_id: co-yly4xno8c0
+  study_id: sd-2lx98atcp0
+- assay_id: di-16frwrlysi
+  subject_id:
+  - pt-g7k8bawahu
+  sample_id:
+  - bs-2lujybqhao
+  file_id:
+  - dr-57nzhcprk0
+  assay_type: OBI:0002117  # whole genome sequencing assay
+  activity_definition_id: ad-4b1di32cvz
+  external_id:
+  - https://example.org/cam-testdata/small/Assay/s02-returning-s01-f0005-proband-wgs
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - assay_id: di-1jo2sftayh
@@ -31,7 +44,7 @@
   - bs-08dyug60bv
   file_id:
   - dr-vqp87va56v
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-4b1di32cvz
   external_id:
   - https://example.org/cam-testdata/small/Assay/s02-f0004-proband-wgs
@@ -44,7 +57,7 @@
   - bs-mkwfg60t6o
   file_id:
   - dr-3ay88rjpq7
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-9xi4otnkl6
   external_id:
   - https://example.org/cam-testdata/small/Assay/s01-f0002-proband-wgs
@@ -57,7 +70,7 @@
   - bs-fpd4arpkia
   file_id:
   - dr-fpe7cm9118
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-9xi4otnkl6
   external_id:
   - https://example.org/cam-testdata/small/Assay/s01-f0002-mother-wgs
@@ -70,7 +83,7 @@
   - bs-5rgzjle102
   file_id:
   - dr-nt2q04ykzv
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-4b1di32cvz
   external_id:
   - https://example.org/cam-testdata/small/Assay/s02-f0005-proband-wgs
@@ -83,7 +96,7 @@
   - bs-i68v99tbwy
   file_id:
   - dr-w6fcc1x2x3
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-9xi4otnkl6
   external_id:
   - https://example.org/cam-testdata/small/Assay/s01-f0011-proband-wgs
@@ -96,7 +109,7 @@
   - bs-ownnxjyr9y
   file_id:
   - dr-gfqyfal0g4
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-4b1di32cvz
   external_id:
   - https://example.org/cam-testdata/small/Assay/s02-f0001-proband-wgs
@@ -109,7 +122,7 @@
   - bs-c9m3animcq
   file_id:
   - dr-am7lr2y8ef
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-4b1di32cvz
   external_id:
   - https://example.org/cam-testdata/small/Assay/s02-f0012-father-wgs
@@ -122,7 +135,7 @@
   - bs-qm0dlp7ik5
   file_id:
   - dr-q8dppwlx74
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-4b1di32cvz
   external_id:
   - https://example.org/cam-testdata/small/Assay/s02-f0010-proband-wgs
@@ -135,7 +148,7 @@
   - bs-debyobor67
   file_id:
   - dr-rthti3h8qh
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-4b1di32cvz
   external_id:
   - https://example.org/cam-testdata/small/Assay/s02-f0012-mother-wgs
@@ -148,7 +161,7 @@
   - bs-qfaoo63s3j
   file_id:
   - dr-kxejd1xust
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-4b1di32cvz
   external_id:
   - https://example.org/cam-testdata/small/Assay/s02-f0012-proband-wgs
@@ -161,7 +174,7 @@
   - bs-aq1hmsfl13
   file_id:
   - dr-l4caxcumdx
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-4b1di32cvz
   external_id:
   - https://example.org/cam-testdata/small/Assay/s02-f0002-mother-wgs
@@ -174,7 +187,7 @@
   - bs-8oa86ma9ot
   file_id:
   - dr-wyy6htjq29
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-4b1di32cvz
   external_id:
   - https://example.org/cam-testdata/small/Assay/s02-f0003-father-wgs
@@ -187,7 +200,7 @@
   - bs-pu48nhp9on
   file_id:
   - dr-dv899gzt40
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-4b1di32cvz
   external_id:
   - https://example.org/cam-testdata/small/Assay/s02-f0008-proband-wgs
@@ -200,7 +213,7 @@
   - bs-x12ulavrim
   file_id:
   - dr-jttmffjdeu
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-4b1di32cvz
   external_id:
   - https://example.org/cam-testdata/small/Assay/s02-f0011-father-wgs
@@ -213,7 +226,7 @@
   - bs-4ez6za4vnj
   file_id:
   - dr-fdxdtru8l2
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-9xi4otnkl6
   external_id:
   - https://example.org/cam-testdata/small/Assay/s01-f0004-proband-wgs
@@ -226,7 +239,7 @@
   - bs-20483amku9
   file_id:
   - dr-a5t68p77a3
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-9xi4otnkl6
   external_id:
   - https://example.org/cam-testdata/small/Assay/s01-f0012-proband-wgs
@@ -239,7 +252,7 @@
   - bs-4738chr6tm
   file_id:
   - dr-7cmrrchrb2
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-4b1di32cvz
   external_id:
   - https://example.org/cam-testdata/small/Assay/s02-f0004-father-wgs
@@ -252,7 +265,7 @@
   - bs-bm46zush6y
   file_id:
   - dr-ay99mw28h9
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-9xi4otnkl6
   external_id:
   - https://example.org/cam-testdata/small/Assay/s01-f0003-proband-wgs
@@ -265,7 +278,7 @@
   - bs-xl9a6llxio
   file_id:
   - dr-zmk9npxmdg
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-4b1di32cvz
   external_id:
   - https://example.org/cam-testdata/small/Assay/s02-f0002-proband-wgs
@@ -278,7 +291,7 @@
   - bs-zznq3y70wq
   file_id:
   - dr-6rz35r1dcn
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-4b1di32cvz
   external_id:
   - https://example.org/cam-testdata/small/Assay/s02-f0002-father-wgs
@@ -291,7 +304,7 @@
   - bs-7i4ai02qm7
   file_id:
   - dr-czqmekc4k9
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-4b1di32cvz
   external_id:
   - https://example.org/cam-testdata/small/Assay/s02-f0003-proband-wgs
@@ -304,7 +317,7 @@
   - bs-k29u6tlui0
   file_id:
   - dr-ko8n1f4o85
-  assay_type: OBI:0002117
+  assay_type: OBI:0002117  # whole genome sequencing assay
   activity_definition_id: ad-4b1di32cvz
   external_id:
   - https://example.org/cam-testdata/small/Assay/s02-f0009-father-wgs

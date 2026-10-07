@@ -24,6 +24,7 @@ EXPECTED_GLOBAL_IDS = {
     "File": ("file_id", ("dr",)),
     "Assay": ("assay_id", ("di",)),
     "Dataset": ("dataset_id", ("ls",)),
+    "Person": ("person_id", ("pn",)),
 }
 
 
@@ -97,6 +98,7 @@ def test_required_multivalued_slots(model: Model) -> None:
         "StudyMetadata.data_category": "StudyMetadata_data_category",
         "StudyMetadata.research_domain": "StudyMetadata_research_domain",
         "VirtualBiorepository.contact": "VirtualBiorepository_contact",
+        "Person.subject_id": "Person_subject_id",
     }
 
 

@@ -221,7 +221,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "common-access-model", url = "https://github.com/include-dcc/common-access-model/releases/download/v0.2.1/common_access_model-0.2.1-py3-none-any.whl" },
+    { name = "common-access-model", url = "https://github.com/include-dcc/common-access-model/releases/download/v0.2.2/common_access_model-0.2.2-py3-none-any.whl" },
     { name = "factory-boy", specifier = ">=3.3.0" },
     { name = "faker", specifier = ">=40.0.0" },
     { name = "linkml", specifier = ">=1.6.0" },
@@ -452,14 +452,14 @@ wheels = [
 
 [[package]]
 name = "common-access-model"
-version = "0.2.1"
-source = { url = "https://github.com/include-dcc/common-access-model/releases/download/v0.2.1/common_access_model-0.2.1-py3-none-any.whl" }
+version = "0.2.2"
+source = { url = "https://github.com/include-dcc/common-access-model/releases/download/v0.2.2/common_access_model-0.2.2-py3-none-any.whl" }
 dependencies = [
     { name = "linkml-runtime" },
     { name = "sqlalchemy" },
 ]
 wheels = [
-    { url = "https://github.com/include-dcc/common-access-model/releases/download/v0.2.1/common_access_model-0.2.1-py3-none-any.whl", hash = "sha256:cf2b0978c4a5621d6d415a95063caa1628c4155b356a79da3ef8803230065cff" },
+    { url = "https://github.com/include-dcc/common-access-model/releases/download/v0.2.2/common_access_model-0.2.2-py3-none-any.whl", hash = "sha256:05be0989ae3148af2e636a42d58fef8e4658db86255674e4662ff9117f6f3bed" },
 ]
 
 [package.metadata]

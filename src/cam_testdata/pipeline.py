@@ -22,7 +22,7 @@ from cam_testdata.export import (
 from cam_testdata.scenarios import scaled
 from cam_testdata.scenarios.loader import load_scenario
 from cam_testdata.settings import PROJECT_ROOT, get_settings
-from cam_testdata.validate.coverage import run_features
+from cam_testdata.validate.coverage import NOT_REQUIRED_IN_TINY, run_features
 from cam_testdata.validate.integrity import run_all
 from cam_testdata.validate.linkml_check import validate_yaml_file
 
@@ -85,7 +85,11 @@ def run_build(
                 )
                 raise BuildFailed(f"integrity rules failed: {summary}")
             features = run_features(conn)
-            missing = [f for f, keys in features.items() if not keys]
+            missing = [
+                f
+                for f, keys in features.items()
+                if not keys and f not in NOT_REQUIRED_IN_TINY
+            ]
             if profile in REQUIRE_ALL_FEATURES and missing:
                 raise BuildFailed(
                     f"coverage features missing from {profile}: {missing}"

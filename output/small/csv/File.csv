@@ -1,5 +1,6 @@
 file_id,filename,file_extension,data_category,data_type,format,size,internal_uri,release_uri,drs_uri,storage_class,availability,access_policy_id,study_id
 dr-3ay88rjpq7,s01-f0002-proband-cram.cram,.cram,edam:topic_3673,edam:data_0863,edam:format_3462,269148449,,,,,,co-tam2ciyi45,sd-3s8wpdnf71
+dr-57nzhcprk0,s02-returning-s01-f0005-proband-cram.cram,.cram,edam:topic_3673,edam:data_0863,edam:format_3462,1759646869,,,,,,co-yly4xno8c0,sd-2lx98atcp0
 dr-5u4yj6t1qz,s01-f0002-joint-vcf.vcf.gz,.vcf.gz,edam:topic_0199,edam:data_3498,edam:format_3016,241393766,,,,,,co-tam2ciyi45,sd-3s8wpdnf71
 dr-6rz35r1dcn,s02-f0002-father-cram.cram,.cram,edam:topic_3673,edam:data_0863,edam:format_3462,2030818155,,,,,,co-yly4xno8c0,sd-2lx98atcp0
 dr-7cmrrchrb2,s02-f0004-father-cram.cram,.cram,edam:topic_3673,edam:data_0863,edam:format_3462,1617726871,,,,,,co-yly4xno8c0,sd-2lx98atcp0

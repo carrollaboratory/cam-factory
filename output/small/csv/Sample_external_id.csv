@@ -3,6 +3,7 @@ bs-08dyug60bv,https://example.org/cam-testdata/small/Sample/s02-f0004-proband-dn
 bs-0qv6n0y2td,https://example.org/cam-testdata/small/Sample/s02-f0011-father-blood
 bs-20483amku9,https://example.org/cam-testdata/small/Sample/s01-f0012-proband-dna
 bs-21qpxwci7x,https://example.org/cam-testdata/small/Sample/s01-f0011-mother-dna
+bs-2lujybqhao,https://example.org/cam-testdata/small/Sample/s02-returning-s01-f0005-proband-dna
 bs-3cqvhqxu4b,https://example.org/cam-testdata/small/Sample/s01-f0008-proband-dna
 bs-3d9plqby6e,https://example.org/cam-testdata/small/Sample/s01-f0011-proband-blood
 bs-4738chr6tm,https://example.org/cam-testdata/small/Sample/s02-f0004-father-dna
@@ -34,6 +35,7 @@ bs-i68v99tbwy,https://example.org/cam-testdata/small/Sample/s01-f0011-proband-dn
 bs-ienhf20njw,https://example.org/cam-testdata/small/Sample/s01-f0009-proband-dna
 bs-k29u6tlui0,https://example.org/cam-testdata/small/Sample/s02-f0009-father-dna
 bs-lvyp2a2swe,https://example.org/cam-testdata/small/Sample/s02-f0004-father-blood
+bs-m8xj37twhd,https://example.org/cam-testdata/small/Sample/s02-returning-s01-f0011-proband-blood
 bs-mff31jzxtq,https://example.org/cam-testdata/small/Sample/s02-f0004-proband-blood
 bs-mkwfg60t6o,https://example.org/cam-testdata/small/Sample/s01-f0002-proband-dna
 bs-mmwh4u6xgb,https://example.org/cam-testdata/small/Sample/s01-f0006-father-blood
@@ -58,7 +60,9 @@ bs-wjfv7ftvkq,https://example.org/cam-testdata/small/Sample/s02-f0011-proband-bl
 bs-x12ulavrim,https://example.org/cam-testdata/small/Sample/s02-f0011-father-dna
 bs-xfa4h8iruu,https://example.org/cam-testdata/small/Sample/s01-f0011-mother-blood
 bs-xl9a6llxio,https://example.org/cam-testdata/small/Sample/s02-f0002-proband-dna
+bs-xtttky72oh,https://example.org/cam-testdata/small/Sample/s02-returning-s01-f0011-proband-dna
 bs-y341t447ov,https://example.org/cam-testdata/small/Sample/s01-f0011-father-dna
+bs-y8mi9al2z2,https://example.org/cam-testdata/small/Sample/s02-returning-s01-f0005-proband-blood
 bs-z08ja02mb2,https://example.org/cam-testdata/small/Sample/s02-f0003-mother-blood
 bs-zgjm1sylgy,https://example.org/cam-testdata/small/Sample/s02-f0002-mother-blood
 bs-zznq3y70wq,https://example.org/cam-testdata/small/Sample/s02-f0002-father-dna

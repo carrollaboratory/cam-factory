@@ -9,6 +9,9 @@ child_studies: 1            # the last N studies get the first study as parent
 families_per_study: 12      # families are generated until this count
 family_mix: {trio: 0.5, duo: 0.2, singleton: 0.3}
 non_participant_sibling: 0.15   # probability a family also has a Non-Participant sibling
+persons:                    # FHIR Person, scoped to the umbrella "Farm" study
+  returning: 0.15           # share of s01 probands also enrolled in a later study (2-subject Person)
+  single: 0.1               # share with a Person that has one subject so far
 
 subject:
   deceased: 0.05

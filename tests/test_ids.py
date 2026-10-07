@@ -26,8 +26,11 @@ def test_local_and_doi_formats(ids: IdRegistry) -> None:
     local = ids.mint_local("fmb", "tiny/FamilyMembership/trio1-proband")
     assert ids.is_valid_local(local) and local.startswith("fmb-")
     doi = ids.mint_doi("tiny/DOI/s1-doi")
-    assert doi.startswith("10.5072/cam-testdata.")
-    assert len(doi) == len("10.5072/cam-testdata.") + get_settings().ids.doi_length
+    assert doi.startswith("https://doi.org/10.5072/cam-testdata.")
+    assert (
+        len(doi)
+        == len("https://doi.org/10.5072/cam-testdata.") + get_settings().ids.doi_length
+    )
 
 
 def test_same_handle_same_id(ids: IdRegistry) -> None:
