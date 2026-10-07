@@ -1,0 +1,138 @@
+# Build and attach the release archives when a data tag is pushed.
+#
+#   git tag data-v0.2.1 && git push origin data-v0.2.1
+#
+# Builds small and portal from the tagged commit against the same pinned
+# Postgres as check.yml, verifies them, and creates a DRAFT release with:
+#   cam-testdata-small-<model>.tar.gz, cam-testdata-portal-<model>.tar.gz, SHA256SUMS
+# Nothing is public until you review the draft and publish it.
+#
+# The job refuses to release if the committed tiny/small outputs were built
+# with a different model (check-drift) or if rebuilding small changes it.
+
+name: release
+
+on:
+  push:
+    tags: ["data-v*"]
+
+permissions:
+  contents: write # create the release and upload assets
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    services:
+      postgres:
+        image: postgres:18.6@sha256:5a5a84b19854a9ffaa54082c166ff4ec27473a361e496e5ea167f298f2da9722 # same as pg_image in the justfile
+        env:
+          POSTGRES_HOST_AUTH_METHOD: trust
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Point pg_dump / psql at the service container
+        run: |
+          pg="${{ job.services.postgres.id }}"
+          echo "CAM_PG_DUMP=docker exec $pg pg_dump -U postgres" >> "$GITHUB_ENV"
+          echo "CAM_PSQL=docker exec -i $pg psql -U postgres" >> "$GITHUB_ENV"
+          for db in cam_testdata_tiny cam_testdata_small cam_testdata_portal cam_testdata_test; do
+            docker exec "$pg" createdb -U postgres "$db"
+          done
+
+      - uses: astral-sh/setup-uv@v6
+
+      - uses: extractions/setup-just@v2
+
+      - name: Install
+        run: uv sync --locked
+
+      - name: Committed outputs match the installed model
+        run: |
+          uv run cam-testdata check-drift --profile tiny
+          uv run cam-testdata check-drift --profile small
+
+      - name: Build small (must reproduce the committed output)
+        run: |
+          just small
+          just verify-sql small
+          changes="$(git status --porcelain -- output/small)"
+          if [ -n "$changes" ]; then
+            echo "output/small differs from the committed version; rebuild and commit it first:"
+            echo "$changes" | head -20
+            exit 1
+          fi
+
+      - name: Build portal
+        run: |
+          just portal
+          just verify-sql portal
+
+      - name: Archives and checksums
+        run: |
+          just dist small
+          just dist portal
+          cd dist && sha256sum *.tar.gz > SHA256SUMS && cat SHA256SUMS
+
+      - name: Release notes from the manifests
+        run: |
+          uv run python - <<'EOF'
+          import json, os
+          from pathlib import Path
+
+          def summary(profile):
+              m = json.loads(Path(f"output/{profile}/manifest.json").read_text())
+              rows = m["row_counts"]
+              entity = {t: n for t, n in rows.items() if "_" not in t and n}
+              fhir = ", ".join(f"`{p}` {n:,}" for p, n in m["fhir_counts_by_prefix"].items())
+              lines = [
+                  f"### {profile}",
+                  "",
+                  f"- {sum(rows.values()):,} rows in {sum(1 for n in rows.values() if n)} tables "
+                  f"({entity.get('Subject', 0):,} subjects, {entity.get('SubjectAssertion', 0):,} observations, "
+                  f"{entity.get('Sample', 0):,} samples, {entity.get('File', 0):,} files)",
+                  f"- Expected FHIR resources by ID prefix: {fhir}",
+              ]
+              if "build_seconds" in m:
+                  lines.append(f"- Build time: {m['build_seconds']} s")
+              return m, lines
+
+          blob = f"{os.environ['GITHUB_SERVER_URL']}/{os.environ['GITHUB_REPOSITORY']}/blob/{os.environ['GITHUB_SHA']}"
+          small, small_lines = summary("small")
+          portal, portal_lines = summary("portal")
+          model = small["model"]
+          notes = [
+              f"Synthetic test data for the Common Access Model **{model['common_access_model']}** "
+              f"(schema `{model['schema_file']}`, sha256 `{model['schema_sha256'][:12]}…`).",
+              "",
+              f"Built from commit `{os.environ['GITHUB_SHA'][:12]}` with {small['pg_dump']}. "
+              "Each archive holds `csv/` (one file per table), `sql/` (full pg_dump, COPY and INSERT "
+              "variants), `yaml/` (LinkML instances), `id_map.csv` and `manifest.json`. "
+              "Verify downloads against `SHA256SUMS`. All people and data are fictional.",
+              "",
+              *small_lines,
+              "",
+              *portal_lines,
+              "",
+              f"Loading and schema notes: [README]({blob}/README.md), [docs/PORTAL.md]({blob}/docs/PORTAL.md).",
+          ]
+          Path("dist/NOTES.md").write_text("\n".join(notes) + "\n")
+          print("\n".join(notes))
+          EOF
+
+      - name: Create draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="$(uv run python -c "import json; print(json.load(open('output/small/manifest.json'))['model']['common_access_model'])")"
+          gh release create "${GITHUB_REF_NAME}" \
+            --draft \
+            --title "Test data for CAM ${version} (${GITHUB_REF_NAME})" \
+            --notes-file dist/NOTES.md \
+            dist/*.tar.gz dist/SHA256SUMS
