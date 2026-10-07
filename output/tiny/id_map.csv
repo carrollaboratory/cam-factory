@@ -17,7 +17,7 @@ tiny/Assay/trio1-proband-wgs,Assay,di-m3z7cpc2we,https://example.org/cam-testdat
 tiny/BiospecimenCollection/trio1-father-blood-draw,BiospecimenCollection,bsc-rbwuuy21ne,https://example.org/cam-testdata/tiny/BiospecimenCollection/trio1-father-blood-draw
 tiny/BiospecimenCollection/trio1-mother-blood-draw,BiospecimenCollection,bsc-8bf58h4x9t,https://example.org/cam-testdata/tiny/BiospecimenCollection/trio1-mother-blood-draw
 tiny/BiospecimenCollection/trio1-proband-blood-draw,BiospecimenCollection,bsc-v721ubzcsj,https://example.org/cam-testdata/tiny/BiospecimenCollection/trio1-proband-blood-draw
-tiny/DOI/s1-doi,DOI,10.5072/cam-testdata.bc5dx08a,https://example.org/cam-testdata/tiny/DOI/s1-doi
+tiny/DOI/s1-doi,DOI,https://doi.org/10.5072/cam-testdata.bc5dx08a,https://example.org/cam-testdata/tiny/DOI/s1-doi
 tiny/Dataset/s1-release-1,Dataset,ls-h7rc1m2nvw,https://example.org/cam-testdata/tiny/Dataset/s1-release-1
 tiny/Demographics/s2-p1,Demographics,pt-lahn13sl6m,https://example.org/cam-testdata/tiny/Demographics/s2-p1
 tiny/Demographics/trio1-father,Demographics,pt-r4rv0bzkwc,https://example.org/cam-testdata/tiny/Demographics/trio1-father

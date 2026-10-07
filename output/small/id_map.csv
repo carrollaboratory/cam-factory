@@ -161,8 +161,8 @@ small/BiospecimenCollection/s02-f0011-proband-blood-draw,BiospecimenCollection,b
 small/BiospecimenCollection/s02-f0012-father-blood-draw,BiospecimenCollection,bsc-gqstqesa4i,https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0012-father-blood-draw
 small/BiospecimenCollection/s02-f0012-mother-blood-draw,BiospecimenCollection,bsc-fwfvwlq7ea,https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0012-mother-blood-draw
 small/BiospecimenCollection/s02-f0012-proband-blood-draw,BiospecimenCollection,bsc-iw86raqc18,https://example.org/cam-testdata/small/BiospecimenCollection/s02-f0012-proband-blood-draw
-small/DOI/s01,DOI,10.5072/cam-testdata.jiktz896,https://example.org/cam-testdata/small/DOI/s01
-small/DOI/s02,DOI,10.5072/cam-testdata.grdggrel,https://example.org/cam-testdata/small/DOI/s02
+small/DOI/s01,DOI,https://doi.org/10.5072/cam-testdata.jiktz896,https://example.org/cam-testdata/small/DOI/s01
+small/DOI/s02,DOI,https://doi.org/10.5072/cam-testdata.grdggrel,https://example.org/cam-testdata/small/DOI/s02
 small/Dataset/s01-release-1,Dataset,ls-ba4m1f3o7k,https://example.org/cam-testdata/small/Dataset/s01-release-1
 small/Dataset/s02-release-1,Dataset,ls-1154czjcje,https://example.org/cam-testdata/small/Dataset/s02-release-1
 small/Demographics/s01-f0001-proband,Demographics,pt-lo3ubn20z3,https://example.org/cam-testdata/small/Demographics/s01-f0001-proband

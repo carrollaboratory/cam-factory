@@ -9,12 +9,12 @@
   - bs-x1o5ezuit1
   filename: TRIO1.joint.vcf.gz
   file_extension: .vcf.gz
-  data_category: edam:topic_0199
-  data_type: edam:data_3498
-  format: edam:format_3016
+  data_category: edam:topic_0199  # Genetic variation
+  data_type: edam:data_3498  # Sequence variations
+  format: edam:format_3016  # VCF
   size: 362905217
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 0ac96d1b3e18024fe2f36ce17807c80a
   external_id:
   - https://example.org/cam-testdata/tiny/File/trio1-joint-vcf
@@ -27,12 +27,12 @@
   - bs-dy45fxh8vr
   filename: TRIO1-M.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 2074521186
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 144e5d3e9bb36a31447bdc75f06cb788
   external_id:
   - https://example.org/cam-testdata/tiny/File/trio1-mother-cram
@@ -45,12 +45,12 @@
   - bs-55cg5o8i0k
   filename: TRIO1-F.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 924768134
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 51e255e86f0d56cb3239cb8c439df409
   external_id:
   - https://example.org/cam-testdata/tiny/File/trio1-father-cram
@@ -63,16 +63,16 @@
   - bs-x1o5ezuit1
   filename: TRIO1-P.cram
   file_extension: .cram
-  data_category: edam:topic_3673
-  data_type: edam:data_0863
-  format: edam:format_3462
+  data_category: edam:topic_3673  # Whole genome sequencing
+  data_type: edam:data_0863  # Sequence alignment
+  format: edam:format_3462  # CRAM
   size: 149975627
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 1f5c7ef9879fd88fe66b79a340dedfc5
-  - hash_type: MS:1000569
+  - hash_type: MS:1000569  # SHA-1
     hash_value: 4c07873ebc37f29c366a63b288c386f8c2b780d1
-  availability: snomedct:103328004
+  availability: snomedct:103328004  # Available
   external_id:
   - https://example.org/cam-testdata/tiny/File/trio1-proband-cram
   access_policy_id: co-ajdm9fyxxz
@@ -84,11 +84,11 @@
   - pt-r4rv0bzkwc
   filename: TRIO1.clinical.tsv
   file_extension: .tsv
-  data_category: edam:topic_0625
-  format: edam:format_3475
+  data_category: edam:topic_0625  # Genotype and phenotype
+  format: edam:format_3475  # TSV
   size: 618663582
   hash:
-  - hash_type: MS:1000568
+  - hash_type: MS:1000568  # MD5
     hash_value: 2d8121f30d249b5ef8f7cfece6131d9d
   external_id:
   - https://example.org/cam-testdata/tiny/File/trio1-clinical-tsv

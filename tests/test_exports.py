@@ -38,3 +38,21 @@ def test_csv_and_yaml_exports(session: Session, tmp_path: Path) -> None:
         study["principal_investigator"][0], dict
     )  # no LinkML identifier -> inlined
     assert study["do_id"] == data["doi"].do_id
+
+
+def test_coded_values_carry_display_comments(session: Session, tmp_path: Path) -> None:
+    data = build_dataset()
+    data.build.write(session)
+    export_yaml(session.connection(), get_model(), tmp_path / "yaml")
+    text = (tmp_path / "yaml" / "Demographics.yaml").read_text()
+    assert "sex: snomedct:248152002  # Female" in text
+    assert "- CDCREC:2054-5  # Black or African American" in text  # list items too
+    assert "access_policy_id: co-" in text and "access_policy_id: co-" + "x" not in text
+    assert "  # " not in next(
+        line for line in text.splitlines() if "access_policy_id" in line
+    )  # IDs: no comment
+    files = (tmp_path / "yaml" / "File.yaml").read_text()
+    assert "- hash_type: MS:1000568  # MD5" in files  # inlined objects too
+    assert not [
+        line for line in files.splitlines() if " # " in line and "  # " not in line
+    ]  # consistent spacing

@@ -5022,7 +5022,7 @@ COPY cam."ConceptRelationship" (id, concept_curie, target_concept_curie, relatio
 --
 
 COPY cam."DOI" (do_id, bibliographic_reference, access_policy_id, study_id) FROM stdin;
-10.5072/cam-testdata.bc5dx08a	Hum D, Oink W, Oink K. Early development in ducks changes with age. Ann Hayloft Genet. 2017;4(7):212-217.	co-ajdm9fyxxz	sd-7hwpqzc2yr
+https://doi.org/10.5072/cam-testdata.bc5dx08a	Hum D, Oink W, Oink K. Early development in ducks changes with age. Ann Hayloft Genet. 2017;4(7):212-217.	co-ajdm9fyxxz	sd-7hwpqzc2yr
 \.
 
 
@@ -5031,7 +5031,7 @@ COPY cam."DOI" (do_id, bibliographic_reference, access_policy_id, study_id) FROM
 --
 
 COPY cam."DOI_external_id" ("DOI_do_id", external_id) FROM stdin;
-10.5072/cam-testdata.bc5dx08a	https://example.org/cam-testdata/tiny/DOI/s1-doi
+https://doi.org/10.5072/cam-testdata.bc5dx08a	https://example.org/cam-testdata/tiny/DOI/s1-doi
 \.
 
 
@@ -5040,7 +5040,7 @@ COPY cam."DOI_external_id" ("DOI_do_id", external_id) FROM stdin;
 --
 
 COPY cam."Dataset" (dataset_id, name, description, do_id, data_collection_start, data_collection_end, access_policy_id, study_id) FROM stdin;
-ls-h7rc1m2nvw	M00M00 release 1	\N	10.5072/cam-testdata.bc5dx08a	\N	\N	co-ajdm9fyxxz	sd-7hwpqzc2yr
+ls-h7rc1m2nvw	M00M00 release 1	\N	https://doi.org/10.5072/cam-testdata.bc5dx08a	\N	\N	co-ajdm9fyxxz	sd-7hwpqzc2yr
 \.
 
 
@@ -5419,7 +5419,7 @@ bs-x1o5ezuit1	OBI:0000915
 
 COPY cam."Study" (parent_study, study_title, study_code, study_short_name, study_description, website, acknowledgments, citation_statement, do_id, access_policy_id, study_id) FROM stdin;
 sd-7hwpqzc2yr	Tiny Follow-on Study	TINY-S2	\N	Minimal child study of S1 with one open-access participant.	\N	\N	\N	\N	co-t869rg8xx6	sd-upp74psk4k
-\N	Madamoiselle Moo's Marvelous Research Study	M00M00	M00M00 Study	Synthetic trio study used to exercise every CAM table and FHIR mapping path. All people and data are fictional.	\N	\N	\N	10.5072/cam-testdata.bc5dx08a	co-ajdm9fyxxz	sd-7hwpqzc2yr
+\N	Madamoiselle Moo's Marvelous Research Study	M00M00	M00M00 Study	Synthetic trio study used to exercise every CAM table and FHIR mapping path. All people and data are fictional.	\N	\N	\N	https://doi.org/10.5072/cam-testdata.bc5dx08a	co-ajdm9fyxxz	sd-7hwpqzc2yr
 \.
 
 

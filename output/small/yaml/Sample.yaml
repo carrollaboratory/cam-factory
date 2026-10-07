@@ -1,23 +1,23 @@
 - sample_id: bs-08dyug60bv
   biospecimen_collection_id: bsc-lcx5u85hto
   parent_sample_id: bs-mff31jzxtq
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-tyk26seuny
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0004-proband-dna
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-0qv6n0y2td
   biospecimen_collection_id: bsc-h2t6mxqssl
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-3heturwy6c
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 4.2
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0011-father-blood
   access_policy_id: co-yly4xno8c0
@@ -25,12 +25,12 @@
 - sample_id: bs-20483amku9
   biospecimen_collection_id: bsc-576p85idzp
   parent_sample_id: bs-q5a6b9u1zn
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-z07ixekmp1
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0012-proband-dna
   access_policy_id: co-tam2ciyi45
@@ -38,12 +38,12 @@
 - sample_id: bs-21qpxwci7x
   biospecimen_collection_id: bsc-4aflfyecd3
   parent_sample_id: bs-xfa4h8iruu
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-455yp3stzr
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0011-mother-dna
   access_policy_id: co-tam2ciyi45
@@ -51,23 +51,23 @@
 - sample_id: bs-3cqvhqxu4b
   biospecimen_collection_id: bsc-ych91dvz45
   parent_sample_id: bs-4b9ztjfcp5
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-89rj8wzflm
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0008-proband-dna
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - sample_id: bs-3d9plqby6e
   biospecimen_collection_id: bsc-xmvx574ulv
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-e1qowyg6qe
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 6.2
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0011-proband-blood
   access_policy_id: co-tam2ciyi45
@@ -75,23 +75,23 @@
 - sample_id: bs-4738chr6tm
   biospecimen_collection_id: bsc-9cetpr0y47
   parent_sample_id: bs-lvyp2a2swe
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-yuolgzovn5
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0004-father-dna
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-4b9ztjfcp5
   biospecimen_collection_id: bsc-ych91dvz45
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-89rj8wzflm
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 3.4
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0008-proband-blood
   access_policy_id: co-tam2ciyi45
@@ -99,12 +99,12 @@
 - sample_id: bs-4ez6za4vnj
   biospecimen_collection_id: bsc-zma9347umx
   parent_sample_id: bs-puia6w6tod
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-x2oc43ni3s
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0004-proband-dna
   access_policy_id: co-tam2ciyi45
@@ -112,47 +112,47 @@
 - sample_id: bs-5rgzjle102
   biospecimen_collection_id: bsc-rwwy83axy6
   parent_sample_id: bs-9c1grrlh6a
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-vvn9rj70ad
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0005-proband-dna
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-5yjg25ca69
   biospecimen_collection_id: bsc-7ppgj6m09d
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-pkqb7v1zxd
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 7.1
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0006-proband-blood
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-6jmtt7z870
   biospecimen_collection_id: bsc-0p2uztsm0k
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-r8x9pj0tys
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   storage_method:
-  - OBI:0000819
+  - OBI:0000819  # anticoagulant tube storage of blood specimen
   quantity_number: 2.6
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0009-father-blood
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-79nfayxcy4
   biospecimen_collection_id: bsc-xe1t4yz07s
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-r22hejnzwv
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 6.9
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0001-proband-blood
   access_policy_id: co-yly4xno8c0
@@ -160,34 +160,34 @@
 - sample_id: bs-7i4ai02qm7
   biospecimen_collection_id: bsc-81rxkuftog
   parent_sample_id: bs-8yrxmmgyc3
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-9mylk1ozmd
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0003-proband-dna
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-88e72vfn35
   biospecimen_collection_id: bsc-7x4j5lg88l
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-sdhpmoh9yq
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 5.2
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0004-father-blood
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - sample_id: bs-8ki6aqj1ye
   biospecimen_collection_id: bsc-iw86raqc18
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-f39hc6n8dq
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 4.6
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0012-proband-blood
   access_policy_id: co-yly4xno8c0
@@ -195,73 +195,73 @@
 - sample_id: bs-8oa86ma9ot
   biospecimen_collection_id: bsc-5ycxjt04v0
   parent_sample_id: bs-raisncggcv
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-6vj8yjqt9f
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0003-father-dna
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-8r09gjn2f4
   biospecimen_collection_id: bsc-ax86yg2qis
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-l98koluj11
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 7.2
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0002-proband-blood
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-8w1pmyml8t
   biospecimen_collection_id: bsc-fkqy2ieno2
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-p8lz6kia0j
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   storage_method:
-  - OBI:0000819
+  - OBI:0000819  # anticoagulant tube storage of blood specimen
   quantity_number: 8.2
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0002-proband-blood
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - sample_id: bs-8yrxmmgyc3
   biospecimen_collection_id: bsc-81rxkuftog
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-9mylk1ozmd
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   storage_method:
-  - OBI:0000819
+  - OBI:0000819  # anticoagulant tube storage of blood specimen
   quantity_number: 4.6
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0003-proband-blood
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-9c1grrlh6a
   biospecimen_collection_id: bsc-rwwy83axy6
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-vvn9rj70ad
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   storage_method:
-  - OBI:0000819
+  - OBI:0000819  # anticoagulant tube storage of blood specimen
   quantity_number: 5.8
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0005-proband-blood
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-9tgznswrol
   biospecimen_collection_id: bsc-w1a2uebbvu
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-xoyf6cflcc
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 7.3
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0003-proband-blood
   access_policy_id: co-tam2ciyi45
@@ -269,23 +269,23 @@
 - sample_id: bs-aq1hmsfl13
   biospecimen_collection_id: bsc-xoiqgmao8y
   parent_sample_id: bs-zgjm1sylgy
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-0y0gjl36rz
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0002-mother-dna
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-be24j2t4up
   biospecimen_collection_id: bsc-b7q94aowax
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-p9wydbuq5q
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 3.4
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0011-father-blood
   access_policy_id: co-tam2ciyi45
@@ -293,12 +293,12 @@
 - sample_id: bs-bm46zush6y
   biospecimen_collection_id: bsc-w1a2uebbvu
   parent_sample_id: bs-9tgznswrol
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-xoyf6cflcc
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0003-proband-dna
   access_policy_id: co-tam2ciyi45
@@ -306,12 +306,12 @@
 - sample_id: bs-c9m3animcq
   biospecimen_collection_id: bsc-gqstqesa4i
   parent_sample_id: bs-q2nqh2kir8
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-j86rjc1yiy
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0012-father-dna
   access_policy_id: co-yly4xno8c0
@@ -319,25 +319,25 @@
 - sample_id: bs-debyobor67
   biospecimen_collection_id: bsc-fwfvwlq7ea
   parent_sample_id: bs-v2rl9yqchx
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-wjcidufzz8
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0012-mother-dna
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-fgxpylqpw2
   biospecimen_collection_id: bsc-92e3t0yuwr
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-2qhnztec9g
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   storage_method:
-  - OBI:0000819
+  - OBI:0000819  # anticoagulant tube storage of blood specimen
   quantity_number: 4.9
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0010-proband-blood
   access_policy_id: co-yly4xno8c0
@@ -345,34 +345,34 @@
 - sample_id: bs-fpd4arpkia
   biospecimen_collection_id: bsc-ahm7zmwt16
   parent_sample_id: bs-gv857swx92
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-rxqwqab2pf
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0002-mother-dna
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - sample_id: bs-fryz5wjfh3
   biospecimen_collection_id: bsc-ebp5r1lgor
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-m9q9s4y6en
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 5.0
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0010-mother-blood
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - sample_id: bs-gv857swx92
   biospecimen_collection_id: bsc-ahm7zmwt16
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-rxqwqab2pf
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 2.6
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0002-mother-blood
   access_policy_id: co-tam2ciyi45
@@ -380,12 +380,12 @@
 - sample_id: bs-i68v99tbwy
   biospecimen_collection_id: bsc-xmvx574ulv
   parent_sample_id: bs-3d9plqby6e
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-e1qowyg6qe
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0011-proband-dna
   access_policy_id: co-tam2ciyi45
@@ -393,12 +393,12 @@
 - sample_id: bs-ienhf20njw
   biospecimen_collection_id: bsc-fpnhjdh9mn
   parent_sample_id: bs-v2lr3u155f
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-ti0pzgxycp
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0009-proband-dna
   access_policy_id: co-tam2ciyi45
@@ -406,38 +406,38 @@
 - sample_id: bs-k29u6tlui0
   biospecimen_collection_id: bsc-0p2uztsm0k
   parent_sample_id: bs-6jmtt7z870
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-r8x9pj0tys
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0009-father-dna
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-lvyp2a2swe
   biospecimen_collection_id: bsc-9cetpr0y47
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-yuolgzovn5
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   storage_method:
-  - OBI:0000819
+  - OBI:0000819  # anticoagulant tube storage of blood specimen
   quantity_number: 7.2
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0004-father-blood
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-mff31jzxtq
   biospecimen_collection_id: bsc-lcx5u85hto
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-tyk26seuny
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   storage_method:
-  - OBI:0000819
+  - OBI:0000819  # anticoagulant tube storage of blood specimen
   quantity_number: 8.9
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0004-proband-blood
   access_policy_id: co-yly4xno8c0
@@ -445,51 +445,51 @@
 - sample_id: bs-mkwfg60t6o
   biospecimen_collection_id: bsc-fkqy2ieno2
   parent_sample_id: bs-8w1pmyml8t
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-p8lz6kia0j
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0002-proband-dna
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - sample_id: bs-mmwh4u6xgb
   biospecimen_collection_id: bsc-aiptm14ear
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-9gk8jq9c8a
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   storage_method:
-  - OBI:0000819
+  - OBI:0000819  # anticoagulant tube storage of blood specimen
   quantity_number: 9.0
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0006-father-blood
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - sample_id: bs-n0rtotub0w
   biospecimen_collection_id: bsc-t2k6bwj9eg
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-undm70vrd3
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   storage_method:
-  - OBI:0000819
+  - OBI:0000819  # anticoagulant tube storage of blood specimen
   quantity_number: 5.7
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0002-father-blood
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-njlq69izu4
   biospecimen_collection_id: bsc-ybue3pod7g
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-oic36wj8i0
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   storage_method:
-  - OBI:0000819
+  - OBI:0000819  # anticoagulant tube storage of blood specimen
   quantity_number: 8.4
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0006-proband-blood
   access_policy_id: co-tam2ciyi45
@@ -497,12 +497,12 @@
 - sample_id: bs-o1smndjojs
   biospecimen_collection_id: bsc-7ppgj6m09d
   parent_sample_id: bs-5yjg25ca69
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-pkqb7v1zxd
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0006-proband-dna
   access_policy_id: co-yly4xno8c0
@@ -510,25 +510,25 @@
 - sample_id: bs-ownnxjyr9y
   biospecimen_collection_id: bsc-xe1t4yz07s
   parent_sample_id: bs-79nfayxcy4
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-r22hejnzwv
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0001-proband-dna
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-p6nwre1wat
   biospecimen_collection_id: bsc-m4df3fz6lt
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-fhfb8mfhx3
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   storage_method:
-  - OBI:0000819
+  - OBI:0000819  # anticoagulant tube storage of blood specimen
   quantity_number: 6.5
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0008-proband-blood
   access_policy_id: co-yly4xno8c0
@@ -536,12 +536,12 @@
 - sample_id: bs-po7nbit95v
   biospecimen_collection_id: bsc-aiptm14ear
   parent_sample_id: bs-mmwh4u6xgb
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-9gk8jq9c8a
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0006-father-dna
   access_policy_id: co-tam2ciyi45
@@ -549,23 +549,23 @@
 - sample_id: bs-pu48nhp9on
   biospecimen_collection_id: bsc-m4df3fz6lt
   parent_sample_id: bs-p6nwre1wat
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-fhfb8mfhx3
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0008-proband-dna
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-puia6w6tod
   biospecimen_collection_id: bsc-zma9347umx
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-x2oc43ni3s
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 4.2
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0004-proband-blood
   access_policy_id: co-tam2ciyi45
@@ -573,34 +573,34 @@
 - sample_id: bs-pzhds8cdc8
   biospecimen_collection_id: bsc-qge59vsp9x
   parent_sample_id: bs-z08ja02mb2
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-2tcvf9d0mr
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0003-mother-dna
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-q2nqh2kir8
   biospecimen_collection_id: bsc-gqstqesa4i
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-j86rjc1yiy
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 4.8
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0012-father-blood
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-q5a6b9u1zn
   biospecimen_collection_id: bsc-576p85idzp
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-z07ixekmp1
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 6.1
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0012-proband-blood
   access_policy_id: co-tam2ciyi45
@@ -608,12 +608,12 @@
 - sample_id: bs-qfaoo63s3j
   biospecimen_collection_id: bsc-iw86raqc18
   parent_sample_id: bs-8ki6aqj1ye
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-f39hc6n8dq
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0012-proband-dna
   access_policy_id: co-yly4xno8c0
@@ -621,23 +621,23 @@
 - sample_id: bs-qm0dlp7ik5
   biospecimen_collection_id: bsc-92e3t0yuwr
   parent_sample_id: bs-fgxpylqpw2
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-2qhnztec9g
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0010-proband-dna
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-raisncggcv
   biospecimen_collection_id: bsc-5ycxjt04v0
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-6vj8yjqt9f
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 4.3
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0003-father-blood
   access_policy_id: co-yly4xno8c0
@@ -645,45 +645,45 @@
 - sample_id: bs-tx6bnw1a0x
   biospecimen_collection_id: bsc-0fdgkol1qm
   parent_sample_id: bs-wjfv7ftvkq
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-54i7xpb3so
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0011-proband-dna
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-v2lr3u155f
   biospecimen_collection_id: bsc-fpnhjdh9mn
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-ti0pzgxycp
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 6.7
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0009-proband-blood
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - sample_id: bs-v2rl9yqchx
   biospecimen_collection_id: bsc-fwfvwlq7ea
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-wjcidufzz8
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 3.7
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0012-mother-blood
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-wjfv7ftvkq
   biospecimen_collection_id: bsc-0fdgkol1qm
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-54i7xpb3so
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   quantity_number: 6.6
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0011-proband-blood
   access_policy_id: co-yly4xno8c0
@@ -691,25 +691,25 @@
 - sample_id: bs-x12ulavrim
   biospecimen_collection_id: bsc-h2t6mxqssl
   parent_sample_id: bs-0qv6n0y2td
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-3heturwy6c
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0011-father-dna
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-xfa4h8iruu
   biospecimen_collection_id: bsc-4aflfyecd3
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-455yp3stzr
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   storage_method:
-  - OBI:0000819
+  - OBI:0000819  # anticoagulant tube storage of blood specimen
   quantity_number: 3.3
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0011-mother-blood
   access_policy_id: co-tam2ciyi45
@@ -717,12 +717,12 @@
 - sample_id: bs-xl9a6llxio
   biospecimen_collection_id: bsc-ax86yg2qis
   parent_sample_id: bs-8r09gjn2f4
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-l98koluj11
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0002-proband-dna
   access_policy_id: co-yly4xno8c0
@@ -730,38 +730,38 @@
 - sample_id: bs-y341t447ov
   biospecimen_collection_id: bsc-b7q94aowax
   parent_sample_id: bs-be24j2t4up
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-p9wydbuq5q
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s01-f0011-father-dna
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - sample_id: bs-z08ja02mb2
   biospecimen_collection_id: bsc-qge59vsp9x
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-2tcvf9d0mr
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   storage_method:
-  - OBI:0000819
+  - OBI:0000819  # anticoagulant tube storage of blood specimen
   quantity_number: 8.9
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0003-mother-blood
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - sample_id: bs-zgjm1sylgy
   biospecimen_collection_id: bsc-xoiqgmao8y
-  sample_type: UBERON:0000178
+  sample_type: UBERON:0000178  # blood
   subject_id: pt-0y0gjl36rz
-  availability_status: snomedct:103328004
+  availability_status: snomedct:103328004  # Available
   storage_method:
-  - OBI:0000819
+  - OBI:0000819  # anticoagulant tube storage of blood specimen
   quantity_number: 4.8
-  quantity_unit: ucum:ml
+  quantity_unit: ucum:ml  # ml
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0002-mother-blood
   access_policy_id: co-yly4xno8c0
@@ -769,12 +769,12 @@
 - sample_id: bs-zznq3y70wq
   biospecimen_collection_id: bsc-t2k6bwj9eg
   parent_sample_id: bs-n0rtotub0w
-  sample_type: OBI:0001051
+  sample_type: OBI:0001051  # DNA extract
   subject_id: pt-undm70vrd3
   processing:
-  - OBI:0000257
+  - OBI:0000257  # DNA extraction
   storage_method:
-  - OBI:0000915
+  - OBI:0000915  # freezing storage
   external_id:
   - https://example.org/cam-testdata/small/Sample/s02-f0002-father-dna
   access_policy_id: co-yly4xno8c0

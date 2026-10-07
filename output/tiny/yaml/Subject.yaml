@@ -1,32 +1,32 @@
 - subject_id: pt-0u4gl52nuc
-  subject_type: CAMO:0000024
-  organism_type: NCBITaxon:9606
+  subject_type: CAMO:0000024  # Participant
+  organism_type: NCBITaxon:9606  # Homo sapiens
   external_id:
   - https://example.org/cam-testdata/tiny/Subject/trio1-proband
   access_policy_id: co-ajdm9fyxxz
   study_id: sd-7hwpqzc2yr
 - subject_id: pt-at6m2ta7nf
-  subject_type: CAMO:0000025
+  subject_type: CAMO:0000025  # Non-Participant
   external_id:
   - https://example.org/cam-testdata/tiny/Subject/trio1-sibling
   access_policy_id: co-ajdm9fyxxz
   study_id: sd-7hwpqzc2yr
 - subject_id: pt-lahn13sl6m
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/tiny/Subject/s2-p1
   access_policy_id: co-t869rg8xx6
   study_id: sd-upp74psk4k
 - subject_id: pt-nlpxyndlla
-  subject_type: CAMO:0000024
-  organism_type: NCBITaxon:9606
+  subject_type: CAMO:0000024  # Participant
+  organism_type: NCBITaxon:9606  # Homo sapiens
   external_id:
   - https://example.org/cam-testdata/tiny/Subject/trio1-mother
   access_policy_id: co-ajdm9fyxxz
   study_id: sd-7hwpqzc2yr
 - subject_id: pt-r4rv0bzkwc
-  subject_type: CAMO:0000024
-  organism_type: NCBITaxon:9606
+  subject_type: CAMO:0000024  # Participant
+  organism_type: NCBITaxon:9606  # Homo sapiens
   external_id:
   - https://example.org/cam-testdata/tiny/Subject/trio1-father
   access_policy_id: co-ajdm9fyxxz

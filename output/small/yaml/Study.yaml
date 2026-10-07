@@ -30,7 +30,7 @@
     - https://example.org/cam-testdata/small/Publication/s02-pub1
     access_policy_id: co-yly4xno8c0
     study_id: sd-2lx98atcp0
-  do_id: 10.5072/cam-testdata.grdggrel
+  do_id: https://doi.org/10.5072/cam-testdata.grdggrel
   external_id:
   - https://example.org/cam-testdata/small/Study/s02
   access_policy_id: co-yly4xno8c0
@@ -66,7 +66,7 @@
     - https://example.org/cam-testdata/small/Publication/s01-pub1
     access_policy_id: co-tam2ciyi45
     study_id: sd-3s8wpdnf71
-  do_id: 10.5072/cam-testdata.jiktz896
+  do_id: https://doi.org/10.5072/cam-testdata.jiktz896
   external_id:
   - https://example.org/cam-testdata/small/Study/s01
   access_policy_id: co-tam2ciyi45

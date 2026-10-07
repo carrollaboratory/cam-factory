@@ -200,9 +200,9 @@ handle)`, collision-checked per table.
 
 `DOI.do_id`, `FamilyMembership.family_membership_id`,
 `BiospecimenCollection.biospecimen_collection_id`, `Aliquot.aliquot_id` are plain
-strings (Q2). DOIs use the DataCite test prefix plus a hashed suffix,
-`10.5072/cam-testdata.<8 chars of [0-9a-z]>`, the same shape as the fake
-`10.1738/2024.99p6kxef` in the old seeds. The others use the same hashing scheme
+strings (Q2). DOIs are resolver URIs (the model gives `DOI.do_id` range `uri`)
+with the DataCite test prefix plus a hashed suffix,
+`https://doi.org/10.5072/cam-testdata.<8 chars of [0-9a-z]>`. The others use the same hashing scheme
 with a 3-letter local prefix (`fmb-`, `bsc-`, `alq-`) so they can never be
 mistaken for global IDs.
 
@@ -571,7 +571,7 @@ add new ones here as `Q11`, `Q12`, ….
 | # | Question | Decision |
 |---|---|---|
 | Q1 | GlobalID alphabet and length | 10 chars, lowercase `[0-9a-z]`; prefix from the type name (§5.1). Confirmed against real IDs |
-| Q2 | Non-global string IDs | DOI `10.5072/cam-testdata.<hash>`; `fmb-` / `bsc-` / `alq-` + hash for the others (§5.2) |
+| Q2 | Non-global string IDs | DOI `https://doi.org/10.5072/cam-testdata.<hash>` (a URI since the model made `do_id` range `uri`); `fmb-` / `bsc-` / `alq-` + hash for the others (§5.2) |
 | Q3 | Units of `age_*` fields | Per slot, from the schema's `unit.ucum_code` (§6.2 R7) |
 | Q4 | `Any` / `Record` / `Record_external_id` tables | LinkML SQL-generator artifacts; skipped, no data |
 | Q5 | Structure of `vocab_content.yaml` | See §2 |

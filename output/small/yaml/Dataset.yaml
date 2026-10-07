@@ -1,6 +1,6 @@
 - dataset_id: ls-1154czjcje
   name: NeighNeigh Equine data release 5
-  do_id: 10.5072/cam-testdata.grdggrel
+  do_id: https://doi.org/10.5072/cam-testdata.grdggrel
   file_id:
   - dr-6rz35r1dcn
   - dr-7cmrrchrb2
@@ -35,7 +35,7 @@
   study_id: sd-2lx98atcp0
 - dataset_id: ls-ba4m1f3o7k
   name: MaaMaa Caprine data release 1
-  do_id: 10.5072/cam-testdata.jiktz896
+  do_id: https://doi.org/10.5072/cam-testdata.jiktz896
   file_id:
   - dr-3ay88rjpq7
   - dr-5u4yj6t1qz

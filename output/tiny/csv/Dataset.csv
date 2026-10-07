@@ -1,2 +1,2 @@
 dataset_id,name,description,do_id,data_collection_start,data_collection_end,access_policy_id,study_id
-ls-h7rc1m2nvw,M00M00 release 1,,10.5072/cam-testdata.bc5dx08a,,,co-ajdm9fyxxz,sd-7hwpqzc2yr
+ls-h7rc1m2nvw,M00M00 release 1,,https://doi.org/10.5072/cam-testdata.bc5dx08a,,,co-ajdm9fyxxz,sd-7hwpqzc2yr

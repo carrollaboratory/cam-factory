@@ -1,3 +1,3 @@
 dataset_id,name,description,do_id,data_collection_start,data_collection_end,access_policy_id,study_id
-ls-1154czjcje,NeighNeigh Equine data release 5,,10.5072/cam-testdata.grdggrel,,,co-yly4xno8c0,sd-2lx98atcp0
-ls-ba4m1f3o7k,MaaMaa Caprine data release 1,,10.5072/cam-testdata.jiktz896,,,co-tam2ciyi45,sd-3s8wpdnf71
+ls-1154czjcje,NeighNeigh Equine data release 5,,https://doi.org/10.5072/cam-testdata.grdggrel,,,co-yly4xno8c0,sd-2lx98atcp0
+ls-ba4m1f3o7k,MaaMaa Caprine data release 1,,https://doi.org/10.5072/cam-testdata.jiktz896,,,co-tam2ciyi45,sd-3s8wpdnf71

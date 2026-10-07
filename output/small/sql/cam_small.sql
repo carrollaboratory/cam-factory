@@ -5380,8 +5380,8 @@ COPY cam."ConceptRelationship" (id, concept_curie, target_concept_curie, relatio
 --
 
 COPY cam."DOI" (do_id, bibliographic_reference, access_policy_id, study_id) FROM stdin;
-10.5072/cam-testdata.grdggrel	Baa R, Oink W. Litter size in ducks differs between farms. Ann Hayloft Genet. 2017;20(12):189-195.	co-yly4xno8c0	sd-2lx98atcp0
-10.5072/cam-testdata.jiktz896	Hum T, Meow T, Cluck K. Coat color in ducks changes with age. J Barnyard Sci. 2019;23(8):97-107.	co-tam2ciyi45	sd-3s8wpdnf71
+https://doi.org/10.5072/cam-testdata.grdggrel	Baa R, Oink W. Litter size in ducks differs between farms. Ann Hayloft Genet. 2017;20(12):189-195.	co-yly4xno8c0	sd-2lx98atcp0
+https://doi.org/10.5072/cam-testdata.jiktz896	Hum T, Meow T, Cluck K. Coat color in ducks changes with age. J Barnyard Sci. 2019;23(8):97-107.	co-tam2ciyi45	sd-3s8wpdnf71
 \.
 
 
@@ -5390,8 +5390,8 @@ COPY cam."DOI" (do_id, bibliographic_reference, access_policy_id, study_id) FROM
 --
 
 COPY cam."DOI_external_id" ("DOI_do_id", external_id) FROM stdin;
-10.5072/cam-testdata.grdggrel	https://example.org/cam-testdata/small/DOI/s02
-10.5072/cam-testdata.jiktz896	https://example.org/cam-testdata/small/DOI/s01
+https://doi.org/10.5072/cam-testdata.grdggrel	https://example.org/cam-testdata/small/DOI/s02
+https://doi.org/10.5072/cam-testdata.jiktz896	https://example.org/cam-testdata/small/DOI/s01
 \.
 
 
@@ -5400,8 +5400,8 @@ COPY cam."DOI_external_id" ("DOI_do_id", external_id) FROM stdin;
 --
 
 COPY cam."Dataset" (dataset_id, name, description, do_id, data_collection_start, data_collection_end, access_policy_id, study_id) FROM stdin;
-ls-1154czjcje	NeighNeigh Equine data release 5	\N	10.5072/cam-testdata.grdggrel	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
-ls-ba4m1f3o7k	MaaMaa Caprine data release 1	\N	10.5072/cam-testdata.jiktz896	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
+ls-1154czjcje	NeighNeigh Equine data release 5	\N	https://doi.org/10.5072/cam-testdata.grdggrel	\N	\N	co-yly4xno8c0	sd-2lx98atcp0
+ls-ba4m1f3o7k	MaaMaa Caprine data release 1	\N	https://doi.org/10.5072/cam-testdata.jiktz896	\N	\N	co-tam2ciyi45	sd-3s8wpdnf71
 \.
 
 
@@ -6779,8 +6779,8 @@ bs-zznq3y70wq	OBI:0000915
 --
 
 COPY cam."Study" (parent_study, study_title, study_code, study_short_name, study_description, website, acknowledgments, citation_statement, do_id, access_policy_id, study_id) FROM stdin;
-sd-3s8wpdnf71	HumHum Family-Based Camelid Cohort	S02	\N	A fictional study of thyroid function in llamas raised on farms around Pasture Point. Each herd is followed with regular visits, and sleep quality is recorded along the way. All participants and data are synthetic.	\N	\N	\N	10.5072/cam-testdata.grdggrel	co-yly4xno8c0	sd-2lx98atcp0
-\N	QuackQuack Longitudinal Anatine Initiative	S01	\N	A fictional study of sleep quality in ducks raised on farms around Clover Hill. Each paddling is followed with regular visits, and lifespan is recorded along the way. All participants and data are synthetic.	\N	\N	\N	10.5072/cam-testdata.jiktz896	co-tam2ciyi45	sd-3s8wpdnf71
+sd-3s8wpdnf71	HumHum Family-Based Camelid Cohort	S02	\N	A fictional study of thyroid function in llamas raised on farms around Pasture Point. Each herd is followed with regular visits, and sleep quality is recorded along the way. All participants and data are synthetic.	\N	\N	\N	https://doi.org/10.5072/cam-testdata.grdggrel	co-yly4xno8c0	sd-2lx98atcp0
+\N	QuackQuack Longitudinal Anatine Initiative	S01	\N	A fictional study of sleep quality in ducks raised on farms around Clover Hill. Each paddling is followed with regular visits, and lifespan is recorded along the way. All participants and data are synthetic.	\N	\N	\N	https://doi.org/10.5072/cam-testdata.jiktz896	co-tam2ciyi45	sd-3s8wpdnf71
 \.
 
 

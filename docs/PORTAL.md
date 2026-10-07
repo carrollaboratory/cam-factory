@@ -109,7 +109,7 @@ resource, a hyphen, and 10 characters of `[0-9a-z]`. `manifest.json` →
 
 Demographics and StudyMetadata reuse their parent's ID. Non-global IDs:
 FamilyMembership `fmb-…`, BiospecimenCollection `bsc-…`, Aliquot `alq-…`; DOIs
-use the DataCite test prefix `10.5072/cam-testdata.…`. Investigator,
+are resolver URIs with the DataCite test prefix, `https://doi.org/10.5072/cam-testdata.…`. Investigator,
 Publication and HashDigest have integer keys.
 
 ## Known model issues that affect queries

@@ -1,7 +1,7 @@
 - family_membership_id: fmb-0h1ud9othq
   family_id: gr-87lzvahybi
   subject_id: pt-3heturwy6c
-  family_role: KIN:028
+  family_role: KIN:028  # isBiologicalFatherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0011-father
   access_policy_id: co-yly4xno8c0
@@ -9,7 +9,7 @@
 - family_membership_id: fmb-19jm0txal2
   family_id: gr-i1ue0qin9w
   subject_id: pt-l98koluj11
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0002-proband
   access_policy_id: co-yly4xno8c0
@@ -17,7 +17,7 @@
 - family_membership_id: fmb-19l0b69lwo
   family_id: gr-zf9y99gaje
   subject_id: pt-onkaogf9n1
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0010-proband
   access_policy_id: co-tam2ciyi45
@@ -25,7 +25,7 @@
 - family_membership_id: fmb-1e9c816j69
   family_id: gr-x8t1druio3
   subject_id: pt-xoyf6cflcc
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0003-proband
   access_policy_id: co-tam2ciyi45
@@ -33,7 +33,7 @@
 - family_membership_id: fmb-1gmoslzj31
   family_id: gr-y2o3d7nwvm
   subject_id: pt-0mz8ptoiqy
-  family_role: KIN:027
+  family_role: KIN:027  # isBiologicalMotherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0004-mother
   access_policy_id: co-yly4xno8c0
@@ -41,7 +41,7 @@
 - family_membership_id: fmb-1z1n9lvgfn
   family_id: gr-xogbo0i77i
   subject_id: pt-wjcidufzz8
-  family_role: KIN:027
+  family_role: KIN:027  # isBiologicalMotherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0012-mother
   access_policy_id: co-yly4xno8c0
@@ -49,7 +49,7 @@
 - family_membership_id: fmb-2a1h6r8s4t
   family_id: gr-a4jmkf3hmb
   subject_id: pt-lo3ubn20z3
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0001-proband
   access_policy_id: co-tam2ciyi45
@@ -57,7 +57,7 @@
 - family_membership_id: fmb-2v8tc3c742
   family_id: gr-g3m1f955mo
   subject_id: pt-hmejx0uz9s
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0009-proband
   access_policy_id: co-yly4xno8c0
@@ -65,7 +65,7 @@
 - family_membership_id: fmb-47rr1dxfv8
   family_id: gr-xogbo0i77i
   subject_id: pt-j86rjc1yiy
-  family_role: KIN:028
+  family_role: KIN:028  # isBiologicalFatherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0012-father
   access_policy_id: co-yly4xno8c0
@@ -73,7 +73,7 @@
 - family_membership_id: fmb-4s8zym21x2
   family_id: gr-pjg6syepak
   subject_id: pt-p8lz6kia0j
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0002-proband
   access_policy_id: co-tam2ciyi45
@@ -81,7 +81,7 @@
 - family_membership_id: fmb-645ct2lh52
   family_id: gr-dw1i7se19t
   subject_id: pt-ljv5blx4vb
-  family_role: KIN:027
+  family_role: KIN:027  # isBiologicalMotherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0006-mother
   access_policy_id: co-yly4xno8c0
@@ -89,7 +89,7 @@
 - family_membership_id: fmb-7395siu2sf
   family_id: gr-7xapo2miv7
   subject_id: pt-2qhnztec9g
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0010-proband
   access_policy_id: co-yly4xno8c0
@@ -97,7 +97,7 @@
 - family_membership_id: fmb-7tj5sgx0cl
   family_id: gr-88gvp0xb9m
   subject_id: pt-2tcvf9d0mr
-  family_role: KIN:027
+  family_role: KIN:027  # isBiologicalMotherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0003-mother
   access_policy_id: co-yly4xno8c0
@@ -105,7 +105,7 @@
 - family_membership_id: fmb-8k6aved2al
   family_id: gr-ak7iyas6ix
   subject_id: pt-oic36wj8i0
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0006-proband
   access_policy_id: co-tam2ciyi45
@@ -113,7 +113,7 @@
 - family_membership_id: fmb-a551f1uznd
   family_id: gr-be10ri4wkd
   subject_id: pt-fhfb8mfhx3
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0008-proband
   access_policy_id: co-yly4xno8c0
@@ -121,7 +121,7 @@
 - family_membership_id: fmb-acucu0mlr7
   family_id: gr-lysgrb1kny
   subject_id: pt-t3ll8jhskm
-  family_role: KIN:028
+  family_role: KIN:028  # isBiologicalFatherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0001-father
   access_policy_id: co-yly4xno8c0
@@ -129,7 +129,7 @@
 - family_membership_id: fmb-aq0s0409iw
   family_id: gr-9dlpx8yoya
   subject_id: pt-ju11ude3rq
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0005-proband
   access_policy_id: co-tam2ciyi45
@@ -137,7 +137,7 @@
 - family_membership_id: fmb-aqdnt9s7di
   family_id: gr-y2o3d7nwvm
   subject_id: pt-tyk26seuny
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0004-proband
   access_policy_id: co-yly4xno8c0
@@ -145,7 +145,7 @@
 - family_membership_id: fmb-bac97kgvz1
   family_id: gr-zf9y99gaje
   subject_id: pt-m9q9s4y6en
-  family_role: KIN:027
+  family_role: KIN:027  # isBiologicalMotherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0010-mother
   access_policy_id: co-tam2ciyi45
@@ -153,7 +153,7 @@
 - family_membership_id: fmb-f0cf4pkxo1
   family_id: gr-pjg6syepak
   subject_id: pt-223dzfx7g4
-  family_role: KIN:028
+  family_role: KIN:028  # isBiologicalFatherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0002-father
   access_policy_id: co-tam2ciyi45
@@ -161,7 +161,7 @@
 - family_membership_id: fmb-fb8sx5xp2w
   family_id: gr-88gvp0xb9m
   subject_id: pt-9mylk1ozmd
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0003-proband
   access_policy_id: co-yly4xno8c0
@@ -169,7 +169,7 @@
 - family_membership_id: fmb-fbh2x0owpl
   family_id: gr-znyuulhgxc
   subject_id: pt-p9wydbuq5q
-  family_role: KIN:028
+  family_role: KIN:028  # isBiologicalFatherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0011-father
   access_policy_id: co-tam2ciyi45
@@ -177,7 +177,7 @@
 - family_membership_id: fmb-foj6iwy31e
   family_id: gr-r88okq37o0
   subject_id: pt-z07ixekmp1
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0012-proband
   access_policy_id: co-tam2ciyi45
@@ -185,7 +185,7 @@
 - family_membership_id: fmb-gcu2axsyml
   family_id: gr-pjg6syepak
   subject_id: pt-rxqwqab2pf
-  family_role: KIN:027
+  family_role: KIN:027  # isBiologicalMotherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0002-mother
   access_policy_id: co-tam2ciyi45
@@ -193,7 +193,7 @@
 - family_membership_id: fmb-htnpraruzm
   family_id: gr-xogbo0i77i
   subject_id: pt-f39hc6n8dq
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0012-proband
   access_policy_id: co-yly4xno8c0
@@ -201,7 +201,7 @@
 - family_membership_id: fmb-i9yc7m81k3
   family_id: gr-zf9y99gaje
   subject_id: pt-72iwinqiw2
-  family_role: KIN:028
+  family_role: KIN:028  # isBiologicalFatherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0010-father
   access_policy_id: co-tam2ciyi45
@@ -209,7 +209,7 @@
 - family_membership_id: fmb-j1twk9vh6h
   family_id: gr-znyuulhgxc
   subject_id: pt-455yp3stzr
-  family_role: KIN:027
+  family_role: KIN:027  # isBiologicalMotherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0011-mother
   access_policy_id: co-tam2ciyi45
@@ -217,7 +217,7 @@
 - family_membership_id: fmb-kealn3jji7
   family_id: gr-fcybny88t1
   subject_id: pt-sv38knyk22
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0007-proband
   access_policy_id: co-tam2ciyi45
@@ -225,7 +225,7 @@
 - family_membership_id: fmb-kearvsvcnf
   family_id: gr-16iokvr3dp
   subject_id: pt-op1524v7uh
-  family_role: KIN:007
+  family_role: KIN:007  # isBiologicalSiblingOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0005-sibling
   access_policy_id: co-yly4xno8c0
@@ -233,7 +233,7 @@
 - family_membership_id: fmb-ll1j1r93cj
   family_id: gr-b4m81p6827
   subject_id: pt-0yxamgf21w
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0007-proband
   access_policy_id: co-yly4xno8c0
@@ -241,7 +241,7 @@
 - family_membership_id: fmb-mqah4kmkj2
   family_id: gr-ak7iyas6ix
   subject_id: pt-3746e85sta
-  family_role: KIN:027
+  family_role: KIN:027  # isBiologicalMotherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0006-mother
   access_policy_id: co-tam2ciyi45
@@ -249,7 +249,7 @@
 - family_membership_id: fmb-od9ird4f2r
   family_id: gr-7xapo2miv7
   subject_id: pt-2px245swmn
-  family_role: KIN:027
+  family_role: KIN:027  # isBiologicalMotherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0010-mother
   access_policy_id: co-yly4xno8c0
@@ -257,7 +257,7 @@
 - family_membership_id: fmb-oiw1tlq9t8
   family_id: gr-8rtgm53791
   subject_id: pt-a15eslmrz3
-  family_role: KIN:027
+  family_role: KIN:027  # isBiologicalMotherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0004-mother
   access_policy_id: co-tam2ciyi45
@@ -265,7 +265,7 @@
 - family_membership_id: fmb-p2oduyc6co
   family_id: gr-8rtgm53791
   subject_id: pt-sdhpmoh9yq
-  family_role: KIN:028
+  family_role: KIN:028  # isBiologicalFatherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0004-father
   access_policy_id: co-tam2ciyi45
@@ -273,7 +273,7 @@
 - family_membership_id: fmb-pmm608r1qk
   family_id: gr-g3m1f955mo
   subject_id: pt-1ohce2h4jo
-  family_role: KIN:027
+  family_role: KIN:027  # isBiologicalMotherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0009-mother
   access_policy_id: co-yly4xno8c0
@@ -281,7 +281,7 @@
 - family_membership_id: fmb-r8dcwt8uq3
   family_id: gr-16iokvr3dp
   subject_id: pt-vvn9rj70ad
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0005-proband
   access_policy_id: co-yly4xno8c0
@@ -289,7 +289,7 @@
 - family_membership_id: fmb-rcaf1er3qt
   family_id: gr-g3m1f955mo
   subject_id: pt-r8x9pj0tys
-  family_role: KIN:028
+  family_role: KIN:028  # isBiologicalFatherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0009-father
   access_policy_id: co-yly4xno8c0
@@ -297,7 +297,7 @@
 - family_membership_id: fmb-ri7o0yhrna
   family_id: gr-88gvp0xb9m
   subject_id: pt-6vj8yjqt9f
-  family_role: KIN:028
+  family_role: KIN:028  # isBiologicalFatherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0003-father
   access_policy_id: co-yly4xno8c0
@@ -305,7 +305,7 @@
 - family_membership_id: fmb-rwztb9hd6t
   family_id: gr-lysgrb1kny
   subject_id: pt-r22hejnzwv
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0001-proband
   access_policy_id: co-yly4xno8c0
@@ -313,7 +313,7 @@
 - family_membership_id: fmb-s4c5jr384t
   family_id: gr-87lzvahybi
   subject_id: pt-8737trkhec
-  family_role: KIN:027
+  family_role: KIN:027  # isBiologicalMotherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0011-mother
   access_policy_id: co-yly4xno8c0
@@ -321,7 +321,7 @@
 - family_membership_id: fmb-s5dp11hqt1
   family_id: gr-87lzvahybi
   subject_id: pt-54i7xpb3so
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0011-proband
   access_policy_id: co-yly4xno8c0
@@ -329,7 +329,7 @@
 - family_membership_id: fmb-seihbb64hr
   family_id: gr-lysgrb1kny
   subject_id: pt-q5abjhzige
-  family_role: KIN:027
+  family_role: KIN:027  # isBiologicalMotherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0001-mother
   access_policy_id: co-yly4xno8c0
@@ -337,7 +337,7 @@
 - family_membership_id: fmb-sn9kplil0u
   family_id: gr-v5ied6g1qi
   subject_id: pt-89rj8wzflm
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0008-proband
   access_policy_id: co-tam2ciyi45
@@ -345,7 +345,7 @@
 - family_membership_id: fmb-udehbn9w0t
   family_id: gr-r88okq37o0
   subject_id: pt-k6m1krw8rg
-  family_role: KIN:007
+  family_role: KIN:007  # isBiologicalSiblingOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0012-sibling
   access_policy_id: co-tam2ciyi45
@@ -353,7 +353,7 @@
 - family_membership_id: fmb-ufdhq7ld00
   family_id: gr-712cogepvh
   subject_id: pt-ti0pzgxycp
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0009-proband
   access_policy_id: co-tam2ciyi45
@@ -361,7 +361,7 @@
 - family_membership_id: fmb-v0cs6po8jz
   family_id: gr-8rtgm53791
   subject_id: pt-x2oc43ni3s
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0004-proband
   access_policy_id: co-tam2ciyi45
@@ -369,7 +369,7 @@
 - family_membership_id: fmb-v56izvo9dp
   family_id: gr-y2o3d7nwvm
   subject_id: pt-yuolgzovn5
-  family_role: KIN:028
+  family_role: KIN:028  # isBiologicalFatherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0004-father
   access_policy_id: co-yly4xno8c0
@@ -377,7 +377,7 @@
 - family_membership_id: fmb-v9i2oxdzkh
   family_id: gr-i1ue0qin9w
   subject_id: pt-0y0gjl36rz
-  family_role: KIN:027
+  family_role: KIN:027  # isBiologicalMotherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0002-mother
   access_policy_id: co-yly4xno8c0
@@ -385,7 +385,7 @@
 - family_membership_id: fmb-w200msfqv5
   family_id: gr-ak7iyas6ix
   subject_id: pt-9gk8jq9c8a
-  family_role: KIN:028
+  family_role: KIN:028  # isBiologicalFatherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0006-father
   access_policy_id: co-tam2ciyi45
@@ -393,7 +393,7 @@
 - family_membership_id: fmb-w9lqdxodc0
   family_id: gr-dw1i7se19t
   subject_id: pt-pkqb7v1zxd
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0006-proband
   access_policy_id: co-yly4xno8c0
@@ -401,7 +401,7 @@
 - family_membership_id: fmb-wgqxxr1vwy
   family_id: gr-i1ue0qin9w
   subject_id: pt-undm70vrd3
-  family_role: KIN:028
+  family_role: KIN:028  # isBiologicalFatherOf
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s02-f0002-father
   access_policy_id: co-yly4xno8c0
@@ -409,7 +409,7 @@
 - family_membership_id: fmb-z9wn0q5fyb
   family_id: gr-znyuulhgxc
   subject_id: pt-e1qowyg6qe
-  family_role: snomedct:85900004
+  family_role: snomedct:85900004  # Proband
   external_id:
   - https://example.org/cam-testdata/small/FamilyMembership/s01-f0011-proband
   access_policy_id: co-tam2ciyi45

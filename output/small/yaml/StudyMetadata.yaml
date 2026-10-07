@@ -1,19 +1,19 @@
 - study_id: sd-2lx98atcp0
   participant_lifespan_stage:
-  - NCIT:C199314
-  - NCIT:C89345
+  - NCIT:C199314  # Adulthood
+  - NCIT:C89345  # Childhood
   study_design:
-  - mesh:D008137
-  - mesh:D016022
+  - mesh:D008137  # Longitudinal Studies
+  - mesh:D016022  # Case-Control Studies
   clinical_data_source_type:
-  - CAMO:0000014
-  - CAMO:0000011
+  - CAMO:0000014  # Electronic Health Record
+  - CAMO:0000011  # Research Assessment
   data_category:
-  - edam:topic_0625
-  - edam:topic_3673
+  - edam:topic_0625  # Genotype and phenotype
+  - edam:topic_3673  # Whole genome sequencing
   vbr_id: or-qldlz7ot0k
   research_domain:
-  - mesh:D006330
+  - mesh:D006330  # Congenital Heart Defects
   expected_number_of_participants: 30
   actual_number_of_participants: 28
   external_id:
@@ -21,20 +21,20 @@
   access_policy_id: co-yly4xno8c0
 - study_id: sd-3s8wpdnf71
   participant_lifespan_stage:
-  - NCIT:C89345
-  - NCIT:C89889
+  - NCIT:C89345  # Childhood
+  - NCIT:C89889  # Infancy
   study_design:
-  - mesh:D003430
-  - mesh:D008137
+  - mesh:D003430  # Cross-Sectional Studies
+  - mesh:D008137  # Longitudinal Studies
   clinical_data_source_type:
-  - CAMO:0000010
-  - CAMO:0000011
+  - CAMO:0000010  # Survey
+  - CAMO:0000011  # Research Assessment
   data_category:
-  - edam:topic_3170
-  - edam:topic_3673
+  - edam:topic_3170  # RNA-Seq
+  - edam:topic_3673  # Whole genome sequencing
   vbr_id: or-gi4q7opjnl
   research_domain:
-  - mesh:D013568
+  - mesh:D013568  # All Co-occurring Conditions
   expected_number_of_participants: 31
   actual_number_of_participants: 22
   external_id:

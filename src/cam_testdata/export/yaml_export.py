@@ -4,15 +4,20 @@
 - join tables folded back into multivalued slots (values sorted)
 - references to classes with a LinkML identifier are written as IDs; classes
   without one (HashDigest, Investigator, Publication) are inlined as objects
+- every coded value (Concept FK, enum, coded uriorcurie) gets an end-of-line
+  comment with its Concept display, so the files read without the Concept table
 - yaml/<Class>.yaml holds a list of instances; tiny also writes
   examples/<Class>-001.yaml (one instance) for the model repo
 """
 
+import io
+import re
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
 from ruamel.yaml import YAML
+from ruamel.yaml.comments import CommentedMap, CommentedSeq
 from sqlalchemy import Connection, select
 
 from cam_testdata.schema_introspect import ColumnStorage, JoinStorage, Model
@@ -24,6 +29,15 @@ class YamlExporter:
         self.model = model
         self._rows: dict[str, dict[Any, dict[str, Any]]] = {}
         self._joins: dict[tuple[str, str], dict[Any, list[Any]]] = {}
+        self._coded = {(cc.cls, cc.slot) for cc in model.curie_columns}
+        concept = model.metadata.tables["Concept"]
+        self._display: dict[str, str] = {
+            curie: " ".join(display.split())  # one line
+            for curie, display in conn.execute(
+                select(concept.c.concept_curie, concept.c.display)
+            )
+            if display
+        }
 
     # ----- cached reads ----------------------------------------------------------
 
@@ -53,8 +67,8 @@ class YamlExporter:
 
     # ----- instances ---------------------------------------------------------------
 
-    def instance(self, cls: str, row: dict[str, Any]) -> dict[str, Any]:
-        out: dict[str, Any] = {}
+    def instance(self, cls: str, row: dict[str, Any]) -> CommentedMap:
+        out = CommentedMap()
         table = self.model.metadata.tables[cls]
         pk_value = row[next(iter(table.primary_key.columns)).name]
         for name in self.model.slots(cls):
@@ -74,6 +88,8 @@ class YamlExporter:
                     if inline and target
                     else value
                 )
+                if (cls, slot) in self._coded and value in self._display:
+                    out.yaml_add_eol_comment(self._display[value], slot)
             else:
                 values = self.join_values(cls, slot, store).get(pk_value, [])
                 if not values:
@@ -83,21 +99,35 @@ class YamlExporter:
                         self.instance(target, self.rows(target)[v]) for v in values
                     ]
                 else:
-                    out[slot] = list(values)
+                    seq = CommentedSeq(values)
+                    if (cls, slot) in self._coded:
+                        for i, v in enumerate(values):
+                            if v in self._display:
+                                seq.yaml_add_eol_comment(self._display[v], i)
+                    out[slot] = seq
         return out
 
-    def class_instances(self, cls: str) -> list[dict[str, Any]]:
+    def class_instances(self, cls: str) -> list[CommentedMap]:
         return [self.instance(cls, row) for row in self.rows(cls).values()]
+
+
+# A display comment ruamel placed with a single space (it does that for the last
+# item of a list or mapping). Only matches when the value part has no quotes or
+# '#', which is always true for curies, so quoted text is never touched.
+_TIGHT_COMMENT = re.compile(r"^([^'\"#\n]*\S) # ")
 
 
 def _dump(data: Any, path: Path) -> None:
     yaml = YAML()
     yaml.width = 4096
-    yaml.representer.ignore_aliases = lambda *_: (
-        True
-    )  # never emit &anchors for repeated objects
-    with path.open("w", encoding="utf-8", newline="") as fh:
-        yaml.dump(data, fh)
+    # never emit &anchors for repeated objects
+    yaml.representer.ignore_aliases = lambda *_: True
+    buf = io.StringIO()
+    yaml.dump(data, buf)
+    text = "\n".join(
+        _TIGHT_COMMENT.sub(r"\1  # ", line) for line in buf.getvalue().split("\n")
+    )
+    path.write_text(text, encoding="utf-8", newline="")
 
 
 def export_yaml(

@@ -1,6 +1,6 @@
 - family_relationship_id: fm-7n5m7c64u3
   family_member_id: pt-at6m2ta7nf
-  relation: KIN:007
+  relation: KIN:007  # isBiologicalSiblingOf
   subject_id: pt-0u4gl52nuc
   external_id:
   - https://example.org/cam-testdata/tiny/FamilyRelationship/sibling-of-proband
@@ -8,7 +8,7 @@
   study_id: sd-7hwpqzc2yr
 - family_relationship_id: fm-jqonemtrwc
   family_member_id: pt-nlpxyndlla
-  relation: KIN:027
+  relation: KIN:027  # isBiologicalMotherOf
   subject_id: pt-0u4gl52nuc
   external_id:
   - https://example.org/cam-testdata/tiny/FamilyRelationship/mother-of-proband
@@ -16,7 +16,7 @@
   study_id: sd-7hwpqzc2yr
 - family_relationship_id: fm-m9v33c0t9z
   family_member_id: pt-r4rv0bzkwc
-  relation: KIN:028
+  relation: KIN:028  # isBiologicalFatherOf
   subject_id: pt-0u4gl52nuc
   external_id:
   - https://example.org/cam-testdata/tiny/FamilyRelationship/father-of-proband

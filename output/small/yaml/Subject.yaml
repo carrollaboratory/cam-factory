@@ -1,311 +1,311 @@
 - subject_id: pt-0mz8ptoiqy
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0004-mother
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-0y0gjl36rz
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0002-mother
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-0yxamgf21w
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0007-proband
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-1ohce2h4jo
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0009-mother
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-223dzfx7g4
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0002-father
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-2px245swmn
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0010-mother
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-2qhnztec9g
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0010-proband
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-2tcvf9d0mr
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0003-mother
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-3746e85sta
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0006-mother
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-3heturwy6c
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0011-father
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-455yp3stzr
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0011-mother
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-54i7xpb3so
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0011-proband
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-6vj8yjqt9f
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0003-father
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-72iwinqiw2
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0010-father
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-8737trkhec
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0011-mother
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-89rj8wzflm
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0008-proband
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-9gk8jq9c8a
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0006-father
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-9mylk1ozmd
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0003-proband
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-a15eslmrz3
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0004-mother
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-e1qowyg6qe
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0011-proband
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-f39hc6n8dq
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0012-proband
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-fhfb8mfhx3
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0008-proband
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-hmejx0uz9s
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0009-proband
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-j86rjc1yiy
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0012-father
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-ju11ude3rq
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0005-proband
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-k6m1krw8rg
-  subject_type: CAMO:0000025
+  subject_type: CAMO:0000025  # Non-Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0012-sibling
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-l98koluj11
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0002-proband
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-ljv5blx4vb
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0006-mother
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-lo3ubn20z3
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0001-proband
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-m9q9s4y6en
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0010-mother
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-oic36wj8i0
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0006-proband
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-onkaogf9n1
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0010-proband
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-op1524v7uh
-  subject_type: CAMO:0000025
+  subject_type: CAMO:0000025  # Non-Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0005-sibling
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-p8lz6kia0j
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0002-proband
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-p9wydbuq5q
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0011-father
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-pkqb7v1zxd
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0006-proband
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-q5abjhzige
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0001-mother
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-r22hejnzwv
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0001-proband
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-r8x9pj0tys
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0009-father
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-rxqwqab2pf
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0002-mother
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-sdhpmoh9yq
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0004-father
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-sv38knyk22
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0007-proband
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-t3ll8jhskm
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0001-father
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-ti0pzgxycp
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0009-proband
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-tyk26seuny
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0004-proband
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-undm70vrd3
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0002-father
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-vvn9rj70ad
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0005-proband
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-wjcidufzz8
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0012-mother
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-x2oc43ni3s
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0004-proband
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-xoyf6cflcc
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0003-proband
   access_policy_id: co-tam2ciyi45
   study_id: sd-3s8wpdnf71
 - subject_id: pt-yuolgzovn5
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s02-f0004-father
   access_policy_id: co-yly4xno8c0
   study_id: sd-2lx98atcp0
 - subject_id: pt-z07ixekmp1
-  subject_type: CAMO:0000024
+  subject_type: CAMO:0000024  # Participant
   external_id:
   - https://example.org/cam-testdata/small/Subject/s01-f0012-proband
   access_policy_id: co-tam2ciyi45

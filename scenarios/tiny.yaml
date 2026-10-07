@@ -39,7 +39,7 @@ records:
       study_id: s1
 
   DOI:
-    - key: s1-doi                            # do_id minted: 10.5072/cam-testdata.<hash>
+    - key: s1-doi                            # do_id minted: https://doi.org/10.5072/cam-testdata.<hash>
       study_id: s1
 
   Study:

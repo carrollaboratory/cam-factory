@@ -4993,21 +4993,21 @@ INSERT INTO cam."Concept" (concept_curie, concept_id, vocabulary_prefix, concept
 -- Data for Name: DOI; Type: TABLE DATA; Schema: cam; Owner: -
 --
 
-INSERT INTO cam."DOI" (do_id, bibliographic_reference, access_policy_id, study_id) VALUES ('10.5072/cam-testdata.bc5dx08a', 'Hum D, Oink W, Oink K. Early development in ducks changes with age. Ann Hayloft Genet. 2017;4(7):212-217.', 'co-ajdm9fyxxz', 'sd-7hwpqzc2yr');
+INSERT INTO cam."DOI" (do_id, bibliographic_reference, access_policy_id, study_id) VALUES ('https://doi.org/10.5072/cam-testdata.bc5dx08a', 'Hum D, Oink W, Oink K. Early development in ducks changes with age. Ann Hayloft Genet. 2017;4(7):212-217.', 'co-ajdm9fyxxz', 'sd-7hwpqzc2yr');
 
 
 --
 -- Data for Name: DOI_external_id; Type: TABLE DATA; Schema: cam; Owner: -
 --
 
-INSERT INTO cam."DOI_external_id" ("DOI_do_id", external_id) VALUES ('10.5072/cam-testdata.bc5dx08a', 'https://example.org/cam-testdata/tiny/DOI/s1-doi');
+INSERT INTO cam."DOI_external_id" ("DOI_do_id", external_id) VALUES ('https://doi.org/10.5072/cam-testdata.bc5dx08a', 'https://example.org/cam-testdata/tiny/DOI/s1-doi');
 
 
 --
 -- Data for Name: Dataset; Type: TABLE DATA; Schema: cam; Owner: -
 --
 
-INSERT INTO cam."Dataset" (dataset_id, name, description, do_id, data_collection_start, data_collection_end, access_policy_id, study_id) VALUES ('ls-h7rc1m2nvw', 'M00M00 release 1', NULL, '10.5072/cam-testdata.bc5dx08a', NULL, NULL, 'co-ajdm9fyxxz', 'sd-7hwpqzc2yr');
+INSERT INTO cam."Dataset" (dataset_id, name, description, do_id, data_collection_start, data_collection_end, access_policy_id, study_id) VALUES ('ls-h7rc1m2nvw', 'M00M00 release 1', NULL, 'https://doi.org/10.5072/cam-testdata.bc5dx08a', NULL, NULL, 'co-ajdm9fyxxz', 'sd-7hwpqzc2yr');
 
 
 --
@@ -5320,7 +5320,7 @@ INSERT INTO cam."Sample_storage_method" ("Sample_sample_id", storage_method) VAL
 --
 
 INSERT INTO cam."Study" (parent_study, study_title, study_code, study_short_name, study_description, website, acknowledgments, citation_statement, do_id, access_policy_id, study_id) VALUES ('sd-7hwpqzc2yr', 'Tiny Follow-on Study', 'TINY-S2', NULL, 'Minimal child study of S1 with one open-access participant.', NULL, NULL, NULL, NULL, 'co-t869rg8xx6', 'sd-upp74psk4k');
-INSERT INTO cam."Study" (parent_study, study_title, study_code, study_short_name, study_description, website, acknowledgments, citation_statement, do_id, access_policy_id, study_id) VALUES (NULL, 'Madamoiselle Moo''s Marvelous Research Study', 'M00M00', 'M00M00 Study', 'Synthetic trio study used to exercise every CAM table and FHIR mapping path. All people and data are fictional.', NULL, NULL, NULL, '10.5072/cam-testdata.bc5dx08a', 'co-ajdm9fyxxz', 'sd-7hwpqzc2yr');
+INSERT INTO cam."Study" (parent_study, study_title, study_code, study_short_name, study_description, website, acknowledgments, citation_statement, do_id, access_policy_id, study_id) VALUES (NULL, 'Madamoiselle Moo''s Marvelous Research Study', 'M00M00', 'M00M00 Study', 'Synthetic trio study used to exercise every CAM table and FHIR mapping path. All people and data are fictional.', NULL, NULL, NULL, 'https://doi.org/10.5072/cam-testdata.bc5dx08a', 'co-ajdm9fyxxz', 'sd-7hwpqzc2yr');
 
 
 --
